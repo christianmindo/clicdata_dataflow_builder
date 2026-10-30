@@ -1,0 +1,101 @@
+{
+  "kind": "NODE_SETTINGS_EXAMPLE_NOT_A_COMPLETE_FLOW",
+  "code": "filter-simple",
+  "propertyClass": "DataFlowNodeFilterSimpleProperties:#Infinis.DataFlows",
+  "observedUpstreamCount": 1,
+  "exampleSettings": {
+    "Filters": [
+      {
+        "ColumnName": "Agent Name",
+        "Comparator": "equals",
+        "Disabled": false,
+        "DisabledIfNull": false,
+        "Groups": [],
+        "Guid": "182b28f9-9f98-5696-96a3-d9aa662a4853",
+        "LogicalOperator": "and",
+        "ValueType": "selectedvalue",
+        "Values": [
+          "John Smith"
+        ]
+      }
+    ]
+  },
+  "exampleOutputSchema": [
+    {
+      "InternalType": "int64",
+      "Name": "Ticket ID",
+      "traceId": "1fcc204d-1113-55fd-93ea-0d955c8cc761"
+    },
+    {
+      "InternalType": "date",
+      "Name": "Date Opened",
+      "traceId": "b826be98-b18e-5e7a-8e6b-29fcb21d94ee"
+    },
+    {
+      "InternalType": "date",
+      "Name": "Date Closed",
+      "traceId": "ebeea7ed-fe18-5692-92a5-c9d8447e9ec3"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Customer Name",
+      "traceId": "4eed6a05-e095-5990-8cdf-9601cd87b797"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Issue Category",
+      "traceId": "e9238685-4ec3-522a-a356-393584f08614"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Priority",
+      "traceId": "f1e1bc28-7b2b-547e-948e-2bddcda7a456"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Status",
+      "traceId": "30cfc661-8fdc-5765-9cad-b8ca5be4dfdb"
+    },
+    {
+      "InternalType": "int64",
+      "Name": "Assigned To",
+      "traceId": "6a58946e-b134-5b76-90cf-ae3f977d3bd7"
+    },
+    {
+      "InternalType": "int64",
+      "Name": "Agent ID",
+      "traceId": "f3d496a9-efea-5405-9783-a34cb8d95a92"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Agent Name",
+      "traceId": "ca74771f-2c46-51ad-9250-216c46523909"
+    }
+  ],
+  "evidence": "Observed structure, synthetic resource/graph identifiers, no execution guarantee",
+  "additionalObservedVariants": [
+    {
+      "name": "selectedvalue-multiple-choices",
+      "settings": {
+        "Filters": [
+          {
+            "ColumnName": "SourcePlatform",
+            "Comparator": "oneof",
+            "Disabled": false,
+            "DisabledIfNull": false,
+            "Groups": [],
+            "Guid": "19f84d9f-e396-5348-81e4-285b5aaf7907",
+            "LogicalOperator": "and",
+            "ValueType": "selectedvalue",
+            "Values": [
+              "SOURCE_A",
+              "SOURCE_B"
+            ]
+          }
+        ]
+      },
+      "note": "Observed Comparator=oneof and ValueType=selectedvalue; synthetic choices/field/GUID. Source also uses ValueType=expression for date comparisons. No complete flow or execution guarantee.",
+      "evidence": "Observed marketing export structure, generalized field names/literals; execution unverified."
+    }
+  ]
+}

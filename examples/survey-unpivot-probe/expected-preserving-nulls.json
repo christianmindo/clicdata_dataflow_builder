@@ -1,0 +1,90 @@
+{
+  "numeric": [
+    {
+      "SurveyID": "DEMO-SURVEY",
+      "RespondentID": "DEMO-PERSON",
+      "SubmittedDate": "2026-01-01",
+      "ProbeName": "ProbeNumericNull",
+      "ProbeValue": null
+    },
+    {
+      "SurveyID": "DEMO-SURVEY",
+      "RespondentID": "DEMO-PERSON",
+      "SubmittedDate": "2026-01-01",
+      "ProbeName": "ProbeNumericZero",
+      "ProbeValue": 0
+    },
+    {
+      "SurveyID": "DEMO-SURVEY",
+      "RespondentID": "DEMO-PERSON",
+      "SubmittedDate": "2026-01-01",
+      "ProbeName": "ProbeNumericValue",
+      "ProbeValue": 5
+    },
+    {
+      "SurveyID": "DEMO-SURVEY",
+      "RespondentID": "DEMO-PERSON",
+      "SubmittedDate": "2026-01-01",
+      "ProbeName": "ProbeNumericNull",
+      "ProbeValue": null
+    },
+    {
+      "SurveyID": "DEMO-SURVEY",
+      "RespondentID": "DEMO-PERSON",
+      "SubmittedDate": "2026-01-01",
+      "ProbeName": "ProbeNumericZero",
+      "ProbeValue": 0
+    },
+    {
+      "SurveyID": "DEMO-SURVEY",
+      "RespondentID": "DEMO-PERSON",
+      "SubmittedDate": "2026-01-01",
+      "ProbeName": "ProbeNumericValue",
+      "ProbeValue": 5
+    }
+  ],
+  "text": [
+    {
+      "SurveyID": "DEMO-SURVEY",
+      "RespondentID": "DEMO-PERSON",
+      "SubmittedDate": "2026-01-01",
+      "ProbeName": "ProbeTextNull",
+      "ProbeValue": null
+    },
+    {
+      "SurveyID": "DEMO-SURVEY",
+      "RespondentID": "DEMO-PERSON",
+      "SubmittedDate": "2026-01-01",
+      "ProbeName": "ProbeTextEmpty",
+      "ProbeValue": ""
+    },
+    {
+      "SurveyID": "DEMO-SURVEY",
+      "RespondentID": "DEMO-PERSON",
+      "SubmittedDate": "2026-01-01",
+      "ProbeName": "ProbeTextValue",
+      "ProbeValue": "demo"
+    },
+    {
+      "SurveyID": "DEMO-SURVEY",
+      "RespondentID": "DEMO-PERSON",
+      "SubmittedDate": "2026-01-01",
+      "ProbeName": "ProbeTextNull",
+      "ProbeValue": null
+    },
+    {
+      "SurveyID": "DEMO-SURVEY",
+      "RespondentID": "DEMO-PERSON",
+      "SubmittedDate": "2026-01-01",
+      "ProbeName": "ProbeTextEmpty",
+      "ProbeValue": ""
+    },
+    {
+      "SurveyID": "DEMO-SURVEY",
+      "RespondentID": "DEMO-PERSON",
+      "SubmittedDate": "2026-01-01",
+      "ProbeName": "ProbeTextValue",
+      "ProbeValue": "demo"
+    }
+  ]
+}

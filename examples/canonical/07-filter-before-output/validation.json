@@ -1,0 +1,8 @@
+{
+  "example": "07-filter-before-output",
+  "result": "PASS",
+  "checks": 11,
+  "processingNodes": 3,
+  "expectedRows": 1,
+  "evidence": "Local structural checks and Python/SQLite simulation; NOT ClicData import or execution"
+}

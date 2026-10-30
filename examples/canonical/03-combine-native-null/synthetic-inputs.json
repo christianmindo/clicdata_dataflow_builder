@@ -1,0 +1,18 @@
+{
+  "900001": [
+    {
+      "Order_ID": "A1",
+      "SKU": "SHARED-01",
+      "SalesAmount": 25,
+      "Category": "Example category"
+    }
+  ],
+  "900002": [
+    {
+      "Order_ID": "B1",
+      "SKU": "SHARED-01",
+      "SalesAmount": 18,
+      "UPC": "001234567890"
+    }
+  ]
+}

@@ -1,0 +1,434 @@
+[
+  {
+    "Code": "background-panel",
+    "Id": "50783a6f-c2c2-5a3b-926c-2da90a497624",
+    "Properties": {
+      "__type": "DataFlowAnnotationBackgroundPanelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": -34,
+      "Top": -187,
+      "Background": {
+        "Color": "rgba(112, 173, 71, 0.1)"
+      },
+      "Border": {
+        "Color": "rgba(50, 50, 50, 1)",
+        "Enabled": true
+      },
+      "Font": {
+        "Background": {
+          "Color": "#E9E9E9"
+        },
+        "Color": "#3F3F3F"
+      },
+      "Height": 306,
+      "Shadow": {
+        "Color": "rgba(237, 66, 55, 0.39)",
+        "Enabled": false,
+        "Radius": 4
+      },
+      "Text": "",
+      "Width": 221
+    }
+  },
+  {
+    "Code": "background-panel",
+    "Id": "e3164c62-69e2-5b13-9ffe-fa127b8a9a1d",
+    "Properties": {
+      "__type": "DataFlowAnnotationBackgroundPanelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": 289,
+      "Top": -187,
+      "Background": {
+        "Color": "rgba(68, 114, 196, 0.1)"
+      },
+      "Border": {
+        "Color": "rgba(50, 50, 50, 1)",
+        "Enabled": true
+      },
+      "Font": {
+        "Background": {
+          "Color": "#E9E9E9"
+        },
+        "Color": "#3F3F3F"
+      },
+      "Height": 306,
+      "Shadow": {
+        "Color": "rgba(237, 66, 55, 0.39)",
+        "Enabled": false,
+        "Radius": 4
+      },
+      "Text": "",
+      "Width": 221
+    }
+  },
+  {
+    "Code": "background-panel",
+    "Id": "ca411b29-2233-5a4d-ad6a-cdbceadb4c4a",
+    "Properties": {
+      "__type": "DataFlowAnnotationBackgroundPanelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": 612,
+      "Top": -187,
+      "Background": {
+        "Color": "rgba(112, 173, 71, 0.1)"
+      },
+      "Border": {
+        "Color": "rgba(50, 50, 50, 1)",
+        "Enabled": true
+      },
+      "Font": {
+        "Background": {
+          "Color": "#E9E9E9"
+        },
+        "Color": "#3F3F3F"
+      },
+      "Height": 306,
+      "Shadow": {
+        "Color": "rgba(237, 66, 55, 0.39)",
+        "Enabled": false,
+        "Radius": 4
+      },
+      "Text": "",
+      "Width": 221
+    }
+  },
+  {
+    "Code": "table-input",
+    "Description": "",
+    "Error": null,
+    "Id": "38ab0db9-8e93-5ce2-9e32-f09c2980da64",
+    "Name": "Example Tickets",
+    "Sequence": 1,
+    "Warning": null,
+    "Properties": {
+      "__type": "DataFlowNodeTableInputProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 17,
+      "Top": 17,
+      "OutputColumns": [
+        {
+          "Name": "Ticket_ID",
+          "InternalType": "int64",
+          "traceId": "c47e5913-9530-5db3-a533-230d60fdcfc0"
+        },
+        {
+          "Name": "Status",
+          "InternalType": "textsimple(250)",
+          "traceId": "e9277980-6a53-5b95-884f-ffafb9217319"
+        }
+      ],
+      "Sources": [],
+      "DataCloneName": "Example Tickets",
+      "DataCloneRecId": 900001,
+      "SelectedColumns": [
+        {
+          "Name": "Ticket_ID",
+          "InternalType": "int64",
+          "RecId": 800001
+        },
+        {
+          "Name": "Status",
+          "InternalType": "textsimple(250)",
+          "RecId": 800002
+        }
+      ]
+    }
+  },
+  {
+    "Code": "filter-query",
+    "Description": "",
+    "Error": null,
+    "Id": "686a8898-ec80-5d30-87ea-605de0dbd6c0",
+    "Name": "Keep Open Tickets",
+    "Sequence": 2,
+    "Warning": null,
+    "Properties": {
+      "__type": "DataFlowNodeFilterQueryProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 340,
+      "Top": 17,
+      "OutputColumns": [
+        {
+          "Name": "Ticket_ID",
+          "InternalType": "int64",
+          "traceId": "9ce66774-5742-523f-869a-4e74511e3c03"
+        },
+        {
+          "Name": "Status",
+          "InternalType": "textsimple(250)",
+          "traceId": "c5639d50-5954-553f-9587-a1d37d957a79"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "38ab0db9-8e93-5ce2-9e32-f09c2980da64",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "Expression": "[Status] = 'OPEN'"
+    }
+  },
+  {
+    "Code": "table-output",
+    "Description": "",
+    "Error": null,
+    "Id": "c4baf6f5-d534-59f1-8dac-6089e4c10486",
+    "Name": "Example Output \u2014 Configure Your Destination",
+    "Sequence": 3,
+    "Warning": null,
+    "Properties": {
+      "__type": "DataFlowNodeTableOutputProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "CheckpointType": null,
+      "Enabled": false,
+      "Left": 663,
+      "Top": 17,
+      "OutputColumns": [
+        {
+          "Name": "Ticket_ID",
+          "InternalType": "int64",
+          "traceId": "fd677aae-c88d-540f-99a5-71b8245aeea5"
+        },
+        {
+          "Name": "Status",
+          "InternalType": "textsimple(250)",
+          "traceId": "d5d444c3-6691-5e22-939a-dd059e5a2e3d"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "686a8898-ec80-5d30-87ea-605de0dbd6c0",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "DataCloneName": "SYNTHETIC EXAMPLE DESTINATION",
+      "DataCloneRecId": 999999,
+      "ProcessMode": "rebuild",
+      "SelectedColumns": [
+        {
+          "SourceName": "Ticket_ID",
+          "OutputName": "Ticket_ID",
+          "InternalType": "int64"
+        },
+        {
+          "SourceName": "Status",
+          "OutputName": "Status",
+          "InternalType": "textsimple(250)"
+        }
+      ]
+    }
+  },
+  {
+    "Code": "label",
+    "Id": "45e234c4-10f1-5862-abc5-4d61f89bba5c",
+    "Properties": {
+      "__type": "DataFlowAnnotationLabelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": -34,
+      "Top": -187,
+      "Background": {
+        "Color": "rgba(112, 173, 71, 1)"
+      },
+      "Border": {
+        "Color": "#454545",
+        "Enabled": false
+      },
+      "Font": {
+        "Background": {
+          "Color": "rgba(112, 173, 71, 1)"
+        },
+        "Color": "rgba(50, 50, 50, 1)"
+      },
+      "Height": 51,
+      "Shadow": {
+        "Color": "#E9E9E9",
+        "Enabled": false,
+        "Radius": 0
+      },
+      "Text": "Input",
+      "Width": 221
+    }
+  },
+  {
+    "Code": "label",
+    "Id": "0cf46209-1a82-5d7d-b88d-727232356ee9",
+    "Properties": {
+      "__type": "DataFlowAnnotationLabelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": -17,
+      "Top": -102,
+      "Background": {
+        "Color": "rgba(50, 50, 50, 0)"
+      },
+      "Border": {
+        "Color": "#454545",
+        "Enabled": false
+      },
+      "Font": {
+        "Background": {
+          "Color": "rgba(50, 50, 50, 0)"
+        },
+        "Color": "rgba(50, 50, 50, 1)"
+      },
+      "Height": 85,
+      "Shadow": {
+        "Color": "#E9E9E9",
+        "Enabled": false,
+        "Radius": 0
+      },
+      "Text": "Read example tickets.",
+      "Width": 187
+    }
+  },
+  {
+    "Code": "label",
+    "Id": "b3b380c8-c281-53fd-9ae5-01540b463fb2",
+    "Properties": {
+      "__type": "DataFlowAnnotationLabelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": 289,
+      "Top": -187,
+      "Background": {
+        "Color": "rgba(68, 114, 196, 1)"
+      },
+      "Border": {
+        "Color": "#454545",
+        "Enabled": false
+      },
+      "Font": {
+        "Background": {
+          "Color": "rgba(68, 114, 196, 1)"
+        },
+        "Color": "rgba(255, 255, 255, 1)"
+      },
+      "Height": 51,
+      "Shadow": {
+        "Color": "#E9E9E9",
+        "Enabled": false,
+        "Radius": 0
+      },
+      "Text": "Filter",
+      "Width": 221
+    }
+  },
+  {
+    "Code": "label",
+    "Id": "3c3bab39-c78b-524e-8e08-e9788421309c",
+    "Properties": {
+      "__type": "DataFlowAnnotationLabelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": 306,
+      "Top": -102,
+      "Background": {
+        "Color": "rgba(50, 50, 50, 0)"
+      },
+      "Border": {
+        "Color": "#454545",
+        "Enabled": false
+      },
+      "Font": {
+        "Background": {
+          "Color": "rgba(50, 50, 50, 0)"
+        },
+        "Color": "rgba(50, 50, 50, 1)"
+      },
+      "Height": 85,
+      "Shadow": {
+        "Color": "#E9E9E9",
+        "Enabled": false,
+        "Radius": 0
+      },
+      "Text": "Keep only the requested reporting subset.",
+      "Width": 187
+    }
+  },
+  {
+    "Code": "label",
+    "Id": "de3ce892-43d6-56cb-9ba8-2bc96f189563",
+    "Properties": {
+      "__type": "DataFlowAnnotationLabelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": 612,
+      "Top": -187,
+      "Background": {
+        "Color": "rgba(112, 173, 71, 1)"
+      },
+      "Border": {
+        "Color": "#454545",
+        "Enabled": false
+      },
+      "Font": {
+        "Background": {
+          "Color": "rgba(112, 173, 71, 1)"
+        },
+        "Color": "rgba(50, 50, 50, 1)"
+      },
+      "Height": 51,
+      "Shadow": {
+        "Color": "#E9E9E9",
+        "Enabled": false,
+        "Radius": 0
+      },
+      "Text": "Output",
+      "Width": 221
+    }
+  },
+  {
+    "Code": "label",
+    "Id": "2a831615-7ca0-5703-abac-ecb3ed0054c8",
+    "Properties": {
+      "__type": "DataFlowAnnotationLabelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": 629,
+      "Top": -102,
+      "Background": {
+        "Color": "rgba(50, 50, 50, 0)"
+      },
+      "Border": {
+        "Color": "#454545",
+        "Enabled": false
+      },
+      "Font": {
+        "Background": {
+          "Color": "rgba(50, 50, 50, 0)"
+        },
+        "Color": "rgba(50, 50, 50, 1)"
+      },
+      "Height": 85,
+      "Shadow": {
+        "Color": "#E9E9E9",
+        "Enabled": false,
+        "Radius": 0
+      },
+      "Text": "Configure destination and write mode.",
+      "Width": 187
+    }
+  }
+]

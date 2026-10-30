@@ -1,0 +1,62 @@
+{
+  "kind": "NODE_SETTINGS_EXAMPLE_NOT_A_COMPLETE_FLOW",
+  "code": "sentiment-analysis",
+  "propertyClass": "DataFlowNodeSentimentAnalysisProperties:#Infinis.DataFlows",
+  "observedUpstreamCount": 1,
+  "exampleSettings": {
+    "OnFailure": "fail",
+    "ProcessOutputColumns": [
+      {
+        "Name": "Sentiment",
+        "Type": "sentiment"
+      },
+      {
+        "Name": "Positive Confidence Score",
+        "Type": "positive_confidence_score"
+      },
+      {
+        "Name": "Neutral Confidence Score",
+        "Type": "neutral_confidence_score"
+      },
+      {
+        "Name": "Negative Confidence Score",
+        "Type": "negative_confidence_score"
+      }
+    ],
+    "SourceColumn": "Review Text",
+    "SourceLanguageType": "auto"
+  },
+  "exampleOutputSchema": [
+    {
+      "InternalType": "int64",
+      "Name": "Review ID",
+      "traceId": "d8b09133-5be2-5c10-b4b6-ec66a4ceb0d4"
+    },
+    {
+      "InternalType": "text(250)",
+      "Name": "Review Text",
+      "traceId": "42d2cda6-cb6a-594b-852f-5206487dcc5e"
+    },
+    {
+      "InternalType": "textsimple(20)",
+      "Name": "Sentiment",
+      "traceId": "98c4db8a-a71a-5159-8c4d-3ac1f6ae00fd"
+    },
+    {
+      "InternalType": "double",
+      "Name": "Positive Confidence Score",
+      "traceId": "8c6bbc7b-4e31-56d8-bd96-0c13b5982d54"
+    },
+    {
+      "InternalType": "double",
+      "Name": "Neutral Confidence Score",
+      "traceId": "b7676876-0fe4-59c3-b678-6ab8a4420ee5"
+    },
+    {
+      "InternalType": "double",
+      "Name": "Negative Confidence Score",
+      "traceId": "04bb2575-257e-56cd-9f42-1e2d2b4850e5"
+    }
+  ],
+  "evidence": "Observed structure, synthetic resource/graph identifiers, no execution guarantee"
+}

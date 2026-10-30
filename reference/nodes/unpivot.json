@@ -1,0 +1,53 @@
+{
+  "kind": "NODE_SETTINGS_EXAMPLE_NOT_A_COMPLETE_FLOW",
+  "code": "unpivot",
+  "propertyClass": "DataFlowNodeUnpivotProperties:#Infinis.DataFlows",
+  "observedUpstreamCount": 1,
+  "exampleSettings": {
+    "ColumnsToUnpivot": [
+      "Ticket ID (Count) Emma Johnson",
+      "Ticket ID (Count) John Smith",
+      "Ticket ID (Count) Michael Davis"
+    ],
+    "PivotColumnName": "Assigned to",
+    "TextToRemove": null,
+    "ValueColumnInternalType": "int64",
+    "ValueColumnName": "Count"
+  },
+  "exampleOutputSchema": [
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Status",
+      "traceId": "d63cc374-a7a3-5b2d-9739-8cb95b6cc3c7"
+    },
+    {
+      "InternalType": "text(128)",
+      "Name": "Assigned to",
+      "traceId": "9c86a9e7-b669-52ac-81b6-431401dc165f"
+    },
+    {
+      "InternalType": "int64",
+      "Name": "Count",
+      "traceId": "cb882f73-4c0a-5281-a725-67c16e14e697"
+    }
+  ],
+  "evidence": "Observed structure, synthetic resource/graph identifiers, no execution guarantee",
+  "behaviorEvidence": [
+    {
+      "date": "2026-10-28",
+      "scope": "Observed user-returned controlled numeric probe output CSV; completeness unverified",
+      "probeCounts": {
+        "ProbeNumericNull": 0,
+        "ProbeNumericZero": 50,
+        "ProbeNumericValue": 50
+      },
+      "interpretation": "Supports numeric NULL omission in the tested configuration/export; not universal engine verification",
+      "pending": [
+        "Calculated-node preview verification",
+        "Export completeness",
+        "Text NULL and empty-string handling"
+      ],
+      "reusableExample": "../../examples/survey-unpivot-probe/README.md"
+    }
+  ]
+}

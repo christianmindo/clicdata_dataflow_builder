@@ -1,0 +1,107 @@
+[
+  {
+    "title": "Source A Input",
+    "description": "Read synthetic parent orders and line arrays.",
+    "kind": "input",
+    "x": 0,
+    "y": 0,
+    "ids": [
+      "1310828d-cbb3-57e5-b596-cc4f2d2178ed"
+    ]
+  },
+  {
+    "title": "Source A Mapping",
+    "description": "Select and normalize the parent order fields.",
+    "kind": "prepare",
+    "x": 323,
+    "y": 0,
+    "ids": [
+      "bc0d629d-f92e-5f12-b125-88eb96a70b72"
+    ]
+  },
+  {
+    "title": "Source A Lines",
+    "description": "Expand the array and retain the parent ID.",
+    "kind": "expand",
+    "x": 867,
+    "y": 0,
+    "ids": [
+      "c3cde521-98a6-5a8e-aa4c-bfc5f696a317"
+    ]
+  },
+  {
+    "title": "Source A Values",
+    "description": "Apply this example rule and project common fields.",
+    "kind": "calculate",
+    "x": 1190,
+    "y": 0,
+    "ids": [
+      "412f34d2-0a99-5c8f-8ca9-c7bd51538748",
+      "7abafe6d-6ea0-55a1-bcde-fa0a983bdde9"
+    ]
+  },
+  {
+    "title": "Source B Input",
+    "description": "Read synthetic parent orders and line arrays.",
+    "kind": "input",
+    "x": 0,
+    "y": 650,
+    "ids": [
+      "d442a7e3-793f-512c-a5a4-b43659831357"
+    ]
+  },
+  {
+    "title": "Source B Mapping",
+    "description": "Select and normalize the parent order fields.",
+    "kind": "prepare",
+    "x": 323,
+    "y": 650,
+    "ids": [
+      "0d6fcaea-e9e6-527e-99f4-0b4cbde58560",
+      "f4ae5997-867a-5fb4-bbf5-41ebd84ae242"
+    ]
+  },
+  {
+    "title": "Source B Lines",
+    "description": "Expand the array and retain the parent ID.",
+    "kind": "expand",
+    "x": 867,
+    "y": 650,
+    "ids": [
+      "021014ee-c5bc-578c-ad58-745f09f2799a"
+    ]
+  },
+  {
+    "title": "Source B Values",
+    "description": "Apply this example rule and project common fields.",
+    "kind": "calculate",
+    "x": 1190,
+    "y": 650,
+    "ids": [
+      "eedcf1a1-9f02-5400-8d34-0641e4456648",
+      "8e72a888-8459-57ed-b778-46ea98059ba3",
+      "d007cff1-823e-50a6-ad73-87e1ddaf23f2"
+    ]
+  },
+  {
+    "title": "Unified Dashboard",
+    "description": "Match identical schemas and set the date.",
+    "kind": "combine",
+    "x": 2057,
+    "y": 325,
+    "ids": [
+      "ddb07033-2889-57ba-bde9-1949b07fa5d5",
+      "4dd78750-fc58-5574-9541-172365754b42"
+    ]
+  },
+  {
+    "title": "Output",
+    "description": "Configure destination and write mode.",
+    "kind": "output",
+    "x": 2600,
+    "y": 325,
+    "ids": [
+      "64d45014-6140-5155-ad55-1091dcc85f76"
+    ]
+  }
+]

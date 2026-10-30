@@ -1,0 +1,257 @@
+[
+  {
+    "Code": "table-input",
+    "Description": "",
+    "Error": null,
+    "Id": "abca0147-9a9a-5ea7-b036-360e8e6f910d",
+    "Name": "Support Tickets JSON",
+    "Properties": {
+      "__type": "DataFlowNodeTableInputProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 100,
+      "OutputColumns": [
+        {
+          "InternalType": "json",
+          "Name": "tickets",
+          "traceId": "abc57026-db1c-5eb0-9456-273d406aab82"
+        }
+      ],
+      "Sources": [],
+      "Top": 100,
+      "DataCloneName": "Support Tickets JSON",
+      "DataCloneRecId": 900035,
+      "SelectedColumns": [
+        {
+          "InternalType": "json",
+          "Name": "tickets",
+          "RecId": 900036
+        }
+      ]
+    },
+    "Sequence": 1,
+    "Warning": null
+  },
+  {
+    "Code": "json-to-rows",
+    "Description": "",
+    "Error": null,
+    "Id": "c5f62e1c-d039-577f-bae2-2e5db1b5100e",
+    "Name": "Expand Tickets JSON",
+    "Properties": {
+      "__type": "DataFlowNodeJSONToRowsProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 400,
+      "OutputColumns": [
+        {
+          "InternalType": "json",
+          "Name": "tickets",
+          "traceId": "abc57026-db1c-5eb0-9456-273d406aab82"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "ticket_id",
+          "traceId": "9ec8ee64-c0ce-5cf9-9fc6-514ac83d1234"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "subject",
+          "traceId": "81c83a9d-b0ff-52f0-b4b7-b752b467d630"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "description",
+          "traceId": "4c7c4ac4-18ca-5dcb-8525-45798f870f2c"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "status",
+          "traceId": "3171bb72-dbfd-5d28-96cf-aa388af584bf"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "priority",
+          "traceId": "1bd52fe8-3b68-57c9-b5c5-1df5a5ddf284"
+        },
+        {
+          "InternalType": "datetime",
+          "Name": "created_at",
+          "traceId": "1f01ba2d-13b4-5d80-9205-6c4f976a0278"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "customer_name",
+          "traceId": "edb28196-8df4-5bba-b1cf-df9df99f344d"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "customer_email",
+          "traceId": "c1708f08-9a09-5ec0-ba7e-dbfd8e14f8a5"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "assigned_to",
+          "traceId": "1e9a3639-4bbe-5680-b7b9-a841e1cea163"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "abca0147-9a9a-5ea7-b036-360e8e6f910d",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": 100,
+      "Columns": [
+        {
+          "InternalType": "textsimple(250)",
+          "IsArray": false,
+          "IsObject": false,
+          "Name": "ticket_id",
+          "Node": "$[].ticket_id"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "IsArray": false,
+          "IsObject": false,
+          "Name": "subject",
+          "Node": "$[].subject"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "IsArray": false,
+          "IsObject": false,
+          "Name": "description",
+          "Node": "$[].description"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "IsArray": false,
+          "IsObject": false,
+          "Name": "status",
+          "Node": "$[].status"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "IsArray": false,
+          "IsObject": false,
+          "Name": "priority",
+          "Node": "$[].priority"
+        },
+        {
+          "InternalType": "datetime",
+          "IsArray": false,
+          "IsObject": false,
+          "Name": "created_at",
+          "Node": "$[].created_at"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "IsArray": false,
+          "IsObject": false,
+          "Name": "customer_name",
+          "Node": "$[].customer_name"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "IsArray": false,
+          "IsObject": false,
+          "Name": "customer_email",
+          "Node": "$[].customer_email"
+        },
+        {
+          "InternalType": "int64",
+          "IsArray": false,
+          "IsObject": false,
+          "Name": "assigned_to",
+          "Node": "$[].assigned_to"
+        }
+      ],
+      "SourceColumn": "tickets"
+    },
+    "Sequence": 2,
+    "Warning": null
+  },
+  {
+    "Code": "column-selector",
+    "Description": "",
+    "Error": null,
+    "Id": "526906f7-063b-502b-9ff5-91771cb1dada",
+    "Name": "Ticket Fields",
+    "Properties": {
+      "__type": "DataFlowNodeColumnSelectorProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 700,
+      "OutputColumns": [
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "ticket_id",
+          "traceId": "9ec8ee64-c0ce-5cf9-9fc6-514ac83d1234"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "subject",
+          "traceId": "81c83a9d-b0ff-52f0-b4b7-b752b467d630"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "description",
+          "traceId": "4c7c4ac4-18ca-5dcb-8525-45798f870f2c"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "status",
+          "traceId": "3171bb72-dbfd-5d28-96cf-aa388af584bf"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "priority",
+          "traceId": "1bd52fe8-3b68-57c9-b5c5-1df5a5ddf284"
+        },
+        {
+          "InternalType": "datetime",
+          "Name": "created_at",
+          "traceId": "1f01ba2d-13b4-5d80-9205-6c4f976a0278"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "customer_name",
+          "traceId": "edb28196-8df4-5bba-b1cf-df9df99f344d"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "customer_email",
+          "traceId": "c1708f08-9a09-5ec0-ba7e-dbfd8e14f8a5"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "assigned_to",
+          "traceId": "1e9a3639-4bbe-5680-b7b9-a841e1cea163"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "c5f62e1c-d039-577f-bae2-2e5db1b5100e",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": 100,
+      "RenamedColumns": [],
+      "SortedColumnNames": [],
+      "UnselectedColumnNames": [
+        "tickets"
+      ]
+    },
+    "Sequence": 3,
+    "Warning": null
+  }
+]

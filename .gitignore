@@ -1,0 +1,7 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+# Task-specific working files are not shared reference materials.
+/outputs/
+/flows/
+/reports/

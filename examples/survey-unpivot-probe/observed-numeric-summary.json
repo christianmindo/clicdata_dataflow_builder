@@ -1,0 +1,21 @@
+{
+  "evidence": "Observed user-returned numeric output CSV; aggregate counts only",
+  "date": "2026-10-28",
+  "rows": 100,
+  "identifierGroups": 50,
+  "probeCounts": {
+    "ProbeNumericNull": 0,
+    "ProbeNumericZero": 50,
+    "ProbeNumericValue": 50
+  },
+  "values": {
+    "ProbeNumericZero": 0,
+    "ProbeNumericValue": 5
+  },
+  "limitations": [
+    "Export completeness unverified",
+    "Calculated-node preview not independently verified",
+    "Text output not supplied",
+    "Synthetic adaptation not engine-tested"
+  ]
+}

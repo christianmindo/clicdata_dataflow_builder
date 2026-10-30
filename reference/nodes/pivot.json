@@ -1,0 +1,48 @@
+{
+  "kind": "NODE_SETTINGS_EXAMPLE_NOT_A_COMPLETE_FLOW",
+  "code": "pivot",
+  "propertyClass": "DataFlowNodePivotProperties:#Infinis.DataFlows",
+  "observedUpstreamCount": 1,
+  "exampleSettings": {
+    "Aggregates": [
+      {
+        "Aggregation": "count",
+        "Alias": "Ticket ID (Count)",
+        "InternalType": "int64",
+        "Name": "Ticket ID"
+      }
+    ],
+    "GroupByColumns": [
+      "Status"
+    ],
+    "PivotedColumn": "Agent Name",
+    "PivotedValues": [
+      "Emma Johnson",
+      "John Smith",
+      "Michael Davis"
+    ]
+  },
+  "exampleOutputSchema": [
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Status",
+      "traceId": "ae3fcd2c-7604-59a5-84b8-69e00d25a894"
+    },
+    {
+      "InternalType": "int64",
+      "Name": "Ticket ID (Count) Emma Johnson",
+      "traceId": "e583c3bd-87cd-51ed-942e-74919dd2b573"
+    },
+    {
+      "InternalType": "int64",
+      "Name": "Ticket ID (Count) John Smith",
+      "traceId": "7a42c398-14c0-56d2-80d4-1e50a16a6b4a"
+    },
+    {
+      "InternalType": "int64",
+      "Name": "Ticket ID (Count) Michael Davis",
+      "traceId": "97a6a6b0-6cb7-5d51-8e1f-7d1caa2bd58a"
+    }
+  ],
+  "evidence": "Observed structure, synthetic resource/graph identifiers, no execution guarantee"
+}

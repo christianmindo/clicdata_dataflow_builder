@@ -1,0 +1,4 @@
+column_name,source_column_name,type,visible,key
+Order_ID,order_id,int64,1,1
+OrderDate,created_at,datetime,1,0
+Status,status,textsimple(250),1,0

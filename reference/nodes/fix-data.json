@@ -1,0 +1,101 @@
+{
+  "kind": "NODE_SETTINGS_EXAMPLE_NOT_A_COMPLETE_FLOW",
+  "code": "fix-data",
+  "propertyClass": "DataFlowNodeFixDataProperties:#Infinis.DataFlows",
+  "observedUpstreamCount": 1,
+  "exampleSettings": {
+    "ColumnNames": [
+      "Status"
+    ],
+    "Fix": {
+      "__type": "DataFlowFixDataActionText:#Infinis.DataFlows",
+      "ChangeCase": "uppercase",
+      "RemoveAllCharacters": false,
+      "RemoveAllDigits": false,
+      "RemoveAllHTML": false,
+      "RemoveAllNonAlphaNumerics": false,
+      "RemoveAllNonDigits": false,
+      "RemoveAllNonLetters": false,
+      "RemoveAllNonVisible": false,
+      "RemoveAllSpaces": true,
+      "RemoveCharacters": null,
+      "TrimLeft": true,
+      "TrimRight": true
+    }
+  },
+  "exampleOutputSchema": [
+    {
+      "InternalType": "int64",
+      "Name": "Ticket ID",
+      "traceId": "d43cb320-6985-5f4b-9261-62f1ef280a3a"
+    },
+    {
+      "InternalType": "date",
+      "Name": "Date Opened",
+      "traceId": "a1e58aee-aff1-5272-a9e3-0f563e04cb7e"
+    },
+    {
+      "InternalType": "date",
+      "Name": "Date Closed",
+      "traceId": "bebaf231-ca80-5503-a20b-eb4ead3117ea"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Customer Name",
+      "traceId": "b4ac6ed1-d386-5caa-9c63-39ce28f4611e"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Issue Category",
+      "traceId": "cda18a1f-f90c-5668-a80e-7fac8c13f8b7"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Priority",
+      "traceId": "bfd8cc3a-4d26-5907-acda-f779168708d5"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Status",
+      "traceId": "4fe97f10-66f1-5ee7-a3d3-6d1c956e5e71"
+    },
+    {
+      "InternalType": "int64",
+      "Name": "Assigned To",
+      "traceId": "f82956d9-f0c3-59ce-8c2c-3082e52b0a8b"
+    },
+    {
+      "InternalType": "int64",
+      "Name": "Agent ID",
+      "traceId": "461bb575-55bb-5702-8775-2dbbbbccb887"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Agent Name",
+      "traceId": "6fbf7114-2ec3-57bb-bf72-86c14721c0d6"
+    }
+  ],
+  "evidence": "Observed structure, synthetic resource/graph identifiers, no execution guarantee",
+  "additionalObservedVariants": [
+    {
+      "name": "numeric-invalid-empty-to-zero",
+      "settings": {
+        "ColumnNames": [
+          "Amount"
+        ],
+        "Fix": {
+          "__type": "DataFlowFixDataActionNumeric:#Infinis.DataFlows",
+          "BiggerSetTo": "null",
+          "BiggerSetToValue": null,
+          "LowerSetTo": "null",
+          "LowerSetToValue": null,
+          "SetInvalidEmptyValuesTo": 0,
+          "ValuesBiggerThan": null,
+          "ValuesLowerThan": null
+        }
+      },
+      "note": "Numeric Fix action class observed; Amount is a generic field alias. Setting invalid/empty numeric values to zero is a source business rule, never a universal default. Threshold controls were null; non-null threshold behavior remains unverified.",
+      "evidence": "Observed marketing export structure, generalized field names/literals; execution unverified."
+    }
+  ]
+}

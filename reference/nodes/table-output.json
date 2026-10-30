@@ -1,0 +1,107 @@
+{
+  "kind": "NODE_SETTINGS_EXAMPLE_NOT_A_COMPLETE_FLOW",
+  "code": "table-output",
+  "propertyClass": "DataFlowNodeTableOutputProperties:#Infinis.DataFlows",
+  "observedUpstreamCount": 1,
+  "exampleSettings": {
+    "DataCloneName": "Support Tickets ALL Update/Append",
+    "DataCloneRecId": 900029,
+    "ProcessMode": "updateappend",
+    "SelectedColumns": [
+      {
+        "InternalType": "int64",
+        "IsKey": true,
+        "OutputName": "Ticket ID",
+        "SourceName": "Ticket ID"
+      },
+      {
+        "InternalType": "date",
+        "OutputName": "Date Opened",
+        "SourceName": "Date Opened"
+      },
+      {
+        "InternalType": "date",
+        "OutputName": "Date Closed",
+        "SourceName": "Date Closed"
+      },
+      {
+        "InternalType": "textsimple(250)",
+        "OutputName": "Customer Name",
+        "SourceName": "Customer Name"
+      },
+      {
+        "InternalType": "textsimple(250)",
+        "OutputName": "Issue Category",
+        "SourceName": "Issue Category"
+      },
+      {
+        "InternalType": "textsimple(250)",
+        "OutputName": "Priority",
+        "SourceName": "Priority"
+      },
+      {
+        "InternalType": "textsimple(250)",
+        "OutputName": "Status",
+        "SourceName": "Status"
+      },
+      {
+        "InternalType": "int64",
+        "OutputName": "Assigned To",
+        "SourceName": "Assigned To"
+      },
+      {
+        "InternalType": "int32",
+        "OutputName": "Resolution Time",
+        "SourceName": "Resolution Time"
+      }
+    ]
+  },
+  "exampleOutputSchema": [
+    {
+      "InternalType": "int64",
+      "Name": "Ticket ID",
+      "traceId": "96d512ca-a96e-5f9b-a5de-6a2f3c78145e"
+    },
+    {
+      "InternalType": "date",
+      "Name": "Date Opened",
+      "traceId": "0646812b-309f-5dfd-bbb9-832b38b55f53"
+    },
+    {
+      "InternalType": "date",
+      "Name": "Date Closed",
+      "traceId": "630a0fd9-3962-5c5c-8419-e5c4c9ba5f36"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Customer Name",
+      "traceId": "6486595c-cccb-5020-ac73-72a470db1e3c"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Issue Category",
+      "traceId": "009438ef-abd2-5e85-8cc7-e76e5dab0ac6"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Priority",
+      "traceId": "87aa42dc-1c5c-5c6a-b6bb-731a061246fa"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Status",
+      "traceId": "11fce843-7cd7-50a9-ac0d-aeb0ef74d9c8"
+    },
+    {
+      "InternalType": "int64",
+      "Name": "Assigned To",
+      "traceId": "2207ecc0-bf2a-52fa-9c84-cc1c1a0fb7af"
+    },
+    {
+      "InternalType": "int32",
+      "Name": "Resolution Time",
+      "traceId": "7501c477-e1f8-555a-8f54-304cf0dffe88"
+    }
+  ],
+  "evidence": "Observed structure, synthetic resource/graph identifiers, no execution guarantee"
+}

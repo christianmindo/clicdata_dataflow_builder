@@ -1,0 +1,5984 @@
+[
+  {
+    "Code": "table-fusion",
+    "Description": "",
+    "Error": null,
+    "Id": "3154a40c-9d97-5379-9d8a-8c6fb6eb025f",
+    "Name": "Table Fusion #1",
+    "Properties": {
+      "__type": "DataFlowNodeTableFusionProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 1394,
+      "OutputColumns": [
+        {
+          "InternalType": "int64",
+          "Name": "Ticket ID",
+          "traceId": "cf58f8e6-439b-59d4-a893-ef44e74fd08f"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Opened",
+          "traceId": "e3c110e6-acf6-5633-9bd7-7dcd57633bad"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Closed",
+          "traceId": "7c14f6ca-2c70-550a-9c77-8a03ee0405f8"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Customer Name",
+          "traceId": "a3f7b4d2-2bba-5245-8959-e688ec8c6dbe"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Issue Category",
+          "traceId": "a0ca2a06-0867-5c47-b6b6-e3dde93df171"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Priority",
+          "traceId": "e5de5eb5-8cc1-57b3-8b40-c99d827425ba"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Assigned To",
+          "traceId": "7cfd2066-6493-577f-a913-f3389b376e8b"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Status",
+          "traceId": "98fdb729-9d50-58bb-9a17-3a3d3b640bf5"
+        }
+      ],
+      "Sources": [],
+      "Top": -510,
+      "AdditionalColumns": [],
+      "Columns": [
+        {
+          "Actions": [],
+          "InternalType": "int64",
+          "Name": "Ticket ID"
+        },
+        {
+          "Actions": [],
+          "InternalType": "date",
+          "Name": "Date Opened"
+        },
+        {
+          "Actions": [],
+          "InternalType": "date",
+          "Name": "Date Closed"
+        },
+        {
+          "Actions": [],
+          "InternalType": "textsimple(250)",
+          "Name": "Customer Name"
+        },
+        {
+          "Actions": [],
+          "InternalType": "textsimple(250)",
+          "Name": "Issue Category"
+        },
+        {
+          "Actions": [],
+          "InternalType": "textsimple(250)",
+          "Name": "Priority"
+        },
+        {
+          "Actions": [],
+          "InternalType": "int64",
+          "Name": "Assigned To"
+        },
+        {
+          "Actions": [
+            {
+              "Action": "matchto",
+              "DataCloneRecId": 900001,
+              "MatchedColumnName": "Ticket Status"
+            }
+          ],
+          "InternalType": "textsimple(250)",
+          "Name": "Status"
+        }
+      ],
+      "DataClones": [
+        {
+          "ConnectorCode": "localfile",
+          "Name": "Support Tickets 1",
+          "RecId": 900002
+        },
+        {
+          "ConnectorCode": "localfile",
+          "Name": "Support Tickets 2",
+          "RecId": 900001
+        }
+      ],
+      "MatchedColumnsOnly": true
+    },
+    "Sequence": 1,
+    "Warning": null
+  },
+  {
+    "Code": "table-input",
+    "Description": "",
+    "Error": null,
+    "Id": "3c3b02b4-defa-5185-8533-dc63001709f4",
+    "Name": "Support Tickets 1 #1",
+    "Properties": {
+      "__type": "DataFlowNodeTableInputProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 1394,
+      "OutputColumns": [
+        {
+          "InternalType": "int64",
+          "Name": "Ticket ID",
+          "traceId": "d18b8310-e647-5d20-975a-392b96adcf5e"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Opened",
+          "traceId": "7cac7ac4-7793-573d-9e86-1f669a67caa0"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Closed",
+          "traceId": "cc8b1453-4692-58ad-88a4-4b6b98514d10"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Customer Name",
+          "traceId": "96d7f614-faab-5334-a4e7-93dab0549da8"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Issue Category",
+          "traceId": "762449a7-ffbc-539f-8f6b-bf119bf1752c"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Priority",
+          "traceId": "275bca07-bdea-52b0-b1ce-9fc50fd9fe21"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Status",
+          "traceId": "b05b8be6-5757-5d92-94b0-04cc5cac8e00"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Assigned To",
+          "traceId": "43f63b88-6440-5a9a-a280-d2cac3080da6"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Location",
+          "traceId": "a90e85c9-dcab-50de-b499-52e6eaa23507"
+        }
+      ],
+      "Sources": [],
+      "Top": -170,
+      "DataCloneName": "Support Tickets 1",
+      "DataCloneRecId": 900002,
+      "SelectedColumns": [
+        {
+          "InternalType": "int64",
+          "Name": "Ticket ID",
+          "RecId": 900003
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Opened",
+          "RecId": 900004
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Closed",
+          "RecId": 900005
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Customer Name",
+          "RecId": 900006
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Issue Category",
+          "RecId": 900007
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Priority",
+          "RecId": 900008
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Status",
+          "RecId": 900009
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Assigned To",
+          "RecId": 900010
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Location",
+          "RecId": 900011
+        }
+      ]
+    },
+    "Sequence": 2,
+    "Warning": null
+  },
+  {
+    "Code": "table-input",
+    "Description": "",
+    "Error": null,
+    "Id": "b2ba1ce6-b298-538a-8848-ff9b4997a066",
+    "Name": "Support Tickets 2 #1",
+    "Properties": {
+      "__type": "DataFlowNodeTableInputProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 1394,
+      "OutputColumns": [
+        {
+          "InternalType": "int64",
+          "Name": "Ticket ID",
+          "traceId": "aa073f56-121f-5ca3-930f-5e3333dce90a"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Opened",
+          "traceId": "f3bb67d1-c61a-5757-bf6d-045e2cc34caa"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Customer Name",
+          "traceId": "545fd7bf-1e66-5b3f-a37f-f25b0f317f32"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Issue Category",
+          "traceId": "91a2c1ae-f962-502a-acc2-e6ad2a8aff85"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Priority",
+          "traceId": "9c7cbba0-91e2-5c29-97b8-585bee282ac1"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Ticket Status",
+          "traceId": "259868f9-503f-59bb-a334-626c7fd0c997"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Assigned To",
+          "traceId": "d48878e1-00ab-5a30-9fb4-1d064a71dcf9"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Closed",
+          "traceId": "518df273-7f58-5daa-8145-8a6de17aa6e2"
+        }
+      ],
+      "Sources": [],
+      "Top": -85,
+      "DataCloneName": "Support Tickets 2",
+      "DataCloneRecId": 900001,
+      "SelectedColumns": [
+        {
+          "InternalType": "int64",
+          "Name": "Ticket ID",
+          "RecId": 900012
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Opened",
+          "RecId": 900013
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Customer Name",
+          "RecId": 900014
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Issue Category",
+          "RecId": 900015
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Priority",
+          "RecId": 900016
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Ticket Status",
+          "RecId": 900017
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Assigned To",
+          "RecId": 900018
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Closed",
+          "RecId": 900019
+        }
+      ]
+    },
+    "Sequence": 3,
+    "Warning": null
+  },
+  {
+    "Code": "column-selector",
+    "Description": "",
+    "Error": null,
+    "Id": "a4a3d68f-4984-5587-9d3f-f9d4be71ac2f",
+    "Name": "Column Selector #2 #1",
+    "Properties": {
+      "__type": "DataFlowNodeColumnSelectorProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 1530,
+      "OutputColumns": [
+        {
+          "traceId": "d18b8310-e647-5d20-975a-392b96adcf5e",
+          "InternalType": "int64",
+          "Name": "Ticket ID"
+        },
+        {
+          "traceId": "7cac7ac4-7793-573d-9e86-1f669a67caa0",
+          "InternalType": "date",
+          "Name": "Date Opened"
+        },
+        {
+          "traceId": "cc8b1453-4692-58ad-88a4-4b6b98514d10",
+          "InternalType": "date",
+          "Name": "Date Closed"
+        },
+        {
+          "traceId": "96d7f614-faab-5334-a4e7-93dab0549da8",
+          "InternalType": "textsimple(250)",
+          "Name": "Customer Name"
+        },
+        {
+          "traceId": "762449a7-ffbc-539f-8f6b-bf119bf1752c",
+          "InternalType": "textsimple(250)",
+          "Name": "Issue Category"
+        },
+        {
+          "traceId": "275bca07-bdea-52b0-b1ce-9fc50fd9fe21",
+          "InternalType": "textsimple(250)",
+          "Name": "Priority"
+        },
+        {
+          "traceId": "b05b8be6-5757-5d92-94b0-04cc5cac8e00",
+          "InternalType": "textsimple(250)",
+          "Name": "Status"
+        },
+        {
+          "traceId": "43f63b88-6440-5a9a-a280-d2cac3080da6",
+          "InternalType": "int64",
+          "Name": "Assigned To"
+        },
+        {
+          "traceId": "a90e85c9-dcab-50de-b499-52e6eaa23507",
+          "InternalType": "textsimple(250)",
+          "Name": "Location"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "3c3b02b4-defa-5185-8533-dc63001709f4",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": -170,
+      "RenamedColumns": [],
+      "SortedColumnNames": [],
+      "UnselectedColumnNames": []
+    },
+    "Sequence": 4,
+    "Warning": null
+  },
+  {
+    "Code": "column-selector",
+    "Description": "",
+    "Error": null,
+    "Id": "3f6764f3-6ef1-5be4-8a79-cf9172628c52",
+    "Name": "Column Selector #2",
+    "Properties": {
+      "__type": "DataFlowNodeColumnSelectorProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 1530,
+      "OutputColumns": [
+        {
+          "traceId": "aa073f56-121f-5ca3-930f-5e3333dce90a",
+          "InternalType": "int64",
+          "Name": "Ticket ID"
+        },
+        {
+          "traceId": "f3bb67d1-c61a-5757-bf6d-045e2cc34caa",
+          "InternalType": "date",
+          "Name": "Date Opened"
+        },
+        {
+          "traceId": "545fd7bf-1e66-5b3f-a37f-f25b0f317f32",
+          "InternalType": "textsimple(250)",
+          "Name": "Customer Name"
+        },
+        {
+          "traceId": "91a2c1ae-f962-502a-acc2-e6ad2a8aff85",
+          "InternalType": "textsimple(250)",
+          "Name": "Issue Category"
+        },
+        {
+          "traceId": "9c7cbba0-91e2-5c29-97b8-585bee282ac1",
+          "InternalType": "textsimple(250)",
+          "Name": "Priority"
+        },
+        {
+          "traceId": "259868f9-503f-59bb-a334-626c7fd0c997",
+          "InternalType": "textsimple(250)",
+          "Name": "Ticket Status"
+        },
+        {
+          "traceId": "d48878e1-00ab-5a30-9fb4-1d064a71dcf9",
+          "InternalType": "int64",
+          "Name": "Assigned To"
+        },
+        {
+          "traceId": "518df273-7f58-5daa-8145-8a6de17aa6e2",
+          "InternalType": "date",
+          "Name": "Date Closed"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "b2ba1ce6-b298-538a-8848-ff9b4997a066",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": -85,
+      "RenamedColumns": [],
+      "SortedColumnNames": [],
+      "UnselectedColumnNames": []
+    },
+    "Sequence": 5,
+    "Warning": null
+  },
+  {
+    "Code": "calculated-columns",
+    "Description": "",
+    "Error": null,
+    "Id": "92639596-cee9-57a0-b807-a3442c16fec8",
+    "Name": "Calculate Columns #2",
+    "Properties": {
+      "__type": "DataFlowNodeCalculatedColumnsProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 1547,
+      "OutputColumns": [
+        {
+          "InternalType": "int64",
+          "Name": "Ticket ID",
+          "traceId": "cf58f8e6-439b-59d4-a893-ef44e74fd08f"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Opened",
+          "traceId": "e3c110e6-acf6-5633-9bd7-7dcd57633bad"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Closed",
+          "traceId": "7c14f6ca-2c70-550a-9c77-8a03ee0405f8"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Customer Name",
+          "traceId": "a3f7b4d2-2bba-5245-8959-e688ec8c6dbe"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Issue Category",
+          "traceId": "a0ca2a06-0867-5c47-b6b6-e3dde93df171"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Priority",
+          "traceId": "e5de5eb5-8cc1-57b3-8b40-c99d827425ba"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Assigned To",
+          "traceId": "7cfd2066-6493-577f-a913-f3389b376e8b"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Status",
+          "traceId": "98fdb729-9d50-58bb-9a17-3a3d3b640bf5"
+        },
+        {
+          "InternalType": "int32",
+          "Name": "Resolution Time",
+          "traceId": "91c04127-4ed9-5b46-b26c-a9dd68b2af79"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "3154a40c-9d97-5379-9d8a-8c6fb6eb025f",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": -510,
+      "CalculatedColumns": [
+        {
+          "Expression": "DATEDIFF(day,[Date Opened],[Date Closed])",
+          "InternalType": "int32",
+          "Name": "Resolution Time"
+        }
+      ]
+    },
+    "Sequence": 6,
+    "Warning": null
+  },
+  {
+    "Code": "table-input",
+    "Description": "",
+    "Error": null,
+    "Id": "247cc2a7-05dc-55a0-bc65-ebe5be376e01",
+    "Name": "IP Addresses #1",
+    "Properties": {
+      "__type": "DataFlowNodeTableInputProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 1615,
+      "OutputColumns": [
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "IP",
+          "traceId": "05ec3378-846d-51bc-99c0-8b35f2aff472"
+        }
+      ],
+      "Sources": [],
+      "Top": 1122,
+      "DataCloneName": "IP Addresses",
+      "DataCloneRecId": 900020,
+      "SelectedColumns": [
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "IP",
+          "RecId": 900021
+        }
+      ]
+    },
+    "Sequence": 7,
+    "Warning": null
+  },
+  {
+    "Code": "table-input",
+    "Description": "",
+    "Error": null,
+    "Id": "93ceb107-000b-5c42-9664-dc6975b58ae9",
+    "Name": "City, Latitude, Longitude #1",
+    "Properties": {
+      "__type": "DataFlowNodeTableInputProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 1615,
+      "OutputColumns": [
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "City",
+          "traceId": "c6008378-b0ce-51c9-9fd1-554f406c5e46"
+        },
+        {
+          "InternalType": "decimalstrict(28,9)",
+          "Name": "Latitude",
+          "traceId": "8a68d301-c7c2-5a46-a936-18f9767b86e2"
+        },
+        {
+          "InternalType": "decimalstrict(28,9)",
+          "Name": "Longitude",
+          "traceId": "83f48a2c-e2b9-59a6-88b1-13028f0a1d7d"
+        }
+      ],
+      "Sources": [],
+      "Top": 1207,
+      "DataCloneName": "City, Latitude, Longitude",
+      "DataCloneRecId": 900022,
+      "SelectedColumns": [
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "City",
+          "RecId": 900023
+        },
+        {
+          "InternalType": "decimalstrict(28,9)",
+          "Name": "Latitude",
+          "RecId": 900024
+        },
+        {
+          "InternalType": "decimalstrict(28,9)",
+          "Name": "Longitude",
+          "RecId": 900025
+        }
+      ]
+    },
+    "Sequence": 8,
+    "Warning": null
+  },
+  {
+    "Code": "table-input",
+    "Description": "",
+    "Error": null,
+    "Id": "a08c3ffc-26eb-55ea-a833-c286d8ed90d5",
+    "Name": "Support Tickets - Review",
+    "Properties": {
+      "__type": "DataFlowNodeTableInputProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 1615,
+      "OutputColumns": [
+        {
+          "InternalType": "int64",
+          "Name": "Review ID",
+          "traceId": "d8b09133-5be2-5c10-b4b6-ec66a4ceb0d4"
+        },
+        {
+          "InternalType": "text(250)",
+          "Name": "Review Text",
+          "traceId": "42d2cda6-cb6a-594b-852f-5206487dcc5e"
+        }
+      ],
+      "Sources": [],
+      "Top": 1292,
+      "DataCloneName": "Support Tickets - Review",
+      "DataCloneRecId": 900026,
+      "SelectedColumns": [
+        {
+          "InternalType": "int64",
+          "Name": "Review ID",
+          "RecId": 900027
+        },
+        {
+          "InternalType": "text(250)",
+          "Name": "Review Text",
+          "RecId": 900028
+        }
+      ]
+    },
+    "Sequence": 9,
+    "Warning": null
+  },
+  {
+    "Code": "table-output",
+    "Description": "",
+    "Error": null,
+    "Id": "85375373-d192-592a-b399-aba115b279cf",
+    "Name": "Support Tickets ALL Update/Append",
+    "Properties": {
+      "__type": "DataFlowNodeTableOutputProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": false,
+      "Left": 1717,
+      "OutputColumns": [
+        {
+          "InternalType": "int64",
+          "Name": "Ticket ID",
+          "traceId": "96d512ca-a96e-5f9b-a5de-6a2f3c78145e"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Opened",
+          "traceId": "0646812b-309f-5dfd-bbb9-832b38b55f53"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Closed",
+          "traceId": "630a0fd9-3962-5c5c-8419-e5c4c9ba5f36"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Customer Name",
+          "traceId": "6486595c-cccb-5020-ac73-72a470db1e3c"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Issue Category",
+          "traceId": "009438ef-abd2-5e85-8cc7-e76e5dab0ac6"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Priority",
+          "traceId": "87aa42dc-1c5c-5c6a-b6bb-731a061246fa"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Status",
+          "traceId": "11fce843-7cd7-50a9-ac0d-aeb0ef74d9c8"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Assigned To",
+          "traceId": "2207ecc0-bf2a-52fa-9c84-cc1c1a0fb7af"
+        },
+        {
+          "InternalType": "int32",
+          "Name": "Resolution Time",
+          "traceId": "7501c477-e1f8-555a-8f54-304cf0dffe88"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "92639596-cee9-57a0-b807-a3442c16fec8",
+          "SourceSide": "top",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": -680,
+      "DataCloneName": "Support Tickets ALL Update/Append",
+      "DataCloneRecId": 900029,
+      "ProcessMode": "updateappend",
+      "SelectedColumns": [
+        {
+          "InternalType": "int64",
+          "IsKey": true,
+          "OutputName": "Ticket ID",
+          "SourceName": "Ticket ID"
+        },
+        {
+          "InternalType": "date",
+          "OutputName": "Date Opened",
+          "SourceName": "Date Opened"
+        },
+        {
+          "InternalType": "date",
+          "OutputName": "Date Closed",
+          "SourceName": "Date Closed"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Customer Name",
+          "SourceName": "Customer Name"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Issue Category",
+          "SourceName": "Issue Category"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Priority",
+          "SourceName": "Priority"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Status",
+          "SourceName": "Status"
+        },
+        {
+          "InternalType": "int64",
+          "OutputName": "Assigned To",
+          "SourceName": "Assigned To"
+        },
+        {
+          "InternalType": "int32",
+          "OutputName": "Resolution Time",
+          "SourceName": "Resolution Time"
+        }
+      ]
+    },
+    "Sequence": 10,
+    "Warning": null
+  },
+  {
+    "Code": "table-output",
+    "Description": "",
+    "Error": null,
+    "Id": "903eb586-d7c2-5c59-ad7e-521a2bb98bfa",
+    "Name": "Support Tickets ALL Append",
+    "Properties": {
+      "__type": "DataFlowNodeTableOutputProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": false,
+      "Left": 1717,
+      "OutputColumns": [
+        {
+          "InternalType": "int64",
+          "Name": "Ticket ID",
+          "traceId": "d50e8109-b0d6-50af-8175-c606b72bad59"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Opened",
+          "traceId": "205a5f25-3b43-5325-a384-70c3ee050545"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Closed",
+          "traceId": "213c6c75-c07f-59bb-9fad-bb5cb59ca086"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Customer Name",
+          "traceId": "eb78f91f-b27e-530a-bc94-7fc14067b0a4"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Issue Category",
+          "traceId": "803ad764-faba-5aa9-8e33-95cf1d651280"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Priority",
+          "traceId": "c3ca318e-4381-560e-9153-e2f766328afe"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Status",
+          "traceId": "827b7390-eb64-5282-bb88-5a2c885b4426"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Assigned To",
+          "traceId": "4894ab9b-bc4f-521f-826d-804ecdecde62"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Resolution Time",
+          "traceId": "8b5dc519-9fd1-51dc-9286-6893c7a1075c"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "92639596-cee9-57a0-b807-a3442c16fec8",
+          "SourceSide": "top",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": -595,
+      "DataCloneName": "Support Tickets ALL Append",
+      "DataCloneRecId": 900030,
+      "ProcessMode": "append",
+      "SelectedColumns": [
+        {
+          "InternalType": "int64",
+          "IsKey": true,
+          "OutputName": "Ticket ID",
+          "SourceName": "Ticket ID"
+        },
+        {
+          "InternalType": "date",
+          "OutputName": "Date Opened",
+          "SourceName": "Date Opened"
+        },
+        {
+          "InternalType": "date",
+          "OutputName": "Date Closed",
+          "SourceName": "Date Closed"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Customer Name",
+          "SourceName": "Customer Name"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Issue Category",
+          "SourceName": "Issue Category"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Priority",
+          "SourceName": "Priority"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Status",
+          "SourceName": "Status"
+        },
+        {
+          "InternalType": "int64",
+          "OutputName": "Assigned To",
+          "SourceName": "Assigned To"
+        },
+        {
+          "InternalType": "int64",
+          "OutputName": "Resolution Time",
+          "SourceName": "Resolution Time"
+        }
+      ]
+    },
+    "Sequence": 11,
+    "Warning": null
+  },
+  {
+    "Code": "table-output",
+    "Description": "",
+    "Error": null,
+    "Id": "a8f87b0f-ccd0-5deb-8465-06928614bdb5",
+    "Name": "Support Tickets ALL Reload",
+    "Properties": {
+      "__type": "DataFlowNodeTableOutputProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": false,
+      "Left": 1717,
+      "OutputColumns": [
+        {
+          "InternalType": "int64",
+          "Name": "Ticket ID",
+          "traceId": "4743d5cc-1308-5653-89c3-7b2663f99938"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Opened",
+          "traceId": "f5d27d53-2f6f-54b5-b897-fb25cd939449"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Closed",
+          "traceId": "ef92d364-a1cf-5834-bec8-7c669fa8534e"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Customer Name",
+          "traceId": "413ed3b5-c984-55b2-9add-985a48603105"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Issue Category",
+          "traceId": "b8a66123-b2db-527c-83b9-20fd712ac423"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Priority",
+          "traceId": "a292ac03-ad0a-502f-a183-97a7563c0442"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Status",
+          "traceId": "07b223ed-09ea-5617-a653-0aa90c2cfefc"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Assigned To",
+          "traceId": "dffc79e7-1238-5c13-afc7-8da7ebe37df4"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Resolution Time",
+          "traceId": "feee3a95-6ad7-50e6-8541-d64494fc9840"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "92639596-cee9-57a0-b807-a3442c16fec8",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": -510,
+      "DataCloneName": "Support Tickets ALL Reload",
+      "DataCloneRecId": 900031,
+      "ProcessMode": "rebuild",
+      "SelectedColumns": [
+        {
+          "InternalType": "int64",
+          "IsKey": true,
+          "OutputName": "Ticket ID",
+          "SourceName": "Ticket ID"
+        },
+        {
+          "InternalType": "date",
+          "OutputName": "Date Opened",
+          "SourceName": "Date Opened"
+        },
+        {
+          "InternalType": "date",
+          "OutputName": "Date Closed",
+          "SourceName": "Date Closed"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Customer Name",
+          "SourceName": "Customer Name"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Issue Category",
+          "SourceName": "Issue Category"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Priority",
+          "SourceName": "Priority"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Status",
+          "SourceName": "Status"
+        },
+        {
+          "InternalType": "int64",
+          "OutputName": "Assigned To",
+          "SourceName": "Assigned To"
+        },
+        {
+          "InternalType": "int64",
+          "OutputName": "Resolution Time",
+          "SourceName": "Resolution Time"
+        }
+      ]
+    },
+    "Sequence": 12,
+    "Warning": null
+  },
+  {
+    "Code": "table-input",
+    "Description": "",
+    "Error": null,
+    "Id": "4fe45f3d-fb91-52f3-be3d-4aefcd509abc",
+    "Name": "Agents #1",
+    "Properties": {
+      "__type": "DataFlowNodeTableInputProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 1717,
+      "OutputColumns": [
+        {
+          "InternalType": "int64",
+          "Name": "Agent ID",
+          "traceId": "7e07a985-4e5e-5c4d-ade6-c5f18c4ebe00"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Agent Name",
+          "traceId": "b0c4f777-d1cb-5a0e-9a44-e51219fe1275"
+        }
+      ],
+      "Sources": [],
+      "Top": -170,
+      "DataCloneName": "Agents",
+      "DataCloneRecId": 900032,
+      "SelectedColumns": [
+        {
+          "InternalType": "int64",
+          "Name": "Agent ID",
+          "RecId": 900033
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Agent Name",
+          "RecId": 900034
+        }
+      ]
+    },
+    "Sequence": 13,
+    "Warning": null
+  },
+  {
+    "Code": "combine-tables",
+    "Description": "",
+    "Error": null,
+    "Id": "c54263d8-b8c4-5b94-bb97-808c5dad0b2e",
+    "Name": "CPoint 50",
+    "Properties": {
+      "__type": "DataFlowNodeCombineTablesProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 1717,
+      "OutputColumns": [
+        {
+          "InternalType": "int64",
+          "Name": "Ticket ID",
+          "traceId": "d9a30d86-24b7-515f-979d-297e8ae3ed90"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Opened",
+          "traceId": "6db1e481-1095-5d0a-8045-46e0660b3aee"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Closed",
+          "traceId": "95d092df-bd54-5c33-9e7f-0919b368902a"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Customer Name",
+          "traceId": "393359bc-c7cb-57dc-a22c-a51cf493ce22"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Issue Category",
+          "traceId": "a03786bc-9d2c-59db-9036-d1cd8c95f91e"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Priority",
+          "traceId": "01b650a2-17fa-581e-aae0-fe772bcad545"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Status",
+          "traceId": "621be452-7cec-572a-8618-cbf0bcaaa000"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Assigned To",
+          "traceId": "78573cfa-ff1e-53f9-82b0-dcc7c5db6c42"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "a4a3d68f-4984-5587-9d3f-f9d4be71ac2f",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        },
+        {
+          "Id": "3f6764f3-6ef1-5be4-8a79-cf9172628c52",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": -85,
+      "Columns": [
+        {
+          "Actions": [],
+          "InternalType": "int64",
+          "Name": "Ticket ID",
+          "sources": [
+            "a4a3d68f-4984-5587-9d3f-f9d4be71ac2f",
+            "3f6764f3-6ef1-5be4-8a79-cf9172628c52"
+          ],
+          "invalidSources": [],
+          "error": false,
+          "internalType": "int64"
+        },
+        {
+          "Actions": [],
+          "InternalType": "date",
+          "Name": "Date Opened",
+          "sources": [
+            "a4a3d68f-4984-5587-9d3f-f9d4be71ac2f",
+            "3f6764f3-6ef1-5be4-8a79-cf9172628c52"
+          ],
+          "invalidSources": [],
+          "error": false,
+          "internalType": "date"
+        },
+        {
+          "Actions": [],
+          "InternalType": "date",
+          "Name": "Date Closed",
+          "sources": [
+            "a4a3d68f-4984-5587-9d3f-f9d4be71ac2f",
+            "3f6764f3-6ef1-5be4-8a79-cf9172628c52"
+          ],
+          "invalidSources": [],
+          "error": false,
+          "internalType": "date"
+        },
+        {
+          "Actions": [],
+          "InternalType": "textsimple(250)",
+          "Name": "Customer Name",
+          "sources": [
+            "a4a3d68f-4984-5587-9d3f-f9d4be71ac2f",
+            "3f6764f3-6ef1-5be4-8a79-cf9172628c52"
+          ],
+          "invalidSources": [],
+          "error": false,
+          "internalType": "textsimple(250)"
+        },
+        {
+          "Actions": [],
+          "InternalType": "textsimple(250)",
+          "Name": "Issue Category",
+          "sources": [
+            "a4a3d68f-4984-5587-9d3f-f9d4be71ac2f",
+            "3f6764f3-6ef1-5be4-8a79-cf9172628c52"
+          ],
+          "invalidSources": [],
+          "error": false,
+          "internalType": "textsimple(250)"
+        },
+        {
+          "Actions": [],
+          "InternalType": "textsimple(250)",
+          "Name": "Priority",
+          "sources": [
+            "a4a3d68f-4984-5587-9d3f-f9d4be71ac2f",
+            "3f6764f3-6ef1-5be4-8a79-cf9172628c52"
+          ],
+          "invalidSources": [],
+          "error": false,
+          "internalType": "textsimple(250)"
+        },
+        {
+          "Actions": [
+            {
+              "Action": "settonull",
+              "MatchedColumnName": null,
+              "SourceId": "3f6764f3-6ef1-5be4-8a79-cf9172628c52"
+            }
+          ],
+          "InternalType": "textsimple(250)",
+          "Name": "Status",
+          "sources": [
+            "a4a3d68f-4984-5587-9d3f-f9d4be71ac2f"
+          ],
+          "invalidSources": [
+            {
+              "id": "3f6764f3-6ef1-5be4-8a79-cf9172628c52",
+              "status": "notmatched"
+            }
+          ],
+          "error": false,
+          "internalType": "textsimple(250)"
+        },
+        {
+          "Actions": [],
+          "InternalType": "int64",
+          "Name": "Assigned To",
+          "sources": [
+            "a4a3d68f-4984-5587-9d3f-f9d4be71ac2f",
+            "3f6764f3-6ef1-5be4-8a79-cf9172628c52"
+          ],
+          "invalidSources": [],
+          "error": false,
+          "internalType": "int64"
+        }
+      ],
+      "SchemaSourceId": "a4a3d68f-4984-5587-9d3f-f9d4be71ac2f"
+    },
+    "Sequence": 14,
+    "Warning": null
+  },
+  {
+    "Code": "combine-tables",
+    "Description": "",
+    "Error": null,
+    "Id": "e6e2f023-e516-57d9-9943-9d67dfedf3fb",
+    "Name": "CPoint ALL",
+    "Properties": {
+      "__type": "DataFlowNodeCombineTablesProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 1717,
+      "OutputColumns": [
+        {
+          "InternalType": "int64",
+          "Name": "Ticket ID",
+          "traceId": "e38d4c3d-f4ae-5199-9dc3-0cc75b66e7f4"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Opened",
+          "traceId": "90801d7f-203f-5895-a706-f7f3eab7aee9"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Customer Name",
+          "traceId": "aac59c29-b382-544d-b73f-17aa0cd5285a"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Issue Category",
+          "traceId": "d505c06f-e17f-560d-9c75-7eb5e69e813e"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Priority",
+          "traceId": "3ed5fc18-f7ae-5614-bcb5-ad6a1a8eea9b"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Assigned To",
+          "traceId": "2302554c-0df0-5b04-ae52-edc124a618c1"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Closed",
+          "traceId": "8ad15477-ec54-5732-a972-a75c387fb692"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "3f6764f3-6ef1-5be4-8a79-cf9172628c52",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        },
+        {
+          "Id": "a4a3d68f-4984-5587-9d3f-f9d4be71ac2f",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": 0,
+      "Columns": [
+        {
+          "Actions": [],
+          "InternalType": "int64",
+          "Name": "Ticket ID",
+          "sources": [
+            "3f6764f3-6ef1-5be4-8a79-cf9172628c52",
+            "a4a3d68f-4984-5587-9d3f-f9d4be71ac2f"
+          ],
+          "invalidSources": [],
+          "error": false,
+          "internalType": "int64"
+        },
+        {
+          "Actions": [],
+          "InternalType": "date",
+          "Name": "Date Opened",
+          "sources": [
+            "3f6764f3-6ef1-5be4-8a79-cf9172628c52",
+            "a4a3d68f-4984-5587-9d3f-f9d4be71ac2f"
+          ],
+          "invalidSources": [],
+          "error": false,
+          "internalType": "date"
+        },
+        {
+          "Actions": [],
+          "InternalType": "textsimple(250)",
+          "Name": "Customer Name",
+          "sources": [
+            "3f6764f3-6ef1-5be4-8a79-cf9172628c52",
+            "a4a3d68f-4984-5587-9d3f-f9d4be71ac2f"
+          ],
+          "invalidSources": [],
+          "error": false,
+          "internalType": "textsimple(250)"
+        },
+        {
+          "Actions": [],
+          "InternalType": "textsimple(250)",
+          "Name": "Issue Category",
+          "sources": [
+            "3f6764f3-6ef1-5be4-8a79-cf9172628c52",
+            "a4a3d68f-4984-5587-9d3f-f9d4be71ac2f"
+          ],
+          "invalidSources": [],
+          "error": false,
+          "internalType": "textsimple(250)"
+        },
+        {
+          "Actions": [],
+          "InternalType": "textsimple(250)",
+          "Name": "Priority",
+          "sources": [
+            "3f6764f3-6ef1-5be4-8a79-cf9172628c52",
+            "a4a3d68f-4984-5587-9d3f-f9d4be71ac2f"
+          ],
+          "invalidSources": [],
+          "error": false,
+          "internalType": "textsimple(250)"
+        },
+        {
+          "Actions": [],
+          "InternalType": "int64",
+          "Name": "Assigned To",
+          "sources": [
+            "3f6764f3-6ef1-5be4-8a79-cf9172628c52",
+            "a4a3d68f-4984-5587-9d3f-f9d4be71ac2f"
+          ],
+          "invalidSources": [],
+          "error": false,
+          "internalType": "int64"
+        },
+        {
+          "Actions": [],
+          "InternalType": "date",
+          "Name": "Date Closed",
+          "sources": [
+            "3f6764f3-6ef1-5be4-8a79-cf9172628c52",
+            "a4a3d68f-4984-5587-9d3f-f9d4be71ac2f"
+          ],
+          "invalidSources": [],
+          "error": false,
+          "internalType": "date"
+        }
+      ],
+      "SchemaSourceId": "3f6764f3-6ef1-5be4-8a79-cf9172628c52"
+    },
+    "Sequence": 15,
+    "Warning": null
+  },
+  {
+    "Code": "iplocation",
+    "Description": "",
+    "Error": null,
+    "Id": "5d3d7b56-6fec-5295-8577-14d4a2aeb1ae",
+    "Name": "IP to Location #1",
+    "Properties": {
+      "__type": "DataFlowNodeIPToLocationProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 1768,
+      "OutputColumns": [
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "IP",
+          "traceId": "05ec3378-846d-51bc-99c0-8b35f2aff472"
+        },
+        {
+          "InternalType": "double",
+          "Name": "Latitude",
+          "traceId": "c1217a61-321b-5348-9c82-b1f8a60d902a"
+        },
+        {
+          "InternalType": "double",
+          "Name": "Longitude",
+          "traceId": "b6d1d380-69ba-5d86-ae17-34e8119af27e"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "247cc2a7-05dc-55a0-bc65-ebe5be376e01",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": 1122,
+      "ProcessOutputColumns": [
+        {
+          "Name": "Latitude",
+          "Type": "latitude"
+        },
+        {
+          "Name": "Longitude",
+          "Type": "longitude"
+        }
+      ],
+      "SourceColumn": "IP"
+    },
+    "Sequence": 16,
+    "Warning": null
+  },
+  {
+    "Code": "geocoding",
+    "Description": "",
+    "Error": null,
+    "Id": "94ea9d11-23f6-5c28-960e-9d06e62f72a2",
+    "Name": "Geocoding #1",
+    "Properties": {
+      "__type": "DataFlowNodeGeocodingProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 1768,
+      "OutputColumns": [
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "City",
+          "traceId": "c6008378-b0ce-51c9-9fd1-554f406c5e46"
+        },
+        {
+          "InternalType": "decimalstrict(28,9)",
+          "Name": "Latitude",
+          "traceId": "8a68d301-c7c2-5a46-a936-18f9767b86e2"
+        },
+        {
+          "InternalType": "decimalstrict(28,9)",
+          "Name": "Longitude",
+          "traceId": "83f48a2c-e2b9-59a6-88b1-13028f0a1d7d"
+        },
+        {
+          "InternalType": "textsimple(10)",
+          "Name": "Country Code",
+          "traceId": "52964ad2-119a-536e-946b-ae3a181a72df"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "93ceb107-000b-5c42-9664-dc6975b58ae9",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": 1207,
+      "GeocodeInputColumns": [
+        {
+          "Column": "City",
+          "Type": "city"
+        }
+      ],
+      "GeocodeOutputColumns": [
+        {
+          "Column": "Country Code",
+          "Type": "country_code"
+        }
+      ]
+    },
+    "Sequence": 17,
+    "Warning": null
+  },
+  {
+    "Code": "sentiment-analysis",
+    "Description": "",
+    "Error": null,
+    "Id": "3eff16bb-84b7-5630-80fa-7bdf4caae3aa",
+    "Name": "Sentiment Analysis #1",
+    "Properties": {
+      "__type": "DataFlowNodeSentimentAnalysisProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 1768,
+      "OutputColumns": [
+        {
+          "InternalType": "int64",
+          "Name": "Review ID",
+          "traceId": "d8b09133-5be2-5c10-b4b6-ec66a4ceb0d4"
+        },
+        {
+          "InternalType": "text(250)",
+          "Name": "Review Text",
+          "traceId": "42d2cda6-cb6a-594b-852f-5206487dcc5e"
+        },
+        {
+          "InternalType": "textsimple(20)",
+          "Name": "Sentiment",
+          "traceId": "98c4db8a-a71a-5159-8c4d-3ac1f6ae00fd"
+        },
+        {
+          "InternalType": "double",
+          "Name": "Positive Confidence Score",
+          "traceId": "8c6bbc7b-4e31-56d8-bd96-0c13b5982d54"
+        },
+        {
+          "InternalType": "double",
+          "Name": "Neutral Confidence Score",
+          "traceId": "b7676876-0fe4-59c3-b678-6ab8a4420ee5"
+        },
+        {
+          "InternalType": "double",
+          "Name": "Negative Confidence Score",
+          "traceId": "04bb2575-257e-56cd-9f42-1e2d2b4850e5"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "a08c3ffc-26eb-55ea-a833-c286d8ed90d5",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": 1292,
+      "OnFailure": "fail",
+      "ProcessOutputColumns": [
+        {
+          "Name": "Sentiment",
+          "Type": "sentiment"
+        },
+        {
+          "Name": "Positive Confidence Score",
+          "Type": "positive_confidence_score"
+        },
+        {
+          "Name": "Neutral Confidence Score",
+          "Type": "neutral_confidence_score"
+        },
+        {
+          "Name": "Negative Confidence Score",
+          "Type": "negative_confidence_score"
+        }
+      ],
+      "SourceColumn": "Review Text",
+      "SourceLanguageType": "auto"
+    },
+    "Sequence": 18,
+    "Warning": null
+  },
+  {
+    "Code": "table-input",
+    "Description": "",
+    "Error": null,
+    "Id": "aa9cf123-857b-5df5-a43c-32c0856d3de7",
+    "Name": "Support Tickets JSON",
+    "Properties": {
+      "__type": "DataFlowNodeTableInputProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 1836,
+      "OutputColumns": [
+        {
+          "InternalType": "json",
+          "Name": "tickets",
+          "traceId": "369540e2-bbf4-51c3-bb66-d21c19bca34a"
+        }
+      ],
+      "Sources": [],
+      "Top": 782,
+      "DataCloneName": "Support Tickets JSON",
+      "DataCloneRecId": 900035,
+      "SelectedColumns": [
+        {
+          "InternalType": "json",
+          "Name": "tickets",
+          "RecId": 900036
+        }
+      ]
+    },
+    "Sequence": 19,
+    "Warning": null
+  },
+  {
+    "Code": "calculated-columns",
+    "Description": "",
+    "Error": null,
+    "Id": "40a18bfd-29be-5e5d-826b-6552a6d034c4",
+    "Name": "Calculate Columns #1",
+    "Properties": {
+      "__type": "DataFlowNodeCalculatedColumnsProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 1836,
+      "OutputColumns": [
+        {
+          "InternalType": "json",
+          "Name": "tickets",
+          "traceId": "369540e2-bbf4-51c3-bb66-d21c19bca34a"
+        },
+        {
+          "InternalType": "textsimple(353)",
+          "Name": "Story",
+          "traceId": "c01a821c-a4ec-550d-8f2f-769892b79dbe"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "aa9cf123-857b-5df5-a43c-32c0856d3de7",
+          "SourceSide": "bottom",
+          "TargetSide": "top"
+        }
+      ],
+      "Top": 867,
+      "CalculatedColumns": [
+        {
+          "Expression": "'Richard Rabbit had always loved wild New York with its inquisitive, ice-dancing igloos. It was a place where he felt relaxed.He was a sweet, hopeful, tea drinker with ruddy toenails and red warts. His friends saw him as a pongy, panicky patient. Once, he had even brought a nutritious old lady back from the brink of death. Thats the sort of man he was.'",
+          "InternalType": "textsimple(353)",
+          "Name": "Story"
+        }
+      ]
+    },
+    "Sequence": 20,
+    "Warning": null
+  },
+  {
+    "Code": "summarize-text",
+    "Description": "",
+    "Error": null,
+    "Id": "bfc8a2d6-76a7-5bf9-9bbd-2c8c9717ad8c",
+    "Name": "Summarize Text #1",
+    "Properties": {
+      "__type": "DataFlowNodeSummarizeTextProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 1989,
+      "OutputColumns": [
+        {
+          "InternalType": "json",
+          "Name": "tickets",
+          "traceId": "369540e2-bbf4-51c3-bb66-d21c19bca34a"
+        },
+        {
+          "InternalType": "textsimple(353)",
+          "Name": "Story",
+          "traceId": "c01a821c-a4ec-550d-8f2f-769892b79dbe"
+        },
+        {
+          "InternalType": "textsimple(max)",
+          "Name": "Extractive Summary",
+          "traceId": "c3448f93-2a92-5adb-97ce-bacbea37ee1b"
+        },
+        {
+          "InternalType": "textsimple(max)",
+          "Name": "Abstractive Summary",
+          "traceId": "7d7a1640-1fcd-5512-844d-9654292936fe"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "40a18bfd-29be-5e5d-826b-6552a6d034c4",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": 867,
+      "OnFailure": "fail",
+      "ProcessOutputColumns": [
+        {
+          "Name": "Extractive Summary",
+          "SortBy": "offset",
+          "Type": "extractive_summary"
+        },
+        {
+          "Language": "",
+          "Name": "Abstractive Summary",
+          "Type": "abstractive_summary"
+        }
+      ],
+      "SourceColumn": "Story",
+      "SourceLanguageType": "auto",
+      "SourceType": "document"
+    },
+    "Sequence": 21,
+    "Warning": null
+  },
+  {
+    "Code": "ask-ai",
+    "Description": "",
+    "Error": null,
+    "Id": "0d0b7b49-b0db-5dbe-a31d-d12379e6b841",
+    "Name": "Ask AI #1",
+    "Properties": {
+      "__type": "DataFlowNodeAskAIProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 1989,
+      "OutputColumns": [
+        {
+          "InternalType": "json",
+          "Name": "tickets",
+          "traceId": "369540e2-bbf4-51c3-bb66-d21c19bca34a"
+        },
+        {
+          "InternalType": "textsimple(353)",
+          "Name": "Story",
+          "traceId": "c01a821c-a4ec-550d-8f2f-769892b79dbe"
+        },
+        {
+          "InternalType": "text(max)",
+          "Name": "Color",
+          "traceId": "ac4a50ce-8dc4-5ff1-8abe-9c975fb7a874"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "40a18bfd-29be-5e5d-826b-6552a6d034c4",
+          "SourceSide": "bottom",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": 952,
+      "ContextColumns": [],
+      "PrePrompt": "Return one word only",
+      "PrePromptType": "custom",
+      "ProcessOutputColumn": "Color",
+      "Prompt": "What color is Pikachu?",
+      "PromptType": "custom",
+      "Temperature": 1,
+      "TopP": 1
+    },
+    "Sequence": 22,
+    "Warning": null
+  },
+  {
+    "Code": "json-to-rows",
+    "Description": "",
+    "Error": null,
+    "Id": "6e737ec7-6e2b-5ce0-8c32-a349e24e51cd",
+    "Name": "JSON to Rows #1",
+    "Properties": {
+      "__type": "DataFlowNodeJSONToRowsProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 2125,
+      "OutputColumns": [
+        {
+          "InternalType": "json",
+          "Name": "tickets",
+          "traceId": "369540e2-bbf4-51c3-bb66-d21c19bca34a"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "ticket_id",
+          "traceId": "efe13483-37ac-58d8-acb1-43e5ff30fd5e"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "subject",
+          "traceId": "bb13c1f7-abf6-56e8-a8f1-08c96dbeebab"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "description",
+          "traceId": "78f6371c-dc16-53a1-8926-db8fb761f43f"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "status",
+          "traceId": "b516b380-17a7-5039-9050-9c15bbc724c4"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "priority",
+          "traceId": "fd83c93a-a3a8-51ae-99bc-4a85637dda4e"
+        },
+        {
+          "InternalType": "datetime",
+          "Name": "created_at",
+          "traceId": "465fcfc8-a2cd-5e1e-a1bc-5ac89d35a10e"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "customer_name",
+          "traceId": "272bc1c8-1c00-5576-be88-08f5cf7f3628"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "customer_email",
+          "traceId": "c16fdf2b-bb99-5e1c-875d-c72a1059122f"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "assigned_to",
+          "traceId": "12afc20c-6ac0-5c7d-ae9a-758d03c82b9a"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "aa9cf123-857b-5df5-a43c-32c0856d3de7",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": 782,
+      "Columns": [
+        {
+          "InternalType": "textsimple(250)",
+          "IsArray": false,
+          "IsObject": false,
+          "Name": "ticket_id",
+          "Node": "$[].ticket_id"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "IsArray": false,
+          "IsObject": false,
+          "Name": "subject",
+          "Node": "$[].subject"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "IsArray": false,
+          "IsObject": false,
+          "Name": "description",
+          "Node": "$[].description"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "IsArray": false,
+          "IsObject": false,
+          "Name": "status",
+          "Node": "$[].status"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "IsArray": false,
+          "IsObject": false,
+          "Name": "priority",
+          "Node": "$[].priority"
+        },
+        {
+          "InternalType": "datetime",
+          "IsArray": false,
+          "IsObject": false,
+          "Name": "created_at",
+          "Node": "$[].created_at"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "IsArray": false,
+          "IsObject": false,
+          "Name": "customer_name",
+          "Node": "$[].customer_name"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "IsArray": false,
+          "IsObject": false,
+          "Name": "customer_email",
+          "Node": "$[].customer_email"
+        },
+        {
+          "InternalType": "int64",
+          "IsArray": false,
+          "IsObject": false,
+          "Name": "assigned_to",
+          "Node": "$[].assigned_to"
+        }
+      ],
+      "SourceColumn": "tickets"
+    },
+    "Sequence": 23,
+    "Warning": null
+  },
+  {
+    "Code": "table-output",
+    "Description": "",
+    "Error": null,
+    "Id": "e456358e-9fbf-5494-8135-08b3f3f32a05",
+    "Name": "Summarize Text - Output",
+    "Properties": {
+      "__type": "DataFlowNodeTableOutputProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": false,
+      "Left": 2125,
+      "OutputColumns": [
+        {
+          "InternalType": "json",
+          "Name": "tickets",
+          "traceId": "4a71ad31-b375-5753-a126-0d3b66b0644b"
+        },
+        {
+          "InternalType": "textsimple(353)",
+          "Name": "Story",
+          "traceId": "a04e7dcc-ad47-5373-adf8-ee082fd5a9a2"
+        },
+        {
+          "InternalType": "textsimple(max)",
+          "Name": "Extractive Summary",
+          "traceId": "e111f9fb-5e72-57f7-9d91-63f2c2edc229"
+        },
+        {
+          "InternalType": "textsimple(max)",
+          "Name": "Abstractive Summary",
+          "traceId": "04629ac5-b92b-54a0-a9b6-692ab38774ad"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "bfc8a2d6-76a7-5bf9-9bbd-2c8c9717ad8c",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": 867,
+      "DataCloneName": "Summarize Text - Output",
+      "DataCloneRecId": 900037,
+      "ProcessMode": "rebuild",
+      "SelectedColumns": [
+        {
+          "InternalType": "json",
+          "OutputName": "tickets",
+          "SourceName": "tickets"
+        },
+        {
+          "InternalType": "textsimple(353)",
+          "OutputName": "Story",
+          "SourceName": "Story"
+        },
+        {
+          "InternalType": "textsimple(max)",
+          "OutputName": "Extractive Summary",
+          "SourceName": "Extractive Summary"
+        },
+        {
+          "InternalType": "textsimple(max)",
+          "OutputName": "Abstractive Summary",
+          "SourceName": "Abstractive Summary"
+        }
+      ]
+    },
+    "Sequence": 24,
+    "Warning": null
+  },
+  {
+    "Code": "table-output",
+    "Description": "",
+    "Error": null,
+    "Id": "c469480e-e242-526b-9d2b-60f0ab06161e",
+    "Name": "Ask AI - Output 3",
+    "Properties": {
+      "__type": "DataFlowNodeTableOutputProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": false,
+      "Left": 2125,
+      "OutputColumns": [
+        {
+          "InternalType": "json",
+          "Name": "tickets",
+          "traceId": "65236557-30c7-5651-9b06-ad34b7b2ac96"
+        },
+        {
+          "InternalType": "textsimple(353)",
+          "Name": "Story",
+          "traceId": "efce8378-c442-5f38-ab8c-3ece7c4c3983"
+        },
+        {
+          "InternalType": "text(max)",
+          "Name": "Color",
+          "traceId": "af30310c-0770-53b1-85af-fad5d948e030"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "0d0b7b49-b0db-5dbe-a31d-d12379e6b841",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": 952,
+      "DataCloneName": "Ask AI - Output 3",
+      "DataCloneRecId": 900038,
+      "ProcessMode": "rebuild",
+      "SelectedColumns": [
+        {
+          "InternalType": "json",
+          "OutputName": "tickets",
+          "SourceName": "tickets"
+        },
+        {
+          "InternalType": "textsimple(353)",
+          "OutputName": "Story",
+          "SourceName": "Story"
+        },
+        {
+          "InternalType": "text(max)",
+          "OutputName": "Color",
+          "SourceName": "Color"
+        }
+      ]
+    },
+    "Sequence": 25,
+    "Warning": null
+  },
+  {
+    "Code": "table-output",
+    "Description": "",
+    "Error": null,
+    "Id": "c679e4a3-c0a5-59b3-b27d-fa37f4c98daf",
+    "Name": "IP to Location - Output",
+    "Properties": {
+      "__type": "DataFlowNodeTableOutputProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": false,
+      "Left": 2176,
+      "OutputColumns": [
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "IP",
+          "traceId": "27e4f3fd-98cf-5384-a03b-332b69f6dea1"
+        },
+        {
+          "InternalType": "double",
+          "Name": "Latitude",
+          "traceId": "1c4f38c3-bd2e-5818-a116-27416cc62435"
+        },
+        {
+          "InternalType": "double",
+          "Name": "Longitude",
+          "traceId": "f93bbd70-492b-5210-abda-436039d4599a"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "5d3d7b56-6fec-5295-8577-14d4a2aeb1ae",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": 1122,
+      "DataCloneName": "IP to Location - Output",
+      "DataCloneRecId": 900039,
+      "ProcessMode": "rebuild",
+      "SelectedColumns": [
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "IP",
+          "SourceName": "IP"
+        },
+        {
+          "InternalType": "double",
+          "OutputName": "Latitude",
+          "SourceName": "Latitude"
+        },
+        {
+          "InternalType": "double",
+          "OutputName": "Longitude",
+          "SourceName": "Longitude"
+        }
+      ]
+    },
+    "Sequence": 26,
+    "Warning": null
+  },
+  {
+    "Code": "table-output",
+    "Description": "",
+    "Error": null,
+    "Id": "07a6ac5a-e6d3-5c08-9b59-06e0131ca7ca",
+    "Name": "Geocoding - Output",
+    "Properties": {
+      "__type": "DataFlowNodeTableOutputProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": false,
+      "Left": 2176,
+      "OutputColumns": [
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "City",
+          "traceId": "62d1f425-d8fb-5bd9-8ea4-18cc8b1d4493"
+        },
+        {
+          "InternalType": "double",
+          "Name": "Latitude",
+          "traceId": "48283403-aab4-5c93-bdb2-75e38b59eaef"
+        },
+        {
+          "InternalType": "double",
+          "Name": "Longitude",
+          "traceId": "b9817467-8f5a-5893-846b-73ace76a842c"
+        },
+        {
+          "InternalType": "textsimple(10)",
+          "Name": "Country Code",
+          "traceId": "7b4d1325-fb47-553a-862e-c8bb776f9122"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "94ea9d11-23f6-5c28-960e-9d06e62f72a2",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": 1207,
+      "DataCloneName": "Geocoding - Output",
+      "DataCloneRecId": 900040,
+      "ProcessMode": "rebuild",
+      "SelectedColumns": [
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "City",
+          "SourceName": "City"
+        },
+        {
+          "InternalType": "double",
+          "OutputName": "Latitude",
+          "SourceName": "Latitude"
+        },
+        {
+          "InternalType": "double",
+          "OutputName": "Longitude",
+          "SourceName": "Longitude"
+        },
+        {
+          "InternalType": "textsimple(10)",
+          "OutputName": "Country Code",
+          "SourceName": "Country Code"
+        }
+      ]
+    },
+    "Sequence": 27,
+    "Warning": null
+  },
+  {
+    "Code": "table-output",
+    "Description": "",
+    "Error": null,
+    "Id": "dc2ba7cc-ba33-5c78-ae8c-e2d11ebc7444",
+    "Name": "Sentiment Analysis - Output",
+    "Properties": {
+      "__type": "DataFlowNodeTableOutputProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": false,
+      "Left": 2176,
+      "OutputColumns": [
+        {
+          "InternalType": "int64",
+          "Name": "Review ID",
+          "traceId": "65b36a28-f78e-58f3-9128-040ba5d886af"
+        },
+        {
+          "InternalType": "text(250)",
+          "Name": "Review Text",
+          "traceId": "a7ffb9a9-b3f3-5253-9718-60c87f6447fa"
+        },
+        {
+          "InternalType": "textsimple(20)",
+          "Name": "Sentiment",
+          "traceId": "050c08fe-f3b7-552a-9887-35cdc7469130"
+        },
+        {
+          "InternalType": "double",
+          "Name": "Positive Confidence Score",
+          "traceId": "476dfac3-8a3d-543d-8de6-bd13c22adbda"
+        },
+        {
+          "InternalType": "double",
+          "Name": "Neutral Confidence Score",
+          "traceId": "6f9c25c0-b67e-5f95-a39f-edc5a6d44a80"
+        },
+        {
+          "InternalType": "double",
+          "Name": "Negative Confidence Score",
+          "traceId": "5eed00cd-4b40-552a-b4f6-3c2361e43821"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "3eff16bb-84b7-5630-80fa-7bdf4caae3aa",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": 1292,
+      "DataCloneName": "Sentiment Analysis - Output",
+      "DataCloneRecId": 900041,
+      "ProcessMode": "rebuild",
+      "SelectedColumns": [
+        {
+          "InternalType": "int64",
+          "OutputName": "Review ID",
+          "SourceName": "Review ID"
+        },
+        {
+          "InternalType": "text(250)",
+          "OutputName": "Review Text",
+          "SourceName": "Review Text"
+        },
+        {
+          "InternalType": "textsimple(20)",
+          "OutputName": "Sentiment",
+          "SourceName": "Sentiment"
+        },
+        {
+          "InternalType": "double",
+          "OutputName": "Positive Confidence Score",
+          "SourceName": "Positive Confidence Score"
+        },
+        {
+          "InternalType": "double",
+          "OutputName": "Neutral Confidence Score",
+          "SourceName": "Neutral Confidence Score"
+        },
+        {
+          "InternalType": "double",
+          "OutputName": "Negative Confidence Score",
+          "SourceName": "Negative Confidence Score"
+        }
+      ]
+    },
+    "Sequence": 28,
+    "Warning": null
+  },
+  {
+    "Code": "table-merge",
+    "Description": "",
+    "Error": null,
+    "Id": "78ac5549-bcf9-50e2-b232-8b14bd6cd8a4",
+    "Name": "Table Merge #1",
+    "Properties": {
+      "__type": "DataFlowNodeTableMergeProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 2193,
+      "OutputColumns": [
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Agent Name",
+          "traceId": "4916a3dc-ccdd-5d68-8099-1f5cbfadd486"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Assigned To",
+          "traceId": "f6c2cf02-8a2f-505d-842c-9528f737ce23"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Customer Name",
+          "traceId": "2075bfb9-e2b3-562a-be65-ceef0528c4f6"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Closed",
+          "traceId": "0912decd-12aa-58e4-92cf-b1f48e01a0b6"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Opened",
+          "traceId": "71c092f1-563c-5b4f-9fa8-5aa5738f8fcc"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Issue Category",
+          "traceId": "6fa56baa-4733-5368-8ee8-b4ec4cfa593a"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Location",
+          "traceId": "112dd44a-5ed5-5ab4-be09-3af2fd13a12b"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Priority",
+          "traceId": "912b9c39-d278-5c7b-b7b7-9245341c30a1"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Status",
+          "traceId": "c96449d3-9595-50b6-9941-7d1cca2bd910"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Ticket ID",
+          "traceId": "b1460ef6-68c1-529f-828a-7b1208ff3090"
+        }
+      ],
+      "Sources": [],
+      "Top": -595,
+      "Connections": [
+        {
+          "Conditions": [
+            {
+              "Comparator": "equals",
+              "LogicalOperator": "and",
+              "Parts": [
+                {
+                  "Source": "cd00eaa7-2c23-574e-9727-866b610aaf84",
+                  "ValueType": "column",
+                  "Values": [
+                    "Agent ID"
+                  ]
+                },
+                {
+                  "Source": "3321999e-fa7a-5640-916a-863e2d6905b8",
+                  "ValueType": "column",
+                  "Values": [
+                    "Assigned To"
+                  ]
+                }
+              ]
+            }
+          ],
+          "Id": "8b217556-9287-5a71-9095-77c4519948b2",
+          "JoinType": "inner",
+          "SourceId": "cd00eaa7-2c23-574e-9727-866b610aaf84",
+          "SourceSide": "left",
+          "TargetId": "3321999e-fa7a-5640-916a-863e2d6905b8",
+          "TargetSide": "right"
+        }
+      ],
+      "DataClones": [
+        {
+          "Alias": "Agents",
+          "ColumnVisibility": "all",
+          "ConnectorCode": "localfile",
+          "Height": 108,
+          "Id": "cd00eaa7-2c23-574e-9727-866b610aaf84",
+          "Left": 299,
+          "Name": "Agents",
+          "RecId": 900032,
+          "RenamedColumns": [],
+          "SelectedColumns": [
+            {
+              "InternalType": "textsimple(250)",
+              "Name": "Agent Name",
+              "RecId": 900034
+            }
+          ],
+          "Top": 67
+        },
+        {
+          "Alias": "Support Tickets 1",
+          "ColumnVisibility": "all",
+          "ConnectorCode": "localfile",
+          "Height": 269,
+          "Id": "3321999e-fa7a-5640-916a-863e2d6905b8",
+          "Left": 50,
+          "Name": "Support Tickets 1",
+          "RecId": 900002,
+          "RenamedColumns": [],
+          "SelectedColumns": [
+            {
+              "InternalType": "int64",
+              "Name": "Assigned To",
+              "RecId": 900010
+            },
+            {
+              "InternalType": "textsimple(250)",
+              "Name": "Customer Name",
+              "RecId": 900006
+            },
+            {
+              "InternalType": "date",
+              "Name": "Date Closed",
+              "RecId": 900005
+            },
+            {
+              "InternalType": "date",
+              "Name": "Date Opened",
+              "RecId": 900004
+            },
+            {
+              "InternalType": "textsimple(250)",
+              "Name": "Issue Category",
+              "RecId": 900007
+            },
+            {
+              "InternalType": "textsimple(250)",
+              "Name": "Location",
+              "RecId": 900011
+            },
+            {
+              "InternalType": "textsimple(250)",
+              "Name": "Priority",
+              "RecId": 900008
+            },
+            {
+              "InternalType": "textsimple(250)",
+              "Name": "Status",
+              "RecId": 900009
+            },
+            {
+              "InternalType": "int64",
+              "Name": "Ticket ID",
+              "RecId": 900003
+            }
+          ],
+          "Top": 30
+        }
+      ],
+      "ForceTableNamePrefix": false
+    },
+    "Sequence": 29,
+    "Warning": null
+  },
+  {
+    "Code": "lookup-columns",
+    "Description": "",
+    "Error": null,
+    "Id": "cb679337-2d04-5043-a969-d3936e41ee43",
+    "Name": "Lookup Columns #1",
+    "Properties": {
+      "__type": "DataFlowNodeLookupColumnsProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 2193,
+      "OutputColumns": [
+        {
+          "InternalType": "int64",
+          "Name": "Ticket ID",
+          "traceId": "d9a30d86-24b7-515f-979d-297e8ae3ed90"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Opened",
+          "traceId": "6db1e481-1095-5d0a-8045-46e0660b3aee"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Closed",
+          "traceId": "95d092df-bd54-5c33-9e7f-0919b368902a"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Customer Name",
+          "traceId": "393359bc-c7cb-57dc-a22c-a51cf493ce22"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Issue Category",
+          "traceId": "a03786bc-9d2c-59db-9036-d1cd8c95f91e"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Priority",
+          "traceId": "01b650a2-17fa-581e-aae0-fe772bcad545"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Status",
+          "traceId": "621be452-7cec-572a-8618-cbf0bcaaa000"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Assigned To",
+          "traceId": "78573cfa-ff1e-53f9-82b0-dcc7c5db6c42"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Agent Name",
+          "traceId": "42f69562-ab91-51df-90f3-3a48cfd9edcc"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "c54263d8-b8c4-5b94-bb97-808c5dad0b2e",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        },
+        {
+          "Id": "4fe45f3d-fb91-52f3-be3d-4aefcd509abc",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": -170,
+      "Conditions": [
+        {
+          "ColumnName": "Agent ID",
+          "Comparator": "equals",
+          "Disabled": false,
+          "DisabledIfNull": false,
+          "Groups": [],
+          "Guid": "c735ef8b-c583-5a31-a503-1eabea438539",
+          "LogicalOperator": "and",
+          "ValueType": "column",
+          "Values": [
+            "Assigned To"
+          ]
+        }
+      ],
+      "LookupNodeId": "4fe45f3d-fb91-52f3-be3d-4aefcd509abc",
+      "Values": [
+        {
+          "Alias": "Agent Name",
+          "Name": "Agent Name"
+        }
+      ]
+    },
+    "Sequence": 30,
+    "Warning": null
+  },
+  {
+    "Code": "join-tables",
+    "Description": "",
+    "Error": null,
+    "Id": "db3825b9-c1bb-505c-a841-96bbf9bf580c",
+    "Name": "Join #1",
+    "Properties": {
+      "__type": "DataFlowNodeJoinTablesProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 2193,
+      "OutputColumns": [
+        {
+          "InternalType": "int64",
+          "Name": "Ticket ID",
+          "traceId": "d43cb320-6985-5f4b-9261-62f1ef280a3a"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Opened",
+          "traceId": "a1e58aee-aff1-5272-a9e3-0f563e04cb7e"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Closed",
+          "traceId": "bebaf231-ca80-5503-a20b-eb4ead3117ea"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Customer Name",
+          "traceId": "b4ac6ed1-d386-5caa-9c63-39ce28f4611e"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Issue Category",
+          "traceId": "cda18a1f-f90c-5668-a80e-7fac8c13f8b7"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Priority",
+          "traceId": "bfd8cc3a-4d26-5907-acda-f779168708d5"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Status",
+          "traceId": "4463036d-ad19-5d5d-b29a-2be76bc7d075"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Assigned To",
+          "traceId": "f82956d9-f0c3-59ce-8c2c-3082e52b0a8b"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Agent ID",
+          "traceId": "461bb575-55bb-5702-8775-2dbbbbccb887"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Agent Name",
+          "traceId": "6fbf7114-2ec3-57bb-bf72-86c14721c0d6"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "c54263d8-b8c4-5b94-bb97-808c5dad0b2e",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        },
+        {
+          "Id": "4fe45f3d-fb91-52f3-be3d-4aefcd509abc",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": -85,
+      "Conditions": [
+        {
+          "Comparator": "equals",
+          "LogicalOperator": "and",
+          "Parts": [
+            {
+              "Source": "c54263d8-b8c4-5b94-bb97-808c5dad0b2e",
+              "ValueType": "column",
+              "Values": [
+                "Assigned To"
+              ],
+              "InternalType": "int64"
+            },
+            {
+              "Source": "4fe45f3d-fb91-52f3-be3d-4aefcd509abc",
+              "ValueType": "column",
+              "Values": [
+                "Agent ID"
+              ],
+              "InternalType": "int64"
+            }
+          ]
+        }
+      ],
+      "JoinType": "inner"
+    },
+    "Sequence": 31,
+    "Warning": null
+  },
+  {
+    "Code": "calculated-columns",
+    "Description": "",
+    "Error": null,
+    "Id": "20d53d87-3237-5233-ba8f-85236295ef2d",
+    "Name": "Calculate Columns #2 #1",
+    "Properties": {
+      "__type": "DataFlowNodeCalculatedColumnsProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 2329,
+      "OutputColumns": [
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Agent Name",
+          "traceId": "4916a3dc-ccdd-5d68-8099-1f5cbfadd486"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Assigned To",
+          "traceId": "f6c2cf02-8a2f-505d-842c-9528f737ce23"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Customer Name",
+          "traceId": "2075bfb9-e2b3-562a-be65-ceef0528c4f6"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Closed",
+          "traceId": "0912decd-12aa-58e4-92cf-b1f48e01a0b6"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Opened",
+          "traceId": "71c092f1-563c-5b4f-9fa8-5aa5738f8fcc"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Issue Category",
+          "traceId": "6fa56baa-4733-5368-8ee8-b4ec4cfa593a"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Location",
+          "traceId": "112dd44a-5ed5-5ab4-be09-3af2fd13a12b"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Priority",
+          "traceId": "912b9c39-d278-5c7b-b7b7-9245341c30a1"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Status",
+          "traceId": "c96449d3-9595-50b6-9941-7d1cca2bd910"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Ticket ID",
+          "traceId": "b1460ef6-68c1-529f-828a-7b1208ff3090"
+        },
+        {
+          "InternalType": "int32",
+          "Name": "Resolution Time",
+          "traceId": "e24c2225-2bcf-534c-b5d2-4fd12eaa17a3"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "78ac5549-bcf9-50e2-b232-8b14bd6cd8a4",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": -595,
+      "CalculatedColumns": [
+        {
+          "Expression": "DATEDIFF(day,[Date Opened],[Date Closed])",
+          "InternalType": "int32",
+          "Name": "Resolution Time"
+        }
+      ]
+    },
+    "Sequence": 32,
+    "Warning": null
+  },
+  {
+    "Code": "fix-data",
+    "Description": "",
+    "Error": null,
+    "Id": "9c6cd1c6-f61f-5342-85c1-57c1308f7ceb",
+    "Name": "Fix Data #1",
+    "Properties": {
+      "__type": "DataFlowNodeFixDataProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 3,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 2346,
+      "OutputColumns": [
+        {
+          "InternalType": "int64",
+          "Name": "Ticket ID",
+          "traceId": "d43cb320-6985-5f4b-9261-62f1ef280a3a"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Opened",
+          "traceId": "a1e58aee-aff1-5272-a9e3-0f563e04cb7e"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Closed",
+          "traceId": "bebaf231-ca80-5503-a20b-eb4ead3117ea"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Customer Name",
+          "traceId": "b4ac6ed1-d386-5caa-9c63-39ce28f4611e"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Issue Category",
+          "traceId": "cda18a1f-f90c-5668-a80e-7fac8c13f8b7"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Priority",
+          "traceId": "bfd8cc3a-4d26-5907-acda-f779168708d5"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Status",
+          "traceId": "4fe97f10-66f1-5ee7-a3d3-6d1c956e5e71"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Assigned To",
+          "traceId": "f82956d9-f0c3-59ce-8c2c-3082e52b0a8b"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Agent ID",
+          "traceId": "461bb575-55bb-5702-8775-2dbbbbccb887"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Agent Name",
+          "traceId": "6fbf7114-2ec3-57bb-bf72-86c14721c0d6"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "db3825b9-c1bb-505c-a841-96bbf9bf580c",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": -255,
+      "ColumnNames": [
+        "Status"
+      ],
+      "Fix": {
+        "__type": "DataFlowFixDataActionText:#Infinis.DataFlows",
+        "ChangeCase": "uppercase",
+        "RemoveAllCharacters": false,
+        "RemoveAllDigits": false,
+        "RemoveAllHTML": false,
+        "RemoveAllNonAlphaNumerics": false,
+        "RemoveAllNonDigits": false,
+        "RemoveAllNonLetters": false,
+        "RemoveAllNonVisible": false,
+        "RemoveAllSpaces": true,
+        "RemoveCharacters": null,
+        "TrimLeft": true,
+        "TrimRight": true
+      }
+    },
+    "Sequence": 33,
+    "Warning": null
+  },
+  {
+    "Code": "column-selector",
+    "Description": "",
+    "Error": null,
+    "Id": "fbe3ea9d-40c6-54c9-9856-eccf0c8b8f07",
+    "Name": "Column Selector #1",
+    "Properties": {
+      "__type": "DataFlowNodeColumnSelectorProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 2346,
+      "OutputColumns": [
+        {
+          "traceId": "d43cb320-6985-5f4b-9261-62f1ef280a3a",
+          "InternalType": "int64",
+          "Name": "Ticket ID"
+        },
+        {
+          "traceId": "a1e58aee-aff1-5272-a9e3-0f563e04cb7e",
+          "InternalType": "date",
+          "Name": "Date Opened"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "db3825b9-c1bb-505c-a841-96bbf9bf580c",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": -170,
+      "RenamedColumns": [],
+      "SortedColumnNames": [],
+      "UnselectedColumnNames": [
+        "Date Closed",
+        "Customer Name",
+        "Issue Category",
+        "Priority",
+        "Status",
+        "Assigned To",
+        "Agent ID",
+        "Agent Name"
+      ]
+    },
+    "Sequence": 34,
+    "Warning": null
+  },
+  {
+    "Code": "filter-query",
+    "Description": "",
+    "Error": null,
+    "Id": "13ea249c-6309-5696-8192-a7b334ee6075",
+    "Name": "Filter Query #1",
+    "Properties": {
+      "__type": "DataFlowNodeFilterQueryProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 2346,
+      "OutputColumns": [
+        {
+          "InternalType": "int64",
+          "Name": "Ticket ID",
+          "traceId": "87c41dfc-9a0e-5e47-b8b0-4187e1d381b8"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Opened",
+          "traceId": "764b4732-0b75-5ed6-91a4-57dcb9bf3f5f"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Closed",
+          "traceId": "9bbbbbe9-0360-5b8f-aa43-b1ccb8e147c0"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Customer Name",
+          "traceId": "511806f9-ecb7-5a75-b542-318496b645d0"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Issue Category",
+          "traceId": "8826abfd-df5e-5618-898d-bfd9d36fe9c7"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Priority",
+          "traceId": "cd6bffbf-1bf5-5f81-b917-99f03ca6bdff"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Status",
+          "traceId": "3057c6c5-90a3-52bd-b3e1-cf476a514c5b"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Assigned To",
+          "traceId": "12fe7f0b-c0ca-5867-afaa-f22a245ff725"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Agent ID",
+          "traceId": "897eb456-dd18-53dd-bde6-f73ba5524c78"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Agent Name",
+          "traceId": "56b96be8-a50d-5671-bd33-99ff93ac65c6"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "db3825b9-c1bb-505c-a841-96bbf9bf580c",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": -85,
+      "Expression": "[Assigned to] = 2"
+    },
+    "Sequence": 35,
+    "Warning": null
+  },
+  {
+    "Code": "filter-query",
+    "Description": "",
+    "Error": null,
+    "Id": "00b56929-a31b-5a9b-871f-849b47b9c5a4",
+    "Name": "Filter Query #1 #1",
+    "Properties": {
+      "__type": "DataFlowNodeFilterQueryProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 2346,
+      "OutputColumns": [
+        {
+          "InternalType": "int64",
+          "Name": "Ticket ID",
+          "traceId": "30a328e4-8334-5f60-a344-8385d77ec461"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Opened",
+          "traceId": "344b0843-a55c-52ec-8365-e976e03892dd"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Closed",
+          "traceId": "a0bc66e1-8e95-57cd-be95-05d37aee174d"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Customer Name",
+          "traceId": "cc159923-2d63-5f7a-8a9b-dbc5c43563f6"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Issue Category",
+          "traceId": "c277c8e5-d62b-596b-ab37-59baa69e26be"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Priority",
+          "traceId": "9547c266-caee-54e6-9aeb-27dc60748155"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Status",
+          "traceId": "20384f8e-0d2f-5d2b-839b-fc0b4049d715"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Assigned To",
+          "traceId": "cbc7b726-c784-52ad-be97-41f37eff7209"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Agent ID",
+          "traceId": "cebac0f9-64bc-56b1-9958-99b1412082c6"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Agent Name",
+          "traceId": "21d0c8e8-a339-589b-bc44-72c13c968e27"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "db3825b9-c1bb-505c-a841-96bbf9bf580c",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": 0,
+      "Expression": "[Date Opened] >= DATEFROMPARTS(2023,10,7)"
+    },
+    "Sequence": 36,
+    "Warning": null
+  },
+  {
+    "Code": "filter-simple",
+    "Description": "",
+    "Error": null,
+    "Id": "c2110b8c-144e-5c45-b349-43c8699527b8",
+    "Name": "Filter Wizard #1",
+    "Properties": {
+      "__type": "DataFlowNodeFilterSimpleProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 2346,
+      "OutputColumns": [
+        {
+          "InternalType": "int64",
+          "Name": "Ticket ID",
+          "traceId": "1fcc204d-1113-55fd-93ea-0d955c8cc761"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Opened",
+          "traceId": "b826be98-b18e-5e7a-8e6b-29fcb21d94ee"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Closed",
+          "traceId": "ebeea7ed-fe18-5692-92a5-c9d8447e9ec3"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Customer Name",
+          "traceId": "4eed6a05-e095-5990-8cdf-9601cd87b797"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Issue Category",
+          "traceId": "e9238685-4ec3-522a-a356-393584f08614"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Priority",
+          "traceId": "f1e1bc28-7b2b-547e-948e-2bddcda7a456"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Status",
+          "traceId": "30cfc661-8fdc-5765-9cad-b8ca5be4dfdb"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Assigned To",
+          "traceId": "6a58946e-b134-5b76-90cf-ae3f977d3bd7"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Agent ID",
+          "traceId": "f3d496a9-efea-5405-9783-a34cb8d95a92"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Agent Name",
+          "traceId": "ca74771f-2c46-51ad-9250-216c46523909"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "db3825b9-c1bb-505c-a841-96bbf9bf580c",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": 85,
+      "Filters": [
+        {
+          "ColumnName": "Agent Name",
+          "Comparator": "equals",
+          "Disabled": false,
+          "DisabledIfNull": false,
+          "Groups": [],
+          "Guid": "182b28f9-9f98-5696-96a3-d9aa662a4853",
+          "LogicalOperator": "and",
+          "ValueType": "selectedvalue",
+          "Values": [
+            "John Smith"
+          ]
+        }
+      ]
+    },
+    "Sequence": 37,
+    "Warning": null
+  },
+  {
+    "Code": "pivot",
+    "Description": "",
+    "Error": null,
+    "Id": "05bf89fd-ab25-52bd-a402-fc4f6238d53e",
+    "Name": "Pivot #1",
+    "Properties": {
+      "__type": "DataFlowNodePivotProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 2346,
+      "OutputColumns": [
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Status",
+          "traceId": "ae3fcd2c-7604-59a5-84b8-69e00d25a894"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Ticket ID (Count) Emma Johnson",
+          "traceId": "e583c3bd-87cd-51ed-942e-74919dd2b573"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Ticket ID (Count) John Smith",
+          "traceId": "7a42c398-14c0-56d2-80d4-1e50a16a6b4a"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Ticket ID (Count) Michael Davis",
+          "traceId": "97a6a6b0-6cb7-5d51-8e1f-7d1caa2bd58a"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "db3825b9-c1bb-505c-a841-96bbf9bf580c",
+          "SourceSide": "bottom",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": 170,
+      "Aggregates": [
+        {
+          "Aggregation": "count",
+          "Alias": "Ticket ID (Count)",
+          "InternalType": "int64",
+          "Name": "Ticket ID"
+        }
+      ],
+      "GroupByColumns": [
+        "Status"
+      ],
+      "PivotedColumn": "Agent Name",
+      "PivotedValues": [
+        "Emma Johnson",
+        "John Smith",
+        "Michael Davis"
+      ]
+    },
+    "Sequence": 38,
+    "Warning": null
+  },
+  {
+    "Code": "transform-data",
+    "Description": "",
+    "Error": null,
+    "Id": "a66e91cc-919d-5588-98db-500cb7ad041d",
+    "Name": "Transform Data #1",
+    "Properties": {
+      "__type": "DataFlowNodeTransformDataProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 2346,
+      "OutputColumns": [
+        {
+          "InternalType": "int64",
+          "Name": "Ticket ID",
+          "traceId": "d43cb320-6985-5f4b-9261-62f1ef280a3a"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Opened",
+          "traceId": "a1e58aee-aff1-5272-a9e3-0f563e04cb7e"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Closed",
+          "traceId": "bebaf231-ca80-5503-a20b-eb4ead3117ea"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Customer Name",
+          "traceId": "b4ac6ed1-d386-5caa-9c63-39ce28f4611e"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Issue Category",
+          "traceId": "cda18a1f-f90c-5668-a80e-7fac8c13f8b7"
+        },
+        {
+          "InternalType": "int32",
+          "Name": "Priority",
+          "traceId": "e0d1572f-44c8-5c8e-9025-6ce907b08729"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Status",
+          "traceId": "4463036d-ad19-5d5d-b29a-2be76bc7d075"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Assigned To",
+          "traceId": "f82956d9-f0c3-59ce-8c2c-3082e52b0a8b"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Agent ID",
+          "traceId": "461bb575-55bb-5702-8775-2dbbbbccb887"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Agent Name",
+          "traceId": "6fbf7114-2ec3-57bb-bf72-86c14721c0d6"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "db3825b9-c1bb-505c-a841-96bbf9bf580c",
+          "SourceSide": "bottom",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": 255,
+      "TransformedColumns": [
+        {
+          "Expression": "case when [Priority] = 'High' then 1 when [Priority] = 'Medium' then 2 else 3 end",
+          "InternalType": "int32",
+          "Name": "Priority"
+        }
+      ]
+    },
+    "Sequence": 39,
+    "Warning": null
+  },
+  {
+    "Code": "group-rows",
+    "Description": "",
+    "Error": null,
+    "Id": "84477db4-b82a-5ab4-8019-21b141c9fbea",
+    "Name": "Group Rows #1",
+    "Properties": {
+      "__type": "DataFlowNodeGroupRowsProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 2346,
+      "OutputColumns": [
+        {
+          "InternalType": "int64",
+          "Name": "Assigned To",
+          "traceId": "9feadb07-cd37-56f7-a279-0940665409df"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Ticket ID (Count)",
+          "traceId": "4ab75c21-aa4f-5dd2-aeea-39af00460291"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "db3825b9-c1bb-505c-a841-96bbf9bf580c",
+          "SourceSide": "bottom",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": 340,
+      "GroupByColumns": [
+        {
+          "Name": "Assigned To"
+        }
+      ],
+      "GroupedValues": [
+        {
+          "Aggregation": "count",
+          "Alias": "Ticket ID (Count)",
+          "InternalType": "int64",
+          "Name": "Ticket ID"
+        }
+      ]
+    },
+    "Sequence": 40,
+    "Warning": null
+  },
+  {
+    "Code": "table-output",
+    "Description": "",
+    "Error": null,
+    "Id": "51d162c2-4074-5ca7-b3a7-285d232a8795",
+    "Name": "Grouping - Output",
+    "Properties": {
+      "__type": "DataFlowNodeTableOutputProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": false,
+      "Left": 2346,
+      "OutputColumns": [
+        {
+          "InternalType": "int64",
+          "Name": "Assigned To",
+          "traceId": "0f638480-153f-586c-9d2e-935ad6144bb5"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Ticket ID (Count)",
+          "traceId": "9c7a1573-098d-5b0c-8179-c001631f4515"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "84477db4-b82a-5ab4-8019-21b141c9fbea",
+          "SourceSide": "bottom",
+          "TargetSide": "top"
+        }
+      ],
+      "Top": 425,
+      "DataCloneName": "Grouping - Output",
+      "DataCloneRecId": 900042,
+      "ProcessMode": "rebuild",
+      "SelectedColumns": [
+        {
+          "InternalType": "int64",
+          "OutputName": "Assigned To",
+          "SourceName": "Assigned To"
+        },
+        {
+          "InternalType": "int64",
+          "OutputName": "Ticket ID (Count)",
+          "SourceName": "Ticket ID (Count)"
+        }
+      ]
+    },
+    "Sequence": 41,
+    "Warning": null
+  },
+  {
+    "Code": "table-output",
+    "Description": "",
+    "Error": null,
+    "Id": "633993fc-06d9-5758-9d3b-5bb4795afdb5",
+    "Name": "Table Merge - Output",
+    "Properties": {
+      "__type": "DataFlowNodeTableOutputProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": false,
+      "Left": 2465,
+      "OutputColumns": [
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Agent Name",
+          "traceId": "03e807bc-0c1e-5d0c-87a1-91b3634e4512"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Assigned To",
+          "traceId": "1af21a0e-140a-5e86-afb7-d547ac6afdef"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Customer Name",
+          "traceId": "d1cf1270-9c41-5bd8-8d84-cabb5e47bb02"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Closed",
+          "traceId": "71105905-4473-571b-8b73-c1e39d0bd6dd"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Opened",
+          "traceId": "95e0f67d-4dc0-5309-bab4-2c5de54b434e"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Issue Category",
+          "traceId": "c0e9eb9e-bd71-5d2a-b6f2-fdb04cbb43d8"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Location",
+          "traceId": "a50e8b62-66b8-5eb4-8669-4e949687f2e0"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Priority",
+          "traceId": "950fe851-ec52-5606-b1ed-e0ea5e0beedc"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Status",
+          "traceId": "dcc8ac00-f2fe-53f8-a4fb-827593602c8a"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Ticket ID",
+          "traceId": "b9c74b04-f91d-5b65-9faa-5b4a8433ebeb"
+        },
+        {
+          "InternalType": "int32",
+          "Name": "Resolution Time",
+          "traceId": "0f064abb-382d-59c9-929d-1fe705a28fa7"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "20d53d87-3237-5233-ba8f-85236295ef2d",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": -595,
+      "DataCloneName": "Table Merge - Output",
+      "DataCloneRecId": 900043,
+      "ProcessMode": "rebuild",
+      "SelectedColumns": [
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Agent Name",
+          "SourceName": "Agent Name"
+        },
+        {
+          "InternalType": "int64",
+          "OutputName": "Assigned To",
+          "SourceName": "Assigned To"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Customer Name",
+          "SourceName": "Customer Name"
+        },
+        {
+          "InternalType": "date",
+          "OutputName": "Date Closed",
+          "SourceName": "Date Closed"
+        },
+        {
+          "InternalType": "date",
+          "OutputName": "Date Opened",
+          "SourceName": "Date Opened"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Issue Category",
+          "SourceName": "Issue Category"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Location",
+          "SourceName": "Location"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Priority",
+          "SourceName": "Priority"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Status",
+          "SourceName": "Status"
+        },
+        {
+          "InternalType": "int64",
+          "OutputName": "Ticket ID",
+          "SourceName": "Ticket ID"
+        },
+        {
+          "InternalType": "int32",
+          "OutputName": "Resolution Time",
+          "SourceName": "Resolution Time"
+        }
+      ]
+    },
+    "Sequence": 42,
+    "Warning": null
+  },
+  {
+    "Code": "remove-duplicates",
+    "Description": "",
+    "Error": null,
+    "Id": "a5123664-1296-5b8b-94a4-c1be99777b8e",
+    "Name": "Remove Duplicates #1",
+    "Properties": {
+      "__type": "DataFlowNodeRemoveDuplicatesProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 2482,
+      "OutputColumns": [
+        {
+          "InternalType": "int64",
+          "Name": "Ticket ID",
+          "traceId": "8f126e65-b9c4-55b8-bacc-92d13527be0e"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Opened",
+          "traceId": "4971bfb1-8a4a-5e39-9e7c-b9104877969a"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Closed",
+          "traceId": "c324c4bf-6341-5330-bb3a-39892d3cd894"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Customer Name",
+          "traceId": "c9a3451d-05f8-5198-9dc2-5e46350d031d"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Issue Category",
+          "traceId": "c20bfc44-589c-5320-8cf9-e8499204f2c8"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Priority",
+          "traceId": "3a4e4953-d8f6-5141-8af9-f44a980c3ae2"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Status",
+          "traceId": "d0513b81-97ec-5627-a99f-842ada8a93e9"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Assigned To",
+          "traceId": "06d725e9-09ba-5adf-92f6-70c86890794e"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Agent ID",
+          "traceId": "669eb078-cf08-5e7b-a181-816bb31d06f2"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Agent Name",
+          "traceId": "a8423672-412d-5e36-a50f-5fe629e17b66"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "9c6cd1c6-f61f-5342-85c1-57c1308f7ceb",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": -255,
+      "OrderBy": [],
+      "OrderByDesc": [],
+      "UniqueKey": [
+        "Status"
+      ]
+    },
+    "Sequence": 43,
+    "Warning": null
+  },
+  {
+    "Code": "table-output",
+    "Description": "",
+    "Error": null,
+    "Id": "163c3a07-ef6f-5b3f-9fe3-3986378b90f7",
+    "Name": "Column Selector - Output",
+    "Properties": {
+      "__type": "DataFlowNodeTableOutputProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": false,
+      "Left": 2482,
+      "OutputColumns": [
+        {
+          "InternalType": "int64",
+          "Name": "Ticket ID",
+          "traceId": "84afd1c3-47fe-55ce-b337-ae0a97c48b1e"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Opened",
+          "traceId": "f8b30523-920d-5062-b13d-14e0b2b7acbe"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "fbe3ea9d-40c6-54c9-9856-eccf0c8b8f07",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": -170,
+      "DataCloneName": "Column Selector - Output",
+      "DataCloneRecId": 900044,
+      "ProcessMode": "rebuild",
+      "SelectedColumns": [
+        {
+          "InternalType": "int64",
+          "OutputName": "Ticket ID",
+          "SourceName": "Ticket ID"
+        },
+        {
+          "InternalType": "date",
+          "OutputName": "Date Opened",
+          "SourceName": "Date Opened"
+        }
+      ]
+    },
+    "Sequence": 44,
+    "Warning": null
+  },
+  {
+    "Code": "table-output",
+    "Description": "",
+    "Error": null,
+    "Id": "2dfb5662-5ae6-5ab4-a843-228e9951dd88",
+    "Name": "Filter Query - Output 1",
+    "Properties": {
+      "__type": "DataFlowNodeTableOutputProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": false,
+      "Left": 2482,
+      "OutputColumns": [
+        {
+          "InternalType": "int64",
+          "Name": "Ticket ID",
+          "traceId": "692e6356-09b2-5cdb-a6d8-a9c764e0dd88"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Opened",
+          "traceId": "f9f24b4d-a842-5033-bdf8-e20d3047f52c"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Closed",
+          "traceId": "16d5c012-d392-57b9-8eff-578ebb4fa16f"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Customer Name",
+          "traceId": "c86fe4d2-4b04-5a87-833b-25af68a164f7"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Issue Category",
+          "traceId": "6293d7ec-dc74-56a3-bbec-ab901ce4fa15"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Priority",
+          "traceId": "8441db3b-ee63-52c7-9780-63b2cf93a525"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Status",
+          "traceId": "baebaff0-8823-5155-adea-b8b1ceaa760d"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Assigned To",
+          "traceId": "c3098b71-d26f-5528-9063-c207005f7b51"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Agent ID",
+          "traceId": "9422a16f-4529-59f8-bfd2-c03d80767b27"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Agent Name",
+          "traceId": "3c2b8979-9631-51d0-88e1-747fcf6e9aba"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "13ea249c-6309-5696-8192-a7b334ee6075",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": -85,
+      "DataCloneName": "Filter Query - Output 1",
+      "DataCloneRecId": 900045,
+      "ProcessMode": "rebuild",
+      "SelectedColumns": [
+        {
+          "InternalType": "int64",
+          "OutputName": "Ticket ID",
+          "SourceName": "Ticket ID"
+        },
+        {
+          "InternalType": "date",
+          "OutputName": "Date Opened",
+          "SourceName": "Date Opened"
+        },
+        {
+          "InternalType": "date",
+          "OutputName": "Date Closed",
+          "SourceName": "Date Closed"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Customer Name",
+          "SourceName": "Customer Name"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Issue Category",
+          "SourceName": "Issue Category"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Priority",
+          "SourceName": "Priority"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Status",
+          "SourceName": "Status"
+        },
+        {
+          "InternalType": "int64",
+          "OutputName": "Assigned To",
+          "SourceName": "Assigned To"
+        },
+        {
+          "InternalType": "int64",
+          "OutputName": "Agent ID",
+          "SourceName": "Agent ID"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Agent Name",
+          "SourceName": "Agent Name"
+        }
+      ]
+    },
+    "Sequence": 45,
+    "Warning": null
+  },
+  {
+    "Code": "table-output",
+    "Description": "",
+    "Error": null,
+    "Id": "92e7990a-96f1-5e27-a226-3bc30fd51231",
+    "Name": "Filter Query - Output 2",
+    "Properties": {
+      "__type": "DataFlowNodeTableOutputProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": false,
+      "Left": 2482,
+      "OutputColumns": [
+        {
+          "InternalType": "int64",
+          "Name": "Ticket ID",
+          "traceId": "9179fbc8-2c76-562a-a135-8ce663cf8555"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Opened",
+          "traceId": "a41671c4-4270-5ea1-a390-529b08135449"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Closed",
+          "traceId": "86e67287-6ccb-5aba-a2a1-8ea26368a57b"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Customer Name",
+          "traceId": "f2720f1c-193d-5d2d-b026-ce317f465025"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Issue Category",
+          "traceId": "eafb8fd2-99bc-5edc-b396-11998829e520"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Priority",
+          "traceId": "5ee5778b-2a6c-5a0e-b2d7-bb61ff48099f"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Status",
+          "traceId": "90c1f2d8-f11d-5b0e-98b4-567146ab4143"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Assigned To",
+          "traceId": "7acac808-e75f-5703-baf9-d4b153863e4e"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Agent ID",
+          "traceId": "06652910-5f4f-54be-8ef0-a6002e422c64"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Agent Name",
+          "traceId": "7d9d1042-109a-5f08-8feb-0f7b5f8c1da1"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "00b56929-a31b-5a9b-871f-849b47b9c5a4",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": 0,
+      "DataCloneName": "Filter Query - Output 2",
+      "DataCloneRecId": 900046,
+      "ProcessMode": "rebuild",
+      "SelectedColumns": [
+        {
+          "InternalType": "int64",
+          "OutputName": "Ticket ID",
+          "SourceName": "Ticket ID"
+        },
+        {
+          "InternalType": "date",
+          "OutputName": "Date Opened",
+          "SourceName": "Date Opened"
+        },
+        {
+          "InternalType": "date",
+          "OutputName": "Date Closed",
+          "SourceName": "Date Closed"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Customer Name",
+          "SourceName": "Customer Name"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Issue Category",
+          "SourceName": "Issue Category"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Priority",
+          "SourceName": "Priority"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Status",
+          "SourceName": "Status"
+        },
+        {
+          "InternalType": "int64",
+          "OutputName": "Assigned To",
+          "SourceName": "Assigned To"
+        },
+        {
+          "InternalType": "int64",
+          "OutputName": "Agent ID",
+          "SourceName": "Agent ID"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Agent Name",
+          "SourceName": "Agent Name"
+        }
+      ]
+    },
+    "Sequence": 46,
+    "Warning": null
+  },
+  {
+    "Code": "table-output",
+    "Description": "",
+    "Error": null,
+    "Id": "d7f7ae02-d056-501b-945b-8d33dc916535",
+    "Name": "Filter Wizard - Output",
+    "Properties": {
+      "__type": "DataFlowNodeTableOutputProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": false,
+      "Left": 2482,
+      "OutputColumns": [
+        {
+          "InternalType": "int64",
+          "Name": "Ticket ID",
+          "traceId": "b662410f-813e-5385-991a-6652f2129c0b"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Opened",
+          "traceId": "480d8386-4910-513f-a695-23d24bcb4221"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Closed",
+          "traceId": "62da2170-6534-55b8-af8b-bd66d5ab02e7"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Customer Name",
+          "traceId": "096adc69-733c-573a-a8f0-b94923728c2c"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Issue Category",
+          "traceId": "396dab3f-beb5-57b1-a2cf-ad4a9acf75db"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Priority",
+          "traceId": "9b5180cd-917d-51c4-9cb1-7b8f2553b65e"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Status",
+          "traceId": "7cdb1f5f-1bc2-56f6-b039-1f2c145aec1a"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Assigned To",
+          "traceId": "11a321db-bd7e-5521-bf90-9de6b16a15b0"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Agent ID",
+          "traceId": "9ca10397-8968-5668-b537-c3657a68a8bf"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Agent Name",
+          "traceId": "97400379-7f66-5d8d-93d0-50f9819fec99"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "c2110b8c-144e-5c45-b349-43c8699527b8",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": 85,
+      "DataCloneName": "Filter Wizard - Output",
+      "DataCloneRecId": 900047,
+      "ProcessMode": "rebuild",
+      "SelectedColumns": [
+        {
+          "InternalType": "int64",
+          "OutputName": "Ticket ID",
+          "SourceName": "Ticket ID"
+        },
+        {
+          "InternalType": "date",
+          "OutputName": "Date Opened",
+          "SourceName": "Date Opened"
+        },
+        {
+          "InternalType": "date",
+          "OutputName": "Date Closed",
+          "SourceName": "Date Closed"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Customer Name",
+          "SourceName": "Customer Name"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Issue Category",
+          "SourceName": "Issue Category"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Priority",
+          "SourceName": "Priority"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Status",
+          "SourceName": "Status"
+        },
+        {
+          "InternalType": "int64",
+          "OutputName": "Assigned To",
+          "SourceName": "Assigned To"
+        },
+        {
+          "InternalType": "int64",
+          "OutputName": "Agent ID",
+          "SourceName": "Agent ID"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Agent Name",
+          "SourceName": "Agent Name"
+        }
+      ]
+    },
+    "Sequence": 47,
+    "Warning": null
+  },
+  {
+    "Code": "table-output",
+    "Description": "",
+    "Error": null,
+    "Id": "0aed37a1-b745-502f-99e3-494ad66486ad",
+    "Name": "Pivot - Output",
+    "Properties": {
+      "__type": "DataFlowNodeTableOutputProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": false,
+      "Left": 2482,
+      "OutputColumns": [
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Status",
+          "traceId": "d63cc374-a7a3-5b2d-9739-8cb95b6cc3c7"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Ticket ID (Count) Emma Johnson",
+          "traceId": "7655c46a-e1f0-5bca-a6b3-1f2238af62eb"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Ticket ID (Count) John Smith",
+          "traceId": "6263fe45-3d7f-54bf-bd5f-049dfb88048d"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Ticket ID (Count) Michael Davis",
+          "traceId": "731bdc45-8ec0-52e8-a57b-7c1a01c80da0"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "05bf89fd-ab25-52bd-a402-fc4f6238d53e",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": 170,
+      "DataCloneName": "Pivot - Output",
+      "DataCloneRecId": 900048,
+      "ProcessMode": "rebuild",
+      "SelectedColumns": [
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Status",
+          "SourceName": "Status"
+        },
+        {
+          "InternalType": "int64",
+          "OutputName": "Ticket ID (Count) Emma Johnson",
+          "SourceName": "Ticket ID (Count) Emma Johnson"
+        },
+        {
+          "InternalType": "int64",
+          "OutputName": "Ticket ID (Count) John Smith",
+          "SourceName": "Ticket ID (Count) John Smith"
+        },
+        {
+          "InternalType": "int64",
+          "OutputName": "Ticket ID (Count) Michael Davis",
+          "SourceName": "Ticket ID (Count) Michael Davis"
+        }
+      ]
+    },
+    "Sequence": 48,
+    "Warning": null
+  },
+  {
+    "Code": "aggregated-columns",
+    "Description": "",
+    "Error": null,
+    "Id": "5b6150a5-6f78-5a42-b35a-57314925b951",
+    "Name": "Aggregate Columns #1",
+    "Properties": {
+      "__type": "DataFlowNodeAggregatedColumnsProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 2482,
+      "OutputColumns": [
+        {
+          "InternalType": "int64",
+          "Name": "Ticket ID",
+          "traceId": "d43cb320-6985-5f4b-9261-62f1ef280a3a"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Opened",
+          "traceId": "a1e58aee-aff1-5272-a9e3-0f563e04cb7e"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Closed",
+          "traceId": "bebaf231-ca80-5503-a20b-eb4ead3117ea"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Customer Name",
+          "traceId": "b4ac6ed1-d386-5caa-9c63-39ce28f4611e"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Issue Category",
+          "traceId": "cda18a1f-f90c-5668-a80e-7fac8c13f8b7"
+        },
+        {
+          "InternalType": "int32",
+          "Name": "Priority",
+          "traceId": "e0d1572f-44c8-5c8e-9025-6ce907b08729"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Status",
+          "traceId": "4463036d-ad19-5d5d-b29a-2be76bc7d075"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Assigned To",
+          "traceId": "f82956d9-f0c3-59ce-8c2c-3082e52b0a8b"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Agent ID",
+          "traceId": "461bb575-55bb-5702-8775-2dbbbbccb887"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Agent Name",
+          "traceId": "6fbf7114-2ec3-57bb-bf72-86c14721c0d6"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Ticket ID (Count) (Max)",
+          "traceId": "469411b7-644f-5e2c-8e05-d1cb90a50164"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "84477db4-b82a-5ab4-8019-21b141c9fbea",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        },
+        {
+          "Id": "a66e91cc-919d-5588-98db-500cb7ad041d",
+          "SourceSide": "right",
+          "TargetSide": "top"
+        }
+      ],
+      "Top": 340,
+      "Conditions": [
+        {
+          "ColumnName": "Assigned To",
+          "Comparator": "equals",
+          "Disabled": false,
+          "DisabledIfNull": false,
+          "Groups": [],
+          "Guid": "c0bbc51a-345b-52d2-abf8-729c15b63c71",
+          "LogicalOperator": "and",
+          "ValueType": "column",
+          "Values": [
+            "Assigned To"
+          ]
+        }
+      ],
+      "AggregatedNodeId": "84477db4-b82a-5ab4-8019-21b141c9fbea",
+      "Aggregates": [
+        {
+          "Aggregation": "maximum",
+          "Alias": "Ticket ID (Count) (Max)",
+          "InternalType": "int64",
+          "Name": "Ticket ID (Count)"
+        }
+      ]
+    },
+    "Sequence": 49,
+    "Warning": null
+  },
+  {
+    "Code": "find-replace",
+    "Description": "",
+    "Error": null,
+    "Id": "0eb0e72d-938e-5ec7-b37a-cf2ed5f173ba",
+    "Name": "Find & Replace #1",
+    "Properties": {
+      "__type": "DataFlowNodeFindReplaceProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 2,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 2618,
+      "OutputColumns": [
+        {
+          "InternalType": "int64",
+          "Name": "Ticket ID",
+          "traceId": "8f126e65-b9c4-55b8-bacc-92d13527be0e"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Opened",
+          "traceId": "4971bfb1-8a4a-5e39-9e7c-b9104877969a"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Closed",
+          "traceId": "c324c4bf-6341-5330-bb3a-39892d3cd894"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Customer Name",
+          "traceId": "c9a3451d-05f8-5198-9dc2-5e46350d031d"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Issue Category",
+          "traceId": "c20bfc44-589c-5320-8cf9-e8499204f2c8"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Priority",
+          "traceId": "d0f08ee0-bfdb-563d-a58b-be5adc6c7c0f"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Status",
+          "traceId": "d0513b81-97ec-5627-a99f-842ada8a93e9"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Assigned To",
+          "traceId": "06d725e9-09ba-5adf-92f6-70c86890794e"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Agent ID",
+          "traceId": "669eb078-cf08-5e7b-a181-816bb31d06f2"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Agent Name",
+          "traceId": "a8423672-412d-5e36-a50f-5fe629e17b66"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "a5123664-1296-5b8b-94a4-c1be99777b8e",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": -255,
+      "ColumnNames": [
+        "Priority"
+      ],
+      "Replacements": [
+        {
+          "Find": "High",
+          "ReplaceWith": "Hi-gh"
+        },
+        {
+          "Find": "Low",
+          "ReplaceWith": "L-ow"
+        },
+        {
+          "Find": "Medium",
+          "ReplaceWith": "Med-ium"
+        }
+      ]
+    },
+    "Sequence": 50,
+    "Warning": null
+  },
+  {
+    "Code": "unpivot",
+    "Description": "",
+    "Error": null,
+    "Id": "bb5d58fa-2770-5a62-a250-414bcf0f93e6",
+    "Name": "Unpivot #1",
+    "Properties": {
+      "__type": "DataFlowNodeUnpivotProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 2618,
+      "OutputColumns": [
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Status",
+          "traceId": "d63cc374-a7a3-5b2d-9739-8cb95b6cc3c7"
+        },
+        {
+          "InternalType": "text(128)",
+          "Name": "Assigned to",
+          "traceId": "9c86a9e7-b669-52ac-81b6-431401dc165f"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Count",
+          "traceId": "cb882f73-4c0a-5281-a725-67c16e14e697"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "0aed37a1-b745-502f-99e3-494ad66486ad",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": 170,
+      "ColumnsToUnpivot": [
+        "Ticket ID (Count) Emma Johnson",
+        "Ticket ID (Count) John Smith",
+        "Ticket ID (Count) Michael Davis"
+      ],
+      "PivotColumnName": "Assigned to",
+      "TextToRemove": null,
+      "ValueColumnInternalType": "int64",
+      "ValueColumnName": "Count"
+    },
+    "Sequence": 51,
+    "Warning": null
+  },
+  {
+    "Code": "standardize-data",
+    "Description": "",
+    "Error": null,
+    "Id": "3b74985b-6ab9-5e71-a706-80bb738feded",
+    "Name": "Standardize Data #1",
+    "Properties": {
+      "__type": "DataFlowNodeStandardizeDataProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 3,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 2618,
+      "OutputColumns": [
+        {
+          "InternalType": "int64",
+          "Name": "Ticket ID",
+          "traceId": "d43cb320-6985-5f4b-9261-62f1ef280a3a"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Opened",
+          "traceId": "a1e58aee-aff1-5272-a9e3-0f563e04cb7e"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Closed",
+          "traceId": "bebaf231-ca80-5503-a20b-eb4ead3117ea"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Customer Name",
+          "traceId": "b4ac6ed1-d386-5caa-9c63-39ce28f4611e"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Issue Category",
+          "traceId": "cda18a1f-f90c-5668-a80e-7fac8c13f8b7"
+        },
+        {
+          "InternalType": "int32",
+          "Name": "Priority",
+          "traceId": "e0d1572f-44c8-5c8e-9025-6ce907b08729"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Status",
+          "traceId": "b688454e-a117-5246-92ef-d2d65231e9f8"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Assigned To",
+          "traceId": "f82956d9-f0c3-59ce-8c2c-3082e52b0a8b"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Agent ID",
+          "traceId": "461bb575-55bb-5702-8775-2dbbbbccb887"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Agent Name",
+          "traceId": "6fbf7114-2ec3-57bb-bf72-86c14721c0d6"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "a66e91cc-919d-5588-98db-500cb7ad041d",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": 255,
+      "ColumnNames": [
+        "Status"
+      ],
+      "Rules": [
+        {
+          "Condition": "exactly",
+          "Pattern": "Resolved",
+          "ReplaceWith": "Closed"
+        }
+      ]
+    },
+    "Sequence": 52,
+    "Warning": null
+  },
+  {
+    "Code": "table-output",
+    "Description": "",
+    "Error": null,
+    "Id": "1e13aaeb-f024-5403-870d-43e33a4131ee",
+    "Name": "Aggregation - Output",
+    "Properties": {
+      "__type": "DataFlowNodeTableOutputProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": false,
+      "Left": 2618,
+      "OutputColumns": [
+        {
+          "InternalType": "int64",
+          "Name": "Ticket ID",
+          "traceId": "a7409cae-b5bf-5283-b2d1-3aa611802215"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Opened",
+          "traceId": "3495b405-75ec-541a-9a7f-01722d154e66"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Closed",
+          "traceId": "ae0f2126-bb8d-594d-84db-a4d290c4ba7f"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Customer Name",
+          "traceId": "65d5330b-836c-58b3-87b2-85210380bf33"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Issue Category",
+          "traceId": "4b3a4cd9-56fb-5f19-b6be-0953b7869ae3"
+        },
+        {
+          "InternalType": "int32",
+          "Name": "Priority",
+          "traceId": "5636750d-d437-547b-b9cb-2d4f9176e02b"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Status",
+          "traceId": "2b15a293-f859-530c-8f78-b946af105256"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Assigned To",
+          "traceId": "4805e8ae-ec08-5633-895e-88a842afc153"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Agent ID",
+          "traceId": "948c24c3-8f8d-5823-9f35-df3c251d80e4"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Agent Name",
+          "traceId": "f678bb42-3a8e-5b38-998b-3a53b7ef36e4"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Ticket ID (Count) (Max)",
+          "traceId": "58240eef-d42b-5f73-b75f-59af78a83d4c"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "5b6150a5-6f78-5a42-b35a-57314925b951",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": 340,
+      "DataCloneName": "Aggregation - Output",
+      "DataCloneRecId": 900049,
+      "ProcessMode": "rebuild",
+      "SelectedColumns": [
+        {
+          "InternalType": "int64",
+          "OutputName": "Ticket ID",
+          "SourceName": "Ticket ID"
+        },
+        {
+          "InternalType": "date",
+          "OutputName": "Date Opened",
+          "SourceName": "Date Opened"
+        },
+        {
+          "InternalType": "date",
+          "OutputName": "Date Closed",
+          "SourceName": "Date Closed"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Customer Name",
+          "SourceName": "Customer Name"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Issue Category",
+          "SourceName": "Issue Category"
+        },
+        {
+          "InternalType": "int32",
+          "OutputName": "Priority",
+          "SourceName": "Priority"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Status",
+          "SourceName": "Status"
+        },
+        {
+          "InternalType": "int64",
+          "OutputName": "Assigned To",
+          "SourceName": "Assigned To"
+        },
+        {
+          "InternalType": "int64",
+          "OutputName": "Agent ID",
+          "SourceName": "Agent ID"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Agent Name",
+          "SourceName": "Agent Name"
+        },
+        {
+          "InternalType": "int64",
+          "OutputName": "Ticket ID (Count) (Max)",
+          "SourceName": "Ticket ID (Count) (Max)"
+        }
+      ]
+    },
+    "Sequence": 53,
+    "Warning": null
+  },
+  {
+    "Code": "text-to-rows",
+    "Description": "",
+    "Error": null,
+    "Id": "6e039978-d4e9-5461-a4d2-846582c631ee",
+    "Name": "Text to Rows #1",
+    "Properties": {
+      "__type": "DataFlowNodeTextToRowsProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 2754,
+      "OutputColumns": [
+        {
+          "InternalType": "int64",
+          "Name": "Ticket ID",
+          "traceId": "8f126e65-b9c4-55b8-bacc-92d13527be0e"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Opened",
+          "traceId": "4971bfb1-8a4a-5e39-9e7c-b9104877969a"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Closed",
+          "traceId": "c324c4bf-6341-5330-bb3a-39892d3cd894"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Customer Name",
+          "traceId": "c9a3451d-05f8-5198-9dc2-5e46350d031d"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Issue Category",
+          "traceId": "c20bfc44-589c-5320-8cf9-e8499204f2c8"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Priority",
+          "traceId": "d0f08ee0-bfdb-563d-a58b-be5adc6c7c0f"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Status",
+          "traceId": "d0513b81-97ec-5627-a99f-842ada8a93e9"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Assigned To",
+          "traceId": "06d725e9-09ba-5adf-92f6-70c86890794e"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Agent ID",
+          "traceId": "669eb078-cf08-5e7b-a181-816bb31d06f2"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Agent Name",
+          "traceId": "a8423672-412d-5e36-a50f-5fe629e17b66"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Split",
+          "traceId": "061e17dd-1a14-55b4-804d-cb725612cfdb"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "0eb0e72d-938e-5ec7-b37a-cf2ed5f173ba",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": -255,
+      "ColumnName": "Split",
+      "Delimiter": "-",
+      "SourceColumn": "Priority"
+    },
+    "Sequence": 54,
+    "Warning": null
+  },
+  {
+    "Code": "text-to-columns",
+    "Description": "",
+    "Error": null,
+    "Id": "aa8abf72-e487-50d4-ac37-cf9c09088b97",
+    "Name": "Text to Columns #1",
+    "Properties": {
+      "__type": "DataFlowNodeTextToColumnsProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 2754,
+      "OutputColumns": [
+        {
+          "InternalType": "int64",
+          "Name": "Ticket ID",
+          "traceId": "8f126e65-b9c4-55b8-bacc-92d13527be0e"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Opened",
+          "traceId": "4971bfb1-8a4a-5e39-9e7c-b9104877969a"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Closed",
+          "traceId": "c324c4bf-6341-5330-bb3a-39892d3cd894"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Customer Name",
+          "traceId": "c9a3451d-05f8-5198-9dc2-5e46350d031d"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Issue Category",
+          "traceId": "c20bfc44-589c-5320-8cf9-e8499204f2c8"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Priority",
+          "traceId": "d0f08ee0-bfdb-563d-a58b-be5adc6c7c0f"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Status",
+          "traceId": "d0513b81-97ec-5627-a99f-842ada8a93e9"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Assigned To",
+          "traceId": "06d725e9-09ba-5adf-92f6-70c86890794e"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Agent ID",
+          "traceId": "669eb078-cf08-5e7b-a181-816bb31d06f2"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Agent Name",
+          "traceId": "a8423672-412d-5e36-a50f-5fe629e17b66"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Test",
+          "traceId": "e87fa956-f182-5245-a734-dc9cb6a03e42"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "0eb0e72d-938e-5ec7-b37a-cf2ed5f173ba",
+          "SourceSide": "bottom",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": -170,
+      "Delimiter": "-",
+      "SourceColumn": "Priority",
+      "ValueColumns": [
+        {
+          "InternalType": null,
+          "Name": "Test",
+          "Position": 1
+        }
+      ]
+    },
+    "Sequence": 55,
+    "Warning": null
+  },
+  {
+    "Code": "table-output",
+    "Description": "",
+    "Error": null,
+    "Id": "f6897813-d5a8-5991-a72c-6cff13877510",
+    "Name": "Unpivot - Output",
+    "Properties": {
+      "__type": "DataFlowNodeTableOutputProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": false,
+      "Left": 2754,
+      "OutputColumns": [
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Status",
+          "traceId": "977cb3be-f092-5085-a1f2-a57abf946e0d"
+        },
+        {
+          "InternalType": "text(128)",
+          "Name": "Assigned to",
+          "traceId": "dfd982a3-f48d-55a1-8dcb-99ae03817c22"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Count",
+          "traceId": "95d95668-eaee-56f8-a84c-b358504e3567"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "bb5d58fa-2770-5a62-a250-414bcf0f93e6",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": 170,
+      "DataCloneName": "Unpivot - Output",
+      "DataCloneRecId": 900050,
+      "ProcessMode": "rebuild",
+      "SelectedColumns": [
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Status",
+          "SourceName": "Status"
+        },
+        {
+          "InternalType": "text(128)",
+          "OutputName": "Assigned to",
+          "SourceName": "Assigned to"
+        },
+        {
+          "InternalType": "int64",
+          "OutputName": "Count",
+          "SourceName": "Count"
+        }
+      ]
+    },
+    "Sequence": 56,
+    "Warning": null
+  },
+  {
+    "Code": "convert-type",
+    "Description": "",
+    "Error": null,
+    "Id": "4bc9b0fa-33f1-5b8b-a81f-f792470cc40c",
+    "Name": "Convert Type #1",
+    "Properties": {
+      "__type": "DataFlowNodeConvertTypeProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 2754,
+      "OutputColumns": [
+        {
+          "InternalType": "text(250)",
+          "Name": "Ticket ID",
+          "traceId": "60dd5bce-5355-5ae5-ab80-b8615a68e27b"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Opened",
+          "traceId": "a1e58aee-aff1-5272-a9e3-0f563e04cb7e"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Closed",
+          "traceId": "bebaf231-ca80-5503-a20b-eb4ead3117ea"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Customer Name",
+          "traceId": "b4ac6ed1-d386-5caa-9c63-39ce28f4611e"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Issue Category",
+          "traceId": "cda18a1f-f90c-5668-a80e-7fac8c13f8b7"
+        },
+        {
+          "InternalType": "int32",
+          "Name": "Priority",
+          "traceId": "e0d1572f-44c8-5c8e-9025-6ce907b08729"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Status",
+          "traceId": "b688454e-a117-5246-92ef-d2d65231e9f8"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Assigned To",
+          "traceId": "f82956d9-f0c3-59ce-8c2c-3082e52b0a8b"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Agent ID",
+          "traceId": "461bb575-55bb-5702-8775-2dbbbbccb887"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Agent Name",
+          "traceId": "6fbf7114-2ec3-57bb-bf72-86c14721c0d6"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "3b74985b-6ab9-5e71-a706-80bb738feded",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": 255,
+      "ConvertedColumns": [
+        {
+          "InternalType": "text(250)",
+          "Name": "Ticket ID"
+        }
+      ]
+    },
+    "Sequence": 57,
+    "Warning": null
+  },
+  {
+    "Code": "table-output",
+    "Description": "",
+    "Error": null,
+    "Id": "f2739a99-90e8-5a62-868b-52fab1244efd",
+    "Name": "JSON to Rows - Output",
+    "Properties": {
+      "__type": "DataFlowNodeTableOutputProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": false,
+      "Left": 2873,
+      "OutputColumns": [
+        {
+          "InternalType": "json",
+          "Name": "tickets",
+          "traceId": "389d09e8-6762-5dcf-be25-ac7472d7633b"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "ticket_id",
+          "traceId": "2cb63d8c-fd8d-5036-aee4-c1a982c57df1"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "subject",
+          "traceId": "270fbdd9-e195-5d2d-988a-c64dadad3f7b"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "description",
+          "traceId": "155a1be7-df88-5b1a-ad47-6adb0803525f"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "status",
+          "traceId": "5b5dfed0-f83c-5267-91eb-9fffef8cbebb"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "priority",
+          "traceId": "7d264672-a6be-545e-8a21-62fa1cb15998"
+        },
+        {
+          "InternalType": "datetime",
+          "Name": "created_at",
+          "traceId": "c76d38ad-4e16-548c-bff6-765ea49522c6"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "customer_name",
+          "traceId": "a080e77b-afda-5267-8084-37f6a79c5b42"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "customer_email",
+          "traceId": "e627b2cb-a190-544a-a7c8-f2041f937b31"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "assigned_to",
+          "traceId": "d561b82d-e37a-5c44-9643-048af9b5b6ac"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "6e737ec7-6e2b-5ce0-8c32-a349e24e51cd",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": 782,
+      "DataCloneName": "JSON to Rows - Output",
+      "DataCloneRecId": 900051,
+      "ProcessMode": "rebuild",
+      "SelectedColumns": [
+        {
+          "InternalType": "json",
+          "OutputName": "tickets",
+          "SourceName": "tickets"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "ticket_id",
+          "SourceName": "ticket_id"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "subject",
+          "SourceName": "subject"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "description",
+          "SourceName": "description"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "status",
+          "SourceName": "status"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "priority",
+          "SourceName": "priority"
+        },
+        {
+          "InternalType": "datetime",
+          "OutputName": "created_at",
+          "SourceName": "created_at"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "customer_name",
+          "SourceName": "customer_name"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "customer_email",
+          "SourceName": "customer_email"
+        },
+        {
+          "InternalType": "int64",
+          "OutputName": "assigned_to",
+          "SourceName": "assigned_to"
+        }
+      ]
+    },
+    "Sequence": 58,
+    "Warning": null
+  },
+  {
+    "Code": "table-output",
+    "Description": "",
+    "Error": null,
+    "Id": "f8bb322a-e097-5a52-8b69-2b6f91f85702",
+    "Name": "Text to Rows - Output",
+    "Properties": {
+      "__type": "DataFlowNodeTableOutputProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": false,
+      "Left": 2890,
+      "OutputColumns": [
+        {
+          "InternalType": "int64",
+          "Name": "Ticket ID",
+          "traceId": "cc2c4409-25b0-580c-a784-c7fa3e1995f9"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Opened",
+          "traceId": "9b776b8c-0a9e-5d06-850c-887ca03bc068"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Closed",
+          "traceId": "fb639dfb-99c6-5328-9523-8ab41d50f402"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Customer Name",
+          "traceId": "7deea8db-c18c-5f05-a7cc-bf901c3e58b7"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Issue Category",
+          "traceId": "380f4f7c-772e-5444-b51c-bb765c48be43"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Priority",
+          "traceId": "54dab7d2-3d68-5e9d-8c09-fd14066b915f"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Status",
+          "traceId": "20e4458b-8985-5a04-836f-7057b27fd393"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Assigned To",
+          "traceId": "c34f93e4-6303-5f54-a977-631f45066fbe"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Agent ID",
+          "traceId": "9ea9af97-eb1f-5d47-ba52-b4ba0d58aba1"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Agent Name",
+          "traceId": "b94d403d-13a7-5e27-8ff6-e058d4e6bec1"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Split",
+          "traceId": "018bb74b-5edb-52aa-b5c6-738d9c10972b"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "6e039978-d4e9-5461-a4d2-846582c631ee",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": -255,
+      "DataCloneName": "Text to Rows - Output",
+      "DataCloneRecId": 900052,
+      "ProcessMode": "rebuild",
+      "SelectedColumns": [
+        {
+          "InternalType": "int64",
+          "OutputName": "Ticket ID",
+          "SourceName": "Ticket ID"
+        },
+        {
+          "InternalType": "date",
+          "OutputName": "Date Opened",
+          "SourceName": "Date Opened"
+        },
+        {
+          "InternalType": "date",
+          "OutputName": "Date Closed",
+          "SourceName": "Date Closed"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Customer Name",
+          "SourceName": "Customer Name"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Issue Category",
+          "SourceName": "Issue Category"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Priority",
+          "SourceName": "Priority"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Status",
+          "SourceName": "Status"
+        },
+        {
+          "InternalType": "int64",
+          "OutputName": "Assigned To",
+          "SourceName": "Assigned To"
+        },
+        {
+          "InternalType": "int64",
+          "OutputName": "Agent ID",
+          "SourceName": "Agent ID"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Agent Name",
+          "SourceName": "Agent Name"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Split",
+          "SourceName": "Split"
+        }
+      ]
+    },
+    "Sequence": 59,
+    "Warning": null
+  },
+  {
+    "Code": "table-output",
+    "Description": "",
+    "Error": null,
+    "Id": "19184f57-fe31-5e7e-8b1f-8cc580f4bd84",
+    "Name": "Text to Columns - Output",
+    "Properties": {
+      "__type": "DataFlowNodeTableOutputProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": false,
+      "Left": 2890,
+      "OutputColumns": [
+        {
+          "InternalType": "int64",
+          "Name": "Ticket ID",
+          "traceId": "e1c90985-56ab-55c6-a655-9a52649e2756"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Opened",
+          "traceId": "f050dfc0-a2d0-5cfe-a1d4-e6fbffe9915f"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Closed",
+          "traceId": "54dff850-d811-5a2e-ae1f-bbaddf52f31e"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Customer Name",
+          "traceId": "a0dafadc-49ce-5ad7-8696-b464b74346c1"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Issue Category",
+          "traceId": "12532204-e305-529e-a3cb-260da61199b7"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Priority",
+          "traceId": "6261ea56-ef04-542f-a776-d50606d65c3a"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Status",
+          "traceId": "a1cfbe5c-9371-5448-a6ad-e3857373fa0b"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Assigned To",
+          "traceId": "2479a7c5-87c2-5f2c-a9aa-cd607fad463f"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Agent ID",
+          "traceId": "49d8d397-0b78-5b34-a872-6ab501ac3cb0"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Agent Name",
+          "traceId": "9203d50c-ad22-52d4-a84f-bfa9cefb359c"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Test",
+          "traceId": "80bb0d3f-7b03-53c9-85dc-ed4bee2e8142"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "aa8abf72-e487-50d4-ac37-cf9c09088b97",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": -170,
+      "DataCloneName": "Text to Columns - Output",
+      "DataCloneRecId": 900053,
+      "ProcessMode": "rebuild",
+      "SelectedColumns": [
+        {
+          "InternalType": "int64",
+          "OutputName": "Ticket ID",
+          "SourceName": "Ticket ID"
+        },
+        {
+          "InternalType": "date",
+          "OutputName": "Date Opened",
+          "SourceName": "Date Opened"
+        },
+        {
+          "InternalType": "date",
+          "OutputName": "Date Closed",
+          "SourceName": "Date Closed"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Customer Name",
+          "SourceName": "Customer Name"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Issue Category",
+          "SourceName": "Issue Category"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Priority",
+          "SourceName": "Priority"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Status",
+          "SourceName": "Status"
+        },
+        {
+          "InternalType": "int64",
+          "OutputName": "Assigned To",
+          "SourceName": "Assigned To"
+        },
+        {
+          "InternalType": "int64",
+          "OutputName": "Agent ID",
+          "SourceName": "Agent ID"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Agent Name",
+          "SourceName": "Agent Name"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Test",
+          "SourceName": "Test"
+        }
+      ]
+    },
+    "Sequence": 60,
+    "Warning": null
+  },
+  {
+    "Code": "find-replace",
+    "Description": "",
+    "Error": null,
+    "Id": "928d39e1-77b1-5483-9120-0ae232af1faf",
+    "Name": "Find & Replace #2",
+    "Properties": {
+      "__type": "DataFlowNodeFindReplaceProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 2,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 2890,
+      "OutputColumns": [
+        {
+          "InternalType": "text(250)",
+          "Name": "Ticket ID",
+          "traceId": "60dd5bce-5355-5ae5-ab80-b8615a68e27b"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Opened",
+          "traceId": "a1e58aee-aff1-5272-a9e3-0f563e04cb7e"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Closed",
+          "traceId": "bebaf231-ca80-5503-a20b-eb4ead3117ea"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Customer Name",
+          "traceId": "9f0ffce6-c52c-5a33-91a1-7611d603bb65"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Issue Category",
+          "traceId": "cda18a1f-f90c-5668-a80e-7fac8c13f8b7"
+        },
+        {
+          "InternalType": "int32",
+          "Name": "Priority",
+          "traceId": "e0d1572f-44c8-5c8e-9025-6ce907b08729"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Status",
+          "traceId": "b688454e-a117-5246-92ef-d2d65231e9f8"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Assigned To",
+          "traceId": "f82956d9-f0c3-59ce-8c2c-3082e52b0a8b"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Agent ID",
+          "traceId": "461bb575-55bb-5702-8775-2dbbbbccb887"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Agent Name",
+          "traceId": "6fbf7114-2ec3-57bb-bf72-86c14721c0d6"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "4bc9b0fa-33f1-5b8b-a81f-f792470cc40c",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": 255,
+      "ColumnNames": [
+        "Customer Name"
+      ],
+      "Replacements": [
+        {
+          "Find": "Linda",
+          "ReplaceWith": "Chris"
+        }
+      ]
+    },
+    "Sequence": 61,
+    "Warning": null
+  },
+  {
+    "Code": "table-output",
+    "Description": "",
+    "Error": null,
+    "Id": "e7020003-77ee-51bd-91ca-037980bd87a6",
+    "Name": "Transform Nodes - Output",
+    "Properties": {
+      "__type": "DataFlowNodeTableOutputProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": false,
+      "Left": 3315,
+      "OutputColumns": [
+        {
+          "InternalType": "text(250)",
+          "Name": "Ticket ID",
+          "traceId": "1c634d9c-49fd-5df9-aaa7-a52430d05f05"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Opened",
+          "traceId": "a831a11a-b4f1-514e-9332-3fedbcabec04"
+        },
+        {
+          "InternalType": "date",
+          "Name": "Date Closed",
+          "traceId": "a0d9cb55-bd52-50e8-9d3b-4307fb98a461"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Customer Name",
+          "traceId": "fc39170d-8e52-54f8-87aa-642e4ca0c634"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Issue Category",
+          "traceId": "91db92b4-7106-5457-9d48-15fa55fd65bf"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Priority",
+          "traceId": "7b4d532b-eae2-5411-b850-059e7d27104a"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Status",
+          "traceId": "1efdef75-1bc3-5b8f-9f08-fde37fa6a2b1"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Assigned To",
+          "traceId": "d3627d2f-fd92-512d-8d78-44283b1a80c3"
+        },
+        {
+          "InternalType": "int64",
+          "Name": "Agent ID",
+          "traceId": "c362b94c-8ffb-5c8c-bccc-8ac524705f81"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "Name": "Agent Name",
+          "traceId": "f1b24da2-6c10-5d9e-9731-6b15c1f9d141"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "928d39e1-77b1-5483-9120-0ae232af1faf",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "Top": 255,
+      "DataCloneName": "Transform Nodes - Output",
+      "DataCloneRecId": 900054,
+      "ProcessMode": "rebuild",
+      "SelectedColumns": [
+        {
+          "InternalType": "text(250)",
+          "OutputName": "Ticket ID",
+          "SourceName": "Ticket ID"
+        },
+        {
+          "InternalType": "date",
+          "OutputName": "Date Opened",
+          "SourceName": "Date Opened"
+        },
+        {
+          "InternalType": "date",
+          "OutputName": "Date Closed",
+          "SourceName": "Date Closed"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Customer Name",
+          "SourceName": "Customer Name"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Issue Category",
+          "SourceName": "Issue Category"
+        },
+        {
+          "InternalType": "int64",
+          "OutputName": "Priority",
+          "SourceName": "Priority"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Status",
+          "SourceName": "Status"
+        },
+        {
+          "InternalType": "int64",
+          "OutputName": "Assigned To",
+          "SourceName": "Assigned To"
+        },
+        {
+          "InternalType": "int64",
+          "OutputName": "Agent ID",
+          "SourceName": "Agent ID"
+        },
+        {
+          "InternalType": "textsimple(250)",
+          "OutputName": "Agent Name",
+          "SourceName": "Agent Name"
+        }
+      ]
+    },
+    "Sequence": 62,
+    "Warning": null
+  },
+  {
+    "Code": "translate-text",
+    "Description": "",
+    "Error": null,
+    "Id": "6f197c5a-4dfc-53eb-8c33-212ec8e0d51a",
+    "Name": "Translate Text #1",
+    "Properties": {
+      "__type": "DataFlowNodeTranslateTextProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 1700,
+      "OutputColumns": [
+        {
+          "InternalType": "json",
+          "Name": "tickets",
+          "traceId": "369540e2-bbf4-51c3-bb66-d21c19bca34a"
+        },
+        {
+          "InternalType": "textsimple(353)",
+          "Name": "Story",
+          "traceId": "c01a821c-a4ec-550d-8f2f-769892b79dbe"
+        },
+        {
+          "InternalType": "text(max)",
+          "Name": "Croatian",
+          "traceId": "72ce15eb-76b5-5953-a3d7-eac959cf4fe9"
+        },
+        {
+          "InternalType": "text(max)",
+          "Name": "Japanese",
+          "traceId": "317d3c07-b196-57c5-951c-b5f262b5bc86"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "40a18bfd-29be-5e5d-826b-6552a6d034c4",
+          "SourceSide": "left",
+          "TargetSide": "right"
+        }
+      ],
+      "Top": 867,
+      "ProcessOutputColumns": [
+        {
+          "Language": "hr",
+          "Name": "Croatian"
+        },
+        {
+          "Language": "ja",
+          "Name": "Japanese"
+        }
+      ],
+      "ProfanityFilter": true,
+      "SourceColumn": "Story",
+      "SourceLanguageType": "auto",
+      "SourceType": "plain"
+    },
+    "Sequence": 63,
+    "Warning": null
+  },
+  {
+    "Code": "table-output",
+    "Description": "",
+    "Error": null,
+    "Id": "4258d8aa-648b-545e-9ace-da7116cecfb8",
+    "Name": "Translate Text - Output",
+    "Properties": {
+      "__type": "DataFlowNodeTableOutputProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": false,
+      "Left": 1564,
+      "OutputColumns": [
+        {
+          "InternalType": "json",
+          "Name": "tickets",
+          "traceId": "ea3b3a97-2a30-595d-b96b-4fe1cfbfc0e6"
+        },
+        {
+          "InternalType": "textsimple(353)",
+          "Name": "Story",
+          "traceId": "42e51cac-c6f5-5405-8279-eadc278ecd1b"
+        },
+        {
+          "InternalType": "text(max)",
+          "Name": "Croatian",
+          "traceId": "7bd3b1dd-7608-581a-81b7-e399c833d2de"
+        },
+        {
+          "InternalType": "text(max)",
+          "Name": "Japanese",
+          "traceId": "d7eee531-2a1e-5def-80a3-d6a02224fe21"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "6f197c5a-4dfc-53eb-8c33-212ec8e0d51a",
+          "SourceSide": "left",
+          "TargetSide": "right"
+        }
+      ],
+      "Top": 867,
+      "DataCloneName": "Translate Text - Output",
+      "DataCloneRecId": 900055,
+      "ProcessMode": "rebuild",
+      "SelectedColumns": [
+        {
+          "InternalType": "json",
+          "OutputName": "tickets",
+          "SourceName": "tickets"
+        },
+        {
+          "InternalType": "textsimple(353)",
+          "OutputName": "Story",
+          "SourceName": "Story"
+        },
+        {
+          "InternalType": "text(max)",
+          "OutputName": "Croatian",
+          "SourceName": "Croatian"
+        },
+        {
+          "InternalType": "text(max)",
+          "OutputName": "Japanese",
+          "SourceName": "Japanese"
+        }
+      ]
+    },
+    "Sequence": 64,
+    "Warning": null
+  },
+  {
+    "Code": "detect-language",
+    "Description": "",
+    "Error": null,
+    "Id": "0db22f35-01f3-5e0b-82cd-f36e474fa490",
+    "Name": "Detect Language #1",
+    "Properties": {
+      "__type": "DataFlowNodeDetectLanguageProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 1564,
+      "OutputColumns": [
+        {
+          "InternalType": "json",
+          "Name": "tickets",
+          "traceId": "369540e2-bbf4-51c3-bb66-d21c19bca34a"
+        },
+        {
+          "InternalType": "textsimple(353)",
+          "Name": "Story",
+          "traceId": "c01a821c-a4ec-550d-8f2f-769892b79dbe"
+        },
+        {
+          "InternalType": "text(max)",
+          "Name": "Croatian",
+          "traceId": "72ce15eb-76b5-5953-a3d7-eac959cf4fe9"
+        },
+        {
+          "InternalType": "text(max)",
+          "Name": "Japanese",
+          "traceId": "317d3c07-b196-57c5-951c-b5f262b5bc86"
+        },
+        {
+          "InternalType": "textsimple(10)",
+          "Name": "Language Code",
+          "traceId": "60c376e4-7304-51c7-9676-2ebc2ec55688"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "6f197c5a-4dfc-53eb-8c33-212ec8e0d51a",
+          "SourceSide": "bottom",
+          "TargetSide": "right"
+        }
+      ],
+      "Top": 952,
+      "OnFailure": "fail",
+      "ProcessOutputColumns": [
+        {
+          "Name": "Language Code",
+          "Type": "language_code"
+        }
+      ],
+      "SourceColumn": "Japanese"
+    },
+    "Sequence": 65,
+    "Warning": null
+  },
+  {
+    "Code": "table-output",
+    "Description": "",
+    "Error": null,
+    "Id": "390d8c38-e06b-5940-abe3-35e3c48b1f78",
+    "Name": "Detect Language - Output",
+    "Properties": {
+      "__type": "DataFlowNodeTableOutputProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": false,
+      "Left": 1428,
+      "OutputColumns": [
+        {
+          "InternalType": "json",
+          "Name": "tickets",
+          "traceId": "f02de109-fd43-579a-97c1-20b515520550"
+        },
+        {
+          "InternalType": "textsimple(353)",
+          "Name": "Story",
+          "traceId": "6a654522-516f-593d-ab82-d7735c9a480f"
+        },
+        {
+          "InternalType": "text(max)",
+          "Name": "Croatian",
+          "traceId": "32e4bf91-9fc0-58e1-b6dc-2ab5076533e5"
+        },
+        {
+          "InternalType": "text(max)",
+          "Name": "Japanese",
+          "traceId": "448e0c8c-6b2c-52cb-812e-d92bd1bdb56b"
+        },
+        {
+          "InternalType": "textsimple(10)",
+          "Name": "Language Code",
+          "traceId": "cf2e4725-c225-5516-9372-6ba8e91847d7"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "0db22f35-01f3-5e0b-82cd-f36e474fa490",
+          "SourceSide": "left",
+          "TargetSide": "right"
+        }
+      ],
+      "Top": 952,
+      "DataCloneName": "Detect Language - Output",
+      "DataCloneRecId": 900056,
+      "ProcessMode": "rebuild",
+      "SelectedColumns": [
+        {
+          "InternalType": "json",
+          "OutputName": "tickets",
+          "SourceName": "tickets"
+        },
+        {
+          "InternalType": "textsimple(353)",
+          "OutputName": "Story",
+          "SourceName": "Story"
+        },
+        {
+          "InternalType": "text(max)",
+          "OutputName": "Croatian",
+          "SourceName": "Croatian"
+        },
+        {
+          "InternalType": "text(max)",
+          "OutputName": "Japanese",
+          "SourceName": "Japanese"
+        },
+        {
+          "InternalType": "textsimple(10)",
+          "OutputName": "Language Code",
+          "SourceName": "Language Code"
+        }
+      ]
+    },
+    "Sequence": 66,
+    "Warning": null
+  },
+  {
+    "Code": "background-panel",
+    "Id": "cee43dc1-2dcd-506e-984f-ecd6ed5a126b",
+    "Properties": {
+      "__type": "DataFlowAnnotationBackgroundPanelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": 2669,
+      "Top": 1139,
+      "Background": {
+        "Color": "rgba(108, 13, 6, 0.39)"
+      },
+      "Border": {
+        "Color": null,
+        "Enabled": false
+      },
+      "Font": {
+        "Background": {
+          "Color": "#E9E9E9"
+        },
+        "Color": "#3F3F3F"
+      },
+      "Height": 136,
+      "Shadow": {
+        "Color": "rgba(110, 255, 0, 1)",
+        "Enabled": true,
+        "Radius": 4
+      },
+      "Text": "Test\n",
+      "Width": 238
+    }
+  },
+  {
+    "Code": "label",
+    "Id": "f93a956f-0bed-5858-8497-0abe896bf283",
+    "Properties": {
+      "__type": "DataFlowAnnotationLabelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": 2669,
+      "Top": 1071,
+      "Background": {
+        "Color": "rgba(39, 38, 38, 1)"
+      },
+      "Border": {
+        "Color": "#454545",
+        "Enabled": true
+      },
+      "Font": {
+        "Background": {
+          "Color": null
+        },
+        "Color": "rgba(193, 42, 42, 1)"
+      },
+      "Height": 34,
+      "Shadow": {
+        "Color": "#E9E9E9",
+        "Enabled": false,
+        "Radius": 4
+      },
+      "Text": "Label",
+      "Width": 238
+    }
+  }
+]

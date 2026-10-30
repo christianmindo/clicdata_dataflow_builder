@@ -1,0 +1,23 @@
+{
+  "id": "06-safe-calculations",
+  "title": "Safe calculation aliases and NULLs",
+  "purpose": "Use distinct raw names and sequential nodes for dependent formulas.",
+  "processingNodes": 5,
+  "schema": [
+    {
+      "name": "SKU",
+      "type": "textsimple(250)"
+    },
+    {
+      "name": "ActiveUnits",
+      "type": "int64"
+    },
+    {
+      "name": "SalesAmount",
+      "type": "decimalstrict(28,9)"
+    }
+  ],
+  "evidence": "Generated adaptation of documented structures; local simulation tested separately; ClicData execution unverified",
+  "resourcePolicy": "Synthetic numeric IDs. Rebind every source/destination and source-column RecId before import into a real account.",
+  "outputPolicy": "Output is disabled. Example rebuild mode is illustrative; obtain the actual requested write mode."
+}

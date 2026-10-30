@@ -1,0 +1,78 @@
+{
+  "kind": "NODE_SETTINGS_EXAMPLE_NOT_A_COMPLETE_FLOW",
+  "code": "iplocation",
+  "propertyClass": "DataFlowNodeIPToLocationProperties:#Infinis.DataFlows",
+  "observedUpstreamCount": 1,
+  "exampleSettings": {
+    "SourceColumn": "IPAddress",
+    "ProcessOutputColumns": [
+      {
+        "Name": "Latitude",
+        "Type": "latitude"
+      },
+      {
+        "Name": "Longitude",
+        "Type": "longitude"
+      },
+      {
+        "Name": "Country Code",
+        "Type": "country_code"
+      },
+      {
+        "Name": "City",
+        "Type": "city"
+      }
+    ]
+  },
+  "exampleOutputSchema": [
+    {
+      "Name": "Latitude",
+      "InternalType": "double",
+      "traceId": "227e0b18-0efc-5b1e-acb7-dd34dd505828"
+    },
+    {
+      "Name": "Longitude",
+      "InternalType": "double",
+      "traceId": "58fc5fd2-bc82-5c43-aa97-2f10953cb9ac"
+    },
+    {
+      "Name": "Country Code",
+      "InternalType": "textsimple(250)",
+      "traceId": "f2e46e0c-2e66-5a75-8e6d-d15f3490f126"
+    },
+    {
+      "Name": "City",
+      "InternalType": "text(250)",
+      "traceId": "792f0a22-aaa2-512b-9e37-09e253f0be12"
+    }
+  ],
+  "evidence": "Observed configured user clipboard and output-selector screenshot 2026-10-28; source example IPAddress. Output schema here includes only enrichment fields; the supplied export retained all five original visit fields. Failure and execution behavior unverified.",
+  "observedUIOutputOptions": [
+    "Latitude",
+    "Longitude",
+    "Continent Code",
+    "Country Code",
+    "Region",
+    "District",
+    "City",
+    "Zip Code",
+    "Weather Code",
+    "Timezone Code",
+    "Timezone Offset",
+    "ISP"
+  ],
+  "limitations": [
+    "Only latitude, longitude, country_code and city serialized Type values verified",
+    "Country Code is not a full country name",
+    "Other UI labels do not establish serialized Type values or output types",
+    "Private/invalid/missing IP failure behavior and IPv6 handling untested"
+  ],
+  "userReportedTests": [
+    {
+      "date": "2026-10-28",
+      "scenario": "Synthetic web-visits unavailable-IP location lookup",
+      "result": "User reports NULL location results; tested visits retained in context of row-presence check, lookup skipped rather than row deletion.",
+      "scope": "No exact row count or individual-IP result listing supplied; outages and all IP formats not established."
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "kind": "NODE_SETTINGS_EXAMPLE_NOT_A_COMPLETE_FLOW",
+  "code": "column-selector",
+  "propertyClass": "DataFlowNodeColumnSelectorProperties:#Infinis.DataFlows",
+  "observedUpstreamCount": 1,
+  "exampleSettings": {
+    "RenamedColumns": [],
+    "SortedColumnNames": [],
+    "UnselectedColumnNames": []
+  },
+  "exampleOutputSchema": [
+    {
+      "traceId": "d18b8310-e647-5d20-975a-392b96adcf5e",
+      "InternalType": "int64",
+      "Name": "Ticket ID"
+    },
+    {
+      "traceId": "7cac7ac4-7793-573d-9e86-1f669a67caa0",
+      "InternalType": "date",
+      "Name": "Date Opened"
+    },
+    {
+      "traceId": "cc8b1453-4692-58ad-88a4-4b6b98514d10",
+      "InternalType": "date",
+      "Name": "Date Closed"
+    },
+    {
+      "traceId": "96d7f614-faab-5334-a4e7-93dab0549da8",
+      "InternalType": "textsimple(250)",
+      "Name": "Customer Name"
+    },
+    {
+      "traceId": "762449a7-ffbc-539f-8f6b-bf119bf1752c",
+      "InternalType": "textsimple(250)",
+      "Name": "Issue Category"
+    },
+    {
+      "traceId": "275bca07-bdea-52b0-b1ce-9fc50fd9fe21",
+      "InternalType": "textsimple(250)",
+      "Name": "Priority"
+    },
+    {
+      "traceId": "b05b8be6-5757-5d92-94b0-04cc5cac8e00",
+      "InternalType": "textsimple(250)",
+      "Name": "Status"
+    },
+    {
+      "traceId": "43f63b88-6440-5a9a-a280-d2cac3080da6",
+      "InternalType": "int64",
+      "Name": "Assigned To"
+    },
+    {
+      "traceId": "a90e85c9-dcab-50de-b499-52e6eaa23507",
+      "InternalType": "textsimple(250)",
+      "Name": "Location"
+    }
+  ],
+  "evidence": "Observed structure, synthetic resource/graph identifiers, no execution guarantee"
+}

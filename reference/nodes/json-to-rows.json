@@ -1,0 +1,127 @@
+{
+  "kind": "NODE_SETTINGS_EXAMPLE_NOT_A_COMPLETE_FLOW",
+  "code": "json-to-rows",
+  "propertyClass": "DataFlowNodeJSONToRowsProperties:#Infinis.DataFlows",
+  "observedUpstreamCount": 1,
+  "exampleSettings": {
+    "Columns": [
+      {
+        "InternalType": "textsimple(250)",
+        "IsArray": false,
+        "IsObject": false,
+        "Name": "ticket_id",
+        "Node": "$[].ticket_id"
+      },
+      {
+        "InternalType": "textsimple(250)",
+        "IsArray": false,
+        "IsObject": false,
+        "Name": "subject",
+        "Node": "$[].subject"
+      },
+      {
+        "InternalType": "textsimple(250)",
+        "IsArray": false,
+        "IsObject": false,
+        "Name": "description",
+        "Node": "$[].description"
+      },
+      {
+        "InternalType": "textsimple(250)",
+        "IsArray": false,
+        "IsObject": false,
+        "Name": "status",
+        "Node": "$[].status"
+      },
+      {
+        "InternalType": "textsimple(250)",
+        "IsArray": false,
+        "IsObject": false,
+        "Name": "priority",
+        "Node": "$[].priority"
+      },
+      {
+        "InternalType": "datetime",
+        "IsArray": false,
+        "IsObject": false,
+        "Name": "created_at",
+        "Node": "$[].created_at"
+      },
+      {
+        "InternalType": "textsimple(250)",
+        "IsArray": false,
+        "IsObject": false,
+        "Name": "customer_name",
+        "Node": "$[].customer_name"
+      },
+      {
+        "InternalType": "textsimple(250)",
+        "IsArray": false,
+        "IsObject": false,
+        "Name": "customer_email",
+        "Node": "$[].customer_email"
+      },
+      {
+        "InternalType": "int64",
+        "IsArray": false,
+        "IsObject": false,
+        "Name": "assigned_to",
+        "Node": "$[].assigned_to"
+      }
+    ],
+    "SourceColumn": "tickets"
+  },
+  "exampleOutputSchema": [
+    {
+      "InternalType": "json",
+      "Name": "tickets",
+      "traceId": "369540e2-bbf4-51c3-bb66-d21c19bca34a"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "ticket_id",
+      "traceId": "efe13483-37ac-58d8-acb1-43e5ff30fd5e"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "subject",
+      "traceId": "bb13c1f7-abf6-56e8-a8f1-08c96dbeebab"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "description",
+      "traceId": "78f6371c-dc16-53a1-8926-db8fb761f43f"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "status",
+      "traceId": "b516b380-17a7-5039-9050-9c15bbc724c4"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "priority",
+      "traceId": "fd83c93a-a3a8-51ae-99bc-4a85637dda4e"
+    },
+    {
+      "InternalType": "datetime",
+      "Name": "created_at",
+      "traceId": "465fcfc8-a2cd-5e1e-a1bc-5ac89d35a10e"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "customer_name",
+      "traceId": "272bc1c8-1c00-5576-be88-08f5cf7f3628"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "customer_email",
+      "traceId": "c16fdf2b-bb99-5e1c-875d-c72a1059122f"
+    },
+    {
+      "InternalType": "int64",
+      "Name": "assigned_to",
+      "traceId": "12afc20c-6ac0-5c7d-ae9a-758d03c82b9a"
+    }
+  ],
+  "evidence": "Observed structure, synthetic resource/graph identifiers, no execution guarantee"
+}

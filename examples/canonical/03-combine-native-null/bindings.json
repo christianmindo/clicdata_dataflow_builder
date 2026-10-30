@@ -1,0 +1,54 @@
+{
+  "900001": {
+    "name": "Example Source A",
+    "columns": [
+      {
+        "Name": "Order_ID",
+        "InternalType": "textsimple(250)",
+        "RecId": 800001
+      },
+      {
+        "Name": "SKU",
+        "InternalType": "textsimple(250)",
+        "RecId": 800002
+      },
+      {
+        "Name": "SalesAmount",
+        "InternalType": "decimalstrict(28,9)",
+        "RecId": 800003
+      },
+      {
+        "Name": "Category",
+        "InternalType": "textsimple(250)",
+        "RecId": 800004
+      }
+    ],
+    "synthetic": true
+  },
+  "900002": {
+    "name": "Example Source B",
+    "columns": [
+      {
+        "Name": "Order_ID",
+        "InternalType": "textsimple(250)",
+        "RecId": 800101
+      },
+      {
+        "Name": "SKU",
+        "InternalType": "textsimple(250)",
+        "RecId": 800102
+      },
+      {
+        "Name": "SalesAmount",
+        "InternalType": "decimalstrict(28,9)",
+        "RecId": 800103
+      },
+      {
+        "Name": "UPC",
+        "InternalType": "textsimple(250)",
+        "RecId": 800104
+      }
+    ],
+    "synthetic": true
+  }
+}

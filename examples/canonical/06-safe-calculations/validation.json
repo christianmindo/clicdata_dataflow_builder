@@ -1,0 +1,8 @@
+{
+  "example": "06-safe-calculations",
+  "result": "PASS",
+  "checks": 15,
+  "processingNodes": 5,
+  "expectedRows": 3,
+  "evidence": "Local structural checks and Python/SQLite simulation; NOT ClicData import or execution"
+}

@@ -1,0 +1,139 @@
+{
+  "date": "2026-10-21",
+  "scope": "Local JSON parsing, static clipboard lint and relative Markdown link targets; no ClicData import/execution. Historical QA errors are retained as evidence.",
+  "jsonFilesParsed": 114,
+  "clipboardFixturesChecked": 21,
+  "markdownLinksChecked": 64,
+  "brokenLinks": [],
+  "canonicalSyntheticChecks": 133,
+  "negativeLinterCases": 9,
+  "fixtures": [
+    {
+      "path": "examples/annotation-style-2026-10-20.json",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "path": "examples/canonical/01-select-and-type/flow.clipboard.json",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "path": "examples/canonical/01-select-and-type/preview.clipboard.json",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "path": "examples/canonical/02-nested-lines/flow.clipboard.json",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "path": "examples/canonical/02-nested-lines/preview.clipboard.json",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "path": "examples/canonical/03-combine-native-null/flow.clipboard.json",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "path": "examples/canonical/03-combine-native-null/preview.clipboard.json",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "path": "examples/canonical/04-event-rollup-lookup/flow.clipboard.json",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "path": "examples/canonical/04-event-rollup-lookup/preview.clipboard.json",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "path": "examples/canonical/05-distinct-key-helper/flow.clipboard.json",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "path": "examples/canonical/05-distinct-key-helper/preview.clipboard.json",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "path": "examples/canonical/06-safe-calculations/flow.clipboard.json",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "path": "examples/canonical/06-safe-calculations/preview.clipboard.json",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "path": "examples/canonical/07-filter-before-output/flow.clipboard.json",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "path": "examples/canonical/07-filter-before-output/preview.clipboard.json",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "path": "examples/canonical/08-two-source-line-dashboard/flow.clipboard.json",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "path": "examples/canonical/08-two-source-line-dashboard/preview.clipboard.json",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "path": "examples/legacy/tickets-expand.json",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "path": "examples/legacy/tickets-expanded.json",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "path": "examples/qa-flow-2026-10-01.json",
+      "errors": [
+        "Support Tickets ALL Append: output source/type mismatch",
+        "Support Tickets ALL Reload: output source/type mismatch",
+        "Geocoding - Output: output source/type mismatch",
+        "Geocoding - Output: output source/type mismatch",
+        "Filter Query #1: filter references unavailable fields",
+        "Transform Nodes - Output: output source/type mismatch"
+      ],
+      "warnings": []
+    },
+    {
+      "path": "reference/annotation-templates.json",
+      "errors": [],
+      "warnings": []
+    }
+  ],
+  "annotationPaletteUpdate": {
+    "date": "2026-10-21",
+    "source": "reference/visuals/node-category-colors.png",
+    "processingObjectsUnchanged": true,
+    "clipboardVariantsCompared": 16
+  },
+  "themeAndCenteringUpdate": {
+    "date": "2026-10-21",
+    "centeredGroupsChecked": 69,
+    "repeatStylingStable": true,
+    "canonicalTheme": "light",
+    "demoTheme": "dark",
+    "gridUnit": 17,
+    "gridEvidence": "reference/editor-grid-evidence.json"
+  }
+}

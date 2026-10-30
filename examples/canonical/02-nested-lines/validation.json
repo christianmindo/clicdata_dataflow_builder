@@ -1,0 +1,8 @@
+{
+  "example": "02-nested-lines",
+  "result": "PASS",
+  "checks": 15,
+  "processingNodes": 5,
+  "expectedRows": 2,
+  "evidence": "Local structural checks and Python/SQLite simulation; NOT ClicData import or execution"
+}

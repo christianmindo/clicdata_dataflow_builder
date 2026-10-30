@@ -1,0 +1,90 @@
+{
+  "kind": "NODE_SETTINGS_EXAMPLE_NOT_A_COMPLETE_FLOW",
+  "code": "aggregated-columns",
+  "propertyClass": "DataFlowNodeAggregatedColumnsProperties:#Infinis.DataFlows",
+  "observedUpstreamCount": 2,
+  "exampleSettings": {
+    "Conditions": [
+      {
+        "ColumnName": "Assigned To",
+        "Comparator": "equals",
+        "Disabled": false,
+        "DisabledIfNull": false,
+        "Groups": [],
+        "Guid": "c0bbc51a-345b-52d2-abf8-729c15b63c71",
+        "LogicalOperator": "and",
+        "ValueType": "column",
+        "Values": [
+          "Assigned To"
+        ]
+      }
+    ],
+    "AggregatedNodeId": "84477db4-b82a-5ab4-8019-21b141c9fbea",
+    "Aggregates": [
+      {
+        "Aggregation": "maximum",
+        "Alias": "Ticket ID (Count) (Max)",
+        "InternalType": "int64",
+        "Name": "Ticket ID (Count)"
+      }
+    ]
+  },
+  "exampleOutputSchema": [
+    {
+      "InternalType": "int64",
+      "Name": "Ticket ID",
+      "traceId": "d43cb320-6985-5f4b-9261-62f1ef280a3a"
+    },
+    {
+      "InternalType": "date",
+      "Name": "Date Opened",
+      "traceId": "a1e58aee-aff1-5272-a9e3-0f563e04cb7e"
+    },
+    {
+      "InternalType": "date",
+      "Name": "Date Closed",
+      "traceId": "bebaf231-ca80-5503-a20b-eb4ead3117ea"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Customer Name",
+      "traceId": "b4ac6ed1-d386-5caa-9c63-39ce28f4611e"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Issue Category",
+      "traceId": "cda18a1f-f90c-5668-a80e-7fac8c13f8b7"
+    },
+    {
+      "InternalType": "int32",
+      "Name": "Priority",
+      "traceId": "e0d1572f-44c8-5c8e-9025-6ce907b08729"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Status",
+      "traceId": "4463036d-ad19-5d5d-b29a-2be76bc7d075"
+    },
+    {
+      "InternalType": "int64",
+      "Name": "Assigned To",
+      "traceId": "f82956d9-f0c3-59ce-8c2c-3082e52b0a8b"
+    },
+    {
+      "InternalType": "int64",
+      "Name": "Agent ID",
+      "traceId": "461bb575-55bb-5702-8775-2dbbbbccb887"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Agent Name",
+      "traceId": "6fbf7114-2ec3-57bb-bf72-86c14721c0d6"
+    },
+    {
+      "InternalType": "int64",
+      "Name": "Ticket ID (Count) (Max)",
+      "traceId": "469411b7-644f-5e2c-8e05-d1cb90a50164"
+    }
+  ],
+  "evidence": "Observed structure, synthetic resource/graph identifiers, no execution guarantee"
+}

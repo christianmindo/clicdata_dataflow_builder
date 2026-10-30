@@ -1,0 +1,101 @@
+[
+  {
+    "Code": "background-panel",
+    "Id": "abc05e9d-b1bb-50f4-a995-8e767367bde9",
+    "Properties": {
+      "__type": "DataFlowAnnotationBackgroundPanelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": 0,
+      "Top": 0,
+      "Background": {
+        "Color": "rgba(255, 192, 2, 0.10)"
+      },
+      "Border": {
+        "Color": "rgba(50, 50, 50, 1)",
+        "Enabled": true
+      },
+      "Font": {
+        "Background": {
+          "Color": "#E9E9E9"
+        },
+        "Color": "#3F3F3F"
+      },
+      "Height": 320,
+      "Shadow": {
+        "Color": "rgba(237, 66, 55, 0.39)",
+        "Enabled": false,
+        "Radius": 4
+      },
+      "Text": "",
+      "Width": 600
+    }
+  },
+  {
+    "Code": "label",
+    "Id": "931860a1-34eb-5f1e-9b71-4aecf77b0bf7",
+    "Properties": {
+      "__type": "DataFlowAnnotationLabelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": 0,
+      "Top": 0,
+      "Background": {
+        "Color": "rgba(255, 192, 2, 1)"
+      },
+      "Border": {
+        "Color": "#454545",
+        "Enabled": false
+      },
+      "Font": {
+        "Background": {
+          "Color": "rgba(255, 192, 2, 1)"
+        },
+        "Color": "rgba(50, 50, 50, 1)"
+      },
+      "Height": 51,
+      "Shadow": {
+        "Color": "#E9E9E9",
+        "Enabled": false,
+        "Radius": 0
+      },
+      "Text": "Prepare data",
+      "Width": 600
+    }
+  },
+  {
+    "Code": "label",
+    "Id": "3f771c6e-263d-51de-97a0-7032e2acda37",
+    "Properties": {
+      "__type": "DataFlowAnnotationLabelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": 20,
+      "Top": 60,
+      "Background": {
+        "Color": "rgba(50, 50, 50, 0)"
+      },
+      "Border": {
+        "Color": "#454545",
+        "Enabled": false
+      },
+      "Font": {
+        "Background": {
+          "Color": "rgba(50, 50, 50, 0)"
+        },
+        "Color": "rgba(50, 50, 50, 1)"
+      },
+      "Height": 80,
+      "Shadow": {
+        "Color": "#E9E9E9",
+        "Enabled": false,
+        "Radius": 0
+      },
+      "Text": "Clean and normalize source fields before enrichment.",
+      "Width": 560
+    }
+  }
+]

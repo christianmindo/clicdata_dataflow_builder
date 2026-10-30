@@ -1,0 +1,33 @@
+[
+  {
+    "title": "Input",
+    "description": "Read repeated and null item keys.",
+    "kind": "input",
+    "x": 0,
+    "y": 0,
+    "ids": [
+      "8cbcd75c-8be7-5f57-afbe-0045a9bef381"
+    ]
+  },
+  {
+    "title": "Distinct Keys",
+    "description": "Group with an aggregate; remove the helper.",
+    "kind": "grouping",
+    "x": 323,
+    "y": 0,
+    "ids": [
+      "588acd6f-5c86-5a2b-9f5e-1ff108943734",
+      "d81eb426-ad38-5e9e-bc15-fc13e1932c27"
+    ]
+  },
+  {
+    "title": "Output",
+    "description": "Configure destination and write mode.",
+    "kind": "output",
+    "x": 850,
+    "y": 0,
+    "ids": [
+      "bfa6d597-6043-5456-aa80-fe63e2e03cb2"
+    ]
+  }
+]

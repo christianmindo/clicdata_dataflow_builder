@@ -1,0 +1,174 @@
+{
+  "kind": "NODE_SETTINGS_EXAMPLE_NOT_A_COMPLETE_FLOW",
+  "code": "table-merge",
+  "propertyClass": "DataFlowNodeTableMergeProperties:#Infinis.DataFlows",
+  "observedUpstreamCount": 0,
+  "exampleSettings": {
+    "Connections": [
+      {
+        "Conditions": [
+          {
+            "Comparator": "equals",
+            "LogicalOperator": "and",
+            "Parts": [
+              {
+                "Source": "cd00eaa7-2c23-574e-9727-866b610aaf84",
+                "ValueType": "column",
+                "Values": [
+                  "Agent ID"
+                ]
+              },
+              {
+                "Source": "3321999e-fa7a-5640-916a-863e2d6905b8",
+                "ValueType": "column",
+                "Values": [
+                  "Assigned To"
+                ]
+              }
+            ]
+          }
+        ],
+        "Id": "8b217556-9287-5a71-9095-77c4519948b2",
+        "JoinType": "inner",
+        "SourceId": "cd00eaa7-2c23-574e-9727-866b610aaf84",
+        "SourceSide": "left",
+        "TargetId": "3321999e-fa7a-5640-916a-863e2d6905b8",
+        "TargetSide": "right"
+      }
+    ],
+    "DataClones": [
+      {
+        "Alias": "Agents",
+        "ColumnVisibility": "all",
+        "ConnectorCode": "localfile",
+        "Height": 108,
+        "Id": "cd00eaa7-2c23-574e-9727-866b610aaf84",
+        "Left": 299,
+        "Name": "Agents",
+        "RecId": 900032,
+        "RenamedColumns": [],
+        "SelectedColumns": [
+          {
+            "InternalType": "textsimple(250)",
+            "Name": "Agent Name",
+            "RecId": 900034
+          }
+        ],
+        "Top": 67
+      },
+      {
+        "Alias": "Support Tickets 1",
+        "ColumnVisibility": "all",
+        "ConnectorCode": "localfile",
+        "Height": 269,
+        "Id": "3321999e-fa7a-5640-916a-863e2d6905b8",
+        "Left": 50,
+        "Name": "Support Tickets 1",
+        "RecId": 900002,
+        "RenamedColumns": [],
+        "SelectedColumns": [
+          {
+            "InternalType": "int64",
+            "Name": "Assigned To",
+            "RecId": 900010
+          },
+          {
+            "InternalType": "textsimple(250)",
+            "Name": "Customer Name",
+            "RecId": 900006
+          },
+          {
+            "InternalType": "date",
+            "Name": "Date Closed",
+            "RecId": 900005
+          },
+          {
+            "InternalType": "date",
+            "Name": "Date Opened",
+            "RecId": 900004
+          },
+          {
+            "InternalType": "textsimple(250)",
+            "Name": "Issue Category",
+            "RecId": 900007
+          },
+          {
+            "InternalType": "textsimple(250)",
+            "Name": "Location",
+            "RecId": 900011
+          },
+          {
+            "InternalType": "textsimple(250)",
+            "Name": "Priority",
+            "RecId": 900008
+          },
+          {
+            "InternalType": "textsimple(250)",
+            "Name": "Status",
+            "RecId": 900009
+          },
+          {
+            "InternalType": "int64",
+            "Name": "Ticket ID",
+            "RecId": 900003
+          }
+        ],
+        "Top": 30
+      }
+    ],
+    "ForceTableNamePrefix": false
+  },
+  "exampleOutputSchema": [
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Agent Name",
+      "traceId": "4916a3dc-ccdd-5d68-8099-1f5cbfadd486"
+    },
+    {
+      "InternalType": "int64",
+      "Name": "Assigned To",
+      "traceId": "f6c2cf02-8a2f-505d-842c-9528f737ce23"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Customer Name",
+      "traceId": "2075bfb9-e2b3-562a-be65-ceef0528c4f6"
+    },
+    {
+      "InternalType": "date",
+      "Name": "Date Closed",
+      "traceId": "0912decd-12aa-58e4-92cf-b1f48e01a0b6"
+    },
+    {
+      "InternalType": "date",
+      "Name": "Date Opened",
+      "traceId": "71c092f1-563c-5b4f-9fa8-5aa5738f8fcc"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Issue Category",
+      "traceId": "6fa56baa-4733-5368-8ee8-b4ec4cfa593a"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Location",
+      "traceId": "112dd44a-5ed5-5ab4-be09-3af2fd13a12b"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Priority",
+      "traceId": "912b9c39-d278-5c7b-b7b7-9245341c30a1"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Status",
+      "traceId": "c96449d3-9595-50b6-9941-7d1cca2bd910"
+    },
+    {
+      "InternalType": "int64",
+      "Name": "Ticket ID",
+      "traceId": "b1460ef6-68c1-529f-828a-7b1208ff3090"
+    }
+  ],
+  "evidence": "Observed structure, synthetic resource/graph identifiers, no execution guarantee"
+}

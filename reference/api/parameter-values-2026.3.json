@@ -1,0 +1,231 @@
+{
+  "source": "https://help.clicdata.com/api?section=section/Object-Properties/Data-Flow-Nodes-Properties&version=2026.3",
+  "documentationVersion": "2026.3",
+  "reviewedDate": "2026-10-28",
+  "scope": "Public documentation only. Parameter-value discovery for clipboard building; no API deployment, client lookup or engine validation.",
+  "enums": {
+    "iplocation.output_columns.type": {
+      "apiValues": [
+        "latitude",
+        "longitude",
+        "continent_code",
+        "country_code",
+        "region",
+        "district",
+        "city",
+        "zip_code",
+        "weather_code",
+        "timezone_code",
+        "timezone_offset",
+        "isp"
+      ],
+      "clipboardConfirmedValues": [
+        "latitude",
+        "longitude",
+        "country_code",
+        "city"
+      ],
+      "clipboardProperty": "ProcessOutputColumns[].Type",
+      "note": "Other values are API documented and visible in user screenshot; their clipboard serialization/output types and runtime behavior still need validation."
+    },
+    "fix-data.fix.change_case": {
+      "apiValues": [
+        "dontchange",
+        "lowercase",
+        "propercase",
+        "sentencecase",
+        "uppercase"
+      ],
+      "clipboardProperty": "Fix.ChangeCase",
+      "clipboardConfirmedValues": [
+        "uppercase"
+      ],
+      "note": "Confirmed subset here is intentionally conservative; no inferred property classes for unobserved Boolean/date/time Fix variants."
+    },
+    "standardize-data.rules.condition": {
+      "apiValues": [
+        "beginswith",
+        "contains",
+        "endswith",
+        "exactly",
+        "isempty",
+        "isemptyorwhitespace"
+      ],
+      "clipboardProperty": "Rules[].Condition",
+      "clipboardConfirmedValues": [
+        "exactly",
+        "isemptyorwhitespace"
+      ]
+    },
+    "common.aggregation": {
+      "apiValues": [
+        "average",
+        "count",
+        "distinct_count",
+        "first",
+        "maximum",
+        "minimum",
+        "standard_deviation",
+        "standard_deviation_for_population",
+        "string_agg",
+        "sum",
+        "variance",
+        "variance_for_population"
+      ],
+      "note": "Cross-node discovery list; each target clipboard aggregation must be checked in its node context. Do not infer first-row ordering or null behavior."
+    },
+    "common.filter.comparator": {
+      "apiValues": [
+        "contains",
+        "notcontain",
+        "equals",
+        "notequal",
+        "greaterthan",
+        "greaterthanorequal",
+        "lessthan",
+        "lessthanorequal",
+        "isempty",
+        "isnotempty",
+        "isemptyorwhitespace",
+        "isnotemptyorwhitespace",
+        "isnotnull",
+        "isnull",
+        "none",
+        "startswith",
+        "notstartwith",
+        "endswith",
+        "notendwith",
+        "between",
+        "notbetween",
+        "oneof",
+        "notoneof"
+      ],
+      "note": "Exact API spellings. UI labels such as Does not contain do not establish a different enum spelling."
+    },
+    "common.filter.value_type": {
+      "apiValues": [
+        "value",
+        "selectedvalue",
+        "formula",
+        "expression",
+        "accountparameter",
+        "column",
+        "script",
+        "cscript"
+      ],
+      "note": "API documented choices; not authorization to execute scripts or assumption every clipboard node exposes every choice."
+    },
+    "join-tables.join_type": {
+      "apiValues": [
+        "inner",
+        "left",
+        "right",
+        "full"
+      ],
+      "clipboardProperty": "JoinType",
+      "clipboardConfirmedValues": [
+        "inner"
+      ]
+    },
+    "table-fusion.additional_columns.type": {
+      "apiValues": [
+        "nameoftable",
+        "dataupdateddate"
+      ],
+      "clipboardProperty": "AdditionalColumns[].Type",
+      "clipboardConfirmedValues": [
+        "nameoftable"
+      ]
+    },
+    "language-nodes.on_failure": {
+      "apiValues": [
+        "fail",
+        "leaveempty"
+      ],
+      "note": "Documented for Detect Language, Sentiment Analysis, Summarize Text. Do not add this to IP to Location; it has no on_failure parameter in its inspected section."
+    },
+    "language-nodes.source_language_type": {
+      "apiValues": [
+        "auto",
+        "column",
+        "value"
+      ],
+      "note": "Selected sentiment/summary/translation sections document language column/value selectors; clipboard mapping for unobserved properties remains unverified."
+    },
+    "fix-boolean.null_values": {
+      "apiValues": [
+        "donothing",
+        "settrue",
+        "setfalse"
+      ],
+      "note": "API-only Fix subtype until a clipboard property class/settings export is observed."
+    },
+    "fix-numeric.threshold-actions": {
+      "apiValues": [
+        "null",
+        "value"
+      ],
+      "note": "Lower/upper replacement action options; existing numeric export shows null action with unused thresholds."
+    },
+    "table-output.process_mode": {
+      "apiValues": [
+        "append",
+        "delete",
+        "deployment",
+        "edit",
+        "emptytable",
+        "initial",
+        "rebuild",
+        "rollback",
+        "schemaupdate",
+        "schemaupdateandreload",
+        "update",
+        "updateappend"
+      ],
+      "clipboardConfirmedValues": [
+        "append",
+        "rebuild",
+        "updateappend"
+      ],
+      "note": "Broad API enum does not prove every value is an available or supported clipboard Output mode. Do not expand generator/linter allowlists or select a mode without task authorization."
+    }
+  },
+  "knownMappings": [
+    {
+      "api": "source_column",
+      "clipboard": "SourceColumn"
+    },
+    {
+      "api": "output_columns",
+      "clipboard": "ProcessOutputColumns (IP node)"
+    },
+    {
+      "api": "lookup_node_guid",
+      "clipboard": "LookupNodeId"
+    },
+    {
+      "api": "table_id",
+      "clipboard": "DataCloneRecId (Input/Output)"
+    },
+    {
+      "api": "tables",
+      "clipboard": "DataClones (Fusion/Merge)"
+    },
+    {
+      "api": "columns_to_remove",
+      "clipboard": "UnselectedColumnNames"
+    },
+    {
+      "api": "position.left / position.top",
+      "clipboard": "Properties.Left / Properties.Top"
+    }
+  ],
+  "uncertainties": [
+    "API required/optional flags are not clipboard omission rules",
+    "No detailed Forecast SSA, Mask Text, Tokenize or Conditional Find & Replace property sections were found in the inspected node-properties section; their presence in endpoint code enums is not a configuration specification",
+    "IP country_code is not a full country name",
+    "API JSON-to-Columns/Rows examples do not establish array expansion/null behavior",
+    "Text-to-Columns API example shows positions 0 and 1; existing clipboard observations do not independently establish a general indexing contract",
+    "Documentation does not resolve IP failure/row retention, duplicate lookup match selection, or automatic metadata regeneration"
+  ]
+}

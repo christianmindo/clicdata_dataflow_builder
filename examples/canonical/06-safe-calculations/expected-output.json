@@ -1,0 +1,17 @@
+[
+  {
+    "SKU": "A",
+    "ActiveUnits": 3,
+    "SalesAmount": 30
+  },
+  {
+    "SKU": "B",
+    "ActiveUnits": null,
+    "SalesAmount": null
+  },
+  {
+    "SKU": "C",
+    "ActiveUnits": 2,
+    "SalesAmount": null
+  }
+]

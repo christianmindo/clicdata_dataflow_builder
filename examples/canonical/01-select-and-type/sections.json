@@ -1,0 +1,33 @@
+[
+  {
+    "title": "Input",
+    "description": "Read the synthetic orders.",
+    "kind": "input",
+    "x": 0,
+    "y": 0,
+    "ids": [
+      "ba865b79-8ff1-5ec2-8642-d24daf42456e"
+    ]
+  },
+  {
+    "title": "Prepare",
+    "description": "Rename fields and set the reporting date.",
+    "kind": "prepare",
+    "x": 323,
+    "y": 0,
+    "ids": [
+      "9b0f313a-a2f4-584b-90dd-2091654380a6",
+      "a09bc2d0-9070-5ce4-8550-cce81faa78d8"
+    ]
+  },
+  {
+    "title": "Output",
+    "description": "Configure destination and write mode.",
+    "kind": "output",
+    "x": 850,
+    "y": 0,
+    "ids": [
+      "09950ed5-e15b-57d8-adf2-386b017cf2c9"
+    ]
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "Order_ID": "A1",
+    "SKU": "SHARED-01",
+    "SalesAmount": 25,
+    "Category": "Example category",
+    "UPC": null
+  },
+  {
+    "Order_ID": "B1",
+    "SKU": "SHARED-01",
+    "SalesAmount": 18,
+    "Category": null,
+    "UPC": "001234567890"
+  }
+]

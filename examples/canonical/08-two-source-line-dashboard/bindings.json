@@ -1,0 +1,54 @@
+{
+  "900001": {
+    "name": "Example Source A",
+    "columns": [
+      {
+        "Name": "order_id",
+        "InternalType": "textsimple(250)",
+        "RecId": 800001
+      },
+      {
+        "Name": "created_at",
+        "InternalType": "datetime",
+        "RecId": 800002
+      },
+      {
+        "Name": "state",
+        "InternalType": "textsimple(250)",
+        "RecId": 800003
+      },
+      {
+        "Name": "items",
+        "InternalType": "json",
+        "RecId": 800004
+      }
+    ],
+    "synthetic": true
+  },
+  "900002": {
+    "name": "Example Source B",
+    "columns": [
+      {
+        "Name": "orderId",
+        "InternalType": "int64",
+        "RecId": 800101
+      },
+      {
+        "Name": "createdAt",
+        "InternalType": "datetime",
+        "RecId": 800102
+      },
+      {
+        "Name": "status",
+        "InternalType": "textsimple(250)",
+        "RecId": 800103
+      },
+      {
+        "Name": "lines",
+        "InternalType": "json",
+        "RecId": 800104
+      }
+    ],
+    "synthetic": true
+  }
+}

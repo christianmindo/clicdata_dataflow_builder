@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Input",
+    "description": "Read example tickets.",
+    "kind": "input",
+    "x": 0,
+    "y": 0,
+    "ids": [
+      "38ab0db9-8e93-5ce2-9e32-f09c2980da64"
+    ]
+  },
+  {
+    "title": "Filter",
+    "description": "Keep only the requested reporting subset.",
+    "kind": "filter",
+    "x": 323,
+    "y": 0,
+    "ids": [
+      "686a8898-ec80-5d30-87ea-605de0dbd6c0"
+    ]
+  },
+  {
+    "title": "Output",
+    "description": "Configure destination and write mode.",
+    "kind": "output",
+    "x": 646,
+    "y": 0,
+    "ids": [
+      "c4baf6f5-d534-59f1-8dac-6089e4c10486"
+    ]
+  }
+]

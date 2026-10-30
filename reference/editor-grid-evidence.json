@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-21",
+  "source": "User-supplied clipboard export and centered AI-node screenshot",
+  "observedGridUnit": 17,
+  "panel": {
+    "Left": 2856,
+    "Top": 731,
+    "Width": 289,
+    "Height": 272
+  },
+  "node": {
+    "Left": 2941,
+    "Top": 884
+  },
+  "headerHeight": 51,
+  "descriptionWidth": 255,
+  "descriptionHeight": 68,
+  "inferredCenteredNodeWidth": 119,
+  "estimatedNodeHeight": 68,
+  "scope": "Observed geometry in one instance; not universal editor specification or screen pixel measurement"
+}

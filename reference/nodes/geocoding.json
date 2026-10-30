@@ -1,0 +1,43 @@
+{
+  "kind": "NODE_SETTINGS_EXAMPLE_NOT_A_COMPLETE_FLOW",
+  "code": "geocoding",
+  "propertyClass": "DataFlowNodeGeocodingProperties:#Infinis.DataFlows",
+  "observedUpstreamCount": 1,
+  "exampleSettings": {
+    "GeocodeInputColumns": [
+      {
+        "Column": "City",
+        "Type": "city"
+      }
+    ],
+    "GeocodeOutputColumns": [
+      {
+        "Column": "Country Code",
+        "Type": "country_code"
+      }
+    ]
+  },
+  "exampleOutputSchema": [
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "City",
+      "traceId": "c6008378-b0ce-51c9-9fd1-554f406c5e46"
+    },
+    {
+      "InternalType": "decimalstrict(28,9)",
+      "Name": "Latitude",
+      "traceId": "8a68d301-c7c2-5a46-a936-18f9767b86e2"
+    },
+    {
+      "InternalType": "decimalstrict(28,9)",
+      "Name": "Longitude",
+      "traceId": "83f48a2c-e2b9-59a6-88b1-13028f0a1d7d"
+    },
+    {
+      "InternalType": "textsimple(10)",
+      "Name": "Country Code",
+      "traceId": "52964ad2-119a-536e-946b-ae3a181a72df"
+    }
+  ],
+  "evidence": "Observed structure, synthetic resource/graph identifiers, no execution guarantee"
+}

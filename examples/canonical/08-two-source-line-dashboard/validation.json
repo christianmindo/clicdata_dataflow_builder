@@ -1,0 +1,8 @@
+{
+  "example": "08-two-source-line-dashboard",
+  "result": "PASS",
+  "checks": 35,
+  "processingNodes": 15,
+  "expectedRows": 3,
+  "evidence": "Local structural checks and Python/SQLite simulation; NOT ClicData import or execution"
+}

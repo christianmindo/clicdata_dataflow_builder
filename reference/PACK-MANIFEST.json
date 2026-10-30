@@ -1,0 +1,27 @@
+{
+  "description": "Generic ClicData builder reference pack",
+  "canonicalExamples": 8,
+  "nodeSettingsReferences": 35,
+  "completeAndPreviewVariants": 16,
+  "localSyntheticChecks": 133,
+  "negativeLinterCases": 9,
+  "clientSpecificMaterialsIncluded": false,
+  "gitHistoryIncluded": false,
+  "rawClientDataIncluded": false,
+  "engineExecution": "Not established by these local checks",
+  "excluded": [
+    ".git",
+    "__pycache__",
+    ".DS_Store",
+    "external backups",
+    "client source snapshots and case studies"
+  ],
+  "documentationMode": "modular, task-routed; no standalone README",
+  "instructions": "AGENTS.md",
+  "focusedGuides": [
+    "reference/BUILD_GUIDE.md",
+    "reference/SERIALIZATION.md",
+    "reference/STYLE_GUIDE.md"
+  ],
+  "reorganizedDate": "2026-10-22"
+}

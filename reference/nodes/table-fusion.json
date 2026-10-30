@@ -1,0 +1,175 @@
+{
+  "kind": "NODE_SETTINGS_EXAMPLE_NOT_A_COMPLETE_FLOW",
+  "code": "table-fusion",
+  "propertyClass": "DataFlowNodeTableFusionProperties:#Infinis.DataFlows",
+  "observedUpstreamCount": 0,
+  "exampleSettings": {
+    "AdditionalColumns": [],
+    "Columns": [
+      {
+        "Actions": [],
+        "InternalType": "int64",
+        "Name": "Ticket ID"
+      },
+      {
+        "Actions": [],
+        "InternalType": "date",
+        "Name": "Date Opened"
+      },
+      {
+        "Actions": [],
+        "InternalType": "date",
+        "Name": "Date Closed"
+      },
+      {
+        "Actions": [],
+        "InternalType": "textsimple(250)",
+        "Name": "Customer Name"
+      },
+      {
+        "Actions": [],
+        "InternalType": "textsimple(250)",
+        "Name": "Issue Category"
+      },
+      {
+        "Actions": [],
+        "InternalType": "textsimple(250)",
+        "Name": "Priority"
+      },
+      {
+        "Actions": [],
+        "InternalType": "int64",
+        "Name": "Assigned To"
+      },
+      {
+        "Actions": [
+          {
+            "Action": "matchto",
+            "DataCloneRecId": 900001,
+            "MatchedColumnName": "Ticket Status"
+          }
+        ],
+        "InternalType": "textsimple(250)",
+        "Name": "Status"
+      }
+    ],
+    "DataClones": [
+      {
+        "ConnectorCode": "localfile",
+        "Name": "Support Tickets 1",
+        "RecId": 900002
+      },
+      {
+        "ConnectorCode": "localfile",
+        "Name": "Support Tickets 2",
+        "RecId": 900001
+      }
+    ],
+    "MatchedColumnsOnly": true
+  },
+  "exampleOutputSchema": [
+    {
+      "InternalType": "int64",
+      "Name": "Ticket ID",
+      "traceId": "cf58f8e6-439b-59d4-a893-ef44e74fd08f"
+    },
+    {
+      "InternalType": "date",
+      "Name": "Date Opened",
+      "traceId": "e3c110e6-acf6-5633-9bd7-7dcd57633bad"
+    },
+    {
+      "InternalType": "date",
+      "Name": "Date Closed",
+      "traceId": "7c14f6ca-2c70-550a-9c77-8a03ee0405f8"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Customer Name",
+      "traceId": "a3f7b4d2-2bba-5245-8959-e688ec8c6dbe"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Issue Category",
+      "traceId": "a0ca2a06-0867-5c47-b6b6-e3dde93df171"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Priority",
+      "traceId": "e5de5eb5-8cc1-57b3-8b40-c99d827425ba"
+    },
+    {
+      "InternalType": "int64",
+      "Name": "Assigned To",
+      "traceId": "7cfd2066-6493-577f-a913-f3389b376e8b"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Status",
+      "traceId": "98fdb729-9d50-58bb-9a17-3a3d3b640bf5"
+    }
+  ],
+  "evidence": "Observed structure, synthetic resource/graph identifiers, no execution guarantee",
+  "additionalObservedVariants": [
+    {
+      "name": "table-provenance-with-per-resource-actions",
+      "exampleSettings": {
+        "AdditionalColumns": [
+          {
+            "Name": "SourceTable",
+            "Type": "nameoftable"
+          }
+        ],
+        "Columns": [
+          {
+            "Name": "Entity",
+            "InternalType": "textsimple(250)",
+            "Actions": [
+              {
+                "Action": "matchto",
+                "DataCloneRecId": 900001,
+                "MatchedColumnName": "entity_name"
+              },
+              {
+                "Action": "settonull",
+                "DataCloneRecId": 900002,
+                "MatchedColumnName": null
+              }
+            ]
+          },
+          {
+            "Name": "Amount",
+            "InternalType": "decimalstrict(28,9)",
+            "Actions": [
+              {
+                "Action": "converttype",
+                "DataCloneRecId": 900002,
+                "MatchedColumnName": null
+              }
+            ]
+          }
+        ],
+        "DataClones": [
+          {
+            "ConnectorCode": "table",
+            "Name": "SYNTHETIC_SOURCE_A",
+            "RecId": 900001
+          },
+          {
+            "ConnectorCode": "table",
+            "Name": "SYNTHETIC_SOURCE_B",
+            "RecId": 900002
+          }
+        ],
+        "MatchedColumnsOnly": false
+      },
+      "evidence": "Generalized structures observed in supplied pre/staging exports 2026-10-22; synthetic bindings/field names; not a complete flow or tested mapping.",
+      "limitations": [
+        "Action coverage depends on actual source schemas; absent actions may represent implicit matching, not proof of compatibility",
+        "converttype uses DataCloneRecId rather than Combine SourceId; target type is on column",
+        "nameoftable is resource table-name provenance, not guaranteed stable platform identity",
+        "DataLossWarning=true was observed on several staging Columns entries; runtime meaning/reset behavior unverified"
+      ]
+    }
+  ]
+}

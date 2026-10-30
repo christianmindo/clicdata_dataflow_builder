@@ -1,0 +1,28 @@
+{
+  "900001": {
+    "name": "Example Quantities",
+    "columns": [
+      {
+        "Name": "SKU",
+        "InternalType": "textsimple(250)",
+        "RecId": 800001
+      },
+      {
+        "Name": "RawQuantity",
+        "InternalType": "int64",
+        "RecId": 800002
+      },
+      {
+        "Name": "RawCancelled",
+        "InternalType": "int64",
+        "RecId": 800003
+      },
+      {
+        "Name": "RawUnitPrice",
+        "InternalType": "decimalstrict(28,9)",
+        "RecId": 800004
+      }
+    ],
+    "synthetic": true
+  }
+}

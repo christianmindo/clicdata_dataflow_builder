@@ -1,0 +1,12 @@
+{
+  "900001": [
+    {
+      "Order_ID": "O-1",
+      "items": "[{\"sku\": \"SHARED-01\", \"quantity\": 2, \"unit_price\": 12.5}, {\"sku\": \"ITEM-02\", \"quantity\": 1, \"unit_price\": 8}]"
+    },
+    {
+      "Order_ID": "O-2",
+      "items": "[]"
+    }
+  ]
+}

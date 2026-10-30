@@ -1,0 +1,14 @@
+[
+  {
+    "Line_ID": "L1",
+    "SalesAmount": 50,
+    "RefundAmount": 8,
+    "NetSalesAmount": 42
+  },
+  {
+    "Line_ID": "L2",
+    "SalesAmount": 20,
+    "RefundAmount": null,
+    "NetSalesAmount": 20
+  }
+]

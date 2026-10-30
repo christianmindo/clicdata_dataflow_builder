@@ -1,0 +1,23 @@
+{
+  "900001": {
+    "name": "Example Orders",
+    "columns": [
+      {
+        "Name": "order_id",
+        "InternalType": "int64",
+        "RecId": 800001
+      },
+      {
+        "Name": "created_at",
+        "InternalType": "datetime",
+        "RecId": 800002
+      },
+      {
+        "Name": "status",
+        "InternalType": "textsimple(250)",
+        "RecId": 800003
+      }
+    ],
+    "synthetic": true
+  }
+}

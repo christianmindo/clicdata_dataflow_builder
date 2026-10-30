@@ -1,0 +1,66 @@
+{
+  "kind": "NODE_SETTINGS_EXAMPLE_NOT_A_COMPLETE_FLOW",
+  "code": "group-rows",
+  "propertyClass": "DataFlowNodeGroupRowsProperties:#Infinis.DataFlows",
+  "observedUpstreamCount": 1,
+  "exampleSettings": {
+    "GroupByColumns": [
+      {
+        "Name": "Assigned To"
+      }
+    ],
+    "GroupedValues": [
+      {
+        "Aggregation": "count",
+        "Alias": "Ticket ID (Count)",
+        "InternalType": "int64",
+        "Name": "Ticket ID"
+      }
+    ]
+  },
+  "exampleOutputSchema": [
+    {
+      "InternalType": "int64",
+      "Name": "Assigned To",
+      "traceId": "9feadb07-cd37-56f7-a279-0940665409df"
+    },
+    {
+      "InternalType": "int64",
+      "Name": "Ticket ID (Count)",
+      "traceId": "4ab75c21-aa4f-5dd2-aeea-39af00460291"
+    }
+  ],
+  "evidence": "Observed structure, synthetic resource/graph identifiers, no execution guarantee",
+  "sumExample": {
+    "evidence": "Observed in user-supplied editor clipboard, 2026-10-29; setting/schema identifiers below are synthetic. No independent execution claim.",
+    "settings": {
+      "GroupByColumns": [
+        {
+          "Name": "SyntheticCategory",
+          "_itemid": "f82d8d2b-6f5e-4d63-9ed0-56354221b02c"
+        }
+      ],
+      "GroupedValues": [
+        {
+          "Aggregation": "sum",
+          "Alias": "SyntheticValue (Sum)",
+          "Name": "SyntheticValue",
+          "InternalType": "int64",
+          "_itemid": "d838bb9a-e306-41a8-93d7-322fedd9c834"
+        }
+      ]
+    },
+    "outputSchema": [
+      {
+        "InternalType": "textsimple(250)",
+        "Name": "SyntheticCategory",
+        "traceId": "e4429576-ac34-4fd7-b775-a0b6ec8f2b29"
+      },
+      {
+        "InternalType": "int64",
+        "Name": "SyntheticValue (Sum)",
+        "traceId": "e59232d8-f956-4c7a-be4c-81113916469a"
+      }
+    ]
+  }
+}

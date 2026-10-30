@@ -1,0 +1,205 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Documented common ClicData clipboard envelope \u2014 not exhaustive node settings",
+  "description": "Use lint_flow.py for graph, field and policy checks. Passing this schema does not prove engine support.",
+  "type": "array",
+  "items": {
+    "oneOf": [
+      {
+        "$ref": "#/$defs/processing"
+      },
+      {
+        "$ref": "#/$defs/annotation"
+      }
+    ]
+  },
+  "$defs": {
+    "processing": {
+      "type": "object",
+      "required": [
+        "Code",
+        "Description",
+        "Error",
+        "Id",
+        "Name",
+        "Properties",
+        "Sequence",
+        "Warning"
+      ],
+      "properties": {
+        "Code": {
+          "type": "string",
+          "not": {
+            "enum": [
+              "label",
+              "background-panel"
+            ]
+          }
+        },
+        "Id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "Name": {
+          "type": "string"
+        },
+        "Properties": {
+          "type": "object",
+          "required": [
+            "__type",
+            "_AppVersion",
+            "_PatchVersion",
+            "CheckpointType",
+            "Enabled",
+            "Left",
+            "Top",
+            "OutputColumns",
+            "Sources"
+          ],
+          "properties": {
+            "__type": {
+              "type": "string"
+            },
+            "CheckpointType": {
+              "type": "null"
+            },
+            "Enabled": {
+              "type": "boolean"
+            },
+            "Left": {
+              "type": "number"
+            },
+            "Top": {
+              "type": "number"
+            },
+            "OutputColumns": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "Name",
+                  "InternalType"
+                ],
+                "properties": {
+                  "Name": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "InternalType": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "traceId": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                },
+                "additionalProperties": true
+              }
+            },
+            "Sources": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "Id",
+                  "SourceSide",
+                  "TargetSide"
+                ],
+                "properties": {
+                  "Id": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "SourceSide": {
+                    "enum": [
+                      "left",
+                      "right",
+                      "top",
+                      "bottom"
+                    ]
+                  },
+                  "TargetSide": {
+                    "enum": [
+                      "left",
+                      "right",
+                      "top",
+                      "bottom"
+                    ]
+                  }
+                },
+                "additionalProperties": true
+              }
+            }
+          },
+          "not": {
+            "anyOf": [
+              {
+                "required": [
+                  "CheckpointStatus"
+                ]
+              },
+              {
+                "required": [
+                  "CheckpointIsOutdated"
+                ]
+              }
+            ]
+          },
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": true
+    },
+    "annotation": {
+      "type": "object",
+      "required": [
+        "Code",
+        "Id",
+        "Properties"
+      ],
+      "properties": {
+        "Code": {
+          "enum": [
+            "label",
+            "background-panel"
+          ]
+        },
+        "Id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "Properties": {
+          "type": "object",
+          "required": [
+            "__type",
+            "Left",
+            "Top",
+            "Width",
+            "Height",
+            "Text",
+            "Background",
+            "Border",
+            "Font",
+            "Shadow"
+          ],
+          "properties": {
+            "Width": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "Height": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "Text": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}

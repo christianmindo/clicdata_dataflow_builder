@@ -1,0 +1,8 @@
+{
+  "example": "04-event-rollup-lookup",
+  "result": "PASS",
+  "checks": 18,
+  "processingNodes": 6,
+  "expectedRows": 2,
+  "evidence": "Local structural checks and Python/SQLite simulation; NOT ClicData import or execution"
+}

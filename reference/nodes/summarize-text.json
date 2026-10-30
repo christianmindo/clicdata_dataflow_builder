@@ -1,0 +1,47 @@
+{
+  "kind": "NODE_SETTINGS_EXAMPLE_NOT_A_COMPLETE_FLOW",
+  "code": "summarize-text",
+  "propertyClass": "DataFlowNodeSummarizeTextProperties:#Infinis.DataFlows",
+  "observedUpstreamCount": 1,
+  "exampleSettings": {
+    "OnFailure": "fail",
+    "ProcessOutputColumns": [
+      {
+        "Name": "Extractive Summary",
+        "SortBy": "offset",
+        "Type": "extractive_summary"
+      },
+      {
+        "Language": "",
+        "Name": "Abstractive Summary",
+        "Type": "abstractive_summary"
+      }
+    ],
+    "SourceColumn": "Story",
+    "SourceLanguageType": "auto",
+    "SourceType": "document"
+  },
+  "exampleOutputSchema": [
+    {
+      "InternalType": "json",
+      "Name": "tickets",
+      "traceId": "369540e2-bbf4-51c3-bb66-d21c19bca34a"
+    },
+    {
+      "InternalType": "textsimple(353)",
+      "Name": "Story",
+      "traceId": "c01a821c-a4ec-550d-8f2f-769892b79dbe"
+    },
+    {
+      "InternalType": "textsimple(max)",
+      "Name": "Extractive Summary",
+      "traceId": "c3448f93-2a92-5adb-97ce-bacbea37ee1b"
+    },
+    {
+      "InternalType": "textsimple(max)",
+      "Name": "Abstractive Summary",
+      "traceId": "7d7a1640-1fcd-5512-844d-9654292936fe"
+    }
+  ],
+  "evidence": "Observed structure, synthetic resource/graph identifiers, no execution guarantee"
+}

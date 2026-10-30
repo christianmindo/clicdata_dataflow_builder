@@ -1,0 +1,29 @@
+[
+  {
+    "SalesAmount": 25,
+    "Order_ID": "A-1",
+    "OrderDate": "2026-01-01",
+    "SourcePlatform": "SOURCE_A",
+    "SKU": "SHARED-01",
+    "ActiveUnits": 2,
+    "OrderStatus": "OPEN"
+  },
+  {
+    "SalesAmount": 8,
+    "Order_ID": "A-2",
+    "OrderDate": "2026-01-02",
+    "SourcePlatform": "SOURCE_A",
+    "SKU": "ITEM-02",
+    "ActiveUnits": 1,
+    "OrderStatus": "CLOSED"
+  },
+  {
+    "SalesAmount": 18,
+    "Order_ID": "101",
+    "OrderDate": "2026-01-03",
+    "SourcePlatform": "SOURCE_B",
+    "SKU": "SHARED-01",
+    "ActiveUnits": 2,
+    "OrderStatus": "SHIPPED"
+  }
+]

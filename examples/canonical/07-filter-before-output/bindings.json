@@ -1,0 +1,18 @@
+{
+  "900001": {
+    "name": "Example Tickets",
+    "columns": [
+      {
+        "Name": "Ticket_ID",
+        "InternalType": "int64",
+        "RecId": 800001
+      },
+      {
+        "Name": "Status",
+        "InternalType": "textsimple(250)",
+        "RecId": 800002
+      }
+    ],
+    "synthetic": true
+  }
+}

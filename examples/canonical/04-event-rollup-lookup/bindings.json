@@ -1,0 +1,34 @@
+{
+  "900001": {
+    "name": "Example Line Facts",
+    "columns": [
+      {
+        "Name": "Line_ID",
+        "InternalType": "textsimple(250)",
+        "RecId": 800001
+      },
+      {
+        "Name": "SalesAmount",
+        "InternalType": "decimalstrict(28,9)",
+        "RecId": 800002
+      }
+    ],
+    "synthetic": true
+  },
+  "900002": {
+    "name": "Example Refund Events",
+    "columns": [
+      {
+        "Name": "Line_ID",
+        "InternalType": "textsimple(250)",
+        "RecId": 800101
+      },
+      {
+        "Name": "Amount",
+        "InternalType": "decimalstrict(28,9)",
+        "RecId": 800102
+      }
+    ],
+    "synthetic": true
+  }
+}

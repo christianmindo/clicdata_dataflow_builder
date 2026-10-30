@@ -1,0 +1,860 @@
+[
+  {
+    "Code": "label",
+    "Id": "3f771c6e-263d-51de-97a0-7032e2acda37",
+    "Properties": {
+      "__type": "DataFlowAnnotationLabelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": 2210,
+      "Top": 272,
+      "Background": {
+        "Color": "rgba(50, 50, 50, 0)"
+      },
+      "Border": {
+        "Color": "#454545",
+        "Enabled": false
+      },
+      "Font": {
+        "Background": {
+          "Color": "rgba(50, 50, 50, 0)"
+        },
+        "Color": "rgba(50, 50, 50, 1)"
+      },
+      "Height": 85,
+      "Shadow": {
+        "Color": "#E9E9E9",
+        "Enabled": false,
+        "Radius": 0
+      },
+      "Text": "Save enriched opportunities for analysis and dashboards",
+      "Width": 255
+    }
+  },
+  {
+    "Code": "label",
+    "Id": "fc249bb5-bf39-5353-9b7f-c97ffe5f7e46",
+    "Properties": {
+      "__type": "DataFlowAnnotationLabelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": 136,
+      "Top": 748,
+      "Background": {
+        "Color": "rgba(50, 50, 50, 0)"
+      },
+      "Border": {
+        "Color": "#454545",
+        "Enabled": false
+      },
+      "Font": {
+        "Background": {
+          "Color": "rgba(50, 50, 50, 0)"
+        },
+        "Color": "rgba(50, 50, 50, 1)"
+      },
+      "Height": 136,
+      "Shadow": {
+        "Color": "#E9E9E9",
+        "Enabled": false,
+        "Radius": 0
+      },
+      "Text": "Find the latest valid activity for each opportunity",
+      "Width": 187
+    }
+  },
+  {
+    "Code": "background-panel",
+    "Id": "abc05e9d-b1bb-50f4-a995-8e767367bde9",
+    "Properties": {
+      "__type": "DataFlowAnnotationBackgroundPanelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": 952,
+      "Top": 221,
+      "Background": {
+        "Color": "rgba(181, 181, 181, 0.43)"
+      },
+      "Border": {
+        "Color": "rgba(50, 50, 50, 1)",
+        "Enabled": true
+      },
+      "Font": {
+        "Background": {
+          "Color": "#E9E9E9"
+        },
+        "Color": "#3F3F3F"
+      },
+      "Height": 476,
+      "Shadow": {
+        "Color": "rgba(237, 66, 55, 0.39)",
+        "Enabled": false,
+        "Radius": 4
+      },
+      "Text": "",
+      "Width": 646
+    }
+  },
+  {
+    "Code": "label",
+    "Id": "931860a1-34eb-5f1e-9b71-4aecf77b0bf7",
+    "Properties": {
+      "__type": "DataFlowAnnotationLabelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": 1615,
+      "Top": 204,
+      "Background": {
+        "Color": "rgba(201, 0, 27, 1)"
+      },
+      "Border": {
+        "Color": "#454545",
+        "Enabled": false
+      },
+      "Font": {
+        "Background": {
+          "Color": "rgba(201, 0, 27, 1)"
+        },
+        "Color": "rgba(255, 255, 255, 1)"
+      },
+      "Height": 34,
+      "Shadow": {
+        "Color": "#E9E9E9",
+        "Enabled": false,
+        "Radius": 0
+      },
+      "Text": "AI: Evaluate Opportunity Risk Level",
+      "Width": 527
+    }
+  },
+  {
+    "Code": "label",
+    "Id": "16fae6dc-6ffd-53e4-90cd-2d2c7934a6a9",
+    "Properties": {
+      "__type": "DataFlowAnnotationLabelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": 578,
+      "Top": 204,
+      "Background": {
+        "Color": "rgba(50, 50, 50, 1)"
+      },
+      "Border": {
+        "Color": "#454545",
+        "Enabled": false
+      },
+      "Font": {
+        "Background": {
+          "Color": "rgba(50, 50, 50, 1)"
+        },
+        "Color": "rgba(255, 255, 255, 1)"
+      },
+      "Height": 34,
+      "Shadow": {
+        "Color": "#E9E9E9",
+        "Enabled": false,
+        "Radius": 0
+      },
+      "Text": "Calculations",
+      "Width": 357
+    }
+  },
+  {
+    "Code": "label",
+    "Id": "bdc597bd-704a-5b6e-a067-89b0b4cb20f0",
+    "Properties": {
+      "__type": "DataFlowAnnotationLabelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": 1003,
+      "Top": 272,
+      "Background": {
+        "Color": "rgba(50, 50, 50, 0)"
+      },
+      "Border": {
+        "Color": "#454545",
+        "Enabled": false
+      },
+      "Font": {
+        "Background": {
+          "Color": "rgba(50, 50, 50, 0)"
+        },
+        "Color": "rgba(50, 50, 50, 1)"
+      },
+      "Height": 85,
+      "Shadow": {
+        "Color": "#E9E9E9",
+        "Enabled": false,
+        "Radius": 0
+      },
+      "Text": "Read the sales notes and identify the primary blocker",
+      "Width": 527
+    }
+  },
+  {
+    "Code": "background-panel",
+    "Id": "893f7629-acd3-5dc7-860e-58fdec1708af",
+    "Properties": {
+      "__type": "DataFlowAnnotationBackgroundPanelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": 578,
+      "Top": 204,
+      "Background": {
+        "Color": "rgba(181, 181, 181, 0.43)"
+      },
+      "Border": {
+        "Color": "rgba(50, 50, 50, 1)",
+        "Enabled": true
+      },
+      "Font": {
+        "Background": {
+          "Color": "#E9E9E9"
+        },
+        "Color": "#3F3F3F"
+      },
+      "Height": 391,
+      "Shadow": {
+        "Color": "rgba(237, 66, 55, 0.39)",
+        "Enabled": false,
+        "Radius": 4
+      },
+      "Text": "",
+      "Width": 357
+    }
+  },
+  {
+    "Code": "label",
+    "Id": "17ae2487-e29e-567f-b548-cc396be68d94",
+    "Properties": {
+      "__type": "DataFlowAnnotationLabelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": 204,
+      "Top": 204,
+      "Background": {
+        "Color": "rgba(50, 50, 50, 1)"
+      },
+      "Border": {
+        "Color": "#454545",
+        "Enabled": false
+      },
+      "Font": {
+        "Background": {
+          "Color": "rgba(50, 50, 50, 1)"
+        },
+        "Color": "rgba(255, 255, 255, 1)"
+      },
+      "Height": 34,
+      "Shadow": {
+        "Color": "#E9E9E9",
+        "Enabled": false,
+        "Radius": 0
+      },
+      "Text": "Lookups",
+      "Width": 357
+    }
+  },
+  {
+    "Code": "label",
+    "Id": "1f9ece85-1212-52c6-865b-9de022c74e93",
+    "Properties": {
+      "__type": "DataFlowAnnotationLabelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": 119,
+      "Top": 697,
+      "Background": {
+        "Color": "rgba(50, 50, 50, 1)"
+      },
+      "Border": {
+        "Color": "#454545",
+        "Enabled": false
+      },
+      "Font": {
+        "Background": {
+          "Color": "rgba(50, 50, 50, 1)"
+        },
+        "Color": "rgba(255, 255, 255, 1)"
+      },
+      "Height": 34,
+      "Shadow": {
+        "Color": "#E9E9E9",
+        "Enabled": false,
+        "Radius": 0
+      },
+      "Text": "Activity grouping",
+      "Width": 221
+    }
+  },
+  {
+    "Code": "label",
+    "Id": "df8a225e-7a71-5891-bee5-b6860ea32fd3",
+    "Properties": {
+      "__type": "DataFlowAnnotationLabelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": 1666,
+      "Top": 493,
+      "Background": {
+        "Color": "rgba(50, 50, 50, 0)"
+      },
+      "Border": {
+        "Color": "#454545",
+        "Enabled": false
+      },
+      "Font": {
+        "Background": {
+          "Color": "rgba(50, 50, 50, 0)"
+        },
+        "Color": "rgba(50, 50, 50, 1)"
+      },
+      "Height": 493,
+      "Shadow": {
+        "Color": "#E9E9E9",
+        "Enabled": false,
+        "Radius": 0
+      },
+      "Text": "Assess review priority as of December 15, 2025, with quarter-end\nDecember 31.\n\nApply these rules in order:\n\nHigh: the open deal\u2019s close date is overdue; an explicit blocker\nprevents a planned Q4 close; or inactivity exceeds 30 days and\nthe note describes an unresolved blocker.\n\nMedium: any other unresolved blocker, inactivity over 30 days,\nor no recorded activity.\n\nLow: a close date is present, activity is within 30 days, and\nthe note explicitly indicates progress without outstanding blockers.\n\nOtherwise: Insufficient information.\n\nUse primary_blocker as context, but check the note for evidence.\nRecent contact does not cancel an unresolved blocker.\nThis is review priority, not a probability of losing the deal.",
+      "Width": 425
+    }
+  },
+  {
+    "Code": "background-panel",
+    "Id": "6460b421-0ef3-59e6-8d23-260139b3216b",
+    "Properties": {
+      "__type": "DataFlowAnnotationBackgroundPanelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": -391,
+      "Top": 204,
+      "Background": {
+        "Color": "rgba(181, 181, 181, 0.43)"
+      },
+      "Border": {
+        "Color": "rgba(50, 50, 50, 1)",
+        "Enabled": true
+      },
+      "Font": {
+        "Background": {
+          "Color": "#E9E9E9"
+        },
+        "Color": "#3F3F3F"
+      },
+      "Height": 306,
+      "Shadow": {
+        "Color": "rgba(237, 66, 55, 0.39)",
+        "Enabled": false,
+        "Radius": 4
+      },
+      "Text": "",
+      "Width": 493
+    }
+  },
+  {
+    "Code": "label",
+    "Id": "111d949d-3275-5753-bf1a-747aea2eb6af",
+    "Properties": {
+      "__type": "DataFlowAnnotationLabelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": 2159,
+      "Top": 204,
+      "Background": {
+        "Color": "rgba(41, 177, 23, 1)"
+      },
+      "Border": {
+        "Color": "#454545",
+        "Enabled": false
+      },
+      "Font": {
+        "Background": {
+          "Color": "rgba(41, 177, 23, 1)"
+        },
+        "Color": "rgba(255, 255, 255, 1)"
+      },
+      "Height": 34,
+      "Shadow": {
+        "Color": "#E9E9E9",
+        "Enabled": false,
+        "Radius": 0
+      },
+      "Text": "Output table",
+      "Width": 357
+    }
+  },
+  {
+    "Code": "background-panel",
+    "Id": "4cdeb991-7c1f-595b-a463-b3924dbd72db",
+    "Properties": {
+      "__type": "DataFlowAnnotationBackgroundPanelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": 2159,
+      "Top": 221,
+      "Background": {
+        "Color": "rgba(181, 181, 181, 0.43)"
+      },
+      "Border": {
+        "Color": "rgba(50, 50, 50, 1)",
+        "Enabled": true
+      },
+      "Font": {
+        "Background": {
+          "Color": "#E9E9E9"
+        },
+        "Color": "#3F3F3F"
+      },
+      "Height": 374,
+      "Shadow": {
+        "Color": "rgba(237, 66, 55, 0.39)",
+        "Enabled": false,
+        "Radius": 4
+      },
+      "Text": "",
+      "Width": 357
+    }
+  },
+  {
+    "Code": "background-panel",
+    "Id": "8080f4c2-7519-5a0b-ad01-a50824586972",
+    "Properties": {
+      "__type": "DataFlowAnnotationBackgroundPanelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": 204,
+      "Top": 204,
+      "Background": {
+        "Color": "rgba(181, 181, 181, 0.43)"
+      },
+      "Border": {
+        "Color": "rgba(50, 50, 50, 1)",
+        "Enabled": true
+      },
+      "Font": {
+        "Background": {
+          "Color": "#E9E9E9"
+        },
+        "Color": "#3F3F3F"
+      },
+      "Height": 391,
+      "Shadow": {
+        "Color": "rgba(237, 66, 55, 0.39)",
+        "Enabled": false,
+        "Radius": 4
+      },
+      "Text": "",
+      "Width": 357
+    }
+  },
+  {
+    "Code": "label",
+    "Id": "c77c1bd3-522b-5809-b857-68e1da842103",
+    "Properties": {
+      "__type": "DataFlowAnnotationLabelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": -391,
+      "Top": 697,
+      "Background": {
+        "Color": "rgba(50, 50, 50, 1)"
+      },
+      "Border": {
+        "Color": "#454545",
+        "Enabled": false
+      },
+      "Font": {
+        "Background": {
+          "Color": "rgba(50, 50, 50, 1)"
+        },
+        "Color": "rgba(255, 255, 255, 1)"
+      },
+      "Height": 34,
+      "Shadow": {
+        "Color": "#E9E9E9",
+        "Enabled": false,
+        "Radius": 0
+      },
+      "Text": "Activity Cleanup",
+      "Width": 493
+    }
+  },
+  {
+    "Code": "background-panel",
+    "Id": "34f805f3-98d3-5c41-be08-a03b40a1d7e2",
+    "Properties": {
+      "__type": "DataFlowAnnotationBackgroundPanelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": 1615,
+      "Top": 221,
+      "Background": {
+        "Color": "rgba(181, 181, 181, 0.43)"
+      },
+      "Border": {
+        "Color": "rgba(50, 50, 50, 1)",
+        "Enabled": true
+      },
+      "Font": {
+        "Background": {
+          "Color": "#E9E9E9"
+        },
+        "Color": "#3F3F3F"
+      },
+      "Height": 833,
+      "Shadow": {
+        "Color": "rgba(237, 66, 55, 0.39)",
+        "Enabled": false,
+        "Radius": 4
+      },
+      "Text": "",
+      "Width": 527
+    }
+  },
+  {
+    "Code": "label",
+    "Id": "8f6231fe-1345-5190-9b55-acf40d06084f",
+    "Properties": {
+      "__type": "DataFlowAnnotationLabelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": 952,
+      "Top": 204,
+      "Background": {
+        "Color": "rgba(201, 0, 27, 1)"
+      },
+      "Border": {
+        "Color": "#454545",
+        "Enabled": false
+      },
+      "Font": {
+        "Background": {
+          "Color": "rgba(201, 0, 27, 1)"
+        },
+        "Color": "rgba(255, 255, 255, 1)"
+      },
+      "Height": 34,
+      "Shadow": {
+        "Color": "#E9E9E9",
+        "Enabled": false,
+        "Radius": 0
+      },
+      "Text": "AI: Identify Primary Blocker",
+      "Width": 646
+    }
+  },
+  {
+    "Code": "label",
+    "Id": "5426d41a-1e9a-5bb7-876d-14642b5c37d4",
+    "Properties": {
+      "__type": "DataFlowAnnotationLabelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": -357,
+      "Top": 748,
+      "Background": {
+        "Color": "rgba(50, 50, 50, 0)"
+      },
+      "Border": {
+        "Color": "#454545",
+        "Enabled": false
+      },
+      "Font": {
+        "Background": {
+          "Color": "rgba(50, 50, 50, 0)"
+        },
+        "Color": "rgba(50, 50, 50, 1)"
+      },
+      "Height": 136,
+      "Shadow": {
+        "Color": "#E9E9E9",
+        "Enabled": false,
+        "Radius": 0
+      },
+      "Text": "Remove duplicate activities and exclude dates after the reporting date",
+      "Width": 425
+    }
+  },
+  {
+    "Code": "background-panel",
+    "Id": "c9f61809-b8b5-5432-b8a8-21af88c0e94a",
+    "Properties": {
+      "__type": "DataFlowAnnotationBackgroundPanelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": -391,
+      "Top": 697,
+      "Background": {
+        "Color": "rgba(181, 181, 181, 0.43)"
+      },
+      "Border": {
+        "Color": "rgba(50, 50, 50, 1)",
+        "Enabled": true
+      },
+      "Font": {
+        "Background": {
+          "Color": "#E9E9E9"
+        },
+        "Color": "#3F3F3F"
+      },
+      "Height": 306,
+      "Shadow": {
+        "Color": "rgba(237, 66, 55, 0.39)",
+        "Enabled": false,
+        "Radius": 4
+      },
+      "Text": "",
+      "Width": 493
+    }
+  },
+  {
+    "Code": "label",
+    "Id": "67ad9bb6-bde0-5881-91ac-f475e99889d6",
+    "Properties": {
+      "__type": "DataFlowAnnotationLabelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": 255,
+      "Top": 255,
+      "Background": {
+        "Color": "rgba(50, 50, 50, 0)"
+      },
+      "Border": {
+        "Color": "#454545",
+        "Enabled": false
+      },
+      "Font": {
+        "Background": {
+          "Color": "rgba(50, 50, 50, 0)"
+        },
+        "Color": "rgba(50, 50, 50, 1)"
+      },
+      "Height": 119,
+      "Shadow": {
+        "Color": "#E9E9E9",
+        "Enabled": false,
+        "Radius": 0
+      },
+      "Text": "Apply the stage mapping and add each opportunity\u2019s latest activity date and note.",
+      "Width": 255
+    }
+  },
+  {
+    "Code": "label",
+    "Id": "4cf4a39d-d14a-54d0-908c-2832b818136d",
+    "Properties": {
+      "__type": "DataFlowAnnotationLabelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": 629,
+      "Top": 272,
+      "Background": {
+        "Color": "rgba(50, 50, 50, 0)"
+      },
+      "Border": {
+        "Color": "#454545",
+        "Enabled": false
+      },
+      "Font": {
+        "Background": {
+          "Color": "rgba(50, 50, 50, 0)"
+        },
+        "Color": "rgba(50, 50, 50, 1)"
+      },
+      "Height": 85,
+      "Shadow": {
+        "Color": "#E9E9E9",
+        "Enabled": false,
+        "Radius": 0
+      },
+      "Text": "Calculate days since the last activity and assign a Follow-up Status to each opportunity.",
+      "Width": 255
+    }
+  },
+  {
+    "Code": "label",
+    "Id": "a2b6ab77-0ada-5d52-ac72-f3f8bf16540f",
+    "Properties": {
+      "__type": "DataFlowAnnotationLabelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": -391,
+      "Top": 204,
+      "Background": {
+        "Color": "rgba(50, 50, 50, 1)"
+      },
+      "Border": {
+        "Color": "#454545",
+        "Enabled": false
+      },
+      "Font": {
+        "Background": {
+          "Color": "rgba(50, 50, 50, 1)"
+        },
+        "Color": "rgba(255, 255, 255, 1)"
+      },
+      "Height": 34,
+      "Shadow": {
+        "Color": "#E9E9E9",
+        "Enabled": false,
+        "Radius": 0
+      },
+      "Text": "Opportunity Cleanup",
+      "Width": 493
+    }
+  },
+  {
+    "Code": "label",
+    "Id": "fe87e4e6-bb7b-56df-aef4-99aa4ebc821f",
+    "Properties": {
+      "__type": "DataFlowAnnotationLabelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": -340,
+      "Top": 255,
+      "Background": {
+        "Color": "rgba(50, 50, 50, 0)"
+      },
+      "Border": {
+        "Color": "#454545",
+        "Enabled": false
+      },
+      "Font": {
+        "Background": {
+          "Color": "rgba(50, 50, 50, 0)"
+        },
+        "Color": "rgba(50, 50, 50, 1)"
+      },
+      "Height": 136,
+      "Shadow": {
+        "Color": "#E9E9E9",
+        "Enabled": false,
+        "Radius": 0
+      },
+      "Text": "Remove duplicate deals and standardize sales stages and amounts",
+      "Width": 391
+    }
+  },
+  {
+    "Code": "background-panel",
+    "Id": "70babf60-c3d4-598f-b40e-3e8ecfd1631d",
+    "Properties": {
+      "__type": "DataFlowAnnotationBackgroundPanelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": 119,
+      "Top": 697,
+      "Background": {
+        "Color": "rgba(181, 181, 181, 0.43)"
+      },
+      "Border": {
+        "Color": "rgba(50, 50, 50, 1)",
+        "Enabled": true
+      },
+      "Font": {
+        "Background": {
+          "Color": "#E9E9E9"
+        },
+        "Color": "#3F3F3F"
+      },
+      "Height": 306,
+      "Shadow": {
+        "Color": "rgba(237, 66, 55, 0.39)",
+        "Enabled": false,
+        "Radius": 4
+      },
+      "Text": "",
+      "Width": 221
+    }
+  },
+  {
+    "Code": "label",
+    "Id": "1e29076a-d270-558f-bf02-ef31c580d5ba",
+    "Properties": {
+      "__type": "DataFlowAnnotationLabelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": 1666,
+      "Top": 272,
+      "Background": {
+        "Color": "rgba(50, 50, 50, 0)"
+      },
+      "Border": {
+        "Color": "#454545",
+        "Enabled": false
+      },
+      "Font": {
+        "Background": {
+          "Color": "rgba(50, 50, 50, 0)"
+        },
+        "Color": "rgba(50, 50, 50, 1)"
+      },
+      "Height": 85,
+      "Shadow": {
+        "Color": "#E9E9E9",
+        "Enabled": false,
+        "Radius": 0
+      },
+      "Text": "Use AI to assess sales notes and activity history, flagging opportunities that need attention.",
+      "Width": 425
+    }
+  },
+  {
+    "Code": "label",
+    "Id": "2f7413b7-6d5f-50d2-b0fa-37baab17ad5c",
+    "Properties": {
+      "__type": "DataFlowAnnotationLabelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": 1003,
+      "Top": 493,
+      "Background": {
+        "Color": "rgba(50, 50, 50, 0)"
+      },
+      "Border": {
+        "Color": "#454545",
+        "Enabled": false
+      },
+      "Font": {
+        "Background": {
+          "Color": "rgba(50, 50, 50, 0)"
+        },
+        "Color": "rgba(50, 50, 50, 1)"
+      },
+      "Height": 170,
+      "Shadow": {
+        "Color": "#E9E9E9",
+        "Enabled": false,
+        "Radius": 0
+      },
+      "Text": "Identify the main blocker explicitly described in activity_note:\nBudget, Technical fit, Internal approval, Competition, or Timing.\n\nChoose the underlying cause preventing the next step. If the note\nexplicitly confirms no concerns, return No blocker stated.\nIf it is missing, vague, or the main blocker is unclear, return\nInsufficient information. Do not infer a blocker from the deal stage.",
+      "Width": 544
+    }
+  }
+]

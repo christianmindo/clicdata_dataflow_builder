@@ -1,0 +1,53 @@
+[
+  {
+    "title": "Facts",
+    "description": "Keep one row per line.",
+    "kind": "input",
+    "x": 0,
+    "y": 300,
+    "ids": [
+      "9a91b778-9937-5c0f-b5e6-b82c59273595"
+    ]
+  },
+  {
+    "title": "Events",
+    "description": "Read multiple events per line.",
+    "kind": "input",
+    "x": 0,
+    "y": -100,
+    "ids": [
+      "6193ad5b-24e9-517a-aba8-56875da33c51"
+    ]
+  },
+  {
+    "title": "Aggregate",
+    "description": "Reduce events to one row per key.",
+    "kind": "grouping",
+    "x": 323,
+    "y": -100,
+    "ids": [
+      "cb77e931-60b9-5fd3-b44c-604a21e0a7ee"
+    ]
+  },
+  {
+    "title": "Enrich Facts",
+    "description": "Attach totals without multiplying line rows.",
+    "kind": "calculate",
+    "x": 323,
+    "y": 300,
+    "ids": [
+      "ffe040cc-7379-5294-9669-891eb160c524",
+      "164e1063-24ce-59b4-9ea0-4625148445ae"
+    ]
+  },
+  {
+    "title": "Output",
+    "description": "Configure destination and write mode.",
+    "kind": "output",
+    "x": 850,
+    "y": 300,
+    "ids": [
+      "fb9ef258-ec31-58f1-9cc1-9ee3982b91c1"
+    ]
+  }
+]

@@ -1,0 +1,71 @@
+{
+  "result": "PASS",
+  "examples": 8,
+  "checks": 133,
+  "results": [
+    {
+      "example": "01-select-and-type",
+      "result": "PASS",
+      "checks": 13,
+      "processingNodes": 4,
+      "expectedRows": 2,
+      "evidence": "Local structural checks and Python/SQLite simulation; NOT ClicData import or execution"
+    },
+    {
+      "example": "02-nested-lines",
+      "result": "PASS",
+      "checks": 15,
+      "processingNodes": 5,
+      "expectedRows": 2,
+      "evidence": "Local structural checks and Python/SQLite simulation; NOT ClicData import or execution"
+    },
+    {
+      "example": "03-combine-native-null",
+      "result": "PASS",
+      "checks": 13,
+      "processingNodes": 4,
+      "expectedRows": 2,
+      "evidence": "Local structural checks and Python/SQLite simulation; NOT ClicData import or execution"
+    },
+    {
+      "example": "04-event-rollup-lookup",
+      "result": "PASS",
+      "checks": 18,
+      "processingNodes": 6,
+      "expectedRows": 2,
+      "evidence": "Local structural checks and Python/SQLite simulation; NOT ClicData import or execution"
+    },
+    {
+      "example": "05-distinct-key-helper",
+      "result": "PASS",
+      "checks": 13,
+      "processingNodes": 4,
+      "expectedRows": 2,
+      "evidence": "Local structural checks and Python/SQLite simulation; NOT ClicData import or execution"
+    },
+    {
+      "example": "06-safe-calculations",
+      "result": "PASS",
+      "checks": 15,
+      "processingNodes": 5,
+      "expectedRows": 3,
+      "evidence": "Local structural checks and Python/SQLite simulation; NOT ClicData import or execution"
+    },
+    {
+      "example": "07-filter-before-output",
+      "result": "PASS",
+      "checks": 11,
+      "processingNodes": 3,
+      "expectedRows": 1,
+      "evidence": "Local structural checks and Python/SQLite simulation; NOT ClicData import or execution"
+    },
+    {
+      "example": "08-two-source-line-dashboard",
+      "result": "PASS",
+      "checks": 35,
+      "processingNodes": 15,
+      "expectedRows": 3,
+      "evidence": "Local structural checks and Python/SQLite simulation; NOT ClicData import or execution"
+    }
+  ]
+}

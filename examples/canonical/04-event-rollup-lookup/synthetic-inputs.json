@@ -1,0 +1,22 @@
+{
+  "900001": [
+    {
+      "Line_ID": "L1",
+      "SalesAmount": 50
+    },
+    {
+      "Line_ID": "L2",
+      "SalesAmount": 20
+    }
+  ],
+  "900002": [
+    {
+      "Line_ID": "L1",
+      "Amount": 5
+    },
+    {
+      "Line_ID": "L1",
+      "Amount": 3
+    }
+  ]
+}

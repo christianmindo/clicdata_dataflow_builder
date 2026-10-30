@@ -1,0 +1,18 @@
+{
+  "900001": {
+    "name": "Example Nested Orders",
+    "columns": [
+      {
+        "Name": "Order_ID",
+        "InternalType": "textsimple(250)",
+        "RecId": 800001
+      },
+      {
+        "Name": "items",
+        "InternalType": "json",
+        "RecId": 800002
+      }
+    ],
+    "synthetic": true
+  }
+}

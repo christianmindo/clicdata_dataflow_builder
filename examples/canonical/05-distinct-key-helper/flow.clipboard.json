@@ -1,0 +1,473 @@
+[
+  {
+    "Code": "background-panel",
+    "Id": "1c5114f9-5e2b-535f-b912-61bf20d37078",
+    "Properties": {
+      "__type": "DataFlowAnnotationBackgroundPanelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": -34,
+      "Top": -187,
+      "Background": {
+        "Color": "rgba(112, 173, 71, 0.1)"
+      },
+      "Border": {
+        "Color": "rgba(50, 50, 50, 1)",
+        "Enabled": true
+      },
+      "Font": {
+        "Background": {
+          "Color": "#E9E9E9"
+        },
+        "Color": "#3F3F3F"
+      },
+      "Height": 306,
+      "Shadow": {
+        "Color": "rgba(237, 66, 55, 0.39)",
+        "Enabled": false,
+        "Radius": 4
+      },
+      "Text": "",
+      "Width": 221
+    }
+  },
+  {
+    "Code": "background-panel",
+    "Id": "f2f08c76-6fbc-5211-80d9-487b6c6c6bb4",
+    "Properties": {
+      "__type": "DataFlowAnnotationBackgroundPanelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": 289,
+      "Top": -187,
+      "Background": {
+        "Color": "rgba(68, 114, 196, 0.1)"
+      },
+      "Border": {
+        "Color": "rgba(50, 50, 50, 1)",
+        "Enabled": true
+      },
+      "Font": {
+        "Background": {
+          "Color": "#E9E9E9"
+        },
+        "Color": "#3F3F3F"
+      },
+      "Height": 306,
+      "Shadow": {
+        "Color": "rgba(237, 66, 55, 0.39)",
+        "Enabled": false,
+        "Radius": 4
+      },
+      "Text": "",
+      "Width": 357
+    }
+  },
+  {
+    "Code": "background-panel",
+    "Id": "447d1288-a16d-5c6f-9805-94b50b5bd506",
+    "Properties": {
+      "__type": "DataFlowAnnotationBackgroundPanelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": 816,
+      "Top": -187,
+      "Background": {
+        "Color": "rgba(112, 173, 71, 0.1)"
+      },
+      "Border": {
+        "Color": "rgba(50, 50, 50, 1)",
+        "Enabled": true
+      },
+      "Font": {
+        "Background": {
+          "Color": "#E9E9E9"
+        },
+        "Color": "#3F3F3F"
+      },
+      "Height": 306,
+      "Shadow": {
+        "Color": "rgba(237, 66, 55, 0.39)",
+        "Enabled": false,
+        "Radius": 4
+      },
+      "Text": "",
+      "Width": 221
+    }
+  },
+  {
+    "Code": "table-input",
+    "Description": "",
+    "Error": null,
+    "Id": "8cbcd75c-8be7-5f57-afbe-0045a9bef381",
+    "Name": "Example Activity",
+    "Sequence": 1,
+    "Warning": null,
+    "Properties": {
+      "__type": "DataFlowNodeTableInputProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 17,
+      "Top": 17,
+      "OutputColumns": [
+        {
+          "Name": "Item_ID",
+          "InternalType": "textsimple(250)",
+          "traceId": "6b3355e5-a394-5b5b-b895-0f58ff9112e8"
+        },
+        {
+          "Name": "Record_ID",
+          "InternalType": "int64",
+          "traceId": "5b5fa0cc-3b71-5e3d-9e49-28773dc4c6e6"
+        }
+      ],
+      "Sources": [],
+      "DataCloneName": "Example Activity",
+      "DataCloneRecId": 900001,
+      "SelectedColumns": [
+        {
+          "Name": "Item_ID",
+          "InternalType": "textsimple(250)",
+          "RecId": 800001
+        },
+        {
+          "Name": "Record_ID",
+          "InternalType": "int64",
+          "RecId": 800002
+        }
+      ]
+    }
+  },
+  {
+    "Code": "group-rows",
+    "Description": "",
+    "Error": null,
+    "Id": "588acd6f-5c86-5a2b-9f5e-1ff108943734",
+    "Name": "Count per Item",
+    "Sequence": 2,
+    "Warning": null,
+    "Properties": {
+      "__type": "DataFlowNodeGroupRowsProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 323,
+      "Top": 17,
+      "OutputColumns": [
+        {
+          "Name": "Item_ID",
+          "InternalType": "textsimple(250)",
+          "traceId": "355cf7e6-7ee4-5b32-914b-ac874a75507e"
+        },
+        {
+          "Name": "HelperCount",
+          "InternalType": "int64",
+          "traceId": "dd8ef945-c369-547e-a7c9-5e5d1cb70d78"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "8cbcd75c-8be7-5f57-afbe-0045a9bef381",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "GroupByColumns": [
+        {
+          "Name": "Item_ID"
+        }
+      ],
+      "GroupedValues": [
+        {
+          "Name": "Record_ID",
+          "Aggregation": "count",
+          "Alias": "HelperCount",
+          "InternalType": "int64"
+        }
+      ]
+    }
+  },
+  {
+    "Code": "column-selector",
+    "Description": "",
+    "Error": null,
+    "Id": "d81eb426-ad38-5e9e-bc15-fc13e1932c27",
+    "Name": "Remove Helper Count",
+    "Sequence": 3,
+    "Warning": null,
+    "Properties": {
+      "__type": "DataFlowNodeColumnSelectorProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 493,
+      "Top": 17,
+      "OutputColumns": [
+        {
+          "Name": "Item_ID",
+          "InternalType": "textsimple(250)",
+          "traceId": "fb9c9b21-f211-5dcf-aee6-602c8c1b4963"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "588acd6f-5c86-5a2b-9f5e-1ff108943734",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "RenamedColumns": [],
+      "SortedColumnNames": [],
+      "UnselectedColumnNames": [
+        "HelperCount"
+      ]
+    }
+  },
+  {
+    "Code": "table-output",
+    "Description": "",
+    "Error": null,
+    "Id": "bfa6d597-6043-5456-aa80-fe63e2e03cb2",
+    "Name": "Example Output \u2014 Configure Your Destination",
+    "Sequence": 4,
+    "Warning": null,
+    "Properties": {
+      "__type": "DataFlowNodeTableOutputProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "CheckpointType": null,
+      "Enabled": false,
+      "Left": 867,
+      "Top": 17,
+      "OutputColumns": [
+        {
+          "Name": "Item_ID",
+          "InternalType": "textsimple(250)",
+          "traceId": "31e1aa02-81cb-517a-a00f-03a797f527aa"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "d81eb426-ad38-5e9e-bc15-fc13e1932c27",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "DataCloneName": "SYNTHETIC EXAMPLE DESTINATION",
+      "DataCloneRecId": 999999,
+      "ProcessMode": "rebuild",
+      "SelectedColumns": [
+        {
+          "SourceName": "Item_ID",
+          "OutputName": "Item_ID",
+          "InternalType": "textsimple(250)"
+        }
+      ]
+    }
+  },
+  {
+    "Code": "label",
+    "Id": "79f05e62-9044-524c-a765-29547d56cc57",
+    "Properties": {
+      "__type": "DataFlowAnnotationLabelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": -34,
+      "Top": -187,
+      "Background": {
+        "Color": "rgba(112, 173, 71, 1)"
+      },
+      "Border": {
+        "Color": "#454545",
+        "Enabled": false
+      },
+      "Font": {
+        "Background": {
+          "Color": "rgba(112, 173, 71, 1)"
+        },
+        "Color": "rgba(50, 50, 50, 1)"
+      },
+      "Height": 51,
+      "Shadow": {
+        "Color": "#E9E9E9",
+        "Enabled": false,
+        "Radius": 0
+      },
+      "Text": "Input",
+      "Width": 221
+    }
+  },
+  {
+    "Code": "label",
+    "Id": "24c11bd8-2d2e-5df5-abe8-4adc59fe9db5",
+    "Properties": {
+      "__type": "DataFlowAnnotationLabelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": -17,
+      "Top": -102,
+      "Background": {
+        "Color": "rgba(50, 50, 50, 0)"
+      },
+      "Border": {
+        "Color": "#454545",
+        "Enabled": false
+      },
+      "Font": {
+        "Background": {
+          "Color": "rgba(50, 50, 50, 0)"
+        },
+        "Color": "rgba(50, 50, 50, 1)"
+      },
+      "Height": 85,
+      "Shadow": {
+        "Color": "#E9E9E9",
+        "Enabled": false,
+        "Radius": 0
+      },
+      "Text": "Read repeated and null item keys.",
+      "Width": 187
+    }
+  },
+  {
+    "Code": "label",
+    "Id": "66560307-e296-5208-9e1d-07a02bc5cf85",
+    "Properties": {
+      "__type": "DataFlowAnnotationLabelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": 289,
+      "Top": -187,
+      "Background": {
+        "Color": "rgba(68, 114, 196, 1)"
+      },
+      "Border": {
+        "Color": "#454545",
+        "Enabled": false
+      },
+      "Font": {
+        "Background": {
+          "Color": "rgba(68, 114, 196, 1)"
+        },
+        "Color": "rgba(255, 255, 255, 1)"
+      },
+      "Height": 51,
+      "Shadow": {
+        "Color": "#E9E9E9",
+        "Enabled": false,
+        "Radius": 0
+      },
+      "Text": "Distinct Keys",
+      "Width": 357
+    }
+  },
+  {
+    "Code": "label",
+    "Id": "21fcf344-1aeb-50e8-ad69-fb4d19924885",
+    "Properties": {
+      "__type": "DataFlowAnnotationLabelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": 306,
+      "Top": -102,
+      "Background": {
+        "Color": "rgba(50, 50, 50, 0)"
+      },
+      "Border": {
+        "Color": "#454545",
+        "Enabled": false
+      },
+      "Font": {
+        "Background": {
+          "Color": "rgba(50, 50, 50, 0)"
+        },
+        "Color": "rgba(50, 50, 50, 1)"
+      },
+      "Height": 85,
+      "Shadow": {
+        "Color": "#E9E9E9",
+        "Enabled": false,
+        "Radius": 0
+      },
+      "Text": "Group with an aggregate; remove the helper.",
+      "Width": 323
+    }
+  },
+  {
+    "Code": "label",
+    "Id": "a1d69e2b-f695-5d01-a7bf-8124eb4f16b9",
+    "Properties": {
+      "__type": "DataFlowAnnotationLabelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": 816,
+      "Top": -187,
+      "Background": {
+        "Color": "rgba(112, 173, 71, 1)"
+      },
+      "Border": {
+        "Color": "#454545",
+        "Enabled": false
+      },
+      "Font": {
+        "Background": {
+          "Color": "rgba(112, 173, 71, 1)"
+        },
+        "Color": "rgba(50, 50, 50, 1)"
+      },
+      "Height": 51,
+      "Shadow": {
+        "Color": "#E9E9E9",
+        "Enabled": false,
+        "Radius": 0
+      },
+      "Text": "Output",
+      "Width": 221
+    }
+  },
+  {
+    "Code": "label",
+    "Id": "81ef482b-b070-59d4-bcfd-2cd9f02e994d",
+    "Properties": {
+      "__type": "DataFlowAnnotationLabelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": 833,
+      "Top": -102,
+      "Background": {
+        "Color": "rgba(50, 50, 50, 0)"
+      },
+      "Border": {
+        "Color": "#454545",
+        "Enabled": false
+      },
+      "Font": {
+        "Background": {
+          "Color": "rgba(50, 50, 50, 0)"
+        },
+        "Color": "rgba(50, 50, 50, 1)"
+      },
+      "Height": 85,
+      "Shadow": {
+        "Color": "#E9E9E9",
+        "Enabled": false,
+        "Radius": 0
+      },
+      "Text": "Configure destination and write mode.",
+      "Width": 187
+    }
+  }
+]

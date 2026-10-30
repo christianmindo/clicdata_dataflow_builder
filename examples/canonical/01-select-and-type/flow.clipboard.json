@@ -1,0 +1,522 @@
+[
+  {
+    "Code": "background-panel",
+    "Id": "b85b2d63-cf8f-50a3-a713-0ea6624af121",
+    "Properties": {
+      "__type": "DataFlowAnnotationBackgroundPanelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": -34,
+      "Top": -187,
+      "Background": {
+        "Color": "rgba(112, 173, 71, 0.1)"
+      },
+      "Border": {
+        "Color": "rgba(50, 50, 50, 1)",
+        "Enabled": true
+      },
+      "Font": {
+        "Background": {
+          "Color": "#E9E9E9"
+        },
+        "Color": "#3F3F3F"
+      },
+      "Height": 306,
+      "Shadow": {
+        "Color": "rgba(237, 66, 55, 0.39)",
+        "Enabled": false,
+        "Radius": 4
+      },
+      "Text": "",
+      "Width": 221
+    }
+  },
+  {
+    "Code": "background-panel",
+    "Id": "8b5744da-662e-52c7-ba3d-a28606c741d9",
+    "Properties": {
+      "__type": "DataFlowAnnotationBackgroundPanelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": 289,
+      "Top": -187,
+      "Background": {
+        "Color": "rgba(255, 192, 2, 0.1)"
+      },
+      "Border": {
+        "Color": "rgba(50, 50, 50, 1)",
+        "Enabled": true
+      },
+      "Font": {
+        "Background": {
+          "Color": "#E9E9E9"
+        },
+        "Color": "#3F3F3F"
+      },
+      "Height": 306,
+      "Shadow": {
+        "Color": "rgba(237, 66, 55, 0.39)",
+        "Enabled": false,
+        "Radius": 4
+      },
+      "Text": "",
+      "Width": 357
+    }
+  },
+  {
+    "Code": "background-panel",
+    "Id": "029fe273-1664-52e1-837d-0a72ee1cdf20",
+    "Properties": {
+      "__type": "DataFlowAnnotationBackgroundPanelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": 816,
+      "Top": -187,
+      "Background": {
+        "Color": "rgba(112, 173, 71, 0.1)"
+      },
+      "Border": {
+        "Color": "rgba(50, 50, 50, 1)",
+        "Enabled": true
+      },
+      "Font": {
+        "Background": {
+          "Color": "#E9E9E9"
+        },
+        "Color": "#3F3F3F"
+      },
+      "Height": 306,
+      "Shadow": {
+        "Color": "rgba(237, 66, 55, 0.39)",
+        "Enabled": false,
+        "Radius": 4
+      },
+      "Text": "",
+      "Width": 221
+    }
+  },
+  {
+    "Code": "table-input",
+    "Description": "",
+    "Error": null,
+    "Id": "ba865b79-8ff1-5ec2-8642-d24daf42456e",
+    "Name": "Example Orders",
+    "Sequence": 1,
+    "Warning": null,
+    "Properties": {
+      "__type": "DataFlowNodeTableInputProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 17,
+      "Top": 17,
+      "OutputColumns": [
+        {
+          "Name": "order_id",
+          "InternalType": "int64",
+          "traceId": "18af6d96-154f-58f6-9e6b-b9e3fbde4bf6"
+        },
+        {
+          "Name": "created_at",
+          "InternalType": "datetime",
+          "traceId": "ea7121aa-6157-5c1d-8785-3b8769b2dcab"
+        },
+        {
+          "Name": "status",
+          "InternalType": "textsimple(250)",
+          "traceId": "95d36100-85a1-5f43-a429-4d196bc54f82"
+        }
+      ],
+      "Sources": [],
+      "DataCloneName": "Example Orders",
+      "DataCloneRecId": 900001,
+      "SelectedColumns": [
+        {
+          "Name": "order_id",
+          "InternalType": "int64",
+          "RecId": 800001
+        },
+        {
+          "Name": "created_at",
+          "InternalType": "datetime",
+          "RecId": 800002
+        },
+        {
+          "Name": "status",
+          "InternalType": "textsimple(250)",
+          "RecId": 800003
+        }
+      ]
+    }
+  },
+  {
+    "Code": "column-selector",
+    "Description": "",
+    "Error": null,
+    "Id": "9b0f313a-a2f4-584b-90dd-2091654380a6",
+    "Name": "Select Dashboard Fields",
+    "Sequence": 2,
+    "Warning": null,
+    "Properties": {
+      "__type": "DataFlowNodeColumnSelectorProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 323,
+      "Top": 17,
+      "OutputColumns": [
+        {
+          "Name": "Order_ID",
+          "InternalType": "int64",
+          "traceId": "ea7976d5-d719-5603-b3eb-41fac9a48f51"
+        },
+        {
+          "Name": "OrderDate",
+          "InternalType": "datetime",
+          "traceId": "3413187c-dbe9-5abe-927e-5db7baad7a46"
+        },
+        {
+          "Name": "OrderStatus",
+          "InternalType": "textsimple(250)",
+          "traceId": "ced8b48c-6a85-52ce-a4de-5ed17b56b767"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "ba865b79-8ff1-5ec2-8642-d24daf42456e",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "RenamedColumns": [
+        {
+          "Name": "order_id",
+          "Alias": "Order_ID"
+        },
+        {
+          "Name": "created_at",
+          "Alias": "OrderDate"
+        },
+        {
+          "Name": "status",
+          "Alias": "OrderStatus"
+        }
+      ],
+      "SortedColumnNames": [],
+      "UnselectedColumnNames": []
+    }
+  },
+  {
+    "Code": "convert-type",
+    "Description": "",
+    "Error": null,
+    "Id": "a09bc2d0-9070-5ce4-8550-cce81faa78d8",
+    "Name": "Convert Reporting Date",
+    "Sequence": 3,
+    "Warning": null,
+    "Properties": {
+      "__type": "DataFlowNodeConvertTypeProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 493,
+      "Top": 17,
+      "OutputColumns": [
+        {
+          "Name": "Order_ID",
+          "InternalType": "int64",
+          "traceId": "ec16419d-8c7e-5cd9-839c-fbd643e7af2f"
+        },
+        {
+          "Name": "OrderDate",
+          "InternalType": "date",
+          "traceId": "d1492e05-5529-585c-8142-32fec25ece27"
+        },
+        {
+          "Name": "OrderStatus",
+          "InternalType": "textsimple(250)",
+          "traceId": "fb523973-352c-53e7-9995-d4cf51d45941"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "9b0f313a-a2f4-584b-90dd-2091654380a6",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "ConvertedColumns": [
+        {
+          "Name": "OrderDate",
+          "InternalType": "date"
+        }
+      ]
+    }
+  },
+  {
+    "Code": "table-output",
+    "Description": "",
+    "Error": null,
+    "Id": "09950ed5-e15b-57d8-adf2-386b017cf2c9",
+    "Name": "Example Output \u2014 Configure Your Destination",
+    "Sequence": 4,
+    "Warning": null,
+    "Properties": {
+      "__type": "DataFlowNodeTableOutputProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "CheckpointType": null,
+      "Enabled": false,
+      "Left": 867,
+      "Top": 17,
+      "OutputColumns": [
+        {
+          "Name": "Order_ID",
+          "InternalType": "int64",
+          "traceId": "da70e151-15e5-5e0e-a3c4-5fa18aa648e4"
+        },
+        {
+          "Name": "OrderDate",
+          "InternalType": "date",
+          "traceId": "02bc5850-0b92-513b-9ec2-d0e5907c0c38"
+        },
+        {
+          "Name": "OrderStatus",
+          "InternalType": "textsimple(250)",
+          "traceId": "0dc96141-27d1-5b22-84a2-99db4af0f606"
+        }
+      ],
+      "Sources": [
+        {
+          "Id": "a09bc2d0-9070-5ce4-8550-cce81faa78d8",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "DataCloneName": "SYNTHETIC EXAMPLE DESTINATION",
+      "DataCloneRecId": 999999,
+      "ProcessMode": "rebuild",
+      "SelectedColumns": [
+        {
+          "SourceName": "Order_ID",
+          "OutputName": "Order_ID",
+          "InternalType": "int64"
+        },
+        {
+          "SourceName": "OrderDate",
+          "OutputName": "OrderDate",
+          "InternalType": "date"
+        },
+        {
+          "SourceName": "OrderStatus",
+          "OutputName": "OrderStatus",
+          "InternalType": "textsimple(250)"
+        }
+      ]
+    }
+  },
+  {
+    "Code": "label",
+    "Id": "ae2ef0b5-de64-5f20-a99c-8bb477ff3d3e",
+    "Properties": {
+      "__type": "DataFlowAnnotationLabelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": -34,
+      "Top": -187,
+      "Background": {
+        "Color": "rgba(112, 173, 71, 1)"
+      },
+      "Border": {
+        "Color": "#454545",
+        "Enabled": false
+      },
+      "Font": {
+        "Background": {
+          "Color": "rgba(112, 173, 71, 1)"
+        },
+        "Color": "rgba(50, 50, 50, 1)"
+      },
+      "Height": 51,
+      "Shadow": {
+        "Color": "#E9E9E9",
+        "Enabled": false,
+        "Radius": 0
+      },
+      "Text": "Input",
+      "Width": 221
+    }
+  },
+  {
+    "Code": "label",
+    "Id": "bdecfb3e-b61a-5fb2-b280-809049aefb8d",
+    "Properties": {
+      "__type": "DataFlowAnnotationLabelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": -17,
+      "Top": -102,
+      "Background": {
+        "Color": "rgba(50, 50, 50, 0)"
+      },
+      "Border": {
+        "Color": "#454545",
+        "Enabled": false
+      },
+      "Font": {
+        "Background": {
+          "Color": "rgba(50, 50, 50, 0)"
+        },
+        "Color": "rgba(50, 50, 50, 1)"
+      },
+      "Height": 85,
+      "Shadow": {
+        "Color": "#E9E9E9",
+        "Enabled": false,
+        "Radius": 0
+      },
+      "Text": "Read the synthetic orders.",
+      "Width": 187
+    }
+  },
+  {
+    "Code": "label",
+    "Id": "3a708cfe-f99d-538d-bbfc-93489541809e",
+    "Properties": {
+      "__type": "DataFlowAnnotationLabelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": 289,
+      "Top": -187,
+      "Background": {
+        "Color": "rgba(255, 192, 2, 1)"
+      },
+      "Border": {
+        "Color": "#454545",
+        "Enabled": false
+      },
+      "Font": {
+        "Background": {
+          "Color": "rgba(255, 192, 2, 1)"
+        },
+        "Color": "rgba(50, 50, 50, 1)"
+      },
+      "Height": 51,
+      "Shadow": {
+        "Color": "#E9E9E9",
+        "Enabled": false,
+        "Radius": 0
+      },
+      "Text": "Prepare",
+      "Width": 357
+    }
+  },
+  {
+    "Code": "label",
+    "Id": "6c45f8b4-50c2-56ac-861a-d414af87e4c0",
+    "Properties": {
+      "__type": "DataFlowAnnotationLabelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": 306,
+      "Top": -102,
+      "Background": {
+        "Color": "rgba(50, 50, 50, 0)"
+      },
+      "Border": {
+        "Color": "#454545",
+        "Enabled": false
+      },
+      "Font": {
+        "Background": {
+          "Color": "rgba(50, 50, 50, 0)"
+        },
+        "Color": "rgba(50, 50, 50, 1)"
+      },
+      "Height": 85,
+      "Shadow": {
+        "Color": "#E9E9E9",
+        "Enabled": false,
+        "Radius": 0
+      },
+      "Text": "Rename fields and set the reporting date.",
+      "Width": 323
+    }
+  },
+  {
+    "Code": "label",
+    "Id": "5a12c0de-9085-591a-ba86-2b14a12890ef",
+    "Properties": {
+      "__type": "DataFlowAnnotationLabelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": 816,
+      "Top": -187,
+      "Background": {
+        "Color": "rgba(112, 173, 71, 1)"
+      },
+      "Border": {
+        "Color": "#454545",
+        "Enabled": false
+      },
+      "Font": {
+        "Background": {
+          "Color": "rgba(112, 173, 71, 1)"
+        },
+        "Color": "rgba(50, 50, 50, 1)"
+      },
+      "Height": 51,
+      "Shadow": {
+        "Color": "#E9E9E9",
+        "Enabled": false,
+        "Radius": 0
+      },
+      "Text": "Output",
+      "Width": 221
+    }
+  },
+  {
+    "Code": "label",
+    "Id": "20602a28-efa7-565d-9d9a-16ba21cf985b",
+    "Properties": {
+      "__type": "DataFlowAnnotationLabelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": 833,
+      "Top": -102,
+      "Background": {
+        "Color": "rgba(50, 50, 50, 0)"
+      },
+      "Border": {
+        "Color": "#454545",
+        "Enabled": false
+      },
+      "Font": {
+        "Background": {
+          "Color": "rgba(50, 50, 50, 0)"
+        },
+        "Color": "rgba(50, 50, 50, 1)"
+      },
+      "Height": 85,
+      "Shadow": {
+        "Color": "#E9E9E9",
+        "Enabled": false,
+        "Radius": 0
+      },
+      "Text": "Configure destination and write mode.",
+      "Width": 187
+    }
+  }
+]

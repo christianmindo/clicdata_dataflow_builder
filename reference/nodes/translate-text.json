@@ -1,0 +1,45 @@
+{
+  "kind": "NODE_SETTINGS_EXAMPLE_NOT_A_COMPLETE_FLOW",
+  "code": "translate-text",
+  "propertyClass": "DataFlowNodeTranslateTextProperties:#Infinis.DataFlows",
+  "observedUpstreamCount": 1,
+  "exampleSettings": {
+    "ProcessOutputColumns": [
+      {
+        "Language": "hr",
+        "Name": "Croatian"
+      },
+      {
+        "Language": "ja",
+        "Name": "Japanese"
+      }
+    ],
+    "ProfanityFilter": true,
+    "SourceColumn": "Story",
+    "SourceLanguageType": "auto",
+    "SourceType": "plain"
+  },
+  "exampleOutputSchema": [
+    {
+      "InternalType": "json",
+      "Name": "tickets",
+      "traceId": "369540e2-bbf4-51c3-bb66-d21c19bca34a"
+    },
+    {
+      "InternalType": "textsimple(353)",
+      "Name": "Story",
+      "traceId": "c01a821c-a4ec-550d-8f2f-769892b79dbe"
+    },
+    {
+      "InternalType": "text(max)",
+      "Name": "Croatian",
+      "traceId": "72ce15eb-76b5-5953-a3d7-eac959cf4fe9"
+    },
+    {
+      "InternalType": "text(max)",
+      "Name": "Japanese",
+      "traceId": "317d3c07-b196-57c5-951c-b5f262b5bc86"
+    }
+  ],
+  "evidence": "Observed structure, synthetic resource/graph identifiers, no execution guarantee"
+}

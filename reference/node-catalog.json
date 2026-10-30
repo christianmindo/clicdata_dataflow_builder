@@ -1,0 +1,247 @@
+[
+  {
+    "code": "aggregated-columns",
+    "propertyClass": "DataFlowNodeAggregatedColumnsProperties:#Infinis.DataFlows",
+    "observedUpstreamCount": 2,
+    "file": "nodes/aggregated-columns.json",
+    "guide": "nodes/aggregated-columns.md"
+  },
+  {
+    "code": "ask-ai",
+    "propertyClass": "DataFlowNodeAskAIProperties:#Infinis.DataFlows",
+    "observedUpstreamCount": 1,
+    "file": "nodes/ask-ai.json",
+    "guide": "nodes/ask-ai.md"
+  },
+  {
+    "code": "calculated-columns",
+    "propertyClass": "DataFlowNodeCalculatedColumnsProperties:#Infinis.DataFlows",
+    "observedUpstreamCount": 1,
+    "file": "nodes/calculated-columns.json",
+    "guide": "nodes/calculated-columns.md"
+  },
+  {
+    "code": "column-selector",
+    "propertyClass": "DataFlowNodeColumnSelectorProperties:#Infinis.DataFlows",
+    "observedUpstreamCount": 1,
+    "file": "nodes/column-selector.json",
+    "guide": "nodes/column-selector.md"
+  },
+  {
+    "code": "combine-tables",
+    "propertyClass": "DataFlowNodeCombineTablesProperties:#Infinis.DataFlows",
+    "observedUpstreamCount": 2,
+    "file": "nodes/combine-tables.json",
+    "guide": "nodes/combine-tables.md"
+  },
+  {
+    "code": "conditional-find-replace",
+    "propertyClass": "DataFlowNodeConditionalFindReplaceProperties:#Infinis.DataFlows",
+    "observedUpstreamCount": 1,
+    "file": "nodes/conditional-find-replace.json",
+    "guide": "nodes/conditional-find-replace.md"
+  },
+  {
+    "code": "convert-type",
+    "propertyClass": "DataFlowNodeConvertTypeProperties:#Infinis.DataFlows",
+    "observedUpstreamCount": 1,
+    "file": "nodes/convert-type.json",
+    "guide": "nodes/convert-type.md"
+  },
+  {
+    "code": "detect-language",
+    "propertyClass": "DataFlowNodeDetectLanguageProperties:#Infinis.DataFlows",
+    "observedUpstreamCount": 1,
+    "file": "nodes/detect-language.json",
+    "guide": "nodes/detect-language.md"
+  },
+  {
+    "code": "filter-query",
+    "propertyClass": "DataFlowNodeFilterQueryProperties:#Infinis.DataFlows",
+    "observedUpstreamCount": 1,
+    "file": "nodes/filter-query.json",
+    "guide": "nodes/filter-query.md"
+  },
+  {
+    "code": "filter-simple",
+    "propertyClass": "DataFlowNodeFilterSimpleProperties:#Infinis.DataFlows",
+    "observedUpstreamCount": 1,
+    "file": "nodes/filter-simple.json",
+    "guide": "nodes/filter-simple.md"
+  },
+  {
+    "code": "find-replace",
+    "propertyClass": "DataFlowNodeFindReplaceProperties:#Infinis.DataFlows",
+    "observedUpstreamCount": 1,
+    "file": "nodes/find-replace.json",
+    "guide": "nodes/find-replace.md"
+  },
+  {
+    "code": "fix-data",
+    "propertyClass": "DataFlowNodeFixDataProperties:#Infinis.DataFlows",
+    "observedUpstreamCount": 1,
+    "file": "nodes/fix-data.json",
+    "guide": "nodes/fix-data.md"
+  },
+  {
+    "code": "geocoding",
+    "propertyClass": "DataFlowNodeGeocodingProperties:#Infinis.DataFlows",
+    "observedUpstreamCount": 1,
+    "file": "nodes/geocoding.json",
+    "guide": "nodes/geocoding.md"
+  },
+  {
+    "code": "group-rows",
+    "propertyClass": "DataFlowNodeGroupRowsProperties:#Infinis.DataFlows",
+    "observedUpstreamCount": 1,
+    "file": "nodes/group-rows.json",
+    "guide": "nodes/group-rows.md"
+  },
+  {
+    "code": "iplocation",
+    "propertyClass": "DataFlowNodeIPToLocationProperties:#Infinis.DataFlows",
+    "observedUpstreamCount": 1,
+    "file": "nodes/iplocation.json",
+    "guide": "nodes/iplocation.md"
+  },
+  {
+    "code": "join-tables",
+    "propertyClass": "DataFlowNodeJoinTablesProperties:#Infinis.DataFlows",
+    "observedUpstreamCount": 2,
+    "file": "nodes/join-tables.json",
+    "guide": "nodes/join-tables.md"
+  },
+  {
+    "code": "json-to-columns",
+    "propertyClass": "DataFlowNodeJSONToColumnsProperties:#Infinis.DataFlows",
+    "observedUpstreamCount": 1,
+    "file": "nodes/json-to-columns.json",
+    "guide": "nodes/json-to-columns.md"
+  },
+  {
+    "code": "json-to-rows",
+    "propertyClass": "DataFlowNodeJSONToRowsProperties:#Infinis.DataFlows",
+    "observedUpstreamCount": 1,
+    "file": "nodes/json-to-rows.json",
+    "guide": "nodes/json-to-rows.md"
+  },
+  {
+    "code": "lookup-columns",
+    "propertyClass": "DataFlowNodeLookupColumnsProperties:#Infinis.DataFlows",
+    "observedUpstreamCount": 2,
+    "file": "nodes/lookup-columns.json",
+    "guide": "nodes/lookup-columns.md"
+  },
+  {
+    "code": "mask-text",
+    "propertyClass": "DataFlowNodeMaskTextProperties:#Infinis.DataFlows",
+    "observedUpstreamCount": 1,
+    "file": "nodes/mask-text.json",
+    "guide": "nodes/mask-text.md"
+  },
+  {
+    "code": "pivot",
+    "propertyClass": "DataFlowNodePivotProperties:#Infinis.DataFlows",
+    "observedUpstreamCount": 1,
+    "file": "nodes/pivot.json",
+    "guide": "nodes/pivot.md"
+  },
+  {
+    "code": "remove-duplicates",
+    "propertyClass": "DataFlowNodeRemoveDuplicatesProperties:#Infinis.DataFlows",
+    "observedUpstreamCount": 1,
+    "file": "nodes/remove-duplicates.json",
+    "guide": "nodes/remove-duplicates.md"
+  },
+  {
+    "code": "sentiment-analysis",
+    "propertyClass": "DataFlowNodeSentimentAnalysisProperties:#Infinis.DataFlows",
+    "observedUpstreamCount": 1,
+    "file": "nodes/sentiment-analysis.json",
+    "guide": "nodes/sentiment-analysis.md"
+  },
+  {
+    "code": "standardize-data",
+    "propertyClass": "DataFlowNodeStandardizeDataProperties:#Infinis.DataFlows",
+    "observedUpstreamCount": 1,
+    "file": "nodes/standardize-data.json",
+    "guide": "nodes/standardize-data.md"
+  },
+  {
+    "code": "summarize-text",
+    "propertyClass": "DataFlowNodeSummarizeTextProperties:#Infinis.DataFlows",
+    "observedUpstreamCount": 1,
+    "file": "nodes/summarize-text.json",
+    "guide": "nodes/summarize-text.md"
+  },
+  {
+    "code": "table-fusion",
+    "propertyClass": "DataFlowNodeTableFusionProperties:#Infinis.DataFlows",
+    "observedUpstreamCount": 0,
+    "file": "nodes/table-fusion.json",
+    "guide": "nodes/table-fusion.md"
+  },
+  {
+    "code": "table-input",
+    "propertyClass": "DataFlowNodeTableInputProperties:#Infinis.DataFlows",
+    "observedUpstreamCount": 0,
+    "file": "nodes/table-input.json",
+    "guide": "nodes/table-input.md"
+  },
+  {
+    "code": "table-merge",
+    "propertyClass": "DataFlowNodeTableMergeProperties:#Infinis.DataFlows",
+    "observedUpstreamCount": 0,
+    "file": "nodes/table-merge.json",
+    "guide": "nodes/table-merge.md"
+  },
+  {
+    "code": "table-output",
+    "propertyClass": "DataFlowNodeTableOutputProperties:#Infinis.DataFlows",
+    "observedUpstreamCount": 1,
+    "file": "nodes/table-output.json",
+    "guide": "nodes/table-output.md"
+  },
+  {
+    "code": "text-to-columns",
+    "propertyClass": "DataFlowNodeTextToColumnsProperties:#Infinis.DataFlows",
+    "observedUpstreamCount": 1,
+    "file": "nodes/text-to-columns.json",
+    "guide": "nodes/text-to-columns.md"
+  },
+  {
+    "code": "text-to-rows",
+    "propertyClass": "DataFlowNodeTextToRowsProperties:#Infinis.DataFlows",
+    "observedUpstreamCount": 1,
+    "file": "nodes/text-to-rows.json",
+    "guide": "nodes/text-to-rows.md"
+  },
+  {
+    "code": "tokenize",
+    "propertyClass": "DataFlowNodeTokenizeProperties:#Infinis.DataFlows",
+    "observedUpstreamCount": 1,
+    "file": "nodes/tokenize.json",
+    "guide": "nodes/tokenize.md"
+  },
+  {
+    "code": "transform-data",
+    "propertyClass": "DataFlowNodeTransformDataProperties:#Infinis.DataFlows",
+    "observedUpstreamCount": 1,
+    "file": "nodes/transform-data.json",
+    "guide": "nodes/transform-data.md"
+  },
+  {
+    "code": "translate-text",
+    "propertyClass": "DataFlowNodeTranslateTextProperties:#Infinis.DataFlows",
+    "observedUpstreamCount": 1,
+    "file": "nodes/translate-text.json",
+    "guide": "nodes/translate-text.md"
+  },
+  {
+    "code": "unpivot",
+    "propertyClass": "DataFlowNodeUnpivotProperties:#Infinis.DataFlows",
+    "observedUpstreamCount": 1,
+    "file": "nodes/unpivot.json",
+    "guide": "nodes/unpivot.md"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Input A",
+    "description": "Read source A fields.",
+    "kind": "input",
+    "x": 0,
+    "y": 0,
+    "ids": [
+      "a6808776-eec5-5ec9-9895-b0c3ff9961db"
+    ]
+  },
+  {
+    "title": "Input B",
+    "description": "Read source B fields.",
+    "kind": "input",
+    "x": 0,
+    "y": 400,
+    "ids": [
+      "3647f562-4a52-5a77-9559-f7fe0325f29b"
+    ]
+  },
+  {
+    "title": "Combine",
+    "description": "Match shared fields; set unavailable values to NULL.",
+    "kind": "combine",
+    "x": 323,
+    "y": 200,
+    "ids": [
+      "09b4b669-b98d-5b37-bea9-9c0bddf5a069"
+    ]
+  },
+  {
+    "title": "Output",
+    "description": "Configure destination and write mode.",
+    "kind": "output",
+    "x": 646,
+    "y": 200,
+    "ids": [
+      "7ba5623e-5958-595e-89be-2d20261d44b2"
+    ]
+  }
+]

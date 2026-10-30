@@ -1,0 +1,22 @@
+{
+  "900001": [
+    {
+      "SKU": "A",
+      "RawQuantity": 3,
+      "RawCancelled": null,
+      "RawUnitPrice": 10
+    },
+    {
+      "SKU": "B",
+      "RawQuantity": 1,
+      "RawCancelled": 2,
+      "RawUnitPrice": 5
+    },
+    {
+      "SKU": "C",
+      "RawQuantity": 2,
+      "RawCancelled": 0,
+      "RawUnitPrice": null
+    }
+  ]
+}

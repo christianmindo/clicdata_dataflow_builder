@@ -1,0 +1,160 @@
+{
+  "kind": "NODE_SETTINGS_EXAMPLE_NOT_A_COMPLETE_FLOW",
+  "code": "combine-tables",
+  "propertyClass": "DataFlowNodeCombineTablesProperties:#Infinis.DataFlows",
+  "observedUpstreamCount": 2,
+  "exampleSettings": {
+    "Columns": [
+      {
+        "Actions": [],
+        "InternalType": "int64",
+        "Name": "Ticket ID",
+        "sources": [
+          "a4a3d68f-4984-5587-9d3f-f9d4be71ac2f",
+          "3f6764f3-6ef1-5be4-8a79-cf9172628c52"
+        ],
+        "invalidSources": [],
+        "error": false,
+        "internalType": "int64"
+      },
+      {
+        "Actions": [],
+        "InternalType": "date",
+        "Name": "Date Opened",
+        "sources": [
+          "a4a3d68f-4984-5587-9d3f-f9d4be71ac2f",
+          "3f6764f3-6ef1-5be4-8a79-cf9172628c52"
+        ],
+        "invalidSources": [],
+        "error": false,
+        "internalType": "date"
+      },
+      {
+        "Actions": [],
+        "InternalType": "date",
+        "Name": "Date Closed",
+        "sources": [
+          "a4a3d68f-4984-5587-9d3f-f9d4be71ac2f",
+          "3f6764f3-6ef1-5be4-8a79-cf9172628c52"
+        ],
+        "invalidSources": [],
+        "error": false,
+        "internalType": "date"
+      },
+      {
+        "Actions": [],
+        "InternalType": "textsimple(250)",
+        "Name": "Customer Name",
+        "sources": [
+          "a4a3d68f-4984-5587-9d3f-f9d4be71ac2f",
+          "3f6764f3-6ef1-5be4-8a79-cf9172628c52"
+        ],
+        "invalidSources": [],
+        "error": false,
+        "internalType": "textsimple(250)"
+      },
+      {
+        "Actions": [],
+        "InternalType": "textsimple(250)",
+        "Name": "Issue Category",
+        "sources": [
+          "a4a3d68f-4984-5587-9d3f-f9d4be71ac2f",
+          "3f6764f3-6ef1-5be4-8a79-cf9172628c52"
+        ],
+        "invalidSources": [],
+        "error": false,
+        "internalType": "textsimple(250)"
+      },
+      {
+        "Actions": [],
+        "InternalType": "textsimple(250)",
+        "Name": "Priority",
+        "sources": [
+          "a4a3d68f-4984-5587-9d3f-f9d4be71ac2f",
+          "3f6764f3-6ef1-5be4-8a79-cf9172628c52"
+        ],
+        "invalidSources": [],
+        "error": false,
+        "internalType": "textsimple(250)"
+      },
+      {
+        "Actions": [
+          {
+            "Action": "settonull",
+            "MatchedColumnName": null,
+            "SourceId": "3f6764f3-6ef1-5be4-8a79-cf9172628c52"
+          }
+        ],
+        "InternalType": "textsimple(250)",
+        "Name": "Status",
+        "sources": [
+          "a4a3d68f-4984-5587-9d3f-f9d4be71ac2f"
+        ],
+        "invalidSources": [
+          {
+            "id": "3f6764f3-6ef1-5be4-8a79-cf9172628c52",
+            "status": "notmatched"
+          }
+        ],
+        "error": false,
+        "internalType": "textsimple(250)"
+      },
+      {
+        "Actions": [],
+        "InternalType": "int64",
+        "Name": "Assigned To",
+        "sources": [
+          "a4a3d68f-4984-5587-9d3f-f9d4be71ac2f",
+          "3f6764f3-6ef1-5be4-8a79-cf9172628c52"
+        ],
+        "invalidSources": [],
+        "error": false,
+        "internalType": "int64"
+      }
+    ],
+    "SchemaSourceId": "a4a3d68f-4984-5587-9d3f-f9d4be71ac2f"
+  },
+  "exampleOutputSchema": [
+    {
+      "InternalType": "int64",
+      "Name": "Ticket ID",
+      "traceId": "d9a30d86-24b7-515f-979d-297e8ae3ed90"
+    },
+    {
+      "InternalType": "date",
+      "Name": "Date Opened",
+      "traceId": "6db1e481-1095-5d0a-8045-46e0660b3aee"
+    },
+    {
+      "InternalType": "date",
+      "Name": "Date Closed",
+      "traceId": "95d092df-bd54-5c33-9e7f-0919b368902a"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Customer Name",
+      "traceId": "393359bc-c7cb-57dc-a22c-a51cf493ce22"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Issue Category",
+      "traceId": "a03786bc-9d2c-59db-9036-d1cd8c95f91e"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Priority",
+      "traceId": "01b650a2-17fa-581e-aae0-fe772bcad545"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Status",
+      "traceId": "621be452-7cec-572a-8618-cbf0bcaaa000"
+    },
+    {
+      "InternalType": "int64",
+      "Name": "Assigned To",
+      "traceId": "78573cfa-ff1e-53f9-82b0-dcc7c5db6c42"
+    }
+  ],
+  "evidence": "Observed structure, synthetic resource/graph identifiers, no execution guarantee"
+}

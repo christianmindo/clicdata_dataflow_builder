@@ -1,0 +1,27 @@
+{
+  "id": "02-nested-lines",
+  "title": "Nested JSON lines with parent IDs",
+  "purpose": "Use when expanding an array while retaining parent context.",
+  "processingNodes": 5,
+  "schema": [
+    {
+      "name": "Order_ID",
+      "type": "textsimple(250)"
+    },
+    {
+      "name": "SKU",
+      "type": "textsimple(250)"
+    },
+    {
+      "name": "Units",
+      "type": "int64"
+    },
+    {
+      "name": "SalesAmount",
+      "type": "decimalstrict(28,9)"
+    }
+  ],
+  "evidence": "Generated adaptation of documented structures; local simulation tested separately; ClicData execution unverified",
+  "resourcePolicy": "Synthetic numeric IDs. Rebind every source/destination and source-column RecId before import into a real account.",
+  "outputPolicy": "Output is disabled. Example rebuild mode is illustrative; obtain the actual requested write mode."
+}

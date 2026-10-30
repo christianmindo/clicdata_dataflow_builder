@@ -1,0 +1,15 @@
+{
+  "scope": "Documentation size and dependency checks, not a generation-time benchmark",
+  "previousReadmeWords": 12226,
+  "previousInstructionsWords": 2706,
+  "currentInstructionsWords": 772,
+  "currentReadmeWords": 386,
+  "nodeGuides": 35,
+  "canonicalExamples": 8,
+  "validation": {
+    "canonicalSyntheticChecks": 133,
+    "negativeLinterCases": 9,
+    "isolatedRebuild": "PASS without README; all 35 references retained"
+  },
+  "generationLatency": "Unmeasured; compare equivalent builds before claiming speedup"
+}

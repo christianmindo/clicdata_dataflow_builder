@@ -1,0 +1,78 @@
+{
+  "kind": "NODE_SETTINGS_EXAMPLE_NOT_A_COMPLETE_FLOW",
+  "code": "find-replace",
+  "propertyClass": "DataFlowNodeFindReplaceProperties:#Infinis.DataFlows",
+  "observedUpstreamCount": 1,
+  "exampleSettings": {
+    "ColumnNames": [
+      "Priority"
+    ],
+    "Replacements": [
+      {
+        "Find": "High",
+        "ReplaceWith": "Hi-gh"
+      },
+      {
+        "Find": "Low",
+        "ReplaceWith": "L-ow"
+      },
+      {
+        "Find": "Medium",
+        "ReplaceWith": "Med-ium"
+      }
+    ]
+  },
+  "exampleOutputSchema": [
+    {
+      "InternalType": "int64",
+      "Name": "Ticket ID",
+      "traceId": "8f126e65-b9c4-55b8-bacc-92d13527be0e"
+    },
+    {
+      "InternalType": "date",
+      "Name": "Date Opened",
+      "traceId": "4971bfb1-8a4a-5e39-9e7c-b9104877969a"
+    },
+    {
+      "InternalType": "date",
+      "Name": "Date Closed",
+      "traceId": "c324c4bf-6341-5330-bb3a-39892d3cd894"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Customer Name",
+      "traceId": "c9a3451d-05f8-5198-9dc2-5e46350d031d"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Issue Category",
+      "traceId": "c20bfc44-589c-5320-8cf9-e8499204f2c8"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Priority",
+      "traceId": "d0f08ee0-bfdb-563d-a58b-be5adc6c7c0f"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Status",
+      "traceId": "d0513b81-97ec-5627-a99f-842ada8a93e9"
+    },
+    {
+      "InternalType": "int64",
+      "Name": "Assigned To",
+      "traceId": "06d725e9-09ba-5adf-92f6-70c86890794e"
+    },
+    {
+      "InternalType": "int64",
+      "Name": "Agent ID",
+      "traceId": "669eb078-cf08-5e7b-a181-816bb31d06f2"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Agent Name",
+      "traceId": "a8423672-412d-5e36-a50f-5fe629e17b66"
+    }
+  ],
+  "evidence": "Observed structure, synthetic resource/graph identifiers, no execution guarantee"
+}

@@ -1,0 +1,98 @@
+{
+  "kind": "REQUIREMENT_TEMPLATE_NOT_CLIPBOARD_JSON",
+  "status": "INCOMPLETE_UNTIL_FILLED",
+  "businessPurpose": null,
+  "rowGrain": null,
+  "sources": [
+    {
+      "logicalName": null,
+      "datasetId": null,
+      "columns": [
+        {
+          "name": null,
+          "columnId": null,
+          "internalType": null,
+          "sourceColumnName": null,
+          "visible": null,
+          "keyFlag": null
+        }
+      ],
+      "nestedArrays": [
+        {
+          "sourceColumn": null,
+          "elementPath": null,
+          "parentFieldsToRetain": [],
+          "dummifiedExampleFile": null,
+          "exampleContainsOnlyInventedValues": null,
+          "optionalPaths": [],
+          "nullAndEmptyArrayPolicy": null,
+          "structuralQuestions": []
+        }
+      ],
+      "schemaFile": null,
+      "bindingEvidenceFile": null,
+      "bindingStatus": "unresolved",
+      "bindingEvidenceSource": null,
+      "jsonExtractionScope": {
+        "useCase": null,
+        "requestedAttributes": [],
+        "selectedFields": [],
+        "scopeAgreed": false
+      }
+    }
+  ],
+  "outputColumns": [
+    {
+      "name": null,
+      "internalType": null,
+      "sourceMappings": [],
+      "expressionOrRule": null,
+      "nullPolicy": null
+    }
+  ],
+  "identity": {
+    "orderCountDefinition": null,
+    "productIdentityDefinition": null,
+    "crossSourceCollisionPolicy": null
+  },
+  "joins": [],
+  "filters": [],
+  "dateAndTimezoneRules": null,
+  "currencyRules": null,
+  "destination": {
+    "requested": true,
+    "datasetId": null,
+    "name": null,
+    "writeMode": "rebuild",
+    "keys": [],
+    "schemaFile": null,
+    "bindingEvidenceFile": null,
+    "kind": "dummy",
+    "enabled": true,
+    "bindingMode": "user_creates_or_selects_table_from_output_node",
+    "destinationIdRequiredBeforeAuthoring": false,
+    "oneTableOutputPerBusinessResult": true
+  },
+  "verification": {
+    "expectedCounts": null,
+    "expectedTotals": null,
+    "unseenStatusPolicy": null
+  },
+  "appearance": {
+    "canvasTheme": null,
+    "allowedThemes": [
+      "light",
+      "dark"
+    ],
+    "askBeforeCreatingIfUnknown": true,
+    "centerNodeGroupsInPanels": true
+  },
+  "inputPolicy": {
+    "source": "user_supplied_local_schema_files",
+    "remoteClientAccessAllowed": false,
+    "clientRowsRequired": false,
+    "clientRowsAllowed": false,
+    "userProvidedBindingIdsAllowed": true,
+    "dummifiedJsonExamplesAllowed": true
+  }
+}

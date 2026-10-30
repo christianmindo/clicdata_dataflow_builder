@@ -1,0 +1,64 @@
+{
+  "kind": "NODE_SETTINGS_EXAMPLE_NOT_A_COMPLETE_FLOW",
+  "code": "json-to-columns",
+  "propertyClass": "DataFlowNodeJSONToColumnsProperties:#Infinis.DataFlows",
+  "observedUpstreamCount": 1,
+  "exampleSettings": {
+    "SourceColumn": "variant_json",
+    "Columns": [
+      {
+        "InternalType": "int64",
+        "IsArray": false,
+        "IsObject": false,
+        "Node": "$.pack_size",
+        "Name": "pack_size",
+        "_itemid": "3bf7ecc3-afbd-59f5-babf-567e740c6172"
+      },
+      {
+        "InternalType": "textsimple(250)",
+        "IsArray": false,
+        "IsObject": false,
+        "Node": "$.flavour_or_type",
+        "Name": "flavour_or_type",
+        "_itemid": "bfed8894-5bae-5e20-a879-35ce470f9d78"
+      },
+      {
+        "InternalType": "textsimple(250)",
+        "IsArray": false,
+        "IsObject": false,
+        "Node": "$.descriptor",
+        "Name": "descriptor",
+        "_itemid": "b84e7507-9b08-5c7b-957f-259daf675636"
+      }
+    ]
+  },
+  "exampleOutputSchema": [
+    {
+      "InternalType": "json",
+      "Name": "variant_json",
+      "traceId": "b4124d7a-ed4e-517a-a4ad-4b921b72958b"
+    },
+    {
+      "InternalType": "int64",
+      "Name": "pack_size",
+      "traceId": "175ee67c-4504-5eb4-91a2-fc3697362130"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "flavour_or_type",
+      "traceId": "9fb3cef6-9752-5caf-9489-a75cf9e5a947"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "descriptor",
+      "traceId": "9fad3eac-ea18-5d8e-af90-939a9f6bba1f"
+    }
+  ],
+  "evidence": "Settings observed in user export 2026-10-22; object extraction and no array expansion user-reported. Synthetic item/schema IDs. Output schema reduced to source JSON and extracted fields; original retains all 22 input fields. No execution guarantee.",
+  "observedAppVersion": "2026.4.204.0",
+  "limitations": [
+    "Not a complete flow or target binding",
+    "Missing/null/malformed input and nested paths untested",
+    "IsArray/IsObject true and _itemid regeneration unverified"
+  ]
+}

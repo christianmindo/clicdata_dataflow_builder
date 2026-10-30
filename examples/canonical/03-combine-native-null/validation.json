@@ -1,0 +1,8 @@
+{
+  "example": "03-combine-native-null",
+  "result": "PASS",
+  "checks": 13,
+  "processingNodes": 4,
+  "expectedRows": 2,
+  "evidence": "Local structural checks and Python/SQLite simulation; NOT ClicData import or execution"
+}

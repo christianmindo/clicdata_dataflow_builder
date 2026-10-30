@@ -1,0 +1,146 @@
+[
+  {
+    "file": "examples/canonical/01-select-and-type/flow.clipboard.json",
+    "result": "PASS",
+    "errors": [],
+    "warnings": [],
+    "processingNodes": 4,
+    "objects": 13,
+    "scope": "Static documented checks; no resource existence, collation, engine execution or output semantics guarantee"
+  },
+  {
+    "file": "examples/canonical/01-select-and-type/preview.clipboard.json",
+    "result": "PASS",
+    "errors": [],
+    "warnings": [],
+    "processingNodes": 3,
+    "objects": 9,
+    "scope": "Static documented checks; no resource existence, collation, engine execution or output semantics guarantee"
+  },
+  {
+    "file": "examples/canonical/02-nested-lines/flow.clipboard.json",
+    "result": "PASS",
+    "errors": [],
+    "warnings": [],
+    "processingNodes": 5,
+    "objects": 17,
+    "scope": "Static documented checks; no resource existence, collation, engine execution or output semantics guarantee"
+  },
+  {
+    "file": "examples/canonical/02-nested-lines/preview.clipboard.json",
+    "result": "PASS",
+    "errors": [],
+    "warnings": [],
+    "processingNodes": 4,
+    "objects": 13,
+    "scope": "Static documented checks; no resource existence, collation, engine execution or output semantics guarantee"
+  },
+  {
+    "file": "examples/canonical/03-combine-native-null/flow.clipboard.json",
+    "result": "PASS",
+    "errors": [],
+    "warnings": [],
+    "processingNodes": 4,
+    "objects": 16,
+    "scope": "Static documented checks; no resource existence, collation, engine execution or output semantics guarantee"
+  },
+  {
+    "file": "examples/canonical/03-combine-native-null/preview.clipboard.json",
+    "result": "PASS",
+    "errors": [],
+    "warnings": [],
+    "processingNodes": 3,
+    "objects": 12,
+    "scope": "Static documented checks; no resource existence, collation, engine execution or output semantics guarantee"
+  },
+  {
+    "file": "examples/canonical/04-event-rollup-lookup/flow.clipboard.json",
+    "result": "PASS",
+    "errors": [],
+    "warnings": [],
+    "processingNodes": 6,
+    "objects": 21,
+    "scope": "Static documented checks; no resource existence, collation, engine execution or output semantics guarantee"
+  },
+  {
+    "file": "examples/canonical/04-event-rollup-lookup/preview.clipboard.json",
+    "result": "PASS",
+    "errors": [],
+    "warnings": [],
+    "processingNodes": 5,
+    "objects": 17,
+    "scope": "Static documented checks; no resource existence, collation, engine execution or output semantics guarantee"
+  },
+  {
+    "file": "examples/canonical/05-distinct-key-helper/flow.clipboard.json",
+    "result": "PASS",
+    "errors": [],
+    "warnings": [],
+    "processingNodes": 4,
+    "objects": 13,
+    "scope": "Static documented checks; no resource existence, collation, engine execution or output semantics guarantee"
+  },
+  {
+    "file": "examples/canonical/05-distinct-key-helper/preview.clipboard.json",
+    "result": "PASS",
+    "errors": [],
+    "warnings": [],
+    "processingNodes": 3,
+    "objects": 9,
+    "scope": "Static documented checks; no resource existence, collation, engine execution or output semantics guarantee"
+  },
+  {
+    "file": "examples/canonical/06-safe-calculations/flow.clipboard.json",
+    "result": "PASS",
+    "errors": [],
+    "warnings": [],
+    "processingNodes": 5,
+    "objects": 14,
+    "scope": "Static documented checks; no resource existence, collation, engine execution or output semantics guarantee"
+  },
+  {
+    "file": "examples/canonical/06-safe-calculations/preview.clipboard.json",
+    "result": "PASS",
+    "errors": [],
+    "warnings": [],
+    "processingNodes": 4,
+    "objects": 10,
+    "scope": "Static documented checks; no resource existence, collation, engine execution or output semantics guarantee"
+  },
+  {
+    "file": "examples/canonical/07-filter-before-output/flow.clipboard.json",
+    "result": "PASS",
+    "errors": [],
+    "warnings": [],
+    "processingNodes": 3,
+    "objects": 12,
+    "scope": "Static documented checks; no resource existence, collation, engine execution or output semantics guarantee"
+  },
+  {
+    "file": "examples/canonical/07-filter-before-output/preview.clipboard.json",
+    "result": "PASS",
+    "errors": [],
+    "warnings": [],
+    "processingNodes": 2,
+    "objects": 8,
+    "scope": "Static documented checks; no resource existence, collation, engine execution or output semantics guarantee"
+  },
+  {
+    "file": "examples/canonical/08-two-source-line-dashboard/flow.clipboard.json",
+    "result": "PASS",
+    "errors": [],
+    "warnings": [],
+    "processingNodes": 15,
+    "objects": 45,
+    "scope": "Static documented checks; no resource existence, collation, engine execution or output semantics guarantee"
+  },
+  {
+    "file": "examples/canonical/08-two-source-line-dashboard/preview.clipboard.json",
+    "result": "PASS",
+    "errors": [],
+    "warnings": [],
+    "processingNodes": 14,
+    "objects": 41,
+    "scope": "Static documented checks; no resource existence, collation, engine execution or output semantics guarantee"
+  }
+]

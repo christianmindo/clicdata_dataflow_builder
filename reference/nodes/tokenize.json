@@ -1,0 +1,21 @@
+{
+  "kind": "NODE_SETTINGS_EXAMPLE_NOT_A_COMPLETE_FLOW",
+  "code": "tokenize",
+  "propertyClass": "DataFlowNodeTokenizeProperties:#Infinis.DataFlows",
+  "observedUpstreamCount": 1,
+  "exampleSettings": {
+    "Columns": [
+      {
+        "SourceName": "financial_state",
+        "OutputName": ""
+      }
+    ],
+    "Behavior": "replace_values",
+    "Prefix": "",
+    "TotalLength": 16,
+    "KeepConsistent": true
+  },
+  "evidence": "Observed UI and copied clipboard settings 2026-10-22; _itemid omitted in this generalized fragment; no engine execution. Conditional sample had no selected columns.",
+  "uiNotes": "Observed UI controls: selected Columns, Behavior (Replace values or Create new columns), Prefix, Total Length, Keep Consistent, and an illustrative input/token Example. The inspected configuration selects financial_state, blank Prefix, Total Length 16 and Keep Consistent enabled.\n\nThe Keep Consistent help text states: enabled means the same input value always produces the same token (deterministic SHA-256) and total length changes to 16; disabled means each row gets a fresh random token. This is observed product help, not an independent verification of the algorithm, cross-run determinism or cryptographic properties. Do not assume cross-node/account token equivalence, collision freedom, reversibility, salt/secret handling, or that this is an LLM token-counting/text-splitting node. Prefix inclusion in total length, length bounds, null handling and create-new-column serialization remain unverified. Only replace_values was captured as a serialized Behavior value.\n",
+  "observedAppVersion": "2026.4.204.0"
+}

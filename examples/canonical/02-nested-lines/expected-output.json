@@ -1,0 +1,14 @@
+[
+  {
+    "Order_ID": "O-1",
+    "SKU": "SHARED-01",
+    "Units": 2,
+    "SalesAmount": 25
+  },
+  {
+    "Order_ID": "O-1",
+    "SKU": "ITEM-02",
+    "Units": 1,
+    "SalesAmount": 8
+  }
+]

@@ -1,0 +1,79 @@
+{
+  "kind": "NODE_SETTINGS_EXAMPLE_NOT_A_COMPLETE_FLOW",
+  "code": "calculated-columns",
+  "propertyClass": "DataFlowNodeCalculatedColumnsProperties:#Infinis.DataFlows",
+  "observedUpstreamCount": 1,
+  "exampleSettings": {
+    "CalculatedColumns": [
+      {
+        "Expression": "DATEDIFF(day,[Date Opened],[Date Closed])",
+        "InternalType": "int32",
+        "Name": "Resolution Time"
+      }
+    ]
+  },
+  "exampleOutputSchema": [
+    {
+      "InternalType": "int64",
+      "Name": "Ticket ID",
+      "traceId": "cf58f8e6-439b-59d4-a893-ef44e74fd08f"
+    },
+    {
+      "InternalType": "date",
+      "Name": "Date Opened",
+      "traceId": "e3c110e6-acf6-5633-9bd7-7dcd57633bad"
+    },
+    {
+      "InternalType": "date",
+      "Name": "Date Closed",
+      "traceId": "7c14f6ca-2c70-550a-9c77-8a03ee0405f8"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Customer Name",
+      "traceId": "a3f7b4d2-2bba-5245-8959-e688ec8c6dbe"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Issue Category",
+      "traceId": "a0ca2a06-0867-5c47-b6b6-e3dde93df171"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Priority",
+      "traceId": "e5de5eb5-8cc1-57b3-8b40-c99d827425ba"
+    },
+    {
+      "InternalType": "int64",
+      "Name": "Assigned To",
+      "traceId": "7cfd2066-6493-577f-a913-f3389b376e8b"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Status",
+      "traceId": "98fdb729-9d50-58bb-9a17-3a3d3b640bf5"
+    },
+    {
+      "InternalType": "int32",
+      "Name": "Resolution Time",
+      "traceId": "91c04127-4ed9-5b46-b26c-a9dd68b2af79"
+    }
+  ],
+  "evidence": "Observed structure, synthetic resource/graph identifiers, no execution guarantee",
+  "additionalObservedVariants": [
+    {
+      "name": "previous-30-observations-average",
+      "settings": {
+        "CalculatedColumns": [
+          {
+            "Name": "Previous30Average",
+            "InternalType": "double",
+            "Expression": "AVG(CAST([Measure] AS FLOAT)) OVER (PARTITION BY [SourceKey], [EntityKey] ORDER BY [Date] ROWS BETWEEN 30 PRECEDING AND 1 PRECEDING)"
+          }
+        ]
+      },
+      "note": "Generalized observed window expression. Counts up to 30 preceding rows excluding current row, not automatically 30 calendar days. Grain, missing dates, duplicate dates/order ties and short-history policy require validation.",
+      "evidence": "Observed marketing export structure, generalized field names/literals; execution unverified."
+    }
+  ]
+}

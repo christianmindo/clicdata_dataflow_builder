@@ -1,0 +1,105 @@
+{
+  "kind": "NODE_SETTINGS_EXAMPLE_NOT_A_COMPLETE_FLOW",
+  "code": "table-input",
+  "propertyClass": "DataFlowNodeTableInputProperties:#Infinis.DataFlows",
+  "observedUpstreamCount": 0,
+  "exampleSettings": {
+    "DataCloneName": "Support Tickets 1",
+    "DataCloneRecId": 900002,
+    "SelectedColumns": [
+      {
+        "InternalType": "int64",
+        "Name": "Ticket ID",
+        "RecId": 900003
+      },
+      {
+        "InternalType": "date",
+        "Name": "Date Opened",
+        "RecId": 900004
+      },
+      {
+        "InternalType": "date",
+        "Name": "Date Closed",
+        "RecId": 900005
+      },
+      {
+        "InternalType": "textsimple(250)",
+        "Name": "Customer Name",
+        "RecId": 900006
+      },
+      {
+        "InternalType": "textsimple(250)",
+        "Name": "Issue Category",
+        "RecId": 900007
+      },
+      {
+        "InternalType": "textsimple(250)",
+        "Name": "Priority",
+        "RecId": 900008
+      },
+      {
+        "InternalType": "textsimple(250)",
+        "Name": "Status",
+        "RecId": 900009
+      },
+      {
+        "InternalType": "int64",
+        "Name": "Assigned To",
+        "RecId": 900010
+      },
+      {
+        "InternalType": "textsimple(250)",
+        "Name": "Location",
+        "RecId": 900011
+      }
+    ]
+  },
+  "exampleOutputSchema": [
+    {
+      "InternalType": "int64",
+      "Name": "Ticket ID",
+      "traceId": "d18b8310-e647-5d20-975a-392b96adcf5e"
+    },
+    {
+      "InternalType": "date",
+      "Name": "Date Opened",
+      "traceId": "7cac7ac4-7793-573d-9e86-1f669a67caa0"
+    },
+    {
+      "InternalType": "date",
+      "Name": "Date Closed",
+      "traceId": "cc8b1453-4692-58ad-88a4-4b6b98514d10"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Customer Name",
+      "traceId": "96d7f614-faab-5334-a4e7-93dab0549da8"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Issue Category",
+      "traceId": "762449a7-ffbc-539f-8f6b-bf119bf1752c"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Priority",
+      "traceId": "275bca07-bdea-52b0-b1ce-9fc50fd9fe21"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Status",
+      "traceId": "b05b8be6-5757-5d92-94b0-04cc5cac8e00"
+    },
+    {
+      "InternalType": "int64",
+      "Name": "Assigned To",
+      "traceId": "43f63b88-6440-5a9a-a280-d2cac3080da6"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Location",
+      "traceId": "a90e85c9-dcab-50de-b499-52e6eaa23507"
+    }
+  ],
+  "evidence": "Observed structure, synthetic resource/graph identifiers, no execution guarantee"
+}

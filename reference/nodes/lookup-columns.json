@@ -1,0 +1,115 @@
+{
+  "kind": "NODE_SETTINGS_EXAMPLE_NOT_A_COMPLETE_FLOW",
+  "code": "lookup-columns",
+  "propertyClass": "DataFlowNodeLookupColumnsProperties:#Infinis.DataFlows",
+  "observedUpstreamCount": 2,
+  "exampleSettings": {
+    "Conditions": [
+      {
+        "ColumnName": "Agent ID",
+        "Comparator": "equals",
+        "Disabled": false,
+        "DisabledIfNull": false,
+        "Groups": [],
+        "Guid": "c735ef8b-c583-5a31-a503-1eabea438539",
+        "LogicalOperator": "and",
+        "ValueType": "column",
+        "Values": [
+          "Assigned To"
+        ]
+      }
+    ],
+    "LookupNodeId": "4fe45f3d-fb91-52f3-be3d-4aefcd509abc",
+    "Values": [
+      {
+        "Alias": "Agent Name",
+        "Name": "Agent Name"
+      }
+    ]
+  },
+  "exampleOutputSchema": [
+    {
+      "InternalType": "int64",
+      "Name": "Ticket ID",
+      "traceId": "d9a30d86-24b7-515f-979d-297e8ae3ed90"
+    },
+    {
+      "InternalType": "date",
+      "Name": "Date Opened",
+      "traceId": "6db1e481-1095-5d0a-8045-46e0660b3aee"
+    },
+    {
+      "InternalType": "date",
+      "Name": "Date Closed",
+      "traceId": "95d092df-bd54-5c33-9e7f-0919b368902a"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Customer Name",
+      "traceId": "393359bc-c7cb-57dc-a22c-a51cf493ce22"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Issue Category",
+      "traceId": "a03786bc-9d2c-59db-9036-d1cd8c95f91e"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Priority",
+      "traceId": "01b650a2-17fa-581e-aae0-fe772bcad545"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Status",
+      "traceId": "621be452-7cec-572a-8618-cbf0bcaaa000"
+    },
+    {
+      "InternalType": "int64",
+      "Name": "Assigned To",
+      "traceId": "78573cfa-ff1e-53f9-82b0-dcc7c5db6c42"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Agent Name",
+      "traceId": "42f69562-ab91-51df-90f3-3a48cfd9edcc"
+    }
+  ],
+  "evidence": "Observed structure, synthetic resource/graph identifiers, no execution guarantee",
+  "additionalObservedVariants": [
+    {
+      "name": "column-key-plus-literal-condition",
+      "settings": {
+        "Conditions": [
+          {
+            "ColumnName": "LookupKey",
+            "Comparator": "equals",
+            "Disabled": false,
+            "DisabledIfNull": false,
+            "Groups": [],
+            "Guid": "64f636da-b93f-5e8d-8947-533e4151428f",
+            "LogicalOperator": "and",
+            "ValueType": "column",
+            "Values": [
+              "FactKey"
+            ]
+          },
+          {
+            "ColumnName": "EnabledFlag",
+            "Comparator": "equals",
+            "Disabled": false,
+            "DisabledIfNull": false,
+            "Groups": [],
+            "Guid": "41883e54-2022-5ac6-9ffc-0c030f5dc37d",
+            "LogicalOperator": "and",
+            "ValueType": "value",
+            "Values": [
+              "1"
+            ]
+          }
+        ]
+      },
+      "note": "Generalized from an observed lookup with both a column equality and literal eligibility condition. LookupNodeId and Values selection still required from the base shape. Main/lookup role follows LookupNodeId, not Sources order. InputMode=text was also observed in other conditions; optionality unverified.",
+      "evidence": "Observed marketing export structure, generalized field names/literals; execution unverified."
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "kind": "NODE_SETTINGS_EXAMPLE_NOT_A_COMPLETE_FLOW",
+  "code": "ask-ai",
+  "propertyClass": "DataFlowNodeAskAIProperties:#Infinis.DataFlows",
+  "observedUpstreamCount": 1,
+  "exampleSettings": {
+    "ContextColumns": [],
+    "PrePrompt": "Return one word only",
+    "PrePromptType": "custom",
+    "ProcessOutputColumn": "Color",
+    "Prompt": "What color is Pikachu?",
+    "PromptType": "custom",
+    "Temperature": 1,
+    "TopP": 1
+  },
+  "exampleOutputSchema": [
+    {
+      "InternalType": "json",
+      "Name": "tickets",
+      "traceId": "369540e2-bbf4-51c3-bb66-d21c19bca34a"
+    },
+    {
+      "InternalType": "textsimple(353)",
+      "Name": "Story",
+      "traceId": "c01a821c-a4ec-550d-8f2f-769892b79dbe"
+    },
+    {
+      "InternalType": "text(max)",
+      "Name": "Color",
+      "traceId": "ac4a50ce-8dc4-5ff1-8abe-9c975fb7a874"
+    }
+  ],
+  "evidence": "Observed structure, synthetic resource/graph identifiers, no execution guarantee",
+  "contextBindingEvidence": {
+    "source": "user_supplied_node_export_2026-10-28",
+    "appVersion": "2026.4.204.0",
+    "status": "observed_configuration_not_engine_test",
+    "settings": {
+      "ContextColumns": [
+        "status",
+        "activity_note"
+      ],
+      "PrePromptType": "custom",
+      "PromptType": "custom",
+      "Prompt": "Status: {{status}}\nNote: {{activity_note}}",
+      "ProcessOutputColumn": "classification_result",
+      "Temperature": 0,
+      "TopP": 1
+    },
+    "generatedOutputType": "text(max)",
+    "incomingColumnsRetained": true,
+    "unverified": [
+      "JSON context serialization",
+      "recursive replacement fidelity",
+      "model output limits",
+      "text-to-JSON conversion",
+      "complete supported parameter ranges"
+    ]
+  }
+}

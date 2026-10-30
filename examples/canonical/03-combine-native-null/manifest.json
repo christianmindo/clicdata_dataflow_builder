@@ -1,0 +1,31 @@
+{
+  "id": "03-combine-native-null",
+  "title": "Combine with source-specific fields",
+  "purpose": "Use for unions, matching columns and explicit missing-source NULLs.",
+  "processingNodes": 4,
+  "schema": [
+    {
+      "name": "Order_ID",
+      "type": "textsimple(250)"
+    },
+    {
+      "name": "SKU",
+      "type": "textsimple(250)"
+    },
+    {
+      "name": "SalesAmount",
+      "type": "decimalstrict(28,9)"
+    },
+    {
+      "name": "Category",
+      "type": "textsimple(250)"
+    },
+    {
+      "name": "UPC",
+      "type": "textsimple(250)"
+    }
+  ],
+  "evidence": "Generated adaptation of documented structures; local simulation tested separately; ClicData execution unverified",
+  "resourcePolicy": "Synthetic numeric IDs. Rebind every source/destination and source-column RecId before import into a real account.",
+  "outputPolicy": "Output is disabled. Example rebuild mode is illustrative; obtain the actual requested write mode."
+}

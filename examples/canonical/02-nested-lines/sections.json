@@ -1,0 +1,43 @@
+[
+  {
+    "title": "Input",
+    "description": "Read orders with nested item arrays.",
+    "kind": "input",
+    "x": 0,
+    "y": 0,
+    "ids": [
+      "e6edebc6-04bc-5aac-8a3c-e0a1b5b192a3"
+    ]
+  },
+  {
+    "title": "Expand Lines",
+    "description": "Repeat Order_ID once per item.",
+    "kind": "expand",
+    "x": 323,
+    "y": 0,
+    "ids": [
+      "d94bc059-cacf-52b7-a89e-8a925ce232eb"
+    ]
+  },
+  {
+    "title": "Line Values",
+    "description": "Calculate sales and remove helper fields.",
+    "kind": "calculate",
+    "x": 646,
+    "y": 0,
+    "ids": [
+      "f182a57f-b93e-53d4-91ac-e1367789bca2",
+      "ac7d7a1f-201f-5ef9-9e3b-93151bdb0c81"
+    ]
+  },
+  {
+    "title": "Output",
+    "description": "Configure destination and write mode.",
+    "kind": "output",
+    "x": 1173,
+    "y": 0,
+    "ids": [
+      "e6add6cc-f362-554f-8db7-a4aea4cf406f"
+    ]
+  }
+]

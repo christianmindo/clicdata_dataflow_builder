@@ -1,0 +1,16 @@
+{
+  "result": "PASS",
+  "negativeCases": 9,
+  "tests": [
+    "Reject wrapper instead of raw array",
+    "Reject duplicate object IDs",
+    "Reject unresolved graph reference",
+    "Reject checkpoints",
+    "Reject explicit COLLATE",
+    "Reject case-insensitive incoming alias collision",
+    "Reject empty GroupedValues",
+    "Reject absent Combine resolution",
+    "Reject enabled teaching output"
+  ],
+  "evidence": "Static tests only; not engine execution"
+}

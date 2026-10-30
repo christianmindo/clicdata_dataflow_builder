@@ -1,0 +1,62 @@
+{
+  "kind": "NODE_SETTINGS_EXAMPLE_NOT_A_COMPLETE_FLOW",
+  "code": "filter-query",
+  "propertyClass": "DataFlowNodeFilterQueryProperties:#Infinis.DataFlows",
+  "observedUpstreamCount": 1,
+  "exampleSettings": {
+    "Expression": "[Assigned to] = 2"
+  },
+  "exampleOutputSchema": [
+    {
+      "InternalType": "int64",
+      "Name": "Ticket ID",
+      "traceId": "87c41dfc-9a0e-5e47-b8b0-4187e1d381b8"
+    },
+    {
+      "InternalType": "date",
+      "Name": "Date Opened",
+      "traceId": "764b4732-0b75-5ed6-91a4-57dcb9bf3f5f"
+    },
+    {
+      "InternalType": "date",
+      "Name": "Date Closed",
+      "traceId": "9bbbbbe9-0360-5b8f-aa43-b1ccb8e147c0"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Customer Name",
+      "traceId": "511806f9-ecb7-5a75-b542-318496b645d0"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Issue Category",
+      "traceId": "8826abfd-df5e-5618-898d-bfd9d36fe9c7"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Priority",
+      "traceId": "cd6bffbf-1bf5-5f81-b917-99f03ca6bdff"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Status",
+      "traceId": "3057c6c5-90a3-52bd-b3e1-cf476a514c5b"
+    },
+    {
+      "InternalType": "int64",
+      "Name": "Assigned To",
+      "traceId": "12fe7f0b-c0ca-5867-afaa-f22a245ff725"
+    },
+    {
+      "InternalType": "int64",
+      "Name": "Agent ID",
+      "traceId": "897eb456-dd18-53dd-bde6-f73ba5524c78"
+    },
+    {
+      "InternalType": "textsimple(250)",
+      "Name": "Agent Name",
+      "traceId": "56b96be8-a50d-5671-bd33-99ff93ac65c6"
+    }
+  ],
+  "evidence": "Observed structure, synthetic resource/graph identifiers, no execution guarantee"
+}

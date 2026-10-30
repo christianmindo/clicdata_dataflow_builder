@@ -1,0 +1,510 @@
+[
+  {
+    "Code": "background-panel",
+    "Id": "19b127f0-54d7-41d5-b3cf-2615b7fa5438",
+    "Properties": {
+      "__type": "DataFlowAnnotationBackgroundPanelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": 0,
+      "Top": 0,
+      "Background": {
+        "Color": "rgba(68, 114, 196, 0.10)"
+      },
+      "Border": {
+        "Color": "rgba(50, 50, 50, 1)",
+        "Enabled": true
+      },
+      "Font": {
+        "Background": {
+          "Color": "rgba(68, 114, 196, 0.10)"
+        },
+        "Color": "rgba(50, 50, 50, 1)"
+      },
+      "Height": 561,
+      "Shadow": {
+        "Color": "rgba(237, 66, 55, 0.39)",
+        "Enabled": false,
+        "Radius": 4
+      },
+      "Text": "",
+      "Width": 901
+    }
+  },
+  {
+    "Code": "table-input",
+    "Description": "",
+    "Error": null,
+    "Id": "68d94447-b91b-485f-91c1-0f9619991d5b",
+    "Name": "Probe source 900100",
+    "Sequence": 1,
+    "Warning": null,
+    "Properties": {
+      "__type": "DataFlowNodeTableInputProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "CheckpointType": null,
+      "Enabled": true,
+      "Left": 51,
+      "Top": 289,
+      "OutputColumns": [
+        {
+          "Name": "SurveyID",
+          "InternalType": "textsimple(250)",
+          "traceId": "7bc45e76-0435-43f0-883e-905bd6aeff3f"
+        },
+        {
+          "Name": "RespondentID",
+          "InternalType": "textsimple(250)",
+          "traceId": "8c41f46d-7e61-4158-a617-947936610862"
+        },
+        {
+          "Name": "SubmittedDate",
+          "InternalType": "date",
+          "traceId": "ccb2e12f-ae49-49c4-8626-03e25e462a7b"
+        }
+      ],
+      "Sources": [],
+      "DataCloneName": "Fictional probe source",
+      "DataCloneRecId": 900100,
+      "SelectedColumns": [
+        {
+          "RecId": 900101,
+          "Name": "SurveyID",
+          "InternalType": "textsimple(250)"
+        },
+        {
+          "RecId": 900102,
+          "Name": "RespondentID",
+          "InternalType": "textsimple(250)"
+        },
+        {
+          "RecId": 900103,
+          "Name": "SubmittedDate",
+          "InternalType": "date"
+        }
+      ]
+    }
+  },
+  {
+    "Code": "calculated-columns",
+    "Description": "",
+    "Error": null,
+    "Warning": null,
+    "Id": "9eb7ccc1-c361-4fdc-98a1-2bf0137ac1f4",
+    "Name": "Create controlled test cells",
+    "Sequence": 2,
+    "Properties": {
+      "__type": "DataFlowNodeCalculatedColumnsProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "Enabled": true,
+      "CheckpointType": null,
+      "Left": 255,
+      "Top": 289,
+      "Sources": [
+        {
+          "Id": "68d94447-b91b-485f-91c1-0f9619991d5b",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "OutputColumns": [
+        {
+          "Name": "SurveyID",
+          "InternalType": "textsimple(250)",
+          "traceId": "1056db83-f3fd-405c-9c37-4258e9028023"
+        },
+        {
+          "Name": "RespondentID",
+          "InternalType": "textsimple(250)",
+          "traceId": "6ef369ff-c96e-4524-bff9-bcabd3a7fefe"
+        },
+        {
+          "Name": "SubmittedDate",
+          "InternalType": "date",
+          "traceId": "e81e3547-9b5f-494e-b121-f6c9ad0ad734"
+        },
+        {
+          "Name": "ProbeNumericNull",
+          "InternalType": "int64",
+          "traceId": "77d386f9-7e12-4c00-b863-0855d391a106"
+        },
+        {
+          "Name": "ProbeNumericZero",
+          "InternalType": "int64",
+          "traceId": "15103fea-6b7c-49d3-9a6e-2205e5734d5c"
+        },
+        {
+          "Name": "ProbeNumericValue",
+          "InternalType": "int64",
+          "traceId": "fa63753b-f5c6-4b0f-a5bd-93442d2cdbe0"
+        },
+        {
+          "Name": "ProbeTextNull",
+          "InternalType": "textsimple(250)",
+          "traceId": "e38eba5c-064f-4363-916f-3086121f53d7"
+        },
+        {
+          "Name": "ProbeTextEmpty",
+          "InternalType": "textsimple(250)",
+          "traceId": "155838a0-1865-42f0-b750-4bbaec26cf57"
+        },
+        {
+          "Name": "ProbeTextValue",
+          "InternalType": "textsimple(250)",
+          "traceId": "705c64b2-0caa-4e89-90f3-e3b83f31344a"
+        }
+      ],
+      "CalculatedColumns": [
+        {
+          "Name": "ProbeNumericNull",
+          "InternalType": "int64",
+          "Expression": "CASE WHEN 1 = 1 THEN NULL ELSE 1 END"
+        },
+        {
+          "Name": "ProbeNumericZero",
+          "InternalType": "int64",
+          "Expression": "0"
+        },
+        {
+          "Name": "ProbeNumericValue",
+          "InternalType": "int64",
+          "Expression": "5"
+        },
+        {
+          "Name": "ProbeTextNull",
+          "InternalType": "textsimple(250)",
+          "Expression": "CASE WHEN 1 = 1 THEN NULL ELSE 'demo' END"
+        },
+        {
+          "Name": "ProbeTextEmpty",
+          "InternalType": "textsimple(250)",
+          "Expression": "''"
+        },
+        {
+          "Name": "ProbeTextValue",
+          "InternalType": "textsimple(250)",
+          "Expression": "'demo'"
+        }
+      ]
+    }
+  },
+  {
+    "Code": "column-selector",
+    "Description": "",
+    "Error": null,
+    "Warning": null,
+    "Id": "876ccfbf-db15-43cb-9668-e1d4b9b7f17e",
+    "Name": "Numeric test columns",
+    "Sequence": 3,
+    "Properties": {
+      "__type": "DataFlowNodeColumnSelectorProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "Enabled": true,
+      "CheckpointType": null,
+      "Left": 493,
+      "Top": 204,
+      "Sources": [
+        {
+          "Id": "9eb7ccc1-c361-4fdc-98a1-2bf0137ac1f4",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "OutputColumns": [
+        {
+          "Name": "SurveyID",
+          "InternalType": "textsimple(250)",
+          "traceId": "30f22b75-2a85-4b0e-be44-6b703ecf1458"
+        },
+        {
+          "Name": "RespondentID",
+          "InternalType": "textsimple(250)",
+          "traceId": "262823a9-7db7-4cf4-a641-024af9bddd36"
+        },
+        {
+          "Name": "SubmittedDate",
+          "InternalType": "date",
+          "traceId": "c4f634a1-21e5-49b2-b09b-5385755655e4"
+        },
+        {
+          "Name": "ProbeNumericNull",
+          "InternalType": "int64",
+          "traceId": "4d687315-e08c-4413-95c8-ad41b1b67dbd"
+        },
+        {
+          "Name": "ProbeNumericZero",
+          "InternalType": "int64",
+          "traceId": "d389e39f-de6b-42e8-9313-6438b3654ce8"
+        },
+        {
+          "Name": "ProbeNumericValue",
+          "InternalType": "int64",
+          "traceId": "7f6c61a5-c9ce-4e13-818b-71cb0b96004d"
+        }
+      ],
+      "RenamedColumns": [],
+      "SortedColumnNames": [],
+      "UnselectedColumnNames": [
+        "ProbeTextNull",
+        "ProbeTextEmpty",
+        "ProbeTextValue"
+      ]
+    }
+  },
+  {
+    "Code": "unpivot",
+    "Description": "",
+    "Error": null,
+    "Warning": null,
+    "Id": "d7172dff-41c0-431d-ba63-505b5a204934",
+    "Name": "TEST - Numeric Unpivot",
+    "Sequence": 4,
+    "Properties": {
+      "__type": "DataFlowNodeUnpivotProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "Enabled": true,
+      "CheckpointType": null,
+      "Left": 731,
+      "Top": 204,
+      "Sources": [
+        {
+          "Id": "876ccfbf-db15-43cb-9668-e1d4b9b7f17e",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "OutputColumns": [
+        {
+          "Name": "SurveyID",
+          "InternalType": "textsimple(250)",
+          "traceId": "bcf78439-33ae-4104-85c9-237618d3ea3e"
+        },
+        {
+          "Name": "RespondentID",
+          "InternalType": "textsimple(250)",
+          "traceId": "65e1434b-13c4-400e-8371-ce139ec0f9c1"
+        },
+        {
+          "Name": "SubmittedDate",
+          "InternalType": "date",
+          "traceId": "c629968b-63b8-4e89-9267-0a67f84684e0"
+        },
+        {
+          "Name": "ProbeName",
+          "InternalType": "text(128)",
+          "traceId": "c46a3ad6-7baf-4c43-afe8-fa8ef2f7648d"
+        },
+        {
+          "Name": "ProbeValue",
+          "InternalType": "int64",
+          "traceId": "43948e1e-fe27-46c0-b5da-dbf6d787bf6b"
+        }
+      ],
+      "ColumnsToUnpivot": [
+        "ProbeNumericNull",
+        "ProbeNumericZero",
+        "ProbeNumericValue"
+      ],
+      "PivotColumnName": "ProbeName",
+      "TextToRemove": null,
+      "ValueColumnInternalType": "int64",
+      "ValueColumnName": "ProbeValue"
+    }
+  },
+  {
+    "Code": "column-selector",
+    "Description": "",
+    "Error": null,
+    "Warning": null,
+    "Id": "19a1dc09-8540-47ae-ac48-7b01a1ce6e8e",
+    "Name": "Text test columns",
+    "Sequence": 5,
+    "Properties": {
+      "__type": "DataFlowNodeColumnSelectorProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "Enabled": true,
+      "CheckpointType": null,
+      "Left": 493,
+      "Top": 374,
+      "Sources": [
+        {
+          "Id": "9eb7ccc1-c361-4fdc-98a1-2bf0137ac1f4",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "OutputColumns": [
+        {
+          "Name": "SurveyID",
+          "InternalType": "textsimple(250)",
+          "traceId": "41dfe10b-ed6f-4d41-afb5-849cc3cfb5de"
+        },
+        {
+          "Name": "RespondentID",
+          "InternalType": "textsimple(250)",
+          "traceId": "7eb553e0-3acb-4aac-a1de-a598d37d170a"
+        },
+        {
+          "Name": "SubmittedDate",
+          "InternalType": "date",
+          "traceId": "45f27f6a-fdc4-4f02-a38c-febfdee9db9a"
+        },
+        {
+          "Name": "ProbeTextNull",
+          "InternalType": "textsimple(250)",
+          "traceId": "c1574024-ccfc-4d47-902c-68443150d518"
+        },
+        {
+          "Name": "ProbeTextEmpty",
+          "InternalType": "textsimple(250)",
+          "traceId": "e5222dfd-63ba-431f-86ca-fbc344a10d25"
+        },
+        {
+          "Name": "ProbeTextValue",
+          "InternalType": "textsimple(250)",
+          "traceId": "ddd6419f-08d1-4802-9d27-710b875a98a0"
+        }
+      ],
+      "RenamedColumns": [],
+      "SortedColumnNames": [],
+      "UnselectedColumnNames": [
+        "ProbeNumericNull",
+        "ProbeNumericZero",
+        "ProbeNumericValue"
+      ]
+    }
+  },
+  {
+    "Code": "unpivot",
+    "Description": "",
+    "Error": null,
+    "Warning": null,
+    "Id": "62d2f1a3-d55e-4a56-b235-65435007d315",
+    "Name": "TEST - Text Unpivot",
+    "Sequence": 6,
+    "Properties": {
+      "__type": "DataFlowNodeUnpivotProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.200.0",
+      "_PatchVersion": 1,
+      "Enabled": true,
+      "CheckpointType": null,
+      "Left": 731,
+      "Top": 374,
+      "Sources": [
+        {
+          "Id": "19a1dc09-8540-47ae-ac48-7b01a1ce6e8e",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "OutputColumns": [
+        {
+          "Name": "SurveyID",
+          "InternalType": "textsimple(250)",
+          "traceId": "306eb27e-8c87-49b7-b413-ec9265d3ce29"
+        },
+        {
+          "Name": "RespondentID",
+          "InternalType": "textsimple(250)",
+          "traceId": "e4e5f161-4d71-455a-924d-d162072a3599"
+        },
+        {
+          "Name": "SubmittedDate",
+          "InternalType": "date",
+          "traceId": "39a565fb-319f-4b20-a8f3-a9151a3ecba5"
+        },
+        {
+          "Name": "ProbeName",
+          "InternalType": "text(128)",
+          "traceId": "59ae2bfe-a541-441d-9293-6db914f872c8"
+        },
+        {
+          "Name": "ProbeValue",
+          "InternalType": "textsimple(250)",
+          "traceId": "fb20a9f7-62ea-4170-90b1-ae662ece1d69"
+        }
+      ],
+      "ColumnsToUnpivot": [
+        "ProbeTextNull",
+        "ProbeTextEmpty",
+        "ProbeTextValue"
+      ],
+      "PivotColumnName": "ProbeName",
+      "TextToRemove": null,
+      "ValueColumnInternalType": "textsimple(250)",
+      "ValueColumnName": "ProbeValue"
+    }
+  },
+  {
+    "Code": "label",
+    "Id": "7a91e16b-cc88-4ec9-ab44-4261dabf235a",
+    "Properties": {
+      "__type": "DataFlowAnnotationLabelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": 0,
+      "Top": 0,
+      "Background": {
+        "Color": "rgba(68, 114, 196, 1)"
+      },
+      "Border": {
+        "Color": "rgba(50, 50, 50, 1)",
+        "Enabled": false
+      },
+      "Font": {
+        "Background": {
+          "Color": "rgba(68, 114, 196, 1)"
+        },
+        "Color": "rgba(255, 255, 255, 1)"
+      },
+      "Height": 51,
+      "Shadow": {
+        "Color": "#E9E9E9",
+        "Enabled": false,
+        "Radius": 0
+      },
+      "Text": "Unpivot: controlled NULL / empty / zero test",
+      "Width": 901
+    }
+  },
+  {
+    "Code": "label",
+    "Id": "57bf39c1-8436-42db-943b-afb5ee4d6631",
+    "Properties": {
+      "__type": "DataFlowAnnotationLabelProperties:#Infinis.DataFlows",
+      "_AppVersion": "2026.4.204.0",
+      "_PatchVersion": 0,
+      "IsLocked": false,
+      "Left": 17,
+      "Top": 85,
+      "Background": {
+        "Color": "rgba(50, 50, 50, 0)"
+      },
+      "Border": {
+        "Color": "rgba(50, 50, 50, 1)",
+        "Enabled": false
+      },
+      "Font": {
+        "Background": {
+          "Color": "rgba(50, 50, 50, 0)"
+        },
+        "Color": "rgba(50, 50, 50, 1)"
+      },
+      "Height": 85,
+      "Shadow": {
+        "Color": "#E9E9E9",
+        "Enabled": false,
+        "Radius": 0
+      },
+      "Text": "First verify the six generated test columns. Each Unpivot should retain three rows per input row if NULL cells are preserved. No destination writes.",
+      "Width": 867
+    }
+  }
+]

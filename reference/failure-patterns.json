@@ -1,0 +1,60 @@
+[
+  {
+    "id": "duplicate-calculated-alias",
+    "evidence": "User-reported editor error; common triggering pattern documented",
+    "message": "A column name is duplicated",
+    "avoid": "Creating Quantity when Quantity or quantity already exists upstream.",
+    "use": "RawQuantity as input; Quantity as a distinct calculated output.",
+    "example": "examples/canonical/06-safe-calculations/flow.clipboard.json"
+  },
+  {
+    "id": "implicit-concat-collation",
+    "evidence": "User-reported SQL error; proposed mitigation is not a guarantee",
+    "message": "Collation conflict between SQL_Latin1_General_CP1_CS_AS and Latin1_General_100_CS_AS_SC_UTF8 in concat operator",
+    "avoid": "Mixing independently collated text columns or adding explicit COLLATE.",
+    "use": "Only if a synthetic key is required, consider CONCAT('SOURCE_A|',[NativeId]) after verifying identity. Otherwise preserve the native identifier.",
+    "example": "reference/FAILURE_PATTERNS.md"
+  },
+  {
+    "id": "combine-missing-source",
+    "evidence": "Observed clipboard action structure; engine outcome remains separate",
+    "avoid": "Listing both sources for a field absent in one, with empty Actions/invalidSources.",
+    "use": "Native settonull action and accurate source availability.",
+    "example": "examples/canonical/03-combine-native-null/flow.clipboard.json"
+  },
+  {
+    "id": "group-without-aggregate",
+    "evidence": "User-reported editor constraint",
+    "avoid": "Empty GroupedValues when obtaining distinct keys.",
+    "use": "Count an existing field, then project away the helper.",
+    "example": "examples/canonical/05-distinct-key-helper/flow.clipboard.json"
+  },
+  {
+    "id": "event-fanout",
+    "evidence": "General grain-preservation requirement; tested locally on synthetic cases",
+    "avoid": "Expanding two nested event arrays into the final fact.",
+    "use": "Aggregate one event stream per parent key, then attach its result.",
+    "example": "examples/canonical/04-event-rollup-lookup/flow.clipboard.json"
+  },
+  {
+    "id": "same-node-alias-dependency",
+    "evidence": "Engine behavior unverified; conservative construction rule",
+    "avoid": "A calculation referencing an alias created in the same node.",
+    "use": "Put dependent calculations in consecutive nodes.",
+    "example": "examples/canonical/06-safe-calculations/flow.clipboard.json"
+  },
+  {
+    "id": "checkpoint-as-preview",
+    "evidence": "Explicit user policy",
+    "avoid": "CheckpointType=preview or complete.",
+    "use": "CheckpointType=null; ordinary node preview; no-output preview variant.",
+    "example": "examples/canonical/01-select-and-type/preview.clipboard.json"
+  },
+  {
+    "id": "copied-account-bindings",
+    "evidence": "Resource IDs are environment-specific",
+    "avoid": "Reusing synthetic or historical dataset/column IDs as actual resources.",
+    "use": "Obtain current schema/IDs via the target connector or a supplied current export.",
+    "example": "reference/requirements-template.json"
+  }
+]

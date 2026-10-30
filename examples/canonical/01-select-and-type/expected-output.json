@@ -1,0 +1,12 @@
+[
+  {
+    "Order_ID": 1,
+    "OrderDate": "2026-01-01",
+    "OrderStatus": "OPEN"
+  },
+  {
+    "Order_ID": 2,
+    "OrderDate": "2026-01-02",
+    "OrderStatus": "CLOSED"
+  }
+]

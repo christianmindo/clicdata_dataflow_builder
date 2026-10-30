@@ -1,0 +1,39 @@
+{
+  "id": "08-two-source-line-dashboard",
+  "title": "Two-source line dashboard",
+  "purpose": "Use for a complete nested-array-to-common-schema pipeline with two sources.",
+  "processingNodes": 15,
+  "schema": [
+    {
+      "name": "SalesAmount",
+      "type": "decimalstrict(28,9)"
+    },
+    {
+      "name": "Order_ID",
+      "type": "textsimple(250)"
+    },
+    {
+      "name": "OrderDate",
+      "type": "date"
+    },
+    {
+      "name": "SourcePlatform",
+      "type": "textsimple(250)"
+    },
+    {
+      "name": "SKU",
+      "type": "textsimple(250)"
+    },
+    {
+      "name": "ActiveUnits",
+      "type": "int64"
+    },
+    {
+      "name": "OrderStatus",
+      "type": "textsimple(250)"
+    }
+  ],
+  "evidence": "Generated adaptation of documented structures; local simulation tested separately; ClicData execution unverified",
+  "resourcePolicy": "Synthetic numeric IDs. Rebind every source/destination and source-column RecId before import into a real account.",
+  "outputPolicy": "Output is disabled. Example rebuild mode is illustrative; obtain the actual requested write mode."
+}
