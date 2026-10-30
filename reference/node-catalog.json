@@ -109,7 +109,20 @@
     "propertyClass": "DataFlowNodeJoinTablesProperties:#Infinis.DataFlows",
     "observedUpstreamCount": 2,
     "file": "nodes/join-tables.json",
-    "guide": "nodes/join-tables.md"
+    "guide": "nodes/join-tables.md",
+    "observedJoinTypes": [
+      "inner",
+      "left"
+    ],
+    "inferredJoinTypes": [
+      {
+        "value": "right",
+        "supportEvidence": "User-confirmed 2026-10-30",
+        "serializationEvidence": "Inferred from observed inner/left syntax; user authorized documentation",
+        "editorExportObserved": false,
+        "engineExecutionVerified": false
+      }
+    ]
   },
   {
     "code": "json-to-columns",

@@ -82,5 +82,92 @@
       "traceId": "6fbf7114-2ec3-57bb-bf72-86c14721c0d6"
     }
   ],
-  "evidence": "Observed structure, synthetic resource/graph identifiers, no execution guarantee"
+  "evidence": "Observed structure, synthetic resource/graph identifiers, no execution guarantee",
+  "observedJoinTypes": [
+    "inner",
+    "left"
+  ],
+  "additionalExamples": [
+    {
+      "name": "left_join_two_conditions",
+      "evidence": {
+        "status": "Observed user-supplied editor configuration",
+        "date": "2026-10-30",
+        "appVersion": "2026.4.204.0",
+        "patchVersion": 0,
+        "engineExecutionVerified": false,
+        "note": "Generic field names and synthetic graph IDs replace supplied identifiers; not a complete flow. Source order preserved from observed shape; left-side interpretation requires editor confirmation."
+      },
+      "exampleSettings": {
+        "Sources": [
+          {
+            "Id": "11111111-1111-4111-8111-111111111111",
+            "SourceSide": "right",
+            "TargetSide": "left"
+          },
+          {
+            "Id": "22222222-2222-4222-8222-222222222222",
+            "SourceSide": "right",
+            "TargetSide": "left"
+          }
+        ],
+        "JoinType": "left",
+        "Conditions": [
+          {
+            "Comparator": "equals",
+            "LogicalOperator": "and",
+            "Parts": [
+              {
+                "Source": "11111111-1111-4111-8111-111111111111",
+                "ValueType": "column",
+                "Values": [
+                  "ContactKey"
+                ],
+                "InternalType": "textsimple(250)"
+              },
+              {
+                "Source": "22222222-2222-4222-8222-222222222222",
+                "ValueType": "column",
+                "Values": [
+                  "PersonKey"
+                ],
+                "InternalType": "textsimple(250)"
+              }
+            ]
+          },
+          {
+            "Comparator": "equals",
+            "LogicalOperator": "and",
+            "Parts": [
+              {
+                "Source": "11111111-1111-4111-8111-111111111111",
+                "ValueType": "column",
+                "Values": [
+                  "EventDate"
+                ],
+                "InternalType": "date"
+              },
+              {
+                "Source": "22222222-2222-4222-8222-222222222222",
+                "ValueType": "column",
+                "Values": [
+                  "MeetingDate"
+                ],
+                "InternalType": "date"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "inferredJoinTypes": [
+    {
+      "value": "right",
+      "supportEvidence": "User-confirmed 2026-10-30",
+      "serializationEvidence": "Inferred from observed inner/left syntax; user authorized documentation",
+      "editorExportObserved": false,
+      "engineExecutionVerified": false
+    }
+  ]
 }
