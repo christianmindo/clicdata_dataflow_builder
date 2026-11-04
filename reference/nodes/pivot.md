@@ -41,3 +41,7 @@ Observed node-specific settings (not a complete node):
 ## Metric-name/value source normalization — 2026-10-22
 
 Observed pre-flow branch: Text to Columns splits a composite rows.name on comma into Date (Position=1) and Domain (Position=2), both text(250). Pivot then groups by those two fields, pivots rows.data.name over explicit values imps/pub_payout/total_traffic/participation_rate, and sums decimalstrict(28,9) rows.data.value. Exported column names combine the aggregate alias and pivot value. This is schema/configuration evidence, not execution proof, nor a reason to sum every kind of rate metric in a different task. Position indexing, delimiter/escaping edge cases, absent pivot values and date parsing still need runtime tests.
+
+## Manual category intake — required
+
+Before configuring PivotedValues, obtain the user's locally collected distinct list for the chosen pivot column or reuse a confirmed complete list already supplied. Metadata names/types do not reveal categories. Follow SCHEMA_FILES.md's manual supplement: agree output grain, aggregation, exact labels/order, null/blank rules and new-category handling. Sensitive labels can be selected manually in the editor. Never query distinct values, use record samples or silently invent categories. Defer dependent output columns until the list or manual setup is resolved; do not claim a finite PivotedValues list dynamically discovers new categories.

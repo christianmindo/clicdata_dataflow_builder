@@ -12,9 +12,25 @@ Offline provides a local-access security boundary; do not describe MCP as inhere
 
 ### MCP intake
 
-Use the connected ClicData tools for metadata discovery only within the agreed source scope. For a dummy-data demonstration, identify and use only the agreed dummy datasets; do not browse unrelated client sources. If no dataset IDs are known, ask for identifying dummy source names or a scope before discovery. Follow each tool's mandatory DescribeFields/DescribeParameters prerequisite before its first list/get/query call for that resource type. Request only the dataset identities, field names, exact types and numeric binding IDs needed for the flow. Inspect tool capabilities before use; do not assume a schema tool exists or use record queries as a substitute.
+Follow AGENTS.md's mandatory metadata-only rule: DO NOT QUERY DATA. Use only DescribeFields, scoped ListTables identities and GetTableSchema column IDs/names/types with explicit minimal fields. No QueryData/query_data, record endpoints, previews, samples, distincts, counts, aggregates or profiling; no rowCount selection. This also applies to QA and dummy tables. Missing metadata is resolved by metadata-only export or manual binding, never a record-query fallback.
 
-Verify dataset and column bindings from returned metadata, then continue BUILD_GUIDE.md's standard requirements, construction and local validation checklist. Dummy files alone do not establish assigned IDs. MCP selection does not authorize record previews, queries of actual records, uploads, destination creation, writes or flow execution; those require explicit task-specific direction. Prefer supplied dummified JSON structures for selected fields when metadata cannot establish nested paths. Never claim editor import or engine execution from metadata discovery or local validation. Do not request credentials in chat.
+Use the connected ClicData tools for metadata discovery only within the agreed source scope. For a dummy-data demonstration, identify and use only the agreed dummy datasets; do not browse unrelated client sources. If no dataset IDs are known, ask for identifying dummy source names or a scope before discovery. Follow each tool's mandatory DescribeFields prerequisite before its first allowed list/schema call for that resource type. Request only the dataset identities, field names, exact types and numeric binding IDs needed for the flow. Inspect tool capabilities before use; do not assume a schema tool exists or use record queries as a substitute.
+
+Verify dataset and column bindings from returned metadata, then continue BUILD_GUIDE.md's standard requirements, construction and local validation checklist. Dummy files alone do not establish assigned IDs. Record access and agent-run previews/flow execution are prohibited under the metadata-only rule, not an intake permission to be escalated. MCP selection also does not authorize uploads, destination creation or writes; any separately authorized metadata/resource mutation must not retrieve records or execute flows. Prefer supplied dummified JSON structures for selected fields when metadata cannot establish nested paths. Never claim editor import or engine execution from metadata discovery or local validation. Do not request credentials in chat.
+
+### Manual supplement for Pivot and JSON — applies to both intake methods
+
+Detect these dependencies from the use case and schema before constructing affected nodes. Metadata-only MCP remains allowed for IDs/names/types; category values and JSON examples must come from the user, not remote record reads. Keep the selected intake method for bindings.
+
+For a required Pivot, first agree pivot column, group keys, aggregate measures and output grain. Then ask:
+
+> Please obtain the distinct category list for `<table>.<pivot column>` locally and share only labels that are safe to disclose, preserving exact spelling and case. We also need the desired column order and treatment of null/blank values. If the labels are sensitive, you can select them manually in the editor instead. I will not query the column values.
+
+A complete list already supplied and confirmed can be reused. Agree how new categories will be handled on later runs; a finite list does not establish dynamic category discovery. Never invent PivotedValues or finalize the output schema from a partial sample. User-approved label mapping requires corresponding input transformations; it is not a silent replacement of real categories by dummy labels.
+
+If any source contains JSON, identify the JSON fields and follow the use-case-first scope sequence below. For selected fields needing extraction/expansion, request dummy examples with real structural keys and invented values; preserve objects versus arrays, nesting, numeric/string/boolean/null types and relevant missing/empty cases. Do not request actual source JSON or examples of unused/pass-through fields. Explicitly record which dependencies are supplied, confirmed, manual-editor setup or pending.
+
+Continue unaffected design while awaiting manual inputs; defer the dependent Pivot values/schema and JSON extraction mappings. No distinct-value, sample, preview, aggregate or record-query tool is allowed for this supplement.
 
 ### Offline intake
 

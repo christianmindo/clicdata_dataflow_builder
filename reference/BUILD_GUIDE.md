@@ -4,7 +4,7 @@ Use this guide for processing changes. Read SERIALIZATION.md for new constructio
 
 ## Input contract
 
-Start with the use case, then offer the [MCP or offline intake choice](SCHEMA_FILES.md), reusing a choice already made for this task. MCP offers streamlined source/schema/binding discovery with fewer manual steps; offline keeps client access local and uses user-run metadata exports. Wait for selection before remote discovery. Use only the chosen path and scoped sources, reuse complete bindings, and do not treat MCP selection as permission to read records, write resources or execute flows. For JSON, first clarify the use case, required attributes/measures and row grain; suggest candidate fields to extract or unnest and agree the scope. Only then request dummified structural examples for the selected fields if needed, never every JSON column or actual client records. Keep unresolved dependencies visible, continue independent design work, and never invent IDs or runtime evidence. User-performed ClicData testing is separate from local assembly.
+Start with the use case, then offer the [MCP or offline intake choice](SCHEMA_FILES.md), reusing a choice already made for this task. MCP offers streamlined source/schema/binding discovery with fewer manual steps; offline keeps client access local and uses user-run metadata exports. Wait for selection before remote discovery. Use only the chosen path and scoped sources, reuse complete bindings, and enforce AGENTS.md’s metadata-only rule: never query/read records, samples, previews, counts, distincts or aggregates, including dummy/QA tables; use only binding metadata. MCP selection does not authorize writes or flow execution. For JSON, first clarify the use case, required attributes/measures and row grain; suggest candidate fields to extract or unnest and agree the scope. Only then request dummified structural examples for the selected fields if needed, never every JSON column or actual client records. Keep unresolved dependencies visible, continue independent design work, and never invent IDs or runtime evidence. User-performed ClicData testing is separate from local assembly.
 
 ## Requirements intake: purpose first — 2026-10-28
 
@@ -17,9 +17,9 @@ Wait for that direction before asking downstream configuration questions or desi
 Once the use case is supplied, continue in order, using existing answers rather than asking again:
 
 0. Ask MCP or offline unless already selected. Follow SCHEMA_FILES.md for that path, accepting relevant dataset IDs or dummy datasets. Resolve missing source bindings through scoped MCP metadata discovery or the offline user-run query, respectively. Continue independent requirements/design work while awaiting dependencies. Use verified metadata to reconcile field selections and configure Table Inputs.
-1. Agree the output grain, desired fields, measures and JSON attributes/expansion needs; suggest relevant candidates from the supplied schemas.
+1. Agree the output grain, desired fields, measures and JSON attributes/expansion needs; suggest relevant candidates from the supplied schemas. Identify required Pivot columns and flag JSON-bearing sources for manual structural intake.
 2. Resolve material business rules: joins/keys/cardinality, filters, calculations, aggregation, duplicates and missing values.
-3. Request only missing dummified JSON structures needed for the agreed fields. Follow SCHEMA_FILES.md for binding metadata or manual source selection; never request client records.
+3. For every required Pivot, obtain a user-supplied/confirmed distinct category list collected locally (or manual editor selection if labels are sensitive), plus order and null/blank/new-category rules. For selected JSON fields, request only missing dummy structures preserving keys, nesting and types with invented values. Reuse sufficient evidence already supplied. Follow SCHEMA_FILES.md’s manual supplement; never query records or distinct values. Continue independent work, but defer affected Pivot schemas and JSON paths until resolved.
 4. Resolve destination/write behavior and theme when applicable. Offer optional readable table names/labels if unknown.
 
 Ask concise grouped follow-ups at each stage, not a comprehensive questionnaire before the purpose is known. If the user already supplied actionable requirements, proceed from them without this initial question. Continue independent work while unresolved details are discussed, but do not finalize dependent logic by assumption.
@@ -103,7 +103,7 @@ For wide survey sources, consult the [survey dashboard pattern](patterns/survey-
 - Preserve duplicates, nulls, dimension-match behavior and the output contract.
 - Distinguish proposed improvements from measured results. Fewer logical evaluations do not establish runtime speedups or shared-branch caching.
 - Compare full results as multisets, retaining duplicate multiplicity, under unchanged source snapshots and evaluation dates. Include financial totals, nulls, ties and ambiguous dimension matches.
-- Benchmark equivalent full executions and output work only when authorized; limited previews and local simulations do not establish engine performance. Preserve required staging writes and dependent consumers before production adoption.
+- Have the user benchmark equivalent full executions and output work in their environment; the agent must not execute flows or query records to benchmark. User-run limited previews and local fictional simulations do not establish engine performance. Preserve required staging writes and dependent consumers before production adoption.
 - Document suspected business-rule issues separately from performance changes.
 
 

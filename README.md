@@ -2,7 +2,13 @@
 
 A modular reference pack for generating ClicData editor clipboard JSON. Keep the folder structure when sharing. It is intentionally not a standalone document.
 
-Use AGENTS.md as project instructions (Codex reads it automatically). Describe the task and provide the latest flow export or local schema CSV files and user-supplied binding evidence. Client accounts are never queried through MCP or other remote access. The instructions route the LLM to a small set of relevant files instead of requiring the entire reference on every request.
+Use AGENTS.md as project instructions (Codex reads it automatically). Describe the task and provide the latest flow export or local schema CSV files and user-supplied binding evidence. Connected-account access is limited to binding metadata; table records must never be queried or read. The instructions route the LLM to a small set of relevant files instead of requiring the entire reference on every request.
+
+## Client-sensitive data: metadata only
+
+**DO NOT QUERY DATA. Only retrieve metadata for dataset/column IDs, names and types.** No record reads, previews, samples, distinct values, counts, aggregates or profiling, including on QA/dummy tables. Never use `query_data` / `QueryData` or a record endpoint to obtain IDs. Use scoped table-name/ID discovery and the dedicated schema endpoint with minimal selected fields. If unavailable, request a metadata-only export or manual binding.
+
+The mandatory [project instructions](AGENTS.md#sensitive-client-data-metadata-only--mandatory) contain the access rules. These are agent instructions, not a server-enforced permission restriction. Editor previews and execution remain user-performed; local fictional fixture generation is allowed.
 
 ## Task entry points
 
@@ -24,6 +30,10 @@ There are 35 documented processing types and eight complete synthetic teaching p
 ## Why we ask for IDs
 
 Dataset and column IDs let the builder preconfigure Table Input nodes so you do not have to select the source table and fields manually. They are reference metadata; the builder does not use them to access or read client records. Verify the bindings after importing into ClicData.
+
+## Pivot and JSON inputs
+
+Pivot category lists and JSON structures require a manual supplement: provide a safe distinct-value list collected locally for each required pivot column, and dummy JSON examples for selected fields being extracted or expanded. Keep JSON keys/nesting/types, replace values with invented ones. Metadata-only MCP can still resolve bindings; it must never query categories or JSON records. See the [intake procedure](reference/SCHEMA_FILES.md#manual-supplement-for-pivot-and-json--applies-to-both-intake-methods).
 
 ## Normal workflow
 
