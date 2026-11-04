@@ -39,5 +39,21 @@
       "traceId": "52964ad2-119a-536e-946b-ae3a181a72df"
     }
   ],
-  "evidence": "Observed structure, synthetic resource/graph identifiers, no execution guarantee"
+  "evidence": "Observed structure, synthetic resource/graph identifiers, no execution guarantee",
+  "outputSelectionEvidence": {
+    "date": "2026-11-04",
+    "status": "Observed user-returned downstream schema; not engine execution",
+    "selectedOutputTypes": [
+      "country_code"
+    ],
+    "observedDownstreamField": {
+      "Name": "GeocodeCountryCode",
+      "InternalType": "textsimple(10)"
+    },
+    "absentDownstreamFields": [
+      "GeocodeLatitude",
+      "GeocodeLongitude"
+    ],
+    "limitation": "Legacy exampleOutputSchema does not prove automatic coordinate emission. Only propagate fields verified for the selected outputs; coordinate output Type serialization is not established here."
+  }
 }

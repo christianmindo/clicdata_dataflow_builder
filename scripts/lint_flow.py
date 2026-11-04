@@ -5,6 +5,11 @@ import argparse,json,re,uuid
 from pathlib import Path
 R=Path(__file__).resolve().parents[1]
 
+def expression_fields(expression):
+ # Brackets inside SQL string literals (including escaped quotes) are data.
+ code=re.sub(r"'(?:''|[^'])*'", "''", expression)
+ return set(re.findall(r'\[([^\]]+)\]',code))
+
 def lint(flow,disabled=False):
  errors=[];warnings=[]
  def require(ok,msg):
@@ -57,9 +62,9 @@ def lint(flow,disabled=False):
    for c in p.get(setting,[]):
     if code=='calculated-columns':
      expr=c.get('Expression','');require(not re.search(r'\bCOLLATE\b',expr,re.I),name+': explicit COLLATE is prohibited')
-     require(set(re.findall(r'\[([^\]]+)\]',expr))<=incoming.keys(),name+': expression uses missing fields or unverified same-node aliases')
+     require(expression_fields(expr)<=incoming.keys(),name+': expression uses missing fields or unverified same-node aliases')
      if 'CONCAT' in expr.upper():
-      textcols=[k for k in set(re.findall(r'\[([^\]]+)\]',expr)) if incoming.get(k,'').startswith('text')]
+      textcols=[k for k in expression_fields(expr) if incoming.get(k,'').startswith('text')]
       if len(textcols)>1:warnings.append(name+': CONCAT combines multiple text columns; implicit collation needs engine verification')
   elif code=='column-selector':
    for c in p.get('RenamedColumns',[]):require(c['Name'] in incoming,name+': rename source is missing')
@@ -69,6 +74,16 @@ def lint(flow,disabled=False):
    changed={c['Name']:c['InternalType'] for c in p.get('ConvertedColumns',[])}
    require(changed.keys()<=incoming.keys(),name+': converted field missing upstream')
    require(out=={k:changed.get(k,v) for k,v in incoming.items()},name+': conversion schema mismatch')
+  elif code in ['geocoding','iplocation']:
+   selected=p.get('GeocodeOutputColumns',[]) if code=='geocoding' else p.get('ProcessOutputColumns',[])
+   outputkey='Column' if code=='geocoding' else 'Name'
+   requested={c.get(outputkey) for c in selected}
+   require(None not in requested and len(requested)==len(selected),name+': invalid or duplicate enrichment output names')
+   require(not requested&incoming.keys(),name+': enrichment output name collides with incoming field')
+   require(out.keys()==incoming.keys()|requested,name+': enrichment schema must contain incoming fields plus explicitly selected outputs only')
+   require(all(out.get(k)==v for k,v in incoming.items()),name+': enrichment changed incoming field types')
+   if code=='iplocation':require(p.get('SourceColumn') in incoming,name+': IP source field unavailable')
+   else:require(all(c.get('Column') in incoming for c in p.get('GeocodeInputColumns',[])),name+': geocoding input field unavailable')
   elif code=='group-rows':
    for key in ['AggregateColumns','AggregatedColumns']:
     require(key not in p,name+': unsupported Group Rows '+key+'; use documented GroupedValues')
@@ -105,7 +120,10 @@ def lint(flow,disabled=False):
    else:require(isinstance(p.get('DataCloneRecId'),int) and not isinstance(p.get('DataCloneRecId'),bool),name+': destination ID must be numeric when supplied')
    if disabled:require(p.get('Enabled') is False,name+': teaching output must be disabled')
    for c in p.get('SelectedColumns',[]):require(incoming.get(c['SourceName'])==c['InternalType'],name+': output source/type mismatch')
-  elif code=='filter-query':require(set(re.findall(r'\[([^\]]+)\]',p.get('Expression','')))<=incoming.keys(),name+': filter references unavailable fields')
+   mapped={c['OutputName']:c['InternalType'] for c in p.get('SelectedColumns',[])}
+   require(len(mapped)==len(p.get('SelectedColumns',[])),name+': duplicate output mappings')
+   require(mapped==out,name+': output mappings disagree with OutputColumns')
+  elif code=='filter-query':require(expression_fields(p.get('Expression',''))<=incoming.keys(),name+': filter references unavailable fields')
  return dict(result='FAIL' if errors else 'PASS',errors=errors,warnings=warnings,processingNodes=len(processing),objects=len(flow),scope='Static documented checks; no resource existence, collation, engine execution or output semantics guarantee')
 if __name__=='__main__':
  parser=argparse.ArgumentParser();parser.add_argument('path');parser.add_argument('--require-disabled-outputs',action='store_true');args=parser.parse_args();report=lint(json.loads(Path(args.path).read_text()),args.require_disabled_outputs);print(json.dumps(report,indent=2));raise SystemExit(1 if report['errors'] else 0)
