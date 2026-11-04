@@ -206,7 +206,15 @@
     "propertyClass": "DataFlowNodeTableMergeProperties:#Infinis.DataFlows",
     "observedUpstreamCount": 0,
     "file": "nodes/table-merge.json",
-    "guide": "nodes/table-merge.md"
+    "guide": "nodes/table-merge.md",
+    "observedUpstreamCounts": [
+      0,
+      1
+    ],
+    "observedInputFormats": [
+      "DataClones (legacy embedded datasets)",
+      "MergeInputs (embedded dataset and upstream node)"
+    ]
   },
   {
     "code": "table-output",

@@ -170,5 +170,187 @@
       "traceId": "b1460ef6-68c1-529f-828a-7b1208ff3090"
     }
   ],
-  "evidence": "Observed structure, synthetic resource/graph identifiers, no execution guarantee"
+  "evidence": "Observed structure, synthetic resource/graph identifiers, no execution guarantee",
+  "observedUpstreamCounts": [
+    0,
+    1
+  ],
+  "connectedInputExample": {
+    "kind": "NODE_SETTINGS_EXAMPLE_NOT_A_COMPLETE_FLOW",
+    "evidence": "User-supplied inner and right join exports, received 2026-11-04; identifiers adapted to synthetic reference identities; no editor import or engine execution performed",
+    "settings": {
+      "_AppVersion": "2026.5.153.0",
+      "_PatchVersion": 2,
+      "Sources": [
+        {
+          "Id": "3321999e-fa7a-5640-916a-863e2d6905b8",
+          "SourceSide": "right",
+          "TargetSide": "left"
+        }
+      ],
+      "Connections": [
+        {
+          "Conditions": [
+            {
+              "Comparator": "equals",
+              "LogicalOperator": "and",
+              "Parts": [
+                {
+                  "Source": "cd00eaa7-2c23-574e-9727-866b610aaf84",
+                  "ValueType": "column",
+                  "Values": [
+                    "Agent ID"
+                  ]
+                },
+                {
+                  "Source": "3321999e-fa7a-5640-916a-863e2d6905b8",
+                  "ValueType": "column",
+                  "Values": [
+                    "Assigned To"
+                  ]
+                }
+              ]
+            }
+          ],
+          "Id": "8b217556-9287-5a71-9095-77c4519948b2",
+          "JoinType": "right",
+          "SourceId": "cd00eaa7-2c23-574e-9727-866b610aaf84",
+          "SourceSide": "left",
+          "TargetId": "3321999e-fa7a-5640-916a-863e2d6905b8",
+          "TargetSide": "right"
+        }
+      ],
+      "ForceTableNamePrefix": false,
+      "MergeInputs": [
+        {
+          "Alias": "Agents",
+          "ColumnVisibility": "all",
+          "ConnectorCode": "localfile",
+          "DataCloneRecId": 900032,
+          "Height": 108,
+          "Id": "cd00eaa7-2c23-574e-9727-866b610aaf84",
+          "Left": 588,
+          "Name": "Agents",
+          "RenamedColumns": [],
+          "SelectedColumns": [
+            {
+              "InternalType": "textsimple(250)",
+              "Name": "Agent Name",
+              "RecId": 900034
+            }
+          ],
+          "Top": 110
+        },
+        {
+          "Alias": "Support Tickets 1 #1 #1",
+          "ColumnVisibility": "all",
+          "ConnectorCode": null,
+          "DataCloneRecId": 0,
+          "Height": 269,
+          "Id": "3321999e-fa7a-5640-916a-863e2d6905b8",
+          "Left": 187,
+          "Name": "Support Tickets 1 #1 #1 #1",
+          "RenamedColumns": [],
+          "SelectedColumns": [
+            {
+              "InternalType": "int64",
+              "Name": "Ticket ID",
+              "RecId": 0
+            },
+            {
+              "InternalType": "date",
+              "Name": "Date Opened",
+              "RecId": 0
+            },
+            {
+              "InternalType": "date",
+              "Name": "Date Closed",
+              "RecId": 0
+            },
+            {
+              "InternalType": "textsimple(250)",
+              "Name": "Customer Name",
+              "RecId": 0
+            },
+            {
+              "InternalType": "textsimple(250)",
+              "Name": "Issue Category",
+              "RecId": 0
+            },
+            {
+              "InternalType": "textsimple(250)",
+              "Name": "Priority",
+              "RecId": 0
+            },
+            {
+              "InternalType": "textsimple(250)",
+              "Name": "Status",
+              "RecId": 0
+            },
+            {
+              "InternalType": "int64",
+              "Name": "Assigned To",
+              "RecId": 0
+            },
+            {
+              "InternalType": "textsimple(250)",
+              "Name": "Location",
+              "RecId": 0
+            }
+          ],
+          "SourceNodeId": "3321999e-fa7a-5640-916a-863e2d6905b8",
+          "Top": 135
+        }
+      ]
+    },
+    "observedJoinTypes": [
+      "inner",
+      "right"
+    ],
+    "innerJoinVariation": {
+      "Connections[0].JoinType": "inner"
+    },
+    "outputSchema": [
+      {
+        "Name": "Agent Name",
+        "InternalType": "textsimple(250)"
+      },
+      {
+        "Name": "Ticket ID",
+        "InternalType": "int64"
+      },
+      {
+        "Name": "Date Opened",
+        "InternalType": "date"
+      },
+      {
+        "Name": "Date Closed",
+        "InternalType": "date"
+      },
+      {
+        "Name": "Customer Name",
+        "InternalType": "textsimple(250)"
+      },
+      {
+        "Name": "Issue Category",
+        "InternalType": "textsimple(250)"
+      },
+      {
+        "Name": "Priority",
+        "InternalType": "textsimple(250)"
+      },
+      {
+        "Name": "Status",
+        "InternalType": "textsimple(250)"
+      },
+      {
+        "Name": "Assigned To",
+        "InternalType": "int64"
+      },
+      {
+        "Name": "Location",
+        "InternalType": "textsimple(250)"
+      }
+    ]
+  }
 }
