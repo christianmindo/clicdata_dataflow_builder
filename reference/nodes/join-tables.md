@@ -10,6 +10,7 @@ The observed fixture uses an inner join over two upstream nodes. This is one con
 
 - **Property class:** `DataFlowNodeJoinTablesProperties:#Infinis.DataFlows`.
 - **Observed upstream source counts:** 2.
+- **Input capacity (user-confirmed 2026-11-04):** exactly two upstream node inputs. Table Merge supports more than two tables in one node; larger joins using Join require a chain of binary Join nodes.
 - **Node-specific properties:** `Conditions`, `JoinType` (historical checkpoint status fields must be omitted on new nodes).
 - **Fixture examples:** `Join #1`.
 

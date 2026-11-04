@@ -148,3 +148,9 @@ The adapted exact settings are in `table-merge.json` → `connectedInputExample`
 - The right-join export includes output `traceId` values; the inner-join export omits them. Do not treat traces as node/resource identities or infer that join type controls their presence. The merge emits Agent Name followed by the nine upstream ticket fields with their observed types.
 
 Validation scope: local structural regression checks only. No remote discovery, editor import, join-result comparison or engine execution was performed. Existing legacy teaching flows have not been regenerated.
+
+## Multi-table capacity — user-confirmed 2026-11-04
+
+Table Merge supports joining more than two tables within one node. Join (`join-tables`) accepts exactly two upstream node inputs; use Table Merge for a multi-table join within one node, or chain binary Join nodes when appropriate.
+
+This capacity is user-confirmed. The supplied connected Table Merge exports still demonstrate two tables and one upstream node only. No maximum table count, three-table connection topology or multiple-upstream-node serialization has been established by those exports; do not invent those details from the capacity statement.

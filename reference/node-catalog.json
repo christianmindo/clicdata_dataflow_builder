@@ -122,7 +122,11 @@
         "editorExportObserved": false,
         "engineExecutionVerified": false
       }
-    ]
+    ],
+    "inputCapacity": {
+      "upstreamNodeInputCount": 2,
+      "evidence": "User-confirmed 2026-11-04; observed two-input exports; engine execution not tested"
+    }
   },
   {
     "code": "json-to-columns",
@@ -214,7 +218,11 @@
     "observedInputFormats": [
       "DataClones (legacy embedded datasets)",
       "MergeInputs (embedded dataset and upstream node)"
-    ]
+    ],
+    "inputCapacity": {
+      "supportsMoreThanTwoTables": true,
+      "evidence": "User-confirmed 2026-11-04; multi-table export and execution not supplied; maximum table count and multiple upstream-node serialization unverified"
+    }
   },
   {
     "code": "table-output",
