@@ -4,7 +4,7 @@ Use this guide for processing changes. Read SERIALIZATION.md for new constructio
 
 ## Input contract
 
-Use [local metadata/schema files or dummy datasets](SCHEMA_FILES.md) and user-supplied requirements/exports. Start with the use case, then take the dataset-ID or dummy-data path documented there. For dataset IDs, default to generating the Master DB metadata query for the user to run and return as a local export; reuse existing complete bindings. Never discover client data, schema, IDs or sample rows through MCP or another remote route. For JSON, first clarify the use case, required attributes/measures and row grain; suggest candidate fields to extract or unnest and agree the scope. Only then request dummified structural examples for the selected fields if needed, never every JSON column or actual client records. Keep unresolved dependencies visible, continue independent design work, and never invent IDs or runtime evidence. User-performed ClicData testing is separate from local assembly.
+Start with the use case, then offer the [MCP or offline intake choice](SCHEMA_FILES.md), reusing a choice already made for this task. MCP offers streamlined source/schema/binding discovery with fewer manual steps; offline keeps client access local and uses user-run metadata exports. Wait for selection before remote discovery. Use only the chosen path and scoped sources, reuse complete bindings, and do not treat MCP selection as permission to read records, write resources or execute flows. For JSON, first clarify the use case, required attributes/measures and row grain; suggest candidate fields to extract or unnest and agree the scope. Only then request dummified structural examples for the selected fields if needed, never every JSON column or actual client records. Keep unresolved dependencies visible, continue independent design work, and never invent IDs or runtime evidence. User-performed ClicData testing is separate from local assembly.
 
 ## Requirements intake: purpose first — 2026-10-28
 
@@ -16,7 +16,7 @@ Wait for that direction before asking downstream configuration questions or desi
 
 Once the use case is supplied, continue in order, using existing answers rather than asking again:
 
-0. Accept relevant dataset IDs or dummy datasets and follow the offline intake path in SCHEMA_FILES.md. In both cases, prompt for missing DataClone IDs (after upload for dummy datasets), then generate the user-run query to obtain column IDs, names and types. Reuse supplied IDs/bindings and continue independent requirements/design work while awaiting the export. Use returned metadata to reconcile field selections and configure Table Inputs.
+0. Ask MCP or offline unless already selected. Follow SCHEMA_FILES.md for that path, accepting relevant dataset IDs or dummy datasets. Resolve missing source bindings through scoped MCP metadata discovery or the offline user-run query, respectively. Continue independent requirements/design work while awaiting dependencies. Use verified metadata to reconcile field selections and configure Table Inputs.
 1. Agree the output grain, desired fields, measures and JSON attributes/expansion needs; suggest relevant candidates from the supplied schemas.
 2. Resolve material business rules: joins/keys/cardinality, filters, calculations, aggregation, duplicates and missing values.
 3. Request only missing dummified JSON structures needed for the agreed fields. Follow SCHEMA_FILES.md for binding metadata or manual source selection; never request client records.
