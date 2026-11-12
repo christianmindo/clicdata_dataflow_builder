@@ -66,6 +66,31 @@ def lint(flow,disabled=False):
      if 'CONCAT' in expr.upper():
       textcols=[k for k in expression_fields(expr) if incoming.get(k,'').startswith('text')]
       if len(textcols)>1:warnings.append(name+': CONCAT combines multiple text columns; implicit collation needs engine verification')
+  elif code=='transform-data':
+   transformed=p.get('TransformedColumns')
+   require(isinstance(transformed,list) and bool(transformed),name+': nonempty TransformedColumns required')
+   transformed=transformed if isinstance(transformed,list) else []
+   changed={}
+   for c in transformed:
+    if not isinstance(c,dict):
+     errors.append(name+': invalid TransformedColumns entry');continue
+    field=c.get('Name');kind=c.get('InternalType');expr=c.get('Expression')
+    require(isinstance(field,str) and bool(field) and isinstance(kind,str) and bool(kind) and isinstance(expr,str) and bool(expr.strip()),name+': transformation requires Name, InternalType and Expression')
+    if not isinstance(field,str):continue
+    require(field.casefold() not in {k.casefold() for k in changed},name+': duplicate transformed fields ignoring case')
+    changed[field]=kind
+    require(field in out,name+': transformed field missing from OutputColumns: '+field)
+    require(out.get(field)==kind,name+': transformed type disagrees with OutputColumns: '+field)
+    if isinstance(expr,str):
+     require(not re.search(r'\bCOLLATE\b',expr,re.I),name+': explicit COLLATE is prohibited')
+     if up:require(expression_fields(expr)<=incoming.keys(),name+': transform expression uses missing incoming fields')
+   if edges:
+    require(len(edges)==1,name+': Transform Data requires exactly one source')
+   if up:
+    require(changed.keys()<=incoming.keys(),name+': transformed field missing upstream')
+    require(out=={k:changed.get(k,v) for k,v in incoming.items()},name+': transform output schema mismatch')
+   else:
+    warnings.append(name+': standalone Transform Data; connect an upstream node to verify input fields and schema')
   elif code=='column-selector':
    for c in p.get('RenamedColumns',[]):require(c['Name'] in incoming,name+': rename source is missing')
    aliases={c['Name']:c['Alias'] for c in p.get('RenamedColumns',[])};mapped={aliases.get(k,k):v for k,v in incoming.items()}

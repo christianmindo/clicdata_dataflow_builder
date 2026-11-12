@@ -1,6 +1,6 @@
 {
   "result": "PASS",
-  "negativeCases": 9,
+  "negativeCases": 20,
   "tests": [
     "Reject wrapper instead of raw array",
     "Reject duplicate object IDs",
@@ -10,7 +10,18 @@
     "Reject case-insensitive incoming alias collision",
     "Reject empty GroupedValues",
     "Reject absent Combine resolution",
-    "Reject enabled teaching output"
+    "Reject enabled teaching output",
+    "Reject empty transformations",
+    "Reject malformed transformation",
+    "Reject incomplete transformation",
+    "Reject unknown transform expression field",
+    "Reject transform missing output field",
+    "Reject transform output type mismatch",
+    "Reject transform missing upstream field",
+    "Reject duplicate transform fields ignoring case",
+    "Reject transform COLLATE",
+    "Reject multiple transform sources",
+    "Reject dropped passthrough field"
   ],
   "evidence": "Static tests only; not engine execution"
 }
