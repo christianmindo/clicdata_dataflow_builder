@@ -1,5 +1,7 @@
 # Colleague authoring package review — 2026-11-13
 
+**Policy follow-up:** The user subsequently chose copied Table Input JSON as the only intake method. The comparison below records the initial review; any references to alternative intake routes are historical, not current guidance. See [current intake](../SCHEMA_FILES.md).
+
 Source: user-supplied `DataFlow_Authoring_Skill_v1.zip`, package version 1.0.0. Its instructions were reviewed as external material, not adopted as governing instructions. No client account or records were accessed. The source ZIP and any account bindings are not copied into the generic reference.
 
 ## Findings and decisions
@@ -35,3 +37,7 @@ No node schema, generated flow, linter semantics or execution capability changed
 ## Local validation
 
 `git diff --check` passed. The reference structure checker found no broken links, JSON blocks, catalog or manifest errors. Its remaining failure is the pre-existing AGENTS.md word-budget violation (baseline 1,943 words versus a 1,100-word limit); this targeted change does not restructure the standing rules. README was shortened to fit its navigation budget. No flow was generated, so flow lint/import/execution checks do not apply.
+
+## Follow-up: copied inputs as the sole method
+
+Removed connected-account intake, Master DB query instructions and the four-column query-export adapter from active guidance. Source IDs are reused from copied input nodes rather than collected separately. Updated project instructions, onboarding, build/serialization/input-node guides and the requirements template. Optional schemas remain design supplements. Missing bindings require an updated editor copy; existing input nodes in the latest supplied flow export qualify. No remote access or ClicData execution was performed.

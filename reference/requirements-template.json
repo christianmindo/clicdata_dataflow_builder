@@ -88,11 +88,14 @@
     "centerNodeGroupsInPanels": true
   },
   "inputPolicy": {
-    "source": "user_supplied_local_schema_files",
+    "source": "user_supplied_copied_table_input_json",
     "remoteClientAccessAllowed": false,
     "clientRowsRequired": false,
     "clientRowsAllowed": false,
-    "userProvidedBindingIdsAllowed": true,
-    "dummifiedJsonExamplesAllowed": true
+    "userProvidedBindingIdsAllowed": false,
+    "dummifiedJsonExamplesAllowed": true,
+    "bindingIdsFromCopiedInputNodes": true,
+    "optionalSchemaFilesForDesignOnly": true,
+    "missingBindingsResolution": "user_updates_and_recopies_table_input_nodes"
   }
 }

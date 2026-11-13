@@ -69,6 +69,6 @@ Observed node-specific settings (not a complete node). IDs below are synthetic a
 }
 ```
 
-## Offline schema inputs — 2026-10-28
+## Source intake — copied input nodes only
 
-Use user-supplied schema CSVs for current names/types; see [SCHEMA_FILES.md](../SCHEMA_FILES.md). The five-column export lacks field RecIds; the user-confirmed schema_<six-digit-ID>.csv filename provides the dataset ID. Obtain those from a user-supplied minimal Table Input export or explicit mapping. Do not substitute source_column_name, infer RecIds from row order or query an account through MCP. Schema-only design remains possible, but target-bound clipboard construction requires its binding dependencies to be resolved.
+Use the user's copied Table Input JSON or input nodes in the latest supplied whole-flow export. These supply source bindings and selected fields; see [SCHEMA_FILES.md](../SCHEMA_FILES.md). Request an updated copy if fields or bindings are missing. Optional schema CSVs support design/comparison but do not replace input-node evidence. Never infer RecIds from names, row order, filenames or trace IDs. Do not collect IDs separately or use remote discovery or metadata queries. Verify source selections after import; copied metadata does not prove execution.

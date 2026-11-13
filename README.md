@@ -2,7 +2,7 @@
 
 A modular reference for ClicData editor clipboard JSON. Keep the folder structure when sharing.
 
-Use AGENTS.md as project instructions (Codex reads it automatically). Describe the task and provide the latest flow export or copied Table Input JSON. Offline schema CSVs and binding metadata are also supported. Connected-account access is limited to binding metadata; table records must never be queried or read. The instructions route the LLM to a small set of relevant files instead of requiring the entire reference on every request.
+Use AGENTS.md as project instructions (Codex reads it automatically). Describe the task and provide the latest flow export or copied Table Input JSON. Schema CSVs are optional design supplements. Connected-account access is limited to binding metadata; table records must never be queried or read. The instructions route the LLM to a small set of relevant files instead of requiring the entire reference on every request.
 
 ## Client-sensitive data: metadata only
 
@@ -25,21 +25,19 @@ Use AGENTS.md as project instructions (Codex reads it automatically). Describe t
 
 There are 35 documented processing types and eight complete synthetic teaching patterns. A documented node is not proof of every option or runtime behavior. Forecast SSA is not documented. Example resource IDs are synthetic or historical; supply actual target bindings.
 
-## Why we ask for IDs
+## Supply copied Table Input nodes
 
-The easiest offline intake is to add/select the required tables and fields as Table Input nodes in ClicData, copy those nodes, and share their JSON. It already contains the source and column bindings, so no separate ID collection or MCP access is needed. See the [copied-input procedure](reference/SCHEMA_FILES.md#copied-table-input-json--recommended-offline-route).
-
-Dataset and column IDs let the builder preconfigure Table Input nodes so you do not have to select the source table and fields manually. They are reference metadata; the builder does not use them to access or read client records. Verify the bindings after importing into ClicData.
+Add/select the required tables and fields as Table Input nodes in ClicData, copy those nodes and share their JSON. Inputs in an existing whole-flow export also qualify. This is the sole source-binding intake method; it works for customers without agent access to their account. The JSON already carries dataset/column IDs, names and exact types. See the [copied-input procedure](reference/SCHEMA_FILES.md#copied-table-input-json). Verify source selections after import.
 
 ## Pivot and JSON inputs
 
-Pivot category lists and JSON structures require a manual supplement: provide a safe distinct-value list collected locally for each required pivot column, and dummy JSON examples for selected fields being extracted or expanded. Keep JSON keys/nesting/types, replace values with invented ones. Metadata-only MCP can still resolve bindings; it must never query categories or JSON records. See the [intake procedure](reference/SCHEMA_FILES.md#manual-supplement-for-pivot-and-json--applies-to-both-intake-methods).
+Pivot category lists and JSON structures require a manual supplement: provide a safe distinct-value list collected locally for each required pivot column, and dummy JSON examples for selected fields being extracted or expanded. Keep JSON keys/nesting/types, replace values with invented ones. Copied inputs cannot establish categories or JSON structures. See the [intake procedure](reference/SCHEMA_FILES.md#manual-supplement-for-pivot-and-json).
 
 ## Normal workflow
 
 New business flows end in dedicated **dummy Table Output nodes**, one per business result, with mapped columns and a full-refresh (`rebuild`) default. Users create/select the destination tables from these nodes in ClicData; destination IDs are not required in advance. Unbound nodes omit DataCloneRecId and need that editor step before execution. Input source bindings still require real metadata. Existing output settings remain unchanged during unrelated edits. See [Build guide](reference/BUILD_GUIDE.md#output-writes).
 
-1. Supply business requirements and copied Table Input JSON, or source schemas with binding evidence; see the schema-file guide. No client-data connection is required. Read only the task-specific references.
+1. Supply business requirements and copied Table Input JSON, plus optional supporting schemas; see the schema-file guide. No client-data connection is required. Read only the task-specific references.
 2. Patch the latest export for edits; assemble new flows with code where possible.
 3. Validate the actual deliverable with `python3 scripts/lint_flow.py path/to/flow.json`.
 4. Test import and data behavior separately in ClicData. Local checks do not establish engine execution.
