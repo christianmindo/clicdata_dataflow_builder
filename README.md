@@ -2,7 +2,31 @@
 
 A modular reference for ClicData editor clipboard JSON. Keep the folder structure when sharing.
 
-Use AGENTS.md as project instructions (Codex reads it automatically). Describe the task and provide the latest flow export or copied Table Input JSON. Schema CSVs are optional design supplements. Connected-account access is limited to binding metadata; table records must never be queried or read. The instructions route the LLM to a small set of relevant files instead of requiring the entire reference on every request.
+Use AGENTS.md as project instructions (Codex reads it automatically). Describe the task and provide the latest flow export or copied Table Input JSON. Schema CSVs are optional design supplements. Source bindings come only from user-supplied copied inputs; connected accounts are not used for intake and table records must never be queried or read. The instructions route the LLM to a small set of relevant files instead of requiring the entire reference on every request.
+
+## Install for your own Codex tasks
+
+This repository is also a self-contained skill: [SKILL.md](SKILL.md) is its entry point, with the existing references, scripts, and examples alongside it. No ClicData account connection is required.
+
+Paste this into Codex, which provides the Skill Installer:
+
+```text
+Use $skill-installer to install the skill from
+https://github.com/christianmindo/clicdata_dataflow_builder
+using repository path . and installation name clicdata-dataflow-builder.
+Keep the bundled AGENTS.md, reference, scripts, and examples with SKILL.md.
+```
+
+Restart Codex after installation so it discovers the skill. In your own project/chat, invoke it with:
+
+```text
+Use $clicdata-dataflow-builder to help with my ClicData flow.
+My use case is: [describe the task and desired result].
+```
+
+Then supply the latest clipboard export or required copied Table Input nodes when requested. The skill does not need write access to this GitHub repository; keep your client artifacts in your own project, outside the installed skill. Installing copies a snapshot, so later repository changes require updating/reinstalling the skill. Pasting the repository link alone does not install it.
+
+Alternatively, clone/download the repository and open the folder as a Codex project to use its AGENTS.md directly.
 
 ## Client-sensitive data: metadata only
 

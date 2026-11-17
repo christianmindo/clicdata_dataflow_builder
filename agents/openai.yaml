@@ -1,0 +1,4 @@
+interface:
+  display_name: "ClicData Data Flow Builder"
+  short_description: "Build and edit ClicData clipboard flows safely"
+  default_prompt: "Use $clicdata-dataflow-builder to help me build or update a ClicData flow, starting with my use case and desired result."
