@@ -24,7 +24,15 @@ Use $clicdata-dataflow-builder to help with my ClicData flow.
 My use case is: [describe the task and desired result].
 ```
 
-Then supply the latest clipboard export or required copied Table Input nodes when requested. The skill does not need write access to this GitHub repository; keep your client artifacts in your own project, outside the installed skill. Installing copies a snapshot, so later repository changes require updating/reinstalling the skill. Pasting the repository link alone does not install it.
+Then supply the latest clipboard export or required copied Table Input nodes when requested. The skill does not need write access to this GitHub repository; keep your client artifacts in your own project, outside the installed skill. Pasting the repository link alone does not install it.
+
+## Current-version check
+
+At the start of each task, the skill checks the public release manifest and uses a current working copy. It downloads the ZIP only if the published version differs from the installed/cached version, verifies its SHA-256 checksum, and keeps that version fixed for the task. This requires permitted network access and writable storage; otherwise it reports the failed check and uses its bundled reference.
+
+Local Codex/Claude Code can retain a persistent cache. Hosted ChatGPT/Claude may only allow a temporary session cache, so this does not promise permanent updates to the account's installed skill. The installed entry point remains a bootstrap; the current working copy supplies the task instructions, references, and linter. Existing installations from before this feature need one update to obtain that bootstrap.
+
+Maintainers must run `python3 scripts/package_skill.py` after reference changes and publish both `dist/clicdata-dataflow-builder.zip` and `dist/clicdata-dataflow-builder.version.json` together. The version is a content hash of bundled files; a GitHub push without rebuilding the package does not publish a new skill version. Checksums detect inconsistent downloads, not independent publisher authenticity.
 
 Alternatively, clone/download the repository and open the folder as a Codex project to use its AGENTS.md directly.
 
@@ -42,7 +50,7 @@ The same [SKILL.md](SKILL.md) and bundled rules support Claude; no separate flow
 
 These are [Claude Code's documented skill locations and invocation format](https://code.claude.com/docs/en/skills). Installing the skill does not grant account access or execute ClicData flows. Claude reads the bundled AGENTS.md through SKILL.md explicitly.
 
-The upload ZIP contains the tracked skill entry point, AGENTS.md, reference, examples, and three runtime helpers. It excludes local client deliverables, untracked folders, Git history, and Codex UI metadata. Maintainers regenerate it after changing bundled materials with `python3 scripts/package_skill.py` and commit the updated ZIP. Re-upload/extract a new ZIP to update an existing installation. ZIP structure and bundled linting can be checked locally; successful Claude upload and invocation still require a check in Claude.
+The upload ZIP contains the tracked skill entry point, AGENTS.md, reference, examples, runtime helpers, and a generated version marker. It excludes local client deliverables, untracked folders, Git history, and Codex UI metadata. ZIP structure and bundled linting can be checked locally; successful Claude upload and invocation still require a check in Claude.
 
 ## Client-sensitive data: metadata only
 

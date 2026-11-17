@@ -11,6 +11,12 @@ This entry point works in Codex and Claude. In Claude Code, invoke `/clicdata-da
 
 ## Start here
 
+Before each new task, check the current published reference once with `python3 <installed-skill>/scripts/sync_skill.py --cache <writable-cache-directory>`. Use a persistent user cache for local tools, or a session-writable temporary cache in hosted ChatGPT/Claude. This accesses only this public repository, never client sources. Do not send client content in requests.
+
+The helper compares release versions and downloads only when different. Read SKILL.md and AGENTS.md from the returned `path` and use that directory for all references and scripts for the rest of the task. Do not repeat the check when reading that updated entry point in the same task. Keep the chosen version fixed during a task. Cached copies are separate from installed platform-managed skills and user artifacts.
+
+If network/tool access or writable storage is unavailable, state that the update check failed and that the bundled version is being used; do not claim it is current. Never bypass platform permissions or overwrite platform-managed installations. Hosted caches may disappear between chats: this updates the working copy for the task, not the account's installed skill. Local persistent caches reuse the updated copy on subsequent tasks.
+
 Read [AGENTS.md](AGENTS.md) before working. Its standing rules and task-to-reference table govern this workflow. Then read only the files needed for the actual task; do not preload the repository or all examples. If a required bundled file is missing, report the incomplete installation instead of inventing its contents.
 
 Start with the business use case and desired result. If only schemas are supplied, ask what the flow must accomplish and wait before asking for field selections or bindings. For edits, use the latest user-supplied clipboard export as the sole baseline.
