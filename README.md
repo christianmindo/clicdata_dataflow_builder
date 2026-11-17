@@ -28,6 +28,22 @@ Then supply the latest clipboard export or required copied Table Input nodes whe
 
 Alternatively, clone/download the repository and open the folder as a Codex project to use its AGENTS.md directly.
 
+## Use with Claude
+
+The same [SKILL.md](SKILL.md) and bundled rules support Claude; no separate flow reference is maintained.
+
+**Claude chat / Desktop:** Download [clicdata-dataflow-builder.zip](dist/clicdata-dataflow-builder.zip) (use GitHub's **Download raw file** button). In **Customize > Skills**, choose the option to upload a skill, upload this ZIP, and enable it. Code execution/file creation must be enabled, and your organization must allow custom skills. Then ask: “Use the ClicData Data Flow Builder skill to help me with [use case and desired result].” See [Claude's upload instructions](https://support.claude.com/en/articles/12512180-use-skills-in-claude).
+
+**Claude Code:** Extract the ZIP so its entry point is at `~/.claude/skills/clicdata-dataflow-builder/SKILL.md` for personal use, or `.claude/skills/clicdata-dataflow-builder/SKILL.md` in your own project for project use. Keep the whole extracted skill folder together. Start a new session and invoke:
+
+```text
+/clicdata-dataflow-builder Help me with [use case and desired result].
+```
+
+These are [Claude Code's documented skill locations and invocation format](https://code.claude.com/docs/en/skills). Installing the skill does not grant account access or execute ClicData flows. Claude reads the bundled AGENTS.md through SKILL.md explicitly.
+
+The upload ZIP contains the tracked skill entry point, AGENTS.md, reference, examples, and three runtime helpers. It excludes local client deliverables, untracked folders, Git history, and Codex UI metadata. Maintainers regenerate it after changing bundled materials with `python3 scripts/package_skill.py` and commit the updated ZIP. Re-upload/extract a new ZIP to update an existing installation. ZIP structure and bundled linting can be checked locally; successful Claude upload and invocation still require a check in Claude.
+
 ## Client-sensitive data: metadata only
 
 **DO NOT QUERY DATA.** Only binding metadata is allowed, including on QA/dummy tables. Follow the mandatory [metadata-only rules](AGENTS.md#sensitive-client-data-metadata-only--mandatory). These are agent instructions, not server-enforced permissions. The user performs editor previews and execution.

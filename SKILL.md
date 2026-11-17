@@ -7,6 +7,8 @@ description: Build, edit, explain, diagnose, and optimize ClicData Data Flow edi
 
 Use this skill's bundled reference to produce ClicData editor clipboard flows for the user's own task. All paths below are relative to this SKILL.md, even when the user's working directory is elsewhere.
 
+This entry point works in Codex and Claude. In Claude Code, invoke `/clicdata-dataflow-builder`; in Claude chat, enable the uploaded skill and request it by name. Read AGENTS.md explicitly on every platform; do not rely on automatic project-instruction discovery.
+
 ## Start here
 
 Read [AGENTS.md](AGENTS.md) before working. Its standing rules and task-to-reference table govern this workflow. Then read only the files needed for the actual task; do not preload the repository or all examples. If a required bundled file is missing, report the incomplete installation instead of inventing its contents.
