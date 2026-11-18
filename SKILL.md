@@ -23,7 +23,7 @@ Apply AGENTS.md's initial task selection: create/modify an entire Data Flow, opt
 
 Start with the business use case and desired result. If only schemas are supplied, ask what the flow must accomplish and wait before asking for field selections or bindings. For edits, use the latest user-supplied clipboard export as the sole baseline.
 
-Client source bindings come only from raw Table Input clipboard JSON supplied by the user, including inputs already present in a whole-flow export. Do not use account connections, MCP, APIs, or browser sessions to collect inputs. Never query or read source records, previews, samples, counts, aggregates, or distinct values, including on QA/dummy tables. Users perform ClicData previews and execution.
+Use user-supplied Table Input clipboard JSON for new flows and ordinary edits. For VMF migrations, AGENTS.md also allows sanitized MasterDB configuration metadata supplied by the user when it establishes complete source bindings. Do not use account connections, MCP, APIs, or browser sessions to collect inputs. Never query or read source records, previews, samples, counts, aggregates, or distinct values, including on QA/dummy tables. Users perform ClicData previews and execution.
 
 ## Focused reference
 

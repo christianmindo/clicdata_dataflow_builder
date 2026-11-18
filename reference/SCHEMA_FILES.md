@@ -2,7 +2,7 @@
 
 ## Copied Table Input JSON
 
-This is the sole source-binding intake method. First establish the use case, then request copied Table Input nodes for the required sources. Inputs in the latest whole-flow export also qualify. Customers can provide these directly without agent access to their account. Do not offer or use MCP, connected APIs/browser sessions, Master DB queries, separately typed IDs or column-metadata query exports. If a copy is incomplete, request an updated input-node copy; do not switch methods.
+Use this method for new flows and ordinary edits. Inputs in the latest whole-flow export qualify. For VMF migrations, the [AGENTS.md binding policy](../AGENTS.md#client-source-bindings) also allows verified, user-supplied MasterDB configuration metadata.
 
 Once the use case is known, the user can:
 

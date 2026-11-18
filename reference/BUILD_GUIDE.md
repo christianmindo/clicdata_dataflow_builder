@@ -6,7 +6,7 @@ First apply the three-way task selection in AGENTS.md. Route create/modify work 
 
 ## Input contract
 
-Start with the use case, then request [copied Table Input JSON](SCHEMA_FILES.md), the sole source-binding intake method. Reuse inputs already supplied in the latest flow export. Request a fresh copy only for missing fields/bindings; do not collect IDs separately or offer connected-account discovery or metadata queries. Optional schemas support design, not bindings. Enforce AGENTS.md's metadata-only rule. For JSON, agree selected fields, required attributes and row grain before requesting missing dummified structures. Never request client records. Continue independent design while dependencies remain visible. User-performed ClicData testing is separate from local assembly.
+Start with the use case, then request [copied Table Input JSON](SCHEMA_FILES.md), the standard binding intake for new flows and ordinary edits. Reuse inputs already supplied in the latest flow export. Request a fresh copy only for missing fields/bindings; use the VMF exception below where applicable. Ordinary schema files support design. Enforce AGENTS.md's metadata-only rule. For JSON, agree selected fields, required attributes and row grain before requesting missing dummified structures. Never request client records. Continue independent design while dependencies remain visible. User-performed ClicData testing is separate from local assembly.
 
 ## Requirements intake: purpose first — 2026-10-28
 
@@ -78,9 +78,9 @@ MODIFYING EXISTING FLOWS
 
 The intended migration process is to map source table objects through their legacy transformations to final results consumed by dashboards, reconstruct equivalent processing in Data Flow, validate parity, and plan outputs that replace the legacy VMF results. Preserve the dashboard-facing schema, grain, keys, and consumer behavior. Replacement may require preserving resource identity or repointing consumers; neither mechanism is established yet.
 
-Planned discovery includes a MasterDB query for configuration/dependency metadata describing relationships, transformation definitions, and final consumers. No verified MasterDB schema/query or colleague-skill migration procedure is incorporated here yet. Do not invent system tables, joins, or replacement behavior. AGENTS.md currently prohibits MasterDB intake: this planned route is not an exception and must not be offered as available intake until a focused metadata-only procedure is explicitly agreed and documented. No source-record reads are permitted.
+For VMF discovery, use sanitized configuration and dependency metadata supplied by the user. A user-run MasterDB extraction with explicit columns can also supply source bindings under AGENTS.md when table and column IDs, ownership, names, and exact types are verified. Include join and filter columns alongside the projected fields. Copied Table Inputs remain available for gaps. Do not assume undocumented SQL relationships or replacement behavior.
 
-For now, use user-supplied legacy configuration and mappings to plan the migration and identify gaps. Copied Table Input JSON remains the binding intake method. Keep generated outputs on dedicated dummy destinations for validation under the existing output rules; production replacement and dashboard cutover remain a separate, explicitly authorized step. Do not silently redirect dummy outputs to existing VMF resources.
+Keep generated outputs on dedicated dummy destinations for validation. Production replacement and dashboard cutover require separate authorization.
 
 - Distinguish removing a canvas node, replacing a dependency and retiring the underlying resource. Drafting replacement JSON does not authorize resource deletion.
 - Obtain the actual legacy definition and relevant source mappings; a view name or Table Input schema does not establish its joins, filters, calculations or refresh behavior.

@@ -12,7 +12,7 @@ At the start of a new task, establish which workflow the user needs before reque
 
 If the request already identifies the workflow, acknowledge it and proceed without asking again. Otherwise present these three choices in one concise question. A route selection does not establish business requirements: continue purpose-first intake within that route. Keep narrow styling, diagnosis, and node-learning requests scoped to the actual request; do not expand them into an entire-flow rebuild.
 
-VMF migration is a developing workflow. The user reports legacy VMF retirement in March 2027. Its intended future metadata discovery must map table dependencies, transformations, and dashboard-consumed outputs. This routing update does not authorize MasterDB intake, remote execution, production replacement, or resource retirement; existing intake and record-access rules still apply.
+VMF migration is a developing workflow. The user reports legacy VMF retirement in March 2027. Its intended future metadata discovery must map table dependencies, transformations, and dashboard-consumed outputs. Use the VMF-specific intake option below. Remote execution, production replacement, and resource retirement require separate authorization.
 
 ## Read only what the task needs
 
@@ -34,13 +34,15 @@ Each node has reference/nodes/<code>.json for exact settings and .md for usage, 
 
 **DO NOT QUERY OR READ DATA RECORDS.** Accept only user-supplied configuration/schema metadata and explicitly dummified structural examples. No record reads, previews, samples, distincts, counts, aggregates or profiling, including QA/dummy tables. Never use `query_data` / `QueryData` or another record endpoint. The user performs ClicData previews and execution; local fictional fixtures remain allowed. These are agent instructions, not server-enforced permissions.
 
-## Client inputs: copied Table Input JSON only
+## Client source bindings
 
-Start with the use case. The user adds/selects the required tables and fields as Table Input nodes in ClicData, copies those nodes and supplies the raw clipboard JSON. Inputs already present in the latest supplied flow export satisfy this requirement. This is the sole source-binding intake method, including for customer use; no agent access to a client account is needed.
+Start with the use case. For new flows and ordinary edits, use raw Table Input clipboard JSON supplied by the user, including inputs in the latest flow export. Reuse complete bindings and request updated copies only for missing fields. For dummy sources, the user uploads and selects them locally.
 
-Do not offer or use MCP, connected APIs/browser sessions, Master DB queries, separately collected IDs or metadata-query exports for intake. Reuse complete copied bindings without requesting another export. If required fields/bindings are missing, ask the user to select them in the editor and recopy the affected inputs. For dummy sources, the user uploads/selects them locally and supplies copied inputs afterward. Continue independent design while waiting; never invent bindings or claim execution.
+For VMF migrations, copied Table Inputs remain an option. Alternatively, use sanitized MasterDB configuration metadata supplied by the user from their own extraction. Verify each table RecId, column RecId and ownership, exact name and type, and all fields needed by the flow, including join and filter fields. Preserve separate input instances when the same table appears more than once. Assemble Table Inputs using documented clipboard serialization. If required metadata or binding properties remain uncertain, request only the missing evidence or the affected copied node. Verify source selections after import.
 
-Follow reference/SCHEMA_FILES.md for metadata checks. Schema files are optional design supplements, not an alternative binding route. Never infer column RecIds from filenames, order, names, graph IDs or trace IDs. Verify source selections after import. For JSON, agree the use case, attributes and row grain before requesting missing dummified examples for selected fields; preserve keys, nesting and types with invented values. Do not request all JSON examples or actual client records.
+The assistant may draft read-only VMF metadata SQL for the user to run, with explicit column lists and no SELECT *. The assistant does not access MasterDB, MCP, connected APIs, or browser sessions for binding intake. Record access remains prohibited. Never invent IDs or claim engine execution from metadata.
+
+Follow reference/SCHEMA_FILES.md for metadata checks. Ordinary schema files are design supplements. User-supplied MasterDB configuration metadata can establish bindings only for VMF migrations. Never infer column RecIds from filenames, order, names, graph IDs or trace IDs. Verify source selections after import. For JSON, agree the use case, attributes and row grain before requesting missing dummified examples for selected fields; preserve keys, nesting and types with invented values. Do not request all JSON examples or actual client records.
 
 ## Manual Pivot values and JSON structures
 

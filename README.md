@@ -2,7 +2,7 @@
 
 A modular reference for ClicData editor clipboard JSON. Keep the folder structure when sharing.
 
-Use AGENTS.md as project instructions (Codex reads it automatically). Describe the task and provide the latest flow export or copied Table Input JSON. Schema CSVs are optional design supplements. Source bindings come only from user-supplied copied inputs; connected accounts are not used for intake and table records must never be queried or read. The instructions route the LLM to a small set of relevant files instead of requiring the entire reference on every request.
+Use AGENTS.md as project instructions (Codex reads it automatically). Describe the task and provide the latest flow export or copied Table Input JSON. Schema CSVs are optional design supplements. Use copied inputs for standard bindings, or verified user-supplied MasterDB configuration metadata for VMF migrations; connected accounts are not used for intake and table records must never be queried or read. The instructions route the LLM to a small set of relevant files instead of requiring the entire reference on every request.
 
 ## Install for your own Codex tasks
 
@@ -75,7 +75,7 @@ There are 35 documented processing types and eight complete synthetic teaching p
 
 ## Supply copied Table Input nodes
 
-Add/select the required tables and fields as Table Input nodes in ClicData, copy those nodes and share their JSON. Inputs in an existing whole-flow export also qualify. This is the sole source-binding intake method; it works for customers without agent access to their account. The JSON already carries dataset/column IDs, names and exact types. See the [copied-input procedure](reference/SCHEMA_FILES.md#copied-table-input-json). Verify source selections after import.
+Add/select the required tables and fields as Table Input nodes in ClicData, copy those nodes and share their JSON. Inputs in an existing whole-flow export also qualify. VMF migrations can also use verified MasterDB configuration metadata supplied by the user under AGENTS.md. The JSON already carries dataset/column IDs, names and exact types. See the [copied-input procedure](reference/SCHEMA_FILES.md#copied-table-input-json). Verify source selections after import.
 
 ## Pivot and JSON inputs
 
