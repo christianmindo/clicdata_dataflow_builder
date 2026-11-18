@@ -83,6 +83,8 @@ Pivot category lists and JSON structures require a manual supplement: provide a 
 
 ## Normal workflow
 
+Start by identifying the task: **create/modify an entire Data Flow**, **optimize an existing Data Flow**, or **Views/Merges/Fusions migration**. Reuse a clear selection in the user's request; otherwise ask which route they need. See [task selection](AGENTS.md#determine-the-task-first). VMF migration is a developing workflow; its planned metadata discovery and production cutover are not implemented by this routing update.
+
 New business flows end in dedicated **dummy Table Output nodes**, one per business result, with mapped columns and a full-refresh (`rebuild`) default. Users create/select the destination tables from these nodes in ClicData; destination IDs are not required in advance. Unbound nodes omit DataCloneRecId and need that editor step before execution. Input source bindings still require real metadata. Existing output settings remain unchanged during unrelated edits. See [Build guide](reference/BUILD_GUIDE.md#output-writes).
 
 1. Supply business requirements and copied Table Input JSON, plus optional supporting schemas; see the schema-file guide. No client-data connection is required. Read only the task-specific references.

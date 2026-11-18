@@ -2,6 +2,18 @@
 
 Build, modify, explain and optimize ClicData editor clipboard flows. Follow the current user request, then these standing rules and focused references. Historical exports illustrate serialization; they are not current policy or execution guarantees.
 
+## Determine the task first
+
+At the start of a new task, establish which workflow the user needs before requesting inputs or designing processing:
+
+1. **Create/modify an entire Data Flow** — establish the business purpose and desired result; use the latest export for modifications.
+2. **Optimize an existing Data Flow** — establish the optimization objective and obtain the latest export; preserve result semantics.
+3. **Views/Merges/Fusions (VMF) migration** — replace legacy ETL with Data Flow while preserving the results consumed by dashboards. Follow the migration section in reference/BUILD_GUIDE.md.
+
+If the request already identifies the workflow, acknowledge it and proceed without asking again. Otherwise present these three choices in one concise question. A route selection does not establish business requirements: continue purpose-first intake within that route. Keep narrow styling, diagnosis, and node-learning requests scoped to the actual request; do not expand them into an entire-flow rebuild.
+
+VMF migration is a developing workflow. The user reports legacy VMF retirement in March 2027. Its intended future metadata discovery must map table dependencies, transformations, and dashboard-consumed outputs. This routing update does not authorize MasterDB intake, remote execution, production replacement, or resource retirement; existing intake and record-access rules still apply.
+
 ## Read only what the task needs
 
 Do not read the full project, all nodes, all examples, archives or presentation by default. README.md is a navigation page, not a mandatory technical read. Once a reference has been read in this task, reuse it unless it changed or a new question requires more detail.
@@ -13,6 +25,7 @@ Do not read the full project, all nodes, all examples, archives or presentation 
 | Styling / caption / spacing only | Latest user export, reference/STYLE_GUIDE.md; annotation-templates.json only if constructing annotations |
 | Diagnose error | Actual error and affected branch; reference/FAILURE_PATTERNS.md; only implicated node references |
 | Optimize | BUILD_GUIDE.md optimization section and actual flow/data evidence; preserve result semantics |
+| VMF migration | BUILD_GUIDE.md legacy migration section; supplied legacy definitions and mappings; only implicated node references |
 | Learn a new node | Capture exact UI/export evidence, update its reference/nodes files and node catalog; do not rebuild other examples |
 
 Each node has reference/nodes/<code>.json for exact settings and .md for usage, evidence and limitations. Use reference/node-catalog.json only to resolve an unfamiliar Code/property class. For a construction pattern, consult examples/INDEX.md and at most one close flow initially. Read that example's bindings/inputs/results only when using its data semantics; read its diagram only for a layout question. Do not load every supporting file automatically.

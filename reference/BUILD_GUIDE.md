@@ -2,6 +2,8 @@
 
 Use this guide for processing changes. Read SERIALIZATION.md for new construction/graph changes and nodes/<code>.json plus nodes/<code>.md only for node types being introduced or changed. A current supplied export is the baseline for edits.
 
+First apply the three-way task selection in AGENTS.md. Route create/modify work through the requirements intake below, optimization through this guide's optimization section, and VMF migration through the legacy migration section. Reuse an explicit selection already supplied by the user.
+
 ## Input contract
 
 Start with the use case, then request [copied Table Input JSON](SCHEMA_FILES.md), the sole source-binding intake method. Reuse inputs already supplied in the latest flow export. Request a fresh copy only for missing fields/bindings; do not collect IDs separately or offer connected-account discovery or metadata queries. Optional schemas support design, not bindings. Enforce AGENTS.md's metadata-only rule. For JSON, agree selected fields, required attributes and row grain before requesting missing dummified structures. Never request client records. Continue independent design while dependencies remain visible. User-performed ClicData testing is separate from local assembly.
@@ -70,7 +72,16 @@ MODIFYING EXISTING FLOWS
 - Preserve useful annotations, updating or replacing them when I request a different style.
 - Keep an original baseline and prevent regeneration scripts from overwriting newer user edits.
 
-LEGACY VIEW / MERGE / FUSION MIGRATIONS
+## Legacy View / Merge / Fusion migrations
+
+**Status: developing workflow, not an automated migration procedure.** The user reports that legacy VMF ETL is being removed in March 2027 and current customers need to migrate to Data Flow.
+
+The intended migration process is to map source table objects through their legacy transformations to final results consumed by dashboards, reconstruct equivalent processing in Data Flow, validate parity, and plan outputs that replace the legacy VMF results. Preserve the dashboard-facing schema, grain, keys, and consumer behavior. Replacement may require preserving resource identity or repointing consumers; neither mechanism is established yet.
+
+Planned discovery includes a MasterDB query for configuration/dependency metadata describing relationships, transformation definitions, and final consumers. No verified MasterDB schema/query or colleague-skill migration procedure is incorporated here yet. Do not invent system tables, joins, or replacement behavior. AGENTS.md currently prohibits MasterDB intake: this planned route is not an exception and must not be offered as available intake until a focused metadata-only procedure is explicitly agreed and documented. No source-record reads are permitted.
+
+For now, use user-supplied legacy configuration and mappings to plan the migration and identify gaps. Copied Table Input JSON remains the binding intake method. Keep generated outputs on dedicated dummy destinations for validation under the existing output rules; production replacement and dashboard cutover remain a separate, explicitly authorized step. Do not silently redirect dummy outputs to existing VMF resources.
+
 - Distinguish removing a canvas node, replacing a dependency and retiring the underlying resource. Drafting replacement JSON does not authorize resource deletion.
 - Obtain the actual legacy definition and relevant source mappings; a view name or Table Input schema does not establish its joins, filters, calculations or refresh behavior.
 - Record KEEP / MODIFY / ADD / REMOVE for affected graph nodes and a before/after legacy-to-replacement mapping. Preserve embedded Table Merge connections, conditions, prefixes and field ownership when translating it; do not substitute Combine unless row-append semantics are intended.

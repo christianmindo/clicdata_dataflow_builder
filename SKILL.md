@@ -1,6 +1,6 @@
 ---
 name: clicdata-dataflow-builder
-description: Build, edit, explain, diagnose, and optimize ClicData Data Flow editor clipboard JSON using documented node settings and user-supplied copied inputs. Use for ClicData flow tasks, not generic ETL or dashboard authoring.
+description: Build, edit, explain, diagnose, and optimize ClicData Data Flow editor clipboard JSON, and plan legacy Views/Merges/Fusions migrations using supplied definitions. Use for ClicData flow tasks, not generic ETL or dashboard authoring.
 ---
 
 # ClicData Data Flow Builder
@@ -18,6 +18,8 @@ The helper compares release versions and downloads only when different. Read SKI
 If network/tool access or writable storage is unavailable, state that the update check failed and that the bundled version is being used; do not claim it is current. Never bypass platform permissions or overwrite platform-managed installations. Hosted caches may disappear between chats: this updates the working copy for the task, not the account's installed skill. Local persistent caches reuse the updated copy on subsequent tasks.
 
 Read [AGENTS.md](AGENTS.md) before working. Its standing rules and task-to-reference table govern this workflow. Then read only the files needed for the actual task; do not preload the repository or all examples. If a required bundled file is missing, report the incomplete installation instead of inventing its contents.
+
+Apply AGENTS.md's initial task selection: create/modify an entire Data Flow, optimize an existing Data Flow, or Views/Merges/Fusions migration. Ask only when the intended route is unclear. Migration automation is under development; follow the build guide's migration limitations before proposing discovery or cutover actions.
 
 Start with the business use case and desired result. If only schemas are supplied, ask what the flow must accomplish and wait before asking for field selections or bindings. For edits, use the latest user-supplied clipboard export as the sole baseline.
 
